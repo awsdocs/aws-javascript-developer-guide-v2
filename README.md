@@ -5,14 +5,15 @@ The open source version of the AWS SDK for JavaScript Developer Guide
 This repository contains source content for the official AWS Java Developer Guide. The source code for the `AWS SDK for JavaScript 2.0`_ is also on GitHub, at https://github.com/aws/aws-sdk-js.
 
 The guide content relies upon content which is provided in the AWS documentation team's shared content and SDK examples repositories.
-Reporting issues
+
+## Reporting issues
 
 You can use the Issues section of this repository to report problems in the documentation. When submitting an issue, please indicate:
 
-    what page (a URL or filename is best) the issue occurs on.
-    what the issue is, using as much detail as you can provide. For many issues, this might be as simple as "The page has a typo; the word 'complie' in the third paragraph shoud be 'compile'." If the issue is more complex, please describe it with enough detail that it's clear to the AWS documentation team what the problem is.
+  *what page (a URL or filename is best) the issue occurs on.
+  *what the issue is, using as much detail as you can provide. For many issues, this might be as simple as "The page has a typo; the word 'complie' in the third paragraph shoud be 'compile'." If the issue is more complex, please describe it with enough detail that it's clear to the AWS documentation team what the problem is.
 
-Contributing fixes and updates
+## Contributing fixes and updates
 
 To contribute your own documentation fixes or updates, please use the Github-standard procedures for forking the repository and submitting a pull request.
 
@@ -23,7 +24,8 @@ The code examples featured in this documentation can be found in a separate repo
 In addition to examples in JavaScript, you'll also find examples for each of the other AWS SDKs. If you find issues with any of the examples, you can submit issues or fork the repository and submit a pull request!
 
 The code examples are provided under the Apache 2.0 open source license. See the example repository's README for more details.
-Copyright and license
+
+## Copyright and license
 
 All content in this repository, unless otherwise stated, is Copyright © 2010-2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
 
