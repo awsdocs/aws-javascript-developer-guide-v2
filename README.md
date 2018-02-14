@@ -10,8 +10,8 @@ The guide content relies upon content which is provided in the AWS documentation
 
 You can use the Issues section of this repository to report problems in the documentation. When submitting an issue, please indicate:
 
-  *what page (a URL or filename is best) the issue occurs on.
-  *what the issue is, using as much detail as you can provide. For many issues, this might be as simple as "The page has a typo; the word 'complie' in the third paragraph shoud be 'compile'." If the issue is more complex, please describe it with enough detail that it's clear to the AWS documentation team what the problem is.
+  * what page (a URL or filename is best) the issue occurs on.
+  * what the issue is, using as much detail as you can provide. For many issues, this might be as simple as "The page has a typo; the word 'complie' in the third paragraph shoud be 'compile'." If the issue is more complex, please describe it with enough detail that it's clear to the AWS documentation team what the problem is.
 
 ## Contributing fixes and updates
 
