@@ -13,6 +13,7 @@ The topics in this section describe various ways to configure the SDK for JavaSc
 
 + [Using the Global Configuration Object](global-config-object.md)
 + [Setting the AWS Region](setting-region.md)
++ [Specifying Custom Endpoints](specifying-endpoints.md)
 + [Getting Your Credentials](getting-your-credentials.md)
 + [Setting Credentials](setting-credentials.md)
 + [Locking API Versions](locking-api-versions.md)

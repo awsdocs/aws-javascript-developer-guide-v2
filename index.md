@@ -1,4 +1,4 @@
-# AWS SDK for JavaScript Developer Guide for SDK v2.196.0
+# AWS SDK for JavaScript Developer Guide for SDK v2.199.0
 
 -----
 *****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -29,6 +29,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Configuring the SDK for JavaScript](configuring-the-jssdk.md)
    + [Using the Global Configuration Object](global-config-object.md)
    + [Setting the AWS Region](setting-region.md)
+   + [Specifying Custom Endpoints](specifying-endpoints.md)
    + [Getting Your Credentials](getting-your-credentials.md)
    + [Setting Credentials](setting-credentials.md)
       + [Setting Credentials in Node.js](setting-credentials-node.md)

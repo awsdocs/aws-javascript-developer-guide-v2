@@ -2,15 +2,16 @@
 
 The following table describes the documentation for this release of the AWS SDK for JavaScript\.
 
-+ **SDK version:** v2\.196\.0
++ **SDK version:** v2\.199\.0
 
-+ **Latest documentation update:** February 16, 2018
++ **Latest documentation update:** February 20, 2018
 
 
 ****  
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| New Topic on Custom Endpoints | Information has been added on the format and use of custom endpoints for making API calls\. See [Specifying Custom Endpoints](specifying-endpoints.md)\.  | February 20, 2018 | 
 | SDK for JavaScript Developer Guide on GitHub | The SDK for JavaScript Developer Guide is available in markdown format in its own [documentation repo](https://github.com/awsdocs/aws-javascript-developer-guide-v2/blob/master/index.md)\. You can post issues you would like the guide to address or submit pull requests to submit proposed changes\. | February 16, 2018 | 
 | New Amazon DynamoDB code sample | A new Node\.js code sample for updating a DynamoDB table using the Document Client has been added\. See [Using the DynamoDB Document Client](dynamodb-example-document-client.md) for the sample code\. | February 14, 2018 | 
 | New Topic on AWS Cloud9 | A topic describing how to use AWS Cloud9 to develop and debug browser and Node\.js code has been added\. See [Using AWS Cloud9 with the AWS SDK for JavaScript](cloud9-javascript.md)\. | February 5, 2018 | 
