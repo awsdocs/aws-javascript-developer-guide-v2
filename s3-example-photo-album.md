@@ -82,7 +82,7 @@ The HTML for the photo upload application consists of a <div> element within whi
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.199.0.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.202.0.min.js"></script>
     <script src="./app.js"></script>
     <script>
        function getHtml(template) {

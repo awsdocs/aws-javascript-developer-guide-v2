@@ -24,7 +24,7 @@ In this example, you use a series of Node\.js modules to send email in a variety
 
 ## Prerequisite Tasks<a name="ses-examples-sending-emails-prerequisites"></a>
 
-+ Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](http://nodejs.org)\.
++ Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
 
 + Create a shared configurations file with your user credentials\. For more information about providing a credentials JSON file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 

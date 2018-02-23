@@ -58,7 +58,7 @@ Promise.all([firstPromise, secondPromise, thirdPromise]).then(function(values) {
 
 ## Browser and Node\.js Support for Promises<a name="w3ab1c19c17c14c15"></a>
 
-Support for native JavaScript promises \(ECMAScript 2015\) depends on the JavaScript engine and version in which your code executes\. To help determine the support for JavaScript promises in each environment where your code needs to run, see the [ECMAScript Compatability Table](http://kangax.github.io/compat-table/es6/) on GitHub\.
+Support for native JavaScript promises \(ECMAScript 2015\) depends on the JavaScript engine and version in which your code executes\. To help determine the support for JavaScript promises in each environment where your code needs to run, see the [ECMAScript Compatability Table](https://kangax.github.io/compat-table/es6/) on GitHub\.
 
 ## Using Other Promise Implementations<a name="w3ab1c19c17c14c17"></a>
 

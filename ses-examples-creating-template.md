@@ -30,7 +30,7 @@ In this example, you use a series of Node\.js modules to work with email templat
 
 To set up and run this example, you must first complete these tasks:
 
-+ Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](http://nodejs.org)\.
++ Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
 
 + Create a shared configurations file with your user credentials\. For more information about creating a credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 

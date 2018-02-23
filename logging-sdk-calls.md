@@ -33,4 +33,4 @@ myLogger.setLogLevel(‘DEBUG’);
 AWS.Config.logger = myLogger;
 ```
 
-For more information about logplease, see the [logplease Simple JavaScript Logger](http://github.com/haadcode/logplease) on GitHub\.
+For more information about logplease, see the [logplease Simple JavaScript Logger](https://github.com/haadcode/logplease) on GitHub\.

@@ -21,7 +21,7 @@ git clone https://github.com/awslabs/aws-nodejs-sample.git
 
 ## Step 2: Installing the SDK and Dependencies<a name="getting-started-nodejs-install-sdk"></a>
 
-You install the SDK for JavaScript package using the [npm \(the Node\.js package manager\)](http://www.npmjs.com)\. From the `aws-nodejs-sample` directory in the package, type the following at the command line\.
+You install the SDK for JavaScript package using the [npm \(the Node\.js package manager\)](https://www.npmjs.com)\. From the `aws-nodejs-sample` directory in the package, type the following at the command line\.
 
 ```
 npm install
