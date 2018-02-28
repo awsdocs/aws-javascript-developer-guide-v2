@@ -16,10 +16,10 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 
 1. Connect to your Linux instance as `ec2-user` using SSH\.
 
-1. Install the current version of node version manager \(nvm\) by typing the following at the command line to install version 33\.6\.
+1. Install the current version of node version manager \(nvm\) by typing the following at the command line to install version 33\.8\.
 
    ```
-   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
    ```
 
    We will use nvm to install Node\.js because nvm can install multiple versions of Node\.js and allow you to switch between them\. See the [nvm repo on GitHub](https://github.com/creationix/nvm) for the current version to install\.
@@ -34,6 +34,12 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 
    ```
    nvm install 6.11.5
+   ```
+
+   To install the latest LTS \(long\-term\-support\) release of Node\.js, type the following at the command line\.
+
+   ```
+   nvm install --lts
    ```
 
    Installing Node\.js also installs the Node Package Manager \(npm\) so you can install additional modules as needed\.
