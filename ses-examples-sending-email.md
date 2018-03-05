@@ -94,7 +94,7 @@ var params = {
       Data: 'Test email'
      }
     },_
-  Source: SENDER_EMAIL_ADDRESS',', /* required */
+  Source: 'SENDER_EMAIL_ADDRESS', /* required */
   ReplyToAddresses: [
       'EMAIL_ADDRESS',
     /* more items */
