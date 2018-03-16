@@ -19,7 +19,7 @@ To contribute your own documentation fixes or updates, please use the Github-sta
 
 Note that many common substitutions and extlinks found in these docs are sourced from the shared content repository--if you see a substitution used that is not declared at the top of the source file or in the _includes.txt file, then it is probably defined in the shared content.
 
-The code examples featured in this documentation can be found in a separate repository: aws-doc-sdk-examples. Full code and build files are included, so you can build and run any of the provided examples yourself.
+The code examples featured in this documentation can be found in a separate repository: aws-doc-sdk-examples. Full code  files are included, so you can run any of the provided examples yourself. Some examples were written for Node.js while others were written for browser script execution. The header comments in the code state the intended environment for that sample. 
 
 In addition to examples in JavaScript, you'll also find examples for each of the other AWS SDKs. If you find issues with any of the examples, you can submit issues or fork the repository and submit a pull request!
 
