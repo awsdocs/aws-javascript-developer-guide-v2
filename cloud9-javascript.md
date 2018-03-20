@@ -43,7 +43,7 @@ After AWS Cloud9 opens the IDE for your development environment, follow one or b
    nvm install node                                                                    # Use nvm to install npm (and Node.js at the same time).
    ```
 
-### To set up the SDK for JavaScript for JavaScript in the browser<a name="cloud9-javascript-sdk-browser"></a>
+### To set up the SDK for JavaScript in the browser<a name="cloud9-javascript-sdk-browser"></a>
 
 You don't have to install the SDK for JavaScript to use it in browser scripts\. You can load the hosted SDK for JavaScript package directly from AWS with a script in your HTML pages\.
 
