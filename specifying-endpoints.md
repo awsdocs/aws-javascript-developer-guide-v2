@@ -30,8 +30,8 @@ mcClient.getJob(getJobParams, function(err, data)) {
 };
 ```
 
-To get your account API endpoint, see [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#describeEndpoints-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#describeEndpoints-property) in the API Reference\. \.
+To get your account API endpoint, see [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#describeEndpoints-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#describeEndpoints-property) in the API Reference\.
 
-Make sure you specify the same region in your code as the region in the custom endpoint URI\. A mismatch between the region setting and the custom endpoint URI can cause API cals to fail\.
+Make sure you specify the same region in your code as the region in the custom endpoint URI\. A mismatch between the region setting and the custom endpoint URI can cause API calls to fail\.
 
 For more information on AWS Elemental MediaConvert, see the [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html) class in the API Reference or the *[AWS Elemental MediaConvert User Guide](http://docs.aws.amazon.com/mediaconvert/latest/ug/)*\.
