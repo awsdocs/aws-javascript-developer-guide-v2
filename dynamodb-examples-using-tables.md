@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to create and manage tables used to store and retrieve data from DynamoDB\.
 
 ## The Scenario<a name="dynamodb-examples-using-tables-scenario"></a>
@@ -11,21 +10,15 @@
 Similar to other database systems, DynamoDB stores data in tables\. A DynamoDB table is a collection of data that's organized into items that are analogous to rows\. To store or access data in DynamoDB, you create and work with tables\.
 
 In this example, you use a series of Node\.js modules to perform basic operations with a DynamoDB table\. The code uses the SDK for JavaScript to create and work with tables by using these methods of the `AWS.DynamoDB` client class:
-
 + [createTable](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#createTable-property)
-
 + [listTables](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#listTables-property)
-
 + [describeTable](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#describeTable-property)
-
 + [deleteTable](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#deleteTable-property)
 
 ## Prerequisite Tasks<a name="dynamodb-examples-using-tables-prerequisites"></a>
 
 To set up and run this example, first complete these tasks:
-
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="dynamodb-example-using-tables-configure-sdk"></a>
@@ -88,7 +81,7 @@ ddb.createTable(params, function(err, data) {
   if (err) {
     console.log("Error", err);
   } else {
-    console.log("Success", data.Table.KeySchema);
+    console.log("Success", data);
   }
 });
 ```
