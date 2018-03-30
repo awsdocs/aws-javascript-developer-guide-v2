@@ -3,27 +3,20 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to create an Amazon EC2 instance from a public Amazon Machine Image \(AMI\)\.
-
 + How to create and assign tags to the new Amazon EC2 instance\.
 
 ## The Scenario<a name="ec2-example-creating-an-instance-scenario"></a>
 
-In this example, you use a Node\.js module to create an Amazon EC2 instance and assign both a krey pair and tags to it\. The code uses the SDK for JavaScript to create and tag an instance by using these methods of the Amazon EC2 client class:
-
+In this example, you use a Node\.js module to create an Amazon EC2 instance and assign both a key pair and tags to it\. The code uses the SDK for JavaScript to create and tag an instance by using these methods of the Amazon EC2 client class:
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#runInstances-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#runInstances-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#createTags-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#createTags-property)
 
 ## Prerequisite Tasks<a name="ec2-example-creating-an-instance-prerequisites"></a>
 
 To set up and run this example, first complete these tasks\.
-
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create a key pair\. For details, see [Working with Amazon EC2 Key Pairs](ec2-example-key-pairs.md)\. You use the name of the key pair in this example\.
 
 ## Configuring the SDK<a name="ec2-example-creating-an-instance-configure-sdk"></a>

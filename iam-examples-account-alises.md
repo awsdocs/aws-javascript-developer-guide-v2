@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to manage aliases for your AWS account ID\.
 
 ## The Scenario<a name="iam-examples-account-alises-scenario"></a>
@@ -11,11 +10,8 @@
 If you want the URL for your sign\-in page to contain your company name or other friendly identifier instead of your AWS account ID, you can create an alias for your AWS account ID\. If you create an AWS account alias, your sign\-in page URL changes to incorporate the alias\.
 
 In this example, a series of Node\.js modules are used to create and manage IAM account aliases\. The Node\.js modules use the SDK for JavaScript to manage alises using these methods of the `AWS.IAM` client class:
-
 + [createAccountAlias](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createAccountAlias-property)
-
 + [listAccountAliases](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAccountAliases-property)
-
 + [deleteAccountAlias](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteAccountAlias-property)
 
 For more information about IAM account aliases, see [Your AWS Account ID and Its Alias](http://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\.
@@ -23,9 +19,7 @@ For more information about IAM account aliases, see [Your AWS Account ID and Its
 ## Prerequisite Tasks<a name="iam-examples-account-alises-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="iam-examples-account-alises-configure-sdk"></a>

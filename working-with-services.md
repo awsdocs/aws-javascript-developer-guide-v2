@@ -8,7 +8,7 @@ The services exposed through the SDK for JavaScript follow the request\-response
 
 Invoking an AWS service includes the full request and response lifecycle of an operation on a service object, including any retries that are attempted\. A request is encapsulated in the SDK by the `AWS.Request` object\. The response is encapsulated in the SDK by the `AWS.Response` object, which is provided to the requestor through one of several techniques, such as a callback function or a JavaScript promise\.
 
-
+**Topics**
 + [Creating and Calling Service Objects](creating-and-calling-service-objects.md)
 + [Logging AWS SDK for JavaScript Calls](logging-sdk-calls.md)
 + [Calling Services Asychronously](calling-services-asynchronously.md)

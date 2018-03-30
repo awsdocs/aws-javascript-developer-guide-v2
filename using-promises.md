@@ -63,11 +63,8 @@ Support for native JavaScript promises \(ECMAScript 2015\) depends on the JavaSc
 ## Using Other Promise Implementations<a name="w3ab1c19c17c14c17"></a>
 
 In addition to the native promise implementation in ECMAScript 2015, you can also use third\-party promise libraries, including:
-
 + [bluebird](http://bluebirdjs.com)
-
 + [RSVP](https://github.com/tildeio/rsvp.js/)
-
 + [Q](https://github.com/kriskowal/q)
 
 These optional promise libraries can be useful if you need your code to run in environments that don't support the native promise implementation in ECMAScript 5 and ECMAScript 2015\.

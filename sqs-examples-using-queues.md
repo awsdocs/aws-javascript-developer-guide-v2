@@ -3,23 +3,16 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to get a list of all of your message queues
-
 + How to obtain the URL for a particular queue
-
 + How to create and delete queues
 
 ## The Scenario<a name="sqs-examples-using-queues-scenario"></a>
 
 In this example, a series of Node\.js modules are used to work with queues\. The Node\.js modules use the SDK for JavaScript to use queues using these methods of the `AWS.SQS` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#listQueues-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#listQueues-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#createQueue-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#createQueue-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#getQueueUrl-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#getQueueUrl-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#deleteQueue-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#deleteQueue-property)
 
 For more information about Amazon SQS messages, see [How Queues Work](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-how-it-works.html) in the *Amazon Simple Queue Service Developer Guide*\.
@@ -27,9 +20,7 @@ For more information about Amazon SQS messages, see [How Queues Work](http://doc
 ## Prerequisite Tasks<a name="sqs-examples-using-queues-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="sqs-examples-using-queues-configure-sdk"></a>

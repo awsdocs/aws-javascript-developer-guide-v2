@@ -4,7 +4,7 @@ The topics in this section contain examples of how to use the AWS SDK for JavaSc
 
 You can find the sample code for these examples in addition to others in the [AWS documentation sample repository on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples)\.
 
-
+**Topics**
 + [Amazon CloudWatch Examples](cloudwatch-examples.md)
 + [Amazon DynamoDB Examples](dynamodb-examples.md)
 + [Amazon EC2 Examples](ec2-examples.md)

@@ -29,9 +29,7 @@ You can set the region using the `AWS_REGION` environment variable\. If you defi
 ## Using a Shared Config File<a name="setting-region-config-file"></a>
 
 Much like the shared credentials file lets you store credentials for use by the SDK, you can keep your region and other configuration settings in a shared file named `config` that is used by SDKs\. The SDK for JavaScript automatically searches for a `config` file when it loads\. Where you save the `config` file depends on your operating system:
-
 + Linux, macOS, or Unix users: `~/.aws/config`
-
 + Windows users: `C:\Users\USER_NAME\.aws\config`
 
 If you don't already have a shared `config` file, you can create one in the designated directory\. In the following example, the `config` file sets both the region and the output format\.
@@ -47,15 +45,9 @@ For more information about using shared config and credentials files, see [Loadi
 ## Order of Precedence for Setting the Region<a name="setting-region-order-of-precedence"></a>
 
 The order of precedence for region setting is as follows:
-
 + If a region is passed to a client class constructor, that region is used\. If not, then\.\.\.
-
 + If a region is set on the global configuration object, that region is used\. If not, then\.\.\.
-
 + If the `AWS_REGION` environment variable is a [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value, that region is used\. If not, then\.\.\.
-
 + If the `AMAZON_REGION` environment variable is a truthy value, that region is used\. If not, then\.\.\.
-
 + If the `AWS_SDK_LOAD_CONFIG` environment variable is set to a truthy value and the shared credentials file \(`~/.aws/credentials` or the path indicated by `AWS_SHARED_CREDENTIALS_FILE`\) contains a region for the configured profile, that region is used\. If not, then\.\.\.
-
 + If the `AWS_SDK_LOAD_CONFIG` environment variable is set to a truthy value and the config file \(`~/.aws/config` or the path indicated by `AWS_CONFIG_FILE`\) contains a region for the configured profile, that region is used\.

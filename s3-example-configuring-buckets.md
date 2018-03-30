@@ -3,15 +3,12 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to configure the cross\-origin resource sharing \(CORS\) permissions for a bucket\.
 
 ## The Scenario<a name="s3-example-configuring-buckets-scenario"></a>
 
 In this example, a series of Node\.js modules are used to list your Amazon S3 buckets and to configure CORS and bucket logging\. The Node\.js modules use the SDK for JavaScript to configure a selected Amazon S3 bucket using these methods of the Amazon S3 client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketCors-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketCors-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketCors-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketCors-property)
 
 For more information about using CORS configuration with an Amazon S3 bucket, see [Cross\-Origin Resource Sharing \(CORS\)](http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -19,9 +16,7 @@ For more information about using CORS configuration with an Amazon S3 bucket, se
 ## Prerequisite Tasks<a name="s3-example-configuring-buckets-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="s3-example-configuring-buckets-configure-sdk"></a>

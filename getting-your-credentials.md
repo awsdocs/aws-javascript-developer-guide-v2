@@ -1,9 +1,7 @@
 # Getting Your Credentials<a name="getting-your-credentials"></a>
 
 When you create an AWS account, your account is provided with root credentials\. Those credentials consist of two access keys:
-
 + Access key ID
-
 + Secret access key
 
 For more information on your access keys, see [Understanding and Getting Your Security Credentials](http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) in the *AWS General Reference*\.
@@ -23,9 +21,7 @@ The only time that you can view or download the secret access keys is when you c
 1. Choose the **Security credentials** tab and then choose **Create access key**\.
 
 1. To see the new access key, choose **Show**\. Your credentials will look something like this:
-
    + Access key ID: AKIAIOSFODNN7EXAMPLE
-
    + Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 1. To download the key pair, choose **Download \.csv file**\. Store the keys in a secure location\.
@@ -33,7 +29,5 @@ The only time that you can view or download the secret access keys is when you c
    Keep the keys confidential in order to protect your AWS account, and never email them\. Do not share them outside your organization, even if an inquiry appears to come from AWS or Amazon\.com\. No one who legitimately represents Amazon will ever ask you for your secret key\.
 
 **Related topics**
-
 + [What Is IAM?](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in the *IAM User Guide*
-
 + [AWS Security Credentials](http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html) in *AWS General Reference* 

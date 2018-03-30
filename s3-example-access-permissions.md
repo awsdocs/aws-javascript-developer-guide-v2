@@ -3,15 +3,12 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to retrieve or set the access control list for an Amazon S3 bucket\.
 
 ## The Scenario<a name="w3ab1c22c26c17b9"></a>
 
 In this example, a Node\.js module is used to display the bucket access control list \(ACL\) for a selected bucket and apply changes to the ACL for a selected bucket\. The Node\.js module uses the SDK for JavaScript to manage Amazon S3 bucket access permissions using these methods of the Amazon S3 client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketAcl-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketAcl-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketAcl-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketAcl-property)
 
 For more information about access control lists for Amazon S3 buckets, see [ Managing Access with ACLs](http://docs.aws.amazon.com/AmazonS3/latest/dev/S3_ACLs_UsingACLs.html) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -19,9 +16,7 @@ For more information about access control lists for Amazon S3 buckets, see [ Man
 ## Prerequisite Tasks<a name="w3ab1c22c26c17c11"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="s3-example-access-permissions-configure-sdk"></a>

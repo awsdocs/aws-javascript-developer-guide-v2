@@ -6,7 +6,7 @@ Amazon Simple Storage Service \(Amazon S3\) is a web service that provides highl
 
 The JavaScript API for Amazon S3 is exposed through the `AWS.S3` client class\. For more information about using the Amazon S3 client class, see [Class: AWS\.S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html) in the API reference\.
 
-
+**Topics**
 + [Uploading Photos to Amazon S3 from a Browser](s3-example-photo-album.md)
 + [Creating and Using Amazon S3 Buckets](s3-example-creating-buckets.md)
 + [Configuring Amazon S3 Buckets](s3-example-configuring-buckets.md)

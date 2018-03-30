@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to change the state of your Amazon EC2 instances automatically based on a CloudWatch alarm\.
 
 ## The Scenario<a name="cloudwatch-examples-using-alarm-actions-scenario"></a>
@@ -11,9 +10,7 @@
 Using alarm actions, you can create alarms that automatically stop, terminate, reboot, or recover your Amazon EC2 instances\. You can use the stop or terminate actions when you no longer need an instance to be running\. You can use the reboot and recover actions to automatically reboot those instances\. 
 
 In this example, a series of Node\.js modules are used to define an alarm action in CloudWatch that triggers the reboot of an Amazon EC2 instance\. The Node\.js modules use the SDK for JavaScript to manage Amazon EC2 instances using these methods of the `CloudWatch` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#enableAlarmActions-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#enableAlarmActions-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#disableAlarmActions-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#disableAlarmActions-property)
 
 For more information about CloudWatch alarm actions, see [Create Alarms to Stop, Terminate, Reboot, or Recover an Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingAlarmActions.html) in the *Amazon CloudWatch User Guide*\.
@@ -21,11 +18,8 @@ For more information about CloudWatch alarm actions, see [Create Alarms to Stop,
 ## Prerequisite Tasks<a name="cloudwatch-examples-using-alarm-actions-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](http://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create an IAM role whose policy grants permission to describe, reboot, stop, or terminate an Amazon EC2 instance\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
 Use the following role policy when creating the IAM role\.

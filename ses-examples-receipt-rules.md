@@ -3,9 +3,7 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + Create and delete receipt rules\.
-
 + Organize receipt rules into receipt rule sets\.
 
 Receipt rules in Amazon SES specify what to do with email received for email addresses or domains you own\. A *receipt rule* contains a condition and an ordered list of actions\. If the recipient of an incoming email matches a recipient specified in the conditions for the receipt rule, Amazon SES performs the actions that the receipt rule specifies\. 
@@ -15,21 +13,15 @@ To use Amazon SES as your email receiver, you must have at least one active *rec
 ## The Scenario<a name="ses-examples-receipt-rules-scenario"></a>
 
 In this example, a series of Node\.js modules are used to send email in a variety of ways\. The Node\.js modules use the SDK for JavaScript to create and use email templates using these methods of the `AWS.SES` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptRule-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptRule-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptRule-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptRule-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptRuleSet-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptRuleSet-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptRuleSet-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptRuleSet-property)
 
 ## Prerequisite Tasks<a name="ses-examples-receipt-rules-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a credentials JSON file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="ses-examples-receipt-rules-configure-sdk"></a>

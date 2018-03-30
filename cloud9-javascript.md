@@ -4,7 +4,14 @@ You can use AWS Cloud9 with the AWS SDK for JavaScript to write and run your Jav
 
 Follow these stps to set up AWS Cloud9 with the SDK for JavaScript:
 
-
+**Contents**
++ [Step 1: Set up Your AWS Account to Use AWS Cloud9](#cloud9-javascript-account)
++ [Step 2: Set up Your AWS Cloud9 Development Environment](#cloud9-javascript-environment)
++ [Step 3: Set up the SDK for JavaScript](#cloud9-javascript-sdk)
+  + [To set up the SDK for JavaScript for Node\.js](#cloud9-javascript-sdk-nodejs)
+  + [To set up the SDK for JavaScript in the browser](#cloud9-javascript-sdk-browser)
++ [Step 4: Download Example Code](#cloud9-javascript-examples)
++ [Step 5: Run and Debug Example Code](#cloud9-javascript-run)
 
 ## Step 1: Set up Your AWS Account to Use AWS Cloud9<a name="cloud9-javascript-account"></a>
 
@@ -43,7 +50,7 @@ After AWS Cloud9 opens the IDE for your development environment, follow one or b
    nvm install node                                                                    # Use nvm to install npm (and Node.js at the same time).
    ```
 
-### To set up the SDK for JavaScript for JavaScript in the browser<a name="cloud9-javascript-sdk-browser"></a>
+### To set up the SDK for JavaScript in the browser<a name="cloud9-javascript-sdk-browser"></a>
 
 You don't have to install the SDK for JavaScript to use it in browser scripts\. You can load the hosted SDK for JavaScript package directly from AWS with a script in your HTML pages\.
 

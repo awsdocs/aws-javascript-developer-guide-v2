@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to create and update a rule used to trigger an event\.
-
 + How to define one or more targets to respond to an event\.
-
 + How to send events that are matched to targets for handling\.
 
 ## The Scenario<a name="cloudwatch-examples-sending-events-scenario"></a>
@@ -15,11 +12,8 @@
 CloudWatch Events delivers a near real\-time stream of system events that describe changes in Amazon Web Services \(AWS\) resources to any of various targets\. Using simple rules, you can match events and route them to one or more target functions or streams\.
 
 In this example, a series of Node\.js modules are used to send events to CloudWatch Events\. The Node\.js modules use the SDK for JavaScript to manage instances using these methods of the `CloudWatchEvents` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putRule-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putRule-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putTargets-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putTargets-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putEvents-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putEvents-property)
 
 For more information about CloudWatch Events, see [Adding Events with PutEvents](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/AddEventsPutEvents.html) in the *Amazon CloudWatch Events User Guide*\.
@@ -27,13 +21,9 @@ For more information about CloudWatch Events, see [Adding Events with PutEvents]
 ## Prerequisite Tasks<a name="cloudwatch-examples-sending-events-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create a Lambda function using the **hello\-world** blueprint to serve as the target for events\. To learn how, see [ Step 1: Create an AWS Lambda function](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/LogEC2InstanceState.html) in the *Amazon CloudWatch Events User Guide*\.
-
 + Create an IAM role whose policy grants permission to CloudWatch Events and that includes `events.amazonaws.com` as a trusted entity\. For more information about creating an IAM role, see [ Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
 Use the following role policy when creating the IAM role\.
@@ -89,11 +79,8 @@ AWS.config.update({region: 'us-west-2'});
 ## Creating a Scheduled Rule<a name="cloudwatch-examples-sending-events-rules"></a>
 
 Create a Node\.js module with the file name `cwe_putrule.js`\. Be sure to configure the SDK as previously shown\. To access CloudWatch Events, create an `AWS.CloudWatchEvents` service object\. Create a JSON object containing the parameters needed to specify the new scheduled rule, which include the following: 
-
 + A name for the rule
-
 + The ARN of the IAM role you created previously
-
 + An expression to schedule triggering of the rule every five minutes
 
 Call the `putRule` method to create the rule\. The callback returns the ARN of the new or updated rule\.

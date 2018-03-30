@@ -4,7 +4,12 @@ To start using the SDK for JavaScript in browser scripts, create a simple browse
 
 For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
 
-
+**Contents**
++ [Step 1: Creating and Configuring an Amazon S3 Bucket](#getting-started-browser-create-bucket)
++ [Step 2: Creating the Facebook App and Getting the App ID](#getting-started-browser-facebook)
++ [Step 3: Creating an IAM Role to Assign Users](#getting-started-browser-iam-role)
++ [Step 4: Creating the HTML Page and Browser Script](#getting-started-browser-create-html)
++ [Step 5: Running the Sample](#getting-started-browser-run-sample)
 
 ## Step 1: Creating and Configuring an Amazon S3 Bucket<a name="getting-started-browser-create-bucket"></a>
 
@@ -127,7 +132,7 @@ The sample app consists of a single HTML page that contains the user interface a
 <head>
     <title>AWS SDK for JavaScript - Sample Application</title>
     <meta charset="utf-8">
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.202.0.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.218.1.min.js"></script>
 </head>
 
 <body>

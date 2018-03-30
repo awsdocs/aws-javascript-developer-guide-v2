@@ -65,7 +65,5 @@ For instructions on how to install Node\.js on any Red Hat® Enterprise Linux® 
 ## Related Resources<a name="w3ab1c25b7c12"></a>
 
 For more information about the commands and software used in this topic, see the following web pages:
-
 + node version manager \(nvm\): see [nvm repo on GitHub](https://github.com/creationix/nvm)\.
-
 + node package manager \(npm\): see [npm website](https://www.npmjs.com)\.

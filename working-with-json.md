@@ -7,9 +7,7 @@ The SDK for JavaScript uses JSON to send data to service objects when making req
 ![\[Showing the general format and parts of JSON.\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/json-format.png)
 
 JSON represents data in two ways:
-
 + An *object*, which is an unordered collection of name\-value pairs\. An object is defined within left \(`{`\) and right \(`}`\) braces\. Each name\-value pair begins with the name, followed by a colon, followed by the value\. Name\-value pairs are comma separated\.
-
 + An *array*, which is an ordered collection of values\. An array is defined within left \(`[`\) and right \(`]`\) brackets\. Items in the array are comma separated\.
 
 Here is an example of a JSON object that contains an array of objects in which the objects represent cards in a card game\. Each card is defined by two name\-value pairs, one that specifies a unique value to identify that card and another that specifies a URL that points to the corresponding card image\.

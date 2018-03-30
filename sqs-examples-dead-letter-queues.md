@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to use a queue to receive and hold messages from other queues that the queues can't process\.
 
 ## The Scenario<a name="sqs-examples-dead-letter-queues-scenario"></a>
@@ -11,7 +10,6 @@
 A dead letter queue is one that other \(source\) queues can target for messages that can't be processed successfully\. You can set aside and isolate these messages in the dead letter queue to determine why their processing did not succeed\. You must individually configure each source queue that sends messages to a dead letter queue\. Multiple queues can target a single dead letter queue\.
 
 In this example, a Node\.js module is used to route messages to a dead letter queue\. The Node\.js module uses the SDK for JavaScript to use dead letter queues using this method of the `AWS.SQS` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#setQueueAttributes-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#setQueueAttributes-property)
 
 For more information about Amazon SQS dead letter queues, see [Using Amazon SQS Dead Letter Queues](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.
@@ -19,11 +17,8 @@ For more information about Amazon SQS dead letter queues, see [Using Amazon SQS 
 ## Prerequisite Tasks<a name="sqs-examples-dead-letter-queues-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create an Amazon SQS queue to serve as a dead letter queue\. For an example of creating a queue, see [Using Queues in Amazon SQS](sqs-examples-using-queues.md)\.
 
 ## Configuring the SDK<a name="sqs-examples-dead-letter-queues-configure-sdk"></a>

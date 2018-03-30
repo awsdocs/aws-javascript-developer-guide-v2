@@ -6,7 +6,7 @@ Amazon Simple Email Service \(Amazon SES\) is a cloud\-based email sending servi
 
 The JavaScript API for Amazon SES is exposed through the `AWS.SES` client class\. For more information about using the Amazon SES client class, see [Class: AWS\.SES](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html) in the API reference\.
 
-
+**Topics**
 + [Managing Amazon SES Identities](ses-examples-managing-identities.md)
 + [Working with Email Templates in Amazon SES](ses-examples-creating-template.md)
 + [Sending Email Using Amazon SES](ses-examples-sending-email.md)

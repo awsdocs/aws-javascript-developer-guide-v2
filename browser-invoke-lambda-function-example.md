@@ -3,9 +3,7 @@
 ![\[JavaScript code example that applies to browser execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsericon.png)
 
 **This browser script example shows you:**
-
 + How to create a Lambda service object used to invoke a Lambda function\.
-
 + How to access data values from JSON returned by the Lambda function\.
 
 ## The Scenario<a name="browser-invoke-lambda-function-example-scenario"></a>
@@ -17,15 +15,10 @@ In this example, a simulated slot machine browser\-based game invokes a Lambda f
 ## Prerequisite Tasks<a name="browser-invoke-lambda-function-example-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Download the \.zip archive that contains the assets needed for this app from [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
-
 + In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket configured to serve as a static web host\. Upload the HTML page, CSS file, and application graphics to the bucket\.
-
 + In the [Amazon Cognito console](https://console.aws.amazon.com/cognito/), create an Amazon Cognito identity pool with access enabled for unauthenticated identities\. You need to include the identity pool ID in the code to obtain credentials for the browser script\.
-
 + In the [IAM console](https://console.aws.amazon.com/iam/), create an IAM role whose policy grants permission to invoke a Lambda function\.
-
 + Create the Lambda function called by the browser script that returns the result of each game spin\.
 
 ## Configuring the SDK<a name="browser-invoke-lambda-function-example-sdk"></a>

@@ -1,9 +1,7 @@
 # Using the Response Object<a name="the-response-object"></a>
 
 After a service object method has been called, it returns an `AWS.Response` object by passing it to your callback function\. You access the contents of the response through the properties of the `AWS.Response` object\. There are two properties of the `AWS.Response` object you use to access the contents of the response:
-
 + `data` property
-
 + `error` property
 
 When using the standard callback mechanism, these two properties are provided as parameters on the anonymous callback function as shown in the following example\.

@@ -43,11 +43,8 @@ request.
 ## Request Object Completion Events<a name="request-object-completion-events"></a>
 
 The `AWS.Request` object raises these completion events based on the response of each service operation method:
-
 + `success`
-
 + `error`
-
 + `complete`
 
 You can register a callback function in response to any of these events\. For a complete list of all request object events, see [Class: AWS\.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\.
@@ -130,17 +127,11 @@ request.on('complete', function(response) {
 ## Request Object HTTP Events<a name="request-object-http-events"></a>
 
 The `AWS.Request` object raises these HTTP events based on the response of each service operation method:
-
 + `httpHeaders`
-
 + `httpData`
-
 + `httpUploadProgress`
-
 + `httpDownloadProgress`
-
 + `httpError`
-
 + `httpDone`
 
 You can register a callback function in response to any of these events\. For a complete list of all request object events, see [Class: AWS\.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\.

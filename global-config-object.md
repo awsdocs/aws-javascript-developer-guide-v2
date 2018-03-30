@@ -1,9 +1,7 @@
 # Using the Global Configuration Object<a name="global-config-object"></a>
 
 There are two ways to configure the SDK:
-
 + Set the global configuration using `AWS.Config`\.
-
 + Pass extra configuration information to a service object\.
 
 Setting global configuration with `AWS.Config` is often easier to get started, but service\-level configuration can provide more control over individual services\. The global configuration specified by `AWS.Config` provides default settings for service objects that you create subsequently, simplifying their configuration\. However, you can update the configuration of individual service objects when your needs vary from the global configuration\.

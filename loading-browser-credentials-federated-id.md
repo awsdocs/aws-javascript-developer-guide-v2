@@ -1,11 +1,8 @@
 # Using Web Federated Identity to Authenticate Users<a name="loading-browser-credentials-federated-id"></a>
 
 You can directly configure individual identity providers to access AWS resources using web identity federation\. AWS currently supports authenticating users using web identity federation through several identity providers:
-
 + [Login with Amazon](https://login.amazon.com)
-
 + [Facebook Login](https://www.facebook.com/about/login)
-
 + [Google Sign\-in](https://developers.google.com/identity/)
 
 You must first register your application with the providers that your application supports\. Next, create an IAM role and set up permissions for it\. The IAM role you create is then used to grant the permissions you configured for it through the respective identity provider\. For example, you can set up a role that allows users who logged in through Facebook to have read access to a specific Amazon S3 bucket you control\.
@@ -59,11 +56,8 @@ For more information on using web identity federation in IAM, see [ About Web Id
 ## Step 3: Obtaining a Provider Access Token After Login<a name="config-web-identity-obtain-token"></a>
 
 Set up the login action for your application by using the identity provider's SDK\. You can download and install a JavaScript SDK from the identity provider that enables user login, using either OAuth or OpenID\. For information on how to download and set up the SDK code in your application, see the SDK documentation for your identity provider:
-
 + [Login with Amazon](https://login.amazon.com/website)
-
 + [Facebook Login](https://developers.facebook.com/docs/javascript)
-
 + [Google Sign\-in](https://developers.google.com/identity/)
 
 ## Step 4: Obtaining Temporary Credentials<a name="config-web-identity-get-credentials"></a>

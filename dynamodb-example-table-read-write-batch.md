@@ -3,25 +3,19 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to read and write batches of items in a DynamoDB table\.
 
 ## The Scenario<a name="dynamodb-example-table-read-write-batch-scenario"></a>
 
 In this example, you use a series of Node\.js modules to put a batch of items in a DynamoDB table as well as read a batch of items\. The code uses the SDK for JavaScript to perform batch read and write operations using these methods of the DynamoDB client class:
-
 + [batchGetItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#batchGetItem-property)
-
 + [batchWriteItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#batchWriteItem-property)
 
 ## Prerequisite Tasks<a name="dynamodb-example-table-read-write-batch-prerequisites"></a>
 
 To set up and run this example, first complete these tasks:
-
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create a DynamoDB table whose items you can access\. For more information about creating a DynamoDB table, see [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)\.
 
 ## Configuring the SDK<a name="dynamodb-example-table-read-write-batch-configure-sdk"></a>

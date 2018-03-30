@@ -17,7 +17,7 @@ While it is possible to do so, we do not recommend hard\-coding your AWS credent
 
 The topics in this section describe how to load credentials into Node\.js\.
 
-
+**Topics**
 + [Loading Credentials in Node\.js from IAM Roles for EC2](loading-node-credentials-iam.md)
 + [Loading Credentials for a Node\.js Lambda Function](loading-node-credentials-lambda.md)
 + [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)

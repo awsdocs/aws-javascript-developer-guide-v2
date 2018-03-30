@@ -12,7 +12,7 @@ The JavaScript API for Lambda is exposed through the `AWS.Lambda` client class\.
 
 Any data returned by the Lambda function is returned in the callback mechanism you use\. See [Calling Services Asychronously](calling-services-asynchronously.md) for details about different ways to set up a callback mechanism\.
 
-
+**Topics**
 + [Using Lambda in Web Pages](#using-lambda-in-web-pages)
 + [Invoking a Lambda Function in a Browser Script](browser-invoke-lambda-function-example.md)
 + [Writing a Lambda Function in Node\.js](nodejs-write-lambda-function-example.md)

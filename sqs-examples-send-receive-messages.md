@@ -3,21 +3,15 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to send messages in a queue\.
-
 + How to receive messages in a queue\.
-
 + How to delete messages in a queue\.
 
 ## The Scenario<a name="sqs-examples-send-receive-messages-scenario"></a>
 
 In this example, a series of Node\.js modules are used to send and receive messages\. The Node\.js modules use the SDK for JavaScript to send and receive messages by using these methods of the `AWS.SQS` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#sendMessage-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#sendMessage-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#receiveMessage-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#receiveMessage-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#deleteMessage-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#deleteMessage-property)
 
 For more information about Amazon SQS messages, see [Sending a Message to an Amazon SQS Queue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-send-message.html) and [Receiving and Deleting a Message from an Amazon SQS Queue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-receive-delete-message.html) in the *Amazon Simple Queue Service Developer Guide*\.
@@ -25,11 +19,8 @@ For more information about Amazon SQS messages, see [Sending a Message to an Ama
 ## Prerequisite Tasks<a name="sqs-examples-send-receive-messages-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create an Amazon SQS queue\. For an example of creating a queue, see [Using Queues in Amazon SQS](sqs-examples-using-queues.md)\.
 
 ## Configuring the SDK<a name="sqs-examples-send-receive-messages-configure-sdk"></a>

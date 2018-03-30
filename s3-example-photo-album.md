@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to browser execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsericon.png)
 
 **This browser script code example shows:**
-
 + How to upload photos into albums stored in an Amazon S3 bucket\.
 
 ## The Scenario<a name="s3-example-photo-album-scenario"></a>
@@ -13,27 +12,18 @@ In this example, a simple HTML page provides a browser\-based application for cr
 ![\[JavaScript in a browser script using Amazon S3 buckets for photo albums.\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-photo-album-example.png)
 
 The browser script uses the SDK for JavaScript to interact with an Amazon S3 bucket\. Use the following methods of the Amazon S3 client class to enable the photo album application: 
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#listObjects-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#listObjects-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#headObject-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#headObject-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteObject-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteObject-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteObjects-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteObjects-property)
 
 ## Prerequisite Tasks<a name="s3-example-photo-album-scenario-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket that you will use to store the photos in the album\. For more information about creating a bucket in the console, see [Creating a Bucket](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/CreatingaBucket.html) in the *Amazon Simple Storage Service Console User Guide*\. Make sure you have both **Read** and **Write** permissions on **Objects**\.
-
 + In the [Amazon Cognito console](https://console.aws.amazon.com/cognito/), create an Amazon Cognito identity pool using Federated Identities with access enabled for unauthenticated users in the same region as the Amazon S3 bucket\. You need to include the identity pool ID in the code to obtain credentials for the browser script\. For more information about Amazon Cognito Federated Identities, see [Amazon Cognito Identity: Using Federated Identites](http://docs.aws.amazon.com/cognito/latest/developerguide/cognito-identity.html) in the *Amazon Cognito Developer Guide*\.
-
 + In the [IAM console](https://console.aws.amazon.com/iam/), find the IAM created by Amazon Cognito for unauthenticated users\. Add the following policy to grant read and write permissions to an Amazon S3 bucket\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
 Use this role policy for the the IAM role created by Amazon Cognito for unauthenticated users\.
@@ -82,7 +72,7 @@ The HTML for the photo upload application consists of a <div> element within whi
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.202.0.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.218.1.min.js"></script>
     <script src="./app.js"></script>
     <script>
        function getHtml(template) {
@@ -121,17 +111,11 @@ var s3 = new AWS.S3({
 ```
 
 Nearly all of the rest of the code in this example is organized into a series of functions that gather and present information about the albums in the bucket, upload and display photos uploaded into albums, and delete photos and albums\. Those functions are:
-
 + `listAlbums`
-
 + `createAlbum`
-
 + `viewAlbum`
-
 + `addPhoto`
-
 + `deleteAlbum`
-
 + `deletePhoto`
 
 ## Listing Albums in the Bucket<a name="s3-example-photo-album-list-albums"></a>

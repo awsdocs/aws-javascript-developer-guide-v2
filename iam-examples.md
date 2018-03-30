@@ -6,7 +6,7 @@ AWS Identity and Access Management \(IAM\) is a web service that enables Amazon 
 
 The JavaScript API for IAM is exposed through the `AWS.IAM` client class\. For more information about using the IAM client class, see [Class: AWS\.IAM](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html) in the API reference\.
 
-
+**Topics**
 + [Managing IAM Users](iam-examples-managing-users.md)
 + [Working with IAM Policies](iam-examples-policies.md)
 + [Managing IAM Access Keys](iam-examples-managing-access-keys.md)

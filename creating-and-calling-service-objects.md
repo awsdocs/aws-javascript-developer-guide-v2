@@ -11,7 +11,7 @@ var AWS = require('aws-sdk');
 When using the SDK with browser JavaScript, you load the SDK package to your browser scripts using the AWS\-hosted SDK package\. To load the SDK package, add the following script tag\.
 
 ```
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.202.0.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.218.1.min.js"></script>
 ```
 
 The default hosted SDK package provides support for a subset of the available AWS services\. For a list of the default services in the hosted SDK package for the browser, see [Supported Services](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/#Supported_Services) in the API Reference\. You can use the SDK with other services if CORS security checking is disabled\. In this case, you can build a custom version of the SDK to include the additional services you require\. For more information on building a custom version of the SDK, see [Building the SDK for Browsers](building-sdk-for-browsers.md)\.

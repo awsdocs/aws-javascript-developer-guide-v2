@@ -6,7 +6,7 @@ Amazon DynamoDB is a fully managed NoSQL cloud database that supports both docum
 
 The JavaScript API for DynamoDB is exposed through the `AWS.DynamoDB`, `AWS.DynamoDBStreams`, and `AWS.DynamoDB.DocumentClient` client classes\. For more information about using the DynamoDB client classes, see [Class: AWS\.DynamoDB](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html), [Class: AWS\.DynamoDBStreams](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDBStreams.html), and [Class: AWS\.DynamoDB\.DocumentClient](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html) in the API reference\.
 
-
+**Topics**
 + [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)
 + [Reading and Writing A Single Item in DynamoDB](dynamodb-example-table-read-write.md)
 + [Reading and Writing Items in Batch in DynamoDB](dynamodb-example-table-read-write-batch.md)

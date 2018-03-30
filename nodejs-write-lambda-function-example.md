@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to prepare an object representation of data that the function returns to the browser\.
-
 + How to create a service object used to access a DynamoDB table that stores the data values retrieved and returned by the Lambda function\.
-
 + How to return the requested data to the calling application as a JSON payload\.
 
 ## The Scenario<a name="w3ab1c22c22c15b9"></a>
@@ -25,11 +22,8 @@ Because it's necessary to make three separate asynchronous requests to DynamoDB,
 ## Prerequisite Tasks<a name="w3ab1c22c22c15c11"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Create an HTML page with browser script accessed in an Amazon S3 bucket acting as a static web host\. The browser script invokes the Lambda function\.
-
 + Create a DynamoDB table with a single row containing ten columns, each containing the file name of a different graphic stored in the Amazon S3 bucket used by the browser portion of the game\.
-
 + Create an IAM execution role for the Lambda function\.\.
 
 Use the following role policy when creating the IAM role\.

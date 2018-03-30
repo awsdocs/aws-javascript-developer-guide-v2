@@ -4,7 +4,7 @@ The SDK for JavaScript is provided as a JavaScript file with support included fo
 
 If you work with the SDK outside of an environment that enforces CORS in your browser and if you want access to all services provided by the SDK for JavaScript, you can build a custom copy of the SDK locally by cloning the repository and running the same build tools that build the default hosted version of the SDK\. The following sections describe the steps to build the SDK with extra services and API versions\.
 
-
+**Topics**
 + [Using the SDK Builder to Build the SDK for JavaScript](#using-the-sdk-builder)
 + [Using the CLI to Build the SDK for JavaScript](#using-command-line-tools)
 + [Building Specific Services and API Versions](#building-specific-services-versions)

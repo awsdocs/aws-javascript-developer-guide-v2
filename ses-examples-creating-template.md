@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + Get a list of all of your email templates\.
-
 + Retrieve and update email templates\.
-
 + Create and delete email templates\.
 
 Amazon SES lets you send personalized email messages using email templates\. For details on how to create and use email templates in Amazon Simple Email Service, see [Sending Personalized Email Using the Amazon SES API](Amazon Simple Email Service Developer Guidesend-personalized-email-api.html) in the Amazon Simple Email Service Developer Guide\.
@@ -15,23 +12,16 @@ Amazon SES lets you send personalized email messages using email templates\. For
 ## The Scenario<a name="ses-examples-creating-template-scenario"></a>
 
 In this example, you use a series of Node\.js modules to work with email templates\. The Node\.js modules use the SDK for JavaScript to create and use email templates using these methods of the `AWS.SES` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listTemplates-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listTemplates-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createTemplate-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#getTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#getTemplate-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteTemplate-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#updateTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#updateTemplate-property)
 
 ## Prerequisite Tasks<a name="ses-examples-creating-template-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about creating a credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="ses-examples-creating-template-configure-sdk"></a>

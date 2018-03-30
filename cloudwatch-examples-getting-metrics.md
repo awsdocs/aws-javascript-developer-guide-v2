@@ -3,9 +3,7 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to retrieve a list of published CloudWatch metrics\.
-
 + How to publish data points to CloudWatch metrics\.
 
 ## The Scenario<a name="cloudwatch-examples-getting-metrics-scenario"></a>
@@ -13,9 +11,7 @@
 Metrics are data about the performance of your systems\. You can enable detailed monitoring of some resources, such as your Amazon EC2 instances, or your own application metrics\. 
 
 In this example, a series of Node\.js modules are used to get metrics from CloudWatch\. In this example, a series of Node\.js modules are used to send events to Amazon CloudWatch Events\. The Node\.js modules use the SDK for JavaScript to get metrics from CloudWatch using these methods of the `CloudWatch` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#listMetrics-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#listMetrics-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#putMetricData-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#putMetricData-property)
 
 For more information about CloudWatch metrics, see [Using Amazon CloudWatch Metrics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html) in the *Amazon CloudWatch User Guide*\.
@@ -23,9 +19,7 @@ For more information about CloudWatch metrics, see [Using Amazon CloudWatch Metr
 ## Prerequisite Tasks<a name="cloudwatch-examples-getting-metrics-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="cloudwatch-examples-getting-metrics-configure-sdk"></a>

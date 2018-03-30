@@ -11,7 +11,7 @@ There are several ways to supply your credentials to the SDK from browser script
 **Warning**  
 We do not recommend hard coding your AWS credentials in your scripts\. Hard coding credentials poses a risk of exposing your access key ID and secret access key\.
 
-
+**Topics**
 + [Using Amazon Cognito Identity to Authenticate Users](loading-browser-credentials-cognito.md)
 + [Using Web Federated Identity to Authenticate Users](loading-browser-credentials-federated-id.md)
 + [Web Federated Identity Examples](config-web-identity-examples.md)

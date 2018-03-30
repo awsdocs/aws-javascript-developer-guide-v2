@@ -1,9 +1,7 @@
 # Loading Credentials in Node\.js from the Shared Credentials File<a name="loading-node-credentials-shared"></a>
 
 You can keep your AWS credentials data in a shared file used by SDKs and the command line interface\. The SDK for JavaScript automatically searches the shared credentials file for credentials when loading\. Where you keep the shared credentials file depends on your operating system:
-
 + Linux, Unix, and macOS users: `~/.aws/credentials`
-
 + Windows users: `C:\Users\USER_NAME\.aws\credentials`
 
 If you do not already have a shared credentials file, you can create one in the designated directory\. Add the following text to the credentials file, replacing *<YOUR\_ACCESS\_KEY\_ID>* and *<YOUR\_SECRET\_ACCESS\_KEY>* values:

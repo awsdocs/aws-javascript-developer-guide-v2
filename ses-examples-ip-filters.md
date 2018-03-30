@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + Create IP address filters to accept or reject mail that originates from an IP address or range of IP addresses\.
-
 + List your current IP address filters\.
-
 + Delete an IP address filter\.
 
 In Amazon SES, a *filter* is a data structure that consists of a name, an IP address range, and whether to allow or block mail from it\. IP addresses you want to block or allow are specified as a single IP address or a range of IP addresses in Classless Inter\-Domain Routing \(CIDR\) notation\. For details on how Amazon SES receives email, see [Amazon SES Email\-Receiving Concepts](Amazon Simple Email Service Developer Guidereceiving-email-concepts.html) in the Amazon Simple Email Service Developer Guide\.
@@ -15,19 +12,14 @@ In Amazon SES, a *filter* is a data structure that consists of a name, an IP add
 ## The Scenario<a name="ses-examples-receiving-email-scenario"></a>
 
 In this example, a series of Node\.js modules are used to send email in a variety of ways\. The Node\.js modules use the SDK for JavaScript to create and use email templates using these methods of the `AWS.SES` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptFilter-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptFilter-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listReceiptFilters-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listReceiptFilters-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptFilter-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptFilter-property)
 
 ## Prerequisite Tasks<a name="ses-examples-ip-filters-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="ses-examples-ip-filters-configure-sdk"></a>

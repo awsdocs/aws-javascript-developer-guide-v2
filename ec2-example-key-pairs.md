@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to retrieve information about your key pairs\.
-
 + How to create a key pair to access an Amazon EC2 instance\.
-
 + How to delete an existing key pair\.
 
 ## The Scenario<a name="ec2-example-key-pairs-scenario"></a>
@@ -15,11 +12,8 @@
 Amazon EC2 uses public–key cryptography to encrypt and decrypt login information\. Public–key cryptography uses a public key to encrypt data, then the recipient uses the private key to decrypt the data\. The public and private keys are known as a *key pair*\.
 
 In this example, you use a series of Node\.js modules to perform several Amazon EC2 key pair management operations\. The Node\.js modules use the SDK for JavaScript to manage instances by using these methods of the Amazon EC2 client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#createKeyPair-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#createKeyPair-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#deleteKeyPair-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#deleteKeyPair-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeKeyPairs-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeKeyPairs-property)
 
 For more information about the Amazon EC2 key pairs, see [Amazon EC2 Key Pairs](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the *Amazon EC2 User Guide for Linux Instances* or [Amazon EC2 Key Pairs and Windows Instances](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-key-pairs.html) in the *Amazon EC2 User Guide for Windows Instances*\.
@@ -27,9 +21,7 @@ For more information about the Amazon EC2 key pairs, see [Amazon EC2 Key Pairs](
 ## Prerequisite Tasks<a name="ec2-example-key-pairs-prerequisites"></a>
 
 To set up and run this example, first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="ec2-example-key-pairs-configure-sdk"></a>

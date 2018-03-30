@@ -3,21 +3,15 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to retrieve the bucket policy of an Amazon S3 bucket\.
-
 + How to add or update the bucket policy of an Amazon S3 bucket\.
-
 + How to delete the bucket policy of an Amazon S3 bucket\.
 
 ## The Scenario<a name="w3ab1c22c26c19b9"></a>
 
 In this example, a series of Node\.js modules are used to retrieve, set, or delete a bucket policy on an Amazon S3 bucket\. The Node\.js modules use the SDK for JavaScript to configure policy for a selected Amazon S3 bucket using these methods of the Amazon S3 client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketPolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketPolicy-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketPolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketPolicy-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteBucketPolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteBucketPolicy-property)
 
 For more information about bucket policies for Amazon S3 buckets, see [ Using Bucket Policies and User Policies](http://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html) in the *Amazon Simple Storage Service Developer Guide*\.
@@ -25,9 +19,7 @@ For more information about bucket policies for Amazon S3 buckets, see [ Using Bu
 ## Prerequisite Tasks<a name="w3ab1c22c26c19c11"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="s3-example-bucket-policies-configure-sdk"></a>

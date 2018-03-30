@@ -27,13 +27,8 @@ For a list of browsers supported by the AWS SDK for JavaScript, see [Web Browser
 ### Common Use Cases<a name="w3ab1b5c13b8"></a>
 
 Using the SDK for JavaScript in browser scripts makes it possible to realize a number of compelling use cases\. Here are several ideas for things you can build in a browser application using the SDK for JavaScript to access different web services\.
-
 + Building a custom console to AWS services in which you access and combine features across regions and services to best meet your organizational or project needs\.
-
 + Using Amazon Cognito Identity to enable authenticated user access to your browser applications and websites, including use of third\-party authentication from Facebook and others\.
-
 + Using Amazon Kinesis to process click streams or other marketing data in real time\.
-
 + Using Amazon DynamoDB for serverless data persistence such as individual user preferences for visitors of your website or application users\.
-
 + Using AWS Lambda to encapsulate proprietary logic that you can invoke from browser scripts without downloading and revealing your intellectual property to users\.

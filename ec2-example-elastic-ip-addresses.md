@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to retrieve descriptions of your Elastic IP addresses\.
-
 + How to allocate and release an Elastic IP address\.
-
 + How to associate an Elastic IP address with an Amazon EC2 instance\.
 
 ## The Scenario<a name="ec2-example-elastic-ip-addresses-scenario"></a>
@@ -15,13 +12,9 @@
 An *Elastic IP address* is a static IP address designed for dynamic cloud computing\. An Elastic IP address is associated with your AWS account\. It is a public IP address, which is reachable from the Internet\. If your instance does not have a public IP address, you can associate an Elastic IP address with your instance to enable communication with the Internet\.
 
 In this example, you use a series of Node\.js modules to perform several Amazon EC2 operations involving Elastic IP addresses\. The Node\.js modules use the SDK for JavaScript to manage Elastic IP addresses by using these methods of the Amazon EC2 client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeAddresses-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeAddresses-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#allocateAddress-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#allocateAddress-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#associateAddress-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#associateAddress-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#releaseAddress-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#releaseAddress-property)
 
 For more information about Elastic IP addresses in Amazon EC2, see [Elastic IP Addresses](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide for Linux Instances* or [Elastic IP Addresses](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide for Windows Instances*\.
@@ -29,11 +22,8 @@ For more information about Elastic IP addresses in Amazon EC2, see [Elastic IP A
 ## Prerequisite Tasks<a name="ec2-example-elastic-ip-addresses-prerequisites"></a>
 
 To set up and run this example, first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create an Amazon EC2 instance\. For more information about creating Amazon EC2 instances, see [Amazon EC2 Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html) in the *Amazon EC2 User Guide for Linux Instances* or [Amazon EC2 Instances](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Instances.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
 ## Configuring the SDK<a name="ec2-example-elastic-ip-addresses-configure-sdk"></a>

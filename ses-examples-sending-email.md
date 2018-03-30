@@ -3,11 +3,8 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + Send a text or HTML email\.
-
 + Send emails based on an email template\.
-
 + Send bulk emails based on an email template\.
 
 The Amazon SES API provides two different ways for you to send an email, depending on how much control you want over the composition of the email message: formatted and raw\. For details, see [Sending Formatted Email Using the Amazon SES API](Amazon Simple Email Service Developer Guidesend-email-formatted.html) and [Sending Raw Email Using the Amazon SES API](Amazon Simple Email Service Developer Guidesend-email-raw.html)\.
@@ -15,17 +12,12 @@ The Amazon SES API provides two different ways for you to send an email, dependi
 ## The Scenario<a name="ses-examples-sending-email-scenario"></a>
 
 In this example, you use a series of Node\.js modules to send email in a variety of ways\. The Node\.js modules use the SDK for JavaScript to create and use email templates using these methods of the `AWS.SES` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendEmail-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendTemplatedEmail-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendTemplatedEmail-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendBulkTemplatedEmail-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#sendBulkTemplatedEmail-property)
 
 ## Prerequisite Tasks<a name="ses-examples-sending-emails-prerequisites"></a>
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a credentials JSON file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="ses-examples-deleting-address-configure-sdk"></a>
@@ -43,15 +35,10 @@ AWS.config.update({region: 'us-west-2'});
 ## Email Message Sending Requirements<a name="ses-examples-sending-msail-reqs"></a>
 
 Amazon SES composes an email message and immediately queues it for sending\. To send email using the `SES.sendEmail` method, your message must meet the following requirements:
-
 + You must send the message from a verified email address or domain\. If you attempt to send email using a non\-verified address or domain, the operation results in an `"Email address not verified"` error\.
-
 + If your account is still in the Amazon SES sandbox, you can only send to verified addresses or domains, or to email addresses associated with the Amazon SES Mailbox Simulator\. For more information, see [Verifying Email Addresses and Domains](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html) in the Amazon Simple Email Service Developer Guide\.
-
 + The total size of the message, including attachments, must be smaller than 10 MB\.
-
 + The message must include at least one recipient email address\. The recipient address can be a To: address, a CC: address, or a BCC: address\. If a recipient email address is invalid \(that is, it is not in the format `UserName@[SubDomain.]Domain.TopLevelDomain`\), the entire message is rejected, even if the message contains other recipients that are valid\.
-
 + The message cannot include more than 50 recipients, across the To:, CC: and BCC: fields\. If you need to send an email message to a larger audience, you can divide your recipient list into groups of 50 or fewer, and then call the `sendEmail` method several times to send the message to each group\.
 
 ## Sending an Email<a name="ses-examples-sendmail"></a>

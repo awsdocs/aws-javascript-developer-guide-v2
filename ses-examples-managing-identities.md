@@ -3,13 +3,9 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to verify email addresses and domains used with Amazon SES\.
-
 + How to assign IAM policy to your Amazon SES identities\.
-
 + How to list all Amazon SES identities for your AWS account\.
-
 + How to delete identities used with Amazon SES\.
 
 An Amazon SES *identity* is an email address or domain that Amazon SES uses to send email\. Amazon SES requires you to verify your email identities, confirming that you own them and preventing others from using them\.
@@ -19,21 +15,15 @@ For details on how to verify email addresses and domains in Amazon SES, see [Ver
 ## The Scenario<a name="ses-examples-verifying-identities-scenario"></a>
 
 In this example, you use a series of Node\.js modules to verify and manage Amazon SES identities\. The Node\.js modules use the SDK for JavaScript to verify email addresses and domains, using these methods of the `AWS.SES` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listIdentities-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listIdentities-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteIdentity-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteIdentity-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#verifyEmailIdentity-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#verifyEmailIdentity-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#verifyDomainIdentity-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#verifyDomainIdentity-property)
 
 ## Prerequisite Tasks<a name="ses-examples-verifying-identities-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a credentials JSON file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="ses-examples-verifying-identities-configure-sdk"></a>

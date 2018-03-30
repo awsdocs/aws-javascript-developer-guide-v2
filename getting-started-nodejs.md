@@ -3,22 +3,18 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to create an Amazon Simple Storage Service \(Amazon S3\) service object\.
-
 + How to create an Amazon S3 bucket\.
-
 + How to upload an object to the created bucket\.
 
 ## Prerequisite Tasks<a name="getting-started-nodejs-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\. Downloads of the current and LTS versions of Node\.js for a variety of operating systems are found at [https://nodejs\.org/en/download/current/](https://nodejs.org/en/download/current/)\.
 
 For more information on installing Node\.js packages, see [How to Install Local Packages](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) and [How to Create Node\.js Modules](https://docs.npmjs.com/getting-started/creating-node-modules) at the npm \(the Node\.js package manager\) website\. For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
 
-
+**Contents**
 + [Prerequisite Tasks](#getting-started-nodejs-prerequisites)
 + [Step 1: Downloading the Sample Project](#getting-started-nodejs-download)
 + [Step 2: Installing the SDK and Dependencies](#getting-started-nodejs-install-sdk)

@@ -3,9 +3,7 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to create and delete IAM policies\.
-
 + How to attach and detach IAM policies from roles\.
 
 ## The Scenario<a name="iam-examples-policies-scenario"></a>
@@ -13,15 +11,10 @@
 You grant permissions to a user by creating a *policy*, which is a document that lists the actions that a user can perform and the resources those actions can affect\. Any actions or resources that are not explicitly allowed are denied by default\. Policies can be created and attached to users, groups of users, roles assumed by users, and resources\.
 
 In this example, a series of Node\.js modules are used to manage policies in IAM\. The Node\.js modules use the SDK for JavaScript to create and delete policies as well as attaching and detaching role policies using these methods of the `AWS.IAM` client class:
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createPolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createPolicy-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getPolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getPolicy-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAttachedRolePolicies-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAttachedRolePolicies-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#attachRolePolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#attachRolePolicy-property)
-
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#detachRolePolicy-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#detachRolePolicy-property)
 
 For more information about IAM users, see [Overview of Access Management: Permissions and Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) in the *IAM User Guide*\.
@@ -29,11 +22,8 @@ For more information about IAM users, see [Overview of Access Management: Permis
 ## Prerequisite Tasks<a name="iam-examples-policies-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create an IAM role to which you can attach policies\. For more information about creating roles, see [Creating IAM Roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html) in the *IAM User Guide*\.
 
 ## Configuring the SDK<a name="iam-examples-policies-configure-sdk"></a>

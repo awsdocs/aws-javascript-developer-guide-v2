@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to carry out basic tasks in managing server certificates for HTTPS connections\.
 
 ## The Scenario<a name="iam-examples-server-certificates-scenario"></a>
@@ -11,13 +10,9 @@
 To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS *server certificate*\. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to IAM or import it into AWS Certificate Manager\.
 
 In this example, a series of Node\.js modules are used to handle server certificates in IAM\. The Node\.js modules use the SDK for JavaScript to manage server certificates using these methods of the `AWS.IAM` client class:
-
 + [listServerCertificates](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listServerCertificates-property)
-
 + [getServerCertificate](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getServerCertificate-property)
-
 + [updateServerCertificate](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateServerCertificate-property)
-
 + [deleteServerCertificate](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteServerCertificate-property)
 
 For more information about server certificates, see [Working with Server Certificates](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*\.
@@ -25,9 +20,7 @@ For more information about server certificates, see [Working with Server Certifi
 ## Prerequisite Tasks<a name="iam-examples-server-certificates-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="iam-examples-server-certificates-configure-sdk"></a>

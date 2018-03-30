@@ -3,9 +3,7 @@
 Cross\-origin resource sharing, or CORS, is a security feature of modern web browsers\. It enables web browsers to negotiate which domains can make requests of external websites or services\. CORS is an important consideration when developing browser applications with the AWS SDK for JavaScript because most requests to resources are sent to an external domain, such as the endpoint for a web service\. If your JavaScript environment enforces CORS security, you must configure CORS with the service\.
 
 CORS determines whether to allow sharing of resources in a cross\-origin request based on:
-
 + The specific domain that makes the request 
-
 + The type of HTTP request being made \(GET, PUT, POST, DELETE and so on\)
 
 ## How CORS Works<a name="how-cors-works"></a>
@@ -35,11 +33,8 @@ You can configure an Amazon S3 bucket to use CORS in the Amazon S3 console\.
 ![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-cors-config.png)
 
 A CORS configuration is an XML file that contains a series of rules within a `<CORSRule>`\. A configuration can have up to 100 rules\. A rule is defined by one of the following tags:
-
 + `<AllowedOrigin>`, which specifies domain origins that you allow to make cross\-domain requests\.
-
 + `<AllowedMethod>`, which specifies a type of request you allow \(GET, PUT, POST, DELETE, HEAD\) in cross\-domain requests\.
-
 + `<AllowedHeader>`, which specifies the headers allowed in a preflight request\.
 
 For sample configurations, see [How Do I Configure CORS on My Bucket?](http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html#how-do-i-enable-cors) in the *Amazon Simple Storage Service Developer Guide*\.

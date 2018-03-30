@@ -3,7 +3,6 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-
 + How to access a DynamoDB table using the document client\.
 
 ## The Scenario<a name="dynamodb-example-document-client-scenario"></a>
@@ -13,25 +12,17 @@ The DynamoDB document client simplifies working with items by abstracting the no
 For more information on the DynamoDB Document Client class, see [AWS\.DynamoDB\.DocumentClient](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html) in the API Reference\. For more information on programming with Amazon DynamoDB, see [Programming with DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.html) in the *Amazon DynamoDB Developer Guide*\.
 
 In this example, you use a series of Node\.js modules to perform basic operations on a DynamoDB table using the document client\. The code uses the SDK for JavaScript to query and scan tables using these methods of the DynamoDB Document Client class:
-
 + [get](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#get-property)
-
 + [put](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#put-property)
-
 + [update](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#update-property)
-
 + [query](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#query-property)
-
 + [delete](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#delete-property)
 
 ## Prerequisite Tasks<a name="dynamodb-example-document-client-prerequisites"></a>
 
 To set up and run this example, first complete these tasks:
-
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\.
-
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-
 + Create a DynamoDB table whose items you can access\. For more information about creating a DynamoDB table using the SDK for JavaScript, see [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)\. You can also use the [DynamoDB console](https://console.aws.amazon.com/dynamodb/) to create a table\.
 
 ## Configuring the SDK<a name="dynamodb-example-document-client-configure-sdk"></a>
