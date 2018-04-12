@@ -14,12 +14,13 @@ Invoke methods of the module as if they are methods of that object\. For example
 
 ```
 var fs = require('fs'); // include File System module
-   // Invoke readFile method of fs module
-   fs.readFile('index.html', function(err, data) {
-      if (err) {
-         throw err;
-      } else {
-         // Successful file read
+// Invoke readFile method of fs module
+fs.readFile('index.html', function(err, data) {
+    if (err) {
+        throw err;
+    } else {
+        // Successful file read
+    }
 });
 ```
 
