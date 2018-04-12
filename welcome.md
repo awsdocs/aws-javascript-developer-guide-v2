@@ -14,7 +14,7 @@ Using the SDK for JavaScript for Node\.js differs from using it for JavaScript i
 
 ## Using the SDK with AWS Cloud9<a name="w3ab1b5c11"></a>
 
-You can also develop Node,js applications using the SDK for JavaScript in the AWS Cloud9 IDE\. For a sample of how to use AWS Cloud9 for Node\.js development, see [Node\.js Sample for AWS Cloud9](http://docs.aws.amazon.com/cloud9/latest/user-guide//sample-nodejs.html) in the *AWS Cloud9 User Guide*\. For more information on using AWS Cloud9 with the SDK for JavaScript, see [Using AWS Cloud9 with the AWS SDK for JavaScript](cloud9-javascript.md)\.
+You can also develop Node.js applications using the SDK for JavaScript in the AWS Cloud9 IDE\. For a sample of how to use AWS Cloud9 for Node\.js development, see [Node\.js Sample for AWS Cloud9](http://docs.aws.amazon.com/cloud9/latest/user-guide//sample-nodejs.html) in the *AWS Cloud9 User Guide*\. For more information on using AWS Cloud9 with the SDK for JavaScript, see [Using AWS Cloud9 with the AWS SDK for JavaScript](cloud9-javascript.md)\.
 
 ## Using the SDK with Web Browsers<a name="w3ab1b5c13"></a>
 
