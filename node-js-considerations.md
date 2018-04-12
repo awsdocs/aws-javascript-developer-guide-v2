@@ -13,13 +13,15 @@ var http = require('http');
 Invoke methods of the module as if they are methods of that object\. For example, here is code that reads an HTML file\.
 
 ```
-var fs = require('fs'); // include File System module
-   // Invoke readFile method of fs module
-   fs.readFile('index.html', function(err, data) {
-      if (err) {
-         throw err;
-      } else {
-         // Successful file read
+// include File System module
+var fs = require('fs'); 
+// Invoke readFile method 
+fs.readFile('index.html', function(err, data) {
+  if (err) {
+    throw err;
+  } else {
+    // Successful file read
+  }
 });
 ```
 

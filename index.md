@@ -1,4 +1,4 @@
-# AWS SDK for JavaScript Developer Guide for SDK v2.218.1
+# AWS SDK for JavaScript Developer Guide for SDK v2
 
 -----
 *****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
