@@ -13,6 +13,19 @@ The preferred way to install the AWS SDK for JavaScript for Node\.js is to use [
 npm install aws-sdk
 ```
 
+In the event you see this error message:
+
+```
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+```
+
+Type these commands at the command line:
+
+```
+npm uninstall --save node-uuid
+npm install --save uuid
+```
+
 ------
 #### [ Browser ]
 

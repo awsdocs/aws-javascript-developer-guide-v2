@@ -37,6 +37,19 @@ You install the SDK for JavaScript package using the [npm \(the Node\.js package
 npm install
 ```
 
+In the event you see this error message:
+
+```
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+```
+
+Type these commands at the command line:
+
+```
+npm uninstall --save node-uuid
+npm install --save uuid
+```
+
 ## Step 3: Configuring the Access Keys<a name="getting-started-nodejs-configure-keys"></a>
 
 You need to provide credentials to AWS so only your account and its resources are accessed by the SDK\. For more information about obtaining your account credentials, see [Getting Your Credentials](getting-your-credentials.md)\.
