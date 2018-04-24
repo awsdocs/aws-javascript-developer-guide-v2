@@ -28,7 +28,7 @@ You can set the region using the `AWS_REGION` environment variable\. If you defi
 
 ## Using a Shared Config File<a name="setting-region-config-file"></a>
 
-Much like the shared credentials file lets you store credentials for use by the SDK, you can keep your region and other configuration settings in a shared file named `config` that is used by SDKs\. The SDK for JavaScript automatically searches for a `config` file when it loads\. Where you save the `config` file depends on your operating system:
+Much like the shared credentials file lets you store credentials for use by the SDK, you can keep your region and other configuration settings in a shared file named `config` that is used by SDKs\. If the `AWS_SDK_LOAD_CONFIG` environment variable has been set to a truthy value, the SDK for JavaScript automatically searches for a `config` file when it loads\. Where you save the `config` file depends on your operating system:
 + Linux, macOS, or Unix users: `~/.aws/config`
 + Windows users: `C:\Users\USER_NAME\.aws\config`
 
