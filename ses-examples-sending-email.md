@@ -80,7 +80,7 @@ var params = {
       Charset: 'UTF-8',
       Data: 'Test email'
      }
-    },_
+    },
   Source: 'SENDER_EMAIL_ADDRESS', /* required */
   ReplyToAddresses: [
       'EMAIL_ADDRESS',
