@@ -132,7 +132,7 @@ The sample app consists of a single HTML page that contains the user interface a
 <head>
     <title>AWS SDK for JavaScript - Sample Application</title>
     <meta charset="utf-8">
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.225.1.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.233.1.min.js"></script>
 </head>
 
 <body>

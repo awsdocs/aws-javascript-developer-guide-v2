@@ -1,7 +1,7 @@
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
 
 The following table describes the documentation for this release of the AWS SDK for JavaScript\.
-+ **SDK version:** v2\.225\.1
++ **SDK version:** v2\.233\.1
 + **Latest documentation update:** February 21, 2018
 
 
