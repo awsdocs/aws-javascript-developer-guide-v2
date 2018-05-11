@@ -9,7 +9,7 @@ Here is the complete HTML and browser script for the slot machine example\.
 <meta charset="UTF-8">
 <title>Emoji Slots</title>
 <link href="emojislots.css" rel="stylesheet" type="text/css">
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.233.1.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.238.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
    // Configure AWS SDK for JavaScript

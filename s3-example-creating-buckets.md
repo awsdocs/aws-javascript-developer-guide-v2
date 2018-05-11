@@ -19,7 +19,7 @@ In this example, a series of Node\.js modules are used to obtain a list of exist
 ## Prerequisite Tasks<a name="s3-example-creating-buckets-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-+ Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](httsp://nodejs.org)\.
++ Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
 ## Configuring the SDK<a name="s3-example-creating-buckets-configure-sdk"></a>
