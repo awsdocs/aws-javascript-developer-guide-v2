@@ -16,7 +16,11 @@ Using the SDK for JavaScript for Node\.js differs from using it for JavaScript i
 
 You can also develop Node\.js applications using the SDK for JavaScript in the AWS Cloud9 IDE\. For a sample of how to use AWS Cloud9 for Node\.js development, see [Node\.js Sample for AWS Cloud9](http://docs.aws.amazon.com/cloud9/latest/user-guide//sample-nodejs.html) in the *AWS Cloud9 User Guide*\. For more information on using AWS Cloud9 with the SDK for JavaScript, see [Using AWS Cloud9 with the AWS SDK for JavaScript](cloud9-javascript.md)\.
 
-## Using the SDK with Web Browsers<a name="w3ab1b5c13"></a>
+## Using the SDK with AWS Amplify<a name="w3ab1b5c13"></a>
+
+For browser\-based web, mobile and hybrid apps, you can also use the [AWS Amplify Library on GitHub](https://github.com/aws/aws-amplify), which extends the SDK for JavaScript, providing a declarative interface\.
+
+## Using the SDK with Web Browsers<a name="w3ab1b5c15"></a>
 
 All major web browsers support execution of JavaScript\. JavaScript code running in a web browser is often called client\-side JavaScript\.
 
@@ -24,7 +28,7 @@ Using the SDK for JavaScript in a web browser differs from using it for Node\.js
 
 For a list of browsers supported by the AWS SDK for JavaScript, see [Web Browsers Supported](browsers-supported.md)\.
 
-### Common Use Cases<a name="w3ab1b5c13b8"></a>
+### Common Use Cases<a name="w3ab1b5c15b8"></a>
 
 Using the SDK for JavaScript in browser scripts makes it possible to realize a number of compelling use cases\. Here are several ideas for things you can build in a browser application using the SDK for JavaScript to access different web services\.
 + Building a custom console to AWS services in which you access and combine features across regions and services to best meet your organizational or project needs\.
