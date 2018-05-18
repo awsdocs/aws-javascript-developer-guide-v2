@@ -8,6 +8,7 @@ You can find the sample code for these examples in addition to others in the [AW
 + [Amazon CloudWatch Examples](cloudwatch-examples.md)
 + [Amazon DynamoDB Examples](dynamodb-examples.md)
 + [Amazon EC2 Examples](ec2-examples.md)
++ [AWS Elemental MediaConvert Examples](emc-examples.md)
 + [Amazon Glacier Examples](glacier-examples.md)
 + [AWS IAM Examples](iam-examples.md)
 + [Amazon Kinesis Example](kinesis-examples.md)

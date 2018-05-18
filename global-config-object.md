@@ -27,7 +27,7 @@ For more information about the configuration object, see [ Class: AWS\.Config](h
 
 ### Global Configuration Examples<a name="global-configuration-examples"></a>
 
-Two properties of `AWS.Config` you must set to use the SDK are those that specify the region to use and the credentials that authorize your access to services\. You can set these properties as part of the `AWS.Config` constructor, as shown in the following browser script example:
+You must set the region and the credentials in `AWS.Config`\. You can set these properties as part of the `AWS.Config` constructor, as shown in the following browser script example:
 
 ```
 var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId:'IDENTITY_POOL_ID'});
