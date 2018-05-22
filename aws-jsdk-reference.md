@@ -1,6 +1,6 @@
 # JavaScript API Reference<a name="aws-jsdk-reference"></a>
 
-The API Reference topics for version 2\.243\.1 of the SDK for JavaScript are found at
+The API Reference topics for version 2\.244\.1 of the SDK for JavaScript are found at
 
 [https://docs\.aws\.amazon\.com/AWSJavaScriptSDK/latest/index\.html](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
 

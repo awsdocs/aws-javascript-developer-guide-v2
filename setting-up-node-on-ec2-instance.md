@@ -60,7 +60,7 @@ After you install Node\.js on an Amazon EC2 instance, you can create an Amazon M
 
 ## Installing Node\.js on Enterprise Linux<a name="w3ab1c25b7c10"></a>
 
-For instructions on how to install Node\.js on any Red Hat® Enterprise Linux® / RHEL, CentOS and Fedora distribution, see the following Node\.js documentation at [https://nodejs\.org/en/download/package\-manager/\#enterprise\-linux\-and\-fedora](https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora)\. 
+For instructions on how to install Node\.js on any Red Hat® Enterprise Linux® / RHEL, CentOS and Fedora or other distributions, see the following Node\.js documentation at [https://nodejs\.org/en/download/package\-manager/](https://nodejs.org/en/download/package-manager)\. 
 
 ## Related Resources<a name="w3ab1c25b7c12"></a>
 

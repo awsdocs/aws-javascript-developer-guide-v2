@@ -70,7 +70,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Getting an Email Template<a name="ses-examples-get-template"></a>
 
-In this example, use a Node\.js module to create an email template to use with Amazon SES\. Create a Node\.js module with the file name `ses_gettemplate.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to get an email template to use with Amazon SES\. Create a Node\.js module with the file name `ses_gettemplate.js`\. Configure the SDK as previously shown\.
 
 Create an object to pass the `TemplateName` parameter for the `getTemplate` method of the `AWS.SES` client class\. To call the `getTemplate` method, create a promise for invoking an Amazon SES service object, passing the parameters\. Then handle the `response` in the promise callback\.
 
