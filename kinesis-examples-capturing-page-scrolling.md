@@ -66,7 +66,7 @@ The HTML for the blog page consists mainly of a series of paragraphs contained w
                 <!-- Additional paragraphs in the blog page appear here -->
             </div>
         </div>
-        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.244.1.min.js"></script>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.247.1.min.js"></script>
         <script src="kinesis-example.js"></script>
     </body>
 </html>

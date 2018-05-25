@@ -26,8 +26,6 @@ All major web browsers support execution of JavaScript\. JavaScript code running
 
 Using the SDK for JavaScript in a web browser differs from using it for Node\.js in the way you load the SDK and in how you obtain the credentials needed to access specific web services\. When use of particular APIs differs between Node\.js and the browser, those differences will be called out\.
 
-For browser-based web, mobile and hybrid apps, you can alternatively use the [AWS Amplify Library](https://aws.github.io/aws-amplify/?utm_source=aws-js-sdk&utm_campaign=browser) which extends the SDK for JavaScript and provides an easier and declarative interface.
-
 For a list of browsers supported by the AWS SDK for JavaScript, see [Web Browsers Supported](browsers-supported.md)\.
 
 ### Common Use Cases<a name="w3ab1b5c15b8"></a>
