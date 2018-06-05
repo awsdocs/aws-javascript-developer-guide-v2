@@ -1,14 +1,15 @@
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
 
 The following table describes the documentation for this release of the AWS SDK for JavaScript\.
-+ **SDK version:** v2\.247\.1
-+ **Latest documentation update:** May 21, 2018
++ **SDK version:** v2\.251\.1
++ **Latest documentation update:** June 4, 2018
 
 
 ****  
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| New Getting Started in Node\.js | Getting Started in Node\.js has been rewritten to use updated sample code and to provide greater detail in how to create the package\.json file as well as the Node\.js code itself\. See [Getting Started in Node\.js](getting-started-nodejs.md) for the new content\. | June 4, 2018 | 
 | New AWS Elemental MediaConvert code samples | Three new Node\.js code samples for working with AWS Elemental MediaConvert have been added\. See [AWS Elemental MediaConvert Examples](emc-examples.md) for the sample code\. | May 21, 2018 | 
 | New Edit on GitHub Button | The header of every topic now provides a button that takes you to the markdown version of same topic on GitHub so you can provide edits to improve the accuracy and completeness of the guide\. | February 21, 2018 | 
 | New Topic on Custom Endpoints | Information has been added on the format and use of custom endpoints for making API calls\. See [Specifying Custom Endpoints](specifying-endpoints.md)\.  | February 20, 2018 | 

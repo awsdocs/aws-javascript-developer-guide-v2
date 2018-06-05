@@ -170,7 +170,7 @@ In this example, use a Node\.js module to send email with Amazon SES\. Create a 
 Create an object to pass the parameter values that define the email to be sent, including sender and receiver addresses, subject, email body in plain text and HTML formats, to the `sendBulkTemplatedEmail` method of the `AWS.SES` client class\. To call the `sendBulkTemplatedEmail` method, create a promise for invoking an Amazon SES service object, passing the parameters\. Then handle the `response` in the promise callback\. 
 
 ```
-/ Load the AWS SDK for Node.js
+// Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
 AWS.config.update({region: 'REGION'});
