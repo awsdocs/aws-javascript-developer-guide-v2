@@ -6,6 +6,10 @@ This repository contains source content for the official AWS Java Developer Guid
 
 The guide content relies upon content which is provided in the AWS documentation team's shared content and SDK examples repositories.
 
+## Recent Updates
+
+You can find out when this guide has been most recently updated and what changes were introduced in that update in the Doument History topic.
+
 ## Reporting issues
 
 You can use the Issues section of this repository to report problems in the documentation. When submitting an issue, please indicate:
@@ -19,7 +23,7 @@ To contribute your own documentation fixes or updates, please use the Github-sta
 
 Note that many common substitutions and extlinks found in these docs are sourced from the shared content repository--if you see a substitution used that is not declared at the top of the source file or in the _includes.txt file, then it is probably defined in the shared content.
 
-The code examples featured in this documentation can be found in a separate repository: aws-doc-sdk-examples. Full code  files are included, so you can run any of the provided examples yourself. Some examples were written for Node.js while others were written for browser script execution. The header comments in the code state the intended environment for that sample. 
+The code examples featured in this documentation can be found in a separate repository: aws-doc-sdk-examples. Full code files are included, so you can run any of the provided examples yourself. Some examples were written for Node.js while others were written for browser script execution. The header comments in the code state the intended environment for that sample. 
 
 In addition to examples in JavaScript, you'll also find examples for each of the other AWS SDKs. If you find issues with any of the examples, you can submit issues or fork the repository and submit a pull request!
 
