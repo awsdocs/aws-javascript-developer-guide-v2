@@ -8,7 +8,7 @@ The guide content relies upon content which is provided in the AWS documentation
 
 ## Recent Updates
 
-You can find out when this guide has been most recently updated and what changes were introduced in that update in the Doument History topic [link](/doc-history.md "Document History") topic.
+You can find out when this guide has been most recently updated and what changes were introduced in that update in the [Document History](/doc-history.md "Document History") topic.
 
 ## Reporting issues
 
