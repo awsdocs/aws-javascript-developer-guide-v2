@@ -34,7 +34,7 @@ var AWS = require('aws-sdk/dist/aws-sdk-react-native');
 The quickest way to get started with the SDK is to load the hosted SDK package directly from Amazon Web Services\. To do this, add the following script tag to your HTML pages:
 
 ```
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.251.1.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.255.1.min.js"></script>
 ```
 
 After the SDK loads in your page, the SDK is available from the global variable `AWS` \(or `window.AWS`\)\.
