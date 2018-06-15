@@ -28,7 +28,7 @@ To set up and run this example, you must first complete these tasks:
 
 Use this role policy for the the IAM role created by Amazon Cognito for unauthenticated users\.
 
-```
+```js
 {
    "Version": "2012-10-17",
    "Statement": [
@@ -49,7 +49,7 @@ Use this role policy for the the IAM role created by Amazon Cognito for unauthen
 
 Before the browser script can access the Amazon S3 bucket, you must first set up its CORS configuration as follows\.
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
     <CORSRule>
@@ -68,7 +68,7 @@ Before the browser script can access the Amazon S3 bucket, you must first set up
 
 The HTML for the photo upload application consists of a <div> element within which the browser script creates the upload user interface\. The first <script> element adds the SDK to the browser script\. The second <script> element adds the external JavaScript file that holds the browser script code\.
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -92,7 +92,7 @@ The HTML for the photo upload application consists of a <div> element within whi
 
 Obtain the credentials needed to configure the SDK by calling the `CognitoIdentityCredentials` method, providing the Amazon Cognito identity pool ID\. Next, create an `AWS.S3` service object\.
 
-```
+```js
 var albumBucketName = 'BUCKET_NAME';
 var bucketRegion = 'REGION';
 var IdentityPoolId = 'IDENTITY_POOL_ID';
@@ -124,7 +124,7 @@ The application creates albums in the Amazon S3 bucket as objects whose keys beg
 
 The rest of the function takes the list of albums from the Amazon S3 bucket and generates the HTML needed to display the album list in the web page\. It also enables deleting and opening individual albums\.
 
-```
+```js
 function listAlbums() {
   s3.listObjects({Delimiter: '/'}, function(err, data) {
     if (err) {
@@ -170,7 +170,7 @@ To create an album in the Amazon S3 bucket, the application's `createAlbum` func
 
 If the album doesn't already exist, the function calls the `putObject` method of the `AWS.S3` service object to create the album\. It then calls the `viewAlbum` function to display the new empty album\.
 
-```
+```js
 function createAlbum(albumName) {
   albumName = albumName.trim();
   if (!albumName) {
@@ -204,7 +204,7 @@ To display the contents of an album in the Amazon S3 bucket, the application's `
 
 The rest of the function takes the list of objects \(photos\) from the album and generates the HTML needed to display the photos in the web page\. It also enables deleting individual photos and navigating back to the album list\.
 
-```
+```js
 function viewAlbum(albumName) {
   var albumPhotosKey = encodeURIComponent(albumName) + '/';
   s3.listObjects({Prefix: albumPhotosKey}, function(err, data) {
@@ -264,7 +264,7 @@ To upload a photo to an album in the Amazon S3 bucket, the application's `addPho
 
 The function calls the `upload` method of the Amazon S3 service object to upload the photo\. The `ACL` parameter is set to `public-read` so the application can fetch the photos in an album for display by their URL in the bucket\. After uploading the photo, the function redisplays the album so the uploaded photo appears\.
 
-```
+```js
 function addPhoto(albumName) {
   var files = document.getElementById('photoupload').files;
   if (!files.length) {
@@ -293,7 +293,7 @@ function addPhoto(albumName) {
 
 To delete a photo from an album in the Amazon S3 bucket, the application's `deletePhoto` function calls the `deleteObject` method of the Amazon S3 service object\. This deletes the photo specified by the `photoKey` value passed to the function\.
 
-```
+```js
 function deletePhoto(albumName, photoKey) {
   s3.deleteObject({Key: photoKey}, function(err, data) {
     if (err) {
@@ -309,7 +309,7 @@ function deletePhoto(albumName, photoKey) {
 
 To delete an album in the Amazon S3 bucket, the application's `deleteAlbum` function calls the `deleteObjects` method of the Amazon S3 service object\.
 
-```
+```js
 function deleteAlbum(albumName) {
   var albumKey = encodeURIComponent(albumName) + '/';
   s3.listObjects({Prefix: albumKey}, function(err, data) {
