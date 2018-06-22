@@ -3,6 +3,7 @@
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
++ How to specify the account\-specific endpoint to use with AWS Elemental MediaConvert\.
 + How to create transcoding jobs in AWS Elemental MediaConvert\.
 + How to cancel a transcoding job\.
 + How to retrieve the JSON for a completed transcoding job\.
@@ -42,7 +43,7 @@ AWS.config.mediaconvert({endpoint: 'ACCOUNT_ENDPOINT'});
 
 Create a Node\.js module with the file name `emc_createjob.js`\. Be sure to configure the SDK as previously shown\. Create the JSON that defines the transcode job parameters\.
 
-These parameters are quite detailed\. You can use the [AWS Elemental MediaConvert console](https://console.aws.amazon.com/mediaconvert/) to generate the JSON job parameters by choosing your job settings in the console, and then choosing **Show job JSON**at the bottom of the **Job** section\. This example shows the JSON for a simple job\.
+These parameters are quite detailed\. You can use the [AWS Elemental MediaConvert console](https://console.aws.amazon.com/mediaconvert/) to generate the JSON job parameters by choosing your job settings in the console, and then choosing **Show job JSON** at the bottom of the **Job** section\. This example shows the JSON for a simple job\.
 
 ```
 var params = {

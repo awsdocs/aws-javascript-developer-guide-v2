@@ -59,7 +59,7 @@ In the project directory, create a new file named `package.json`\. Then add this
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "NAME",
-  "license": "ISC",
+  "license": "ISC"
 }
 ```
 
