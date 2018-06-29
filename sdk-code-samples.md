@@ -15,4 +15,5 @@ You can find the sample code for these examples in addition to others in the [AW
 + [AWS Lambda Examples](lambda-examples.md)
 + [Amazon S3 Examples](s3-examples.md)
 + [Amazon Simple Email Service Examples](ses-examples.md)
++ [Amazon Simple Notification Service Examples](sns-examples.md)
 + [Amazon SQS Examples](sqs-examples.md)

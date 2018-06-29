@@ -27,7 +27,7 @@ Here is the portion of the browser script that configures the SDK for JavaScript
 
 ```
 AWS.config.update({region: 'REGION'});
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IdentityPool'});
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
 ```
 
 ## Creating the Lambda Service Object<a name="w3ab1c22c25c13c15"></a>

@@ -1,6 +1,6 @@
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
-+ **SDK version:** v2\.262\.1
-+ **Latest documentation update:** June 4, 2018
++ **SDK version:** v2\.266\.1
++ **Latest documentation update:** June 29, 2018
 
 ## Document History<a name="doc-history-recent"></a>
 
@@ -8,6 +8,7 @@ The following table describes important changes in each release of the AWS SDK f
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New Amazon SNS Code Samples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples.html) | Four new Node\.js code samples for working with Amazon SNS have been added\. See [Amazon SNS Examples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples.html) for the sample code\. | June 29, 2018 | 
 | [New Getting Started in Node\.js](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html) | Getting Started in Node\.js has been rewritten to use updated sample code and to provide greater detail in how to create the `package.json` file as well as the Node\.js code itself\. See [Getting Started in Node\.js](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html) for the new content\. | June 4, 2018 | 
 
 ## Earlier Updates<a name="doc-history-earlier"></a>
