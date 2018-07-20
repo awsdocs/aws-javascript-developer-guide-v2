@@ -29,9 +29,9 @@ To set up and run this example, you must first complete these tasks:
 
 Use Amazon SNS to specify preferences for SMS messaging, such as how your deliveries are optimized \(for cost or for reliable delivery\), your monthly spending limit, how message deliveries are logged, and whether to subscribe to daily SMS usage reports\. These preferences are retrieved and set as SMS attributes for Amazon SNS\.
 
-In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_getsmsttype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for getting SMS attributes, including the names of the individual attributes you want to get\. For details on available SMS attributes, see [ SetSMSAttributes](http://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
+In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_getsmstype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for getting SMS attributes, including the names of the individual attributes to get\. For details on available SMS attributes, see [SetSMSAttributes](http://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
 
-This example gets the `DefaultSMSType` attribute, which controls whether SMS messages are either sent as `Promotional` which optimizes message delivery to incur the lowest cost or as `Transactional` which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
+This example gets the `DefaultSMSType` attribute, which controls whether SMS messages are sent as `Promotional`, which optimizes message delivery to incur the lowest cost, or as `Transactional`, which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
 ```
 // Load the AWS SDK for Node.js
@@ -51,7 +51,7 @@ var params = {
 // Create promise and SNS service object
 var getSMSTypePromise = new AWS.SNS({apiVersion: '2010-03-31'}).getSMSAttributes(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 getSMSTypePromise.then(
   function(data) {
     console.log(data);
@@ -71,9 +71,9 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Setting SMS Attributes<a name="sending-sms-setattributes"></a>
 
-In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_setsmsttype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes you want to set along with the values you want to set for each\. For details on available SMS attributes, see [ SetSMSAttributes](http://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
+In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_setsmsttype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each\. For details on available SMS attributes, see [ SetSMSAttributes](http://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
 
-This example sets the `DefaultSMSType` attribute to `Transactional` which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
+This example sets the `DefaultSMSType` attribute to `Transactional`, which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
 ```
 // Load the AWS SDK for Node.js
@@ -91,7 +91,7 @@ var params = {
 // Create promise and SNS service object
 var setSMSTypePromise = new AWS.SNS({apiVersion: '2010-03-31'}).setSMSAttributes(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 setSMSTypePromise.then(
   function(data) {
     console.log(data);
@@ -111,7 +111,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Checking If a Phone Number Has Opted Out<a name="sending-sms-checkifphonenumberisoptedout"></a>
 
-In this example, use a Node\.js module to get the check a phone number to see if has opted out from receiving SMS messages\. Create a Node\.js module with the file name `sns_checkphoneoptput.js`\. Configure the SDK as previously shown\. Create an object containing the phone number you want to check as a parameter\.
+In this example, use a Node\.js module to check a phone number to see if it has opted out from receiving SMS messages\. Create a Node\.js module with the file name `sns_checkphoneoptout.js`\. Configure the SDK as previously shown\. Create an object containing the phone number to check as a parameter\.
 
 This example sets the `PhoneNumber` parameter to specify the phone number to check\. Pass the object to the `checkIfPhoneNumberIsOptedOut` method of the `AWS.SNS` client class\. To call the `checkIfPhoneNumberIsOptedOut` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -124,7 +124,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var phonenumPromise = new AWS.SNS({apiVersion: '2010-03-31'}).checkIfPhoneNumberIsOptedOut({phoneNumber: 'PHONE_NUMBER'}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 phonenumPromise.then(
   function(data) {
     console.log("Phone Opt Out is " + data.isOptedOut);
@@ -137,14 +137,14 @@ phonenumPromise.then(
 To run the example, type the following at the command line\.
 
 ```
-node sns_checkphoneoptput.js
+node sns_checkphoneoptout.js
 ```
 
 This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_checkphoneoptput.js)\.
 
-## Listing Opted Out Phone Numbers<a name="sending-sms-listphonenumbersoptedout"></a>
+## Listing Opted\-Out Phone Numbers<a name="sending-sms-listphonenumbersoptedout"></a>
 
-In this example, use a Node\.js module to get a list of phone numbers that have has opted out from receiving SMS messages\. Create a Node\.js module with the file name `sns_listnumbersoptedput.js`\. Configure the SDK as previously shown\. Create an empty object as a parameter\.
+In this example, use a Node\.js module to get a list of phone numbers that have opted out from receiving SMS messages\. Create a Node\.js module with the file name `sns_listnumbersoptedout.js`\. Configure the SDK as previously shown\. Create an empty object as a parameter\.
 
 Pass the object to the `listPhoneNumbersOptedOut` method of the `AWS.SNS` client class\. To call the `listPhoneNumbersOptedOut` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -157,7 +157,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var phonelistPromise = new AWS.SNS({apiVersion: '2010-03-31'}).listPhoneNumbersOptedOut({}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
   phonelistPromise.then(
     function(data) {
       console.log(data);
@@ -171,7 +171,7 @@ var phonelistPromise = new AWS.SNS({apiVersion: '2010-03-31'}).listPhoneNumbersO
 To run the example, type the following at the command line\.
 
 ```
-node sns_listnumbersoptedput.js
+node sns_listnumbersoptedout.js
 ```
 
 This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_listnumbersoptedput.js)\.
@@ -180,7 +180,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 In this example, use a Node\.js module to send an SMS message to a phone number\. Create a Node\.js module with the file name `sns_publishsms.js`\. Configure the SDK as previously shown\. Create an object containing the `Message` and `PhoneNumber` parameters\.
 
-When you send an SMS message, specify the phone number using the E\.164 format\. E\.164 is a standard for the phone number structure used for international telecommunication\. Phone numbers that follow this format can have a maximum of 15 digits, and they are prefixed with the plus character \(\+\) and the country code\. For example, a U\.S\. phone number in E\.164 format would appear as \+1001XXX5550100\. 
+When you send an SMS message, specify the phone number using the E\.164 format\. E\.164 is a standard for the phone number structure used for international telecommunication\. Phone numbers that follow this format can have a maximum of 15 digits, and they are prefixed with the plus character \(\+\) and the country code\. For example, a US phone number in E\.164 format would appear as \+1001XXX5550100\. 
 
 This example sets the `PhoneNumber` parameter to specify the phone number to send the message\. Pass the object to the `publish` method of the `AWS.SNS` client class\. To call the `publish` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -199,7 +199,7 @@ var params = {
 // Create promise and SNS service object
 var publishTextPromise = new AWS.SNS({apiVersion: '2010-03-31'}).publish(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 publishTextPromise.then(
   function(data) {
     console.log("MessageID is " + data.MessageId);

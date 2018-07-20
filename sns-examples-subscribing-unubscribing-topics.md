@@ -4,7 +4,7 @@
 
 **This Node\.js code example shows:**
 + How to list all subscriptions to an Amazon SNS topic\.
-+ How to subscribe an email address, an application endpoint, or a Lambda function to an Amazon SNS topic\.
++ How to subscribe an email address, an application endpoint, or an AWS Lambda function to an Amazon SNS topic\.
 + How to unsubscribe from Amazon SNS topics\.
 
 ## The Scenario<a name="sns-examples-subscribing-unubscribing-yopics-scenario"></a>
@@ -36,7 +36,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var subslistPromise = new AWS.SNS({apiVersion: '2010-03-31'}).listSubscriptionsByTopic({TopicArn : TOPIC_ARN}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
   subslistPromise.then(
     function(data) {
       console.log(data);
@@ -57,9 +57,9 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Subscribing an Email Address to a Topic<a name="sns-examples-subscribing-email"></a>
 
-In this example, use a Node\.js module to subscribe an email address so it receive SMTP email messages from an Amazon SNS topic\. Create a Node\.js module with the file name`sns_subscribeemail.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to subscribe an email address so that it receives SMTP email messages from an Amazon SNS topic\. Create a Node\.js module with the file name `sns_subscribeemail.js`\. Configure the SDK as previously shown\.
 
-Create an object containing the `Protocol` parameter to specify the `email` protocol, the `TopicArn` for the topic to subscribe to, and an email address as the message `Endpoint`\. Pass the parameters to the `subscribe` method of the `AWS.SNS` client class\. You can use the `subscribe` method to subscribe a number of different endpoints to an Amazon SNS topic, depending on the values used for parameters passed, as other examples in this topic will show\.
+Create an object containing the `Protocol` parameter to specify the `email` protocol, the `TopicArn` for the topic to subscribe to, and an email address as the message `Endpoint`\. Pass the parameters to the `subscribe` method of the `AWS.SNS` client class\. You can use the `subscribe` method to subscribe several different endpoints to an Amazon SNS topic, depending on the values used for parameters passed, as other examples in this topic will show\.
 
 To call the `subscribe` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -79,7 +79,7 @@ var params = {
 // Create promise and SNS service object
 var subscribePromise = new AWS.SNS({apiVersion: '2010-03-31'}).subscribe(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 subscribePromise.then(
   function(data) {
     console.log("Subscription ARN is " + data.SubscriptionArn);
@@ -121,7 +121,7 @@ var params = {
 // Create promise and SNS service object
 var subscribePromise = new AWS.SNS({apiVersion: '2010-03-31'}).subscribe(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 subscribePromise.then(
   function(data) {
     console.log("Subscription ARN is " + data.SubscriptionArn);
@@ -141,9 +141,9 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Subscribing a Lambda Function to a Topic<a name="sns-examples-subscribing-lambda"></a>
 
-In this example, use a Node\.js module to subscribe a Lambda function so it receives notifications from an Amazon SNS topic\. Create a Node\.js module with the file name `sns_subscribelambda.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to subscribe an AWS Lambda function so it receives notifications from an Amazon SNS topic\. Create a Node\.js module with the file name `sns_subscribelambda.js`\. Configure the SDK as previously shown\.
 
-Create an object containing the `Protocol` parameter, specifying the `lambda` protocol, the `TopicArn` for the topic to subscribe to, and the ARN of a AWS Lambda function as the `Endpoint` parameter\. Pass the parameters to the `subscribe` method of the `AWS.SNS` client class\.
+Create an object containing the `Protocol` parameter, specifying the `lambda` protocol, the `TopicArn` for the topic to subscribe to, and the ARN of an AWS Lambda function as the `Endpoint` parameter\. Pass the parameters to the `subscribe` method of the `AWS.SNS` client class\.
 
 To call the `subscribe` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -163,7 +163,7 @@ var params = {
 // Create promise and SNS service object
 var subscribePromise = new AWS.SNS({apiVersion: '2010-03-31'}).subscribe(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 subscribePromise.then(
   function(data) {
     console.log("Subscription ARN is " + data.SubscriptionArn);
@@ -185,7 +185,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 In this example, use a Node\.js module to unsubscribe an Amazon SNS topic subscription\. Create a Node\.js module with the file name `sns_unsubscribe.js`\. Configure the SDK as previously shown\.
 
-Create an object containing the `SubscriptionArn` parameter, specifying the ARN of the subscription you want unsubscribed \. Pass the parameters to the `unsubscribe` method of the `AWS.SNS` client class\.
+Create an object containing the `SubscriptionArn` parameter, specifying the ARN of the subscription to unsubscribe\. Pass the parameters to the `unsubscribe` method of the `AWS.SNS` client class\.
 
 To call the `unsubscribe` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -198,7 +198,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var subscribePromise = new AWS.SNS({apiVersion: '2010-03-31'}).subscribe({SubscriptionArn : TOPIC_SUBSCRIPTION_ARN}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 subscribePromise.then(
   function(data) {
     console.log(data);

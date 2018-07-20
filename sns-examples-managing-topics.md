@@ -10,7 +10,7 @@
 
 ## The Scenario<a name="sns-examples-managing-topics-scenario"></a>
 
-In this example, you use a series of Node\.js modules to create, list, and delete Amazon SNS topics as well as handling topic attributes\. The Node\.js modules use the SDK for JavaScript to manage topics using these methods of the `AWS.SNS` client class:
+In this example, you use a series of Node\.js modules to create, list, and delete Amazon SNS topics, and to handle topic attributes\. The Node\.js modules use the SDK for JavaScript to manage topics using these methods of the `AWS.SNS` client class:
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#createTopic-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#createTopic-property)
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listTopics-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listTopics-property)
 + [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#deleteTopic-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#deleteTopic-property)
@@ -25,11 +25,9 @@ To set up and run this example, you must first complete these tasks:
 
 ## Creating a Topic<a name="sns-examples-managing-topics-createtopic"></a>
 
-In this example, use a Node\.js module to create a topic Amazon SNS\. Create a Node\.js module with the file name `sns_createtopic.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to create an Amazon SNS topic\. Create a Node\.js module with the file name `sns_createtopic.js`\. Configure the SDK as previously shown\.
 
-Create an object to pass the `Name` for the new topic to the `createTopic` method of the `AWS.SNS` client class\. To call the `createTopic` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. 
-
-Then handle the `response` in the promise callback\. The `data` returned by the promise contains the ARN of the topic\.
+Create an object to pass the `Name` for the new topic to the `createTopic` method of the `AWS.SNS` client class\. To call the `createTopic` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\. The `data` returned by the promise contains the ARN of the topic\.
 
 ```
 // Load the AWS SDK for Node.js
@@ -41,7 +39,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var createTopicPromise = new AWS.SNS({apiVersion: '2010-03-31'}).createTopic({Name: "TOPIC_NAME"}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 createTopicPromise.then(
   function(data) {
     console.log("Topic ARN is " + data.TopicArn);
@@ -63,9 +61,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 In this example, use a Node\.js module to list all Amazon SNS topics\. Create a Node\.js module with the file name `sns_listtopics.js`\. Configure the SDK as previously shown\.
 
-Create an empty object to pass to the `listTopics` method of the `AWS.SNS` client class\. To call the `listTopics` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. 
-
-Then handle the `response` in the promise callback\. The `data` returned by the promise contains an array of your topic ARNs\.
+Create an empty object to pass to the `listTopics` method of the `AWS.SNS` client class\. To call the `listTopics` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\. The `data` returned by the promise contains an array of your topic ARNs\.
 
 ```
 // Load the AWS SDK for Node.js
@@ -77,7 +73,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var listTopicsPromise = new AWS.SNS({apiVersion: '2010-03-31'}).listTopics({}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 listTopicsPromise.then(
   function(data) {
     console.log(data.Topics);
@@ -97,7 +93,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Deleting a Topic<a name="sns-examples-managing-topics-deletetopic"></a>
 
-In this example, use a Node\.js module to delete an Amazon SNS topics\. Create a Node\.js module with the file name `sns_deletetopic.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to delete an Amazon SNS topic\. Create a Node\.js module with the file name `sns_deletetopic.js`\. Configure the SDK as previously shown\.
 
 Create an object containing the `TopicArn` of the topic to delete to pass to the `deleteTopic` method of the `AWS.SNS` client class\. To call the `deleteTopic` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -110,7 +106,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var deleteTopicPromise = new AWS.SNS({apiVersion: '2010-03-31'}).deleteTopic({TopicArn: 'TOPIC_ARN'}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 deleteTopicPromise.then(
   function(data) {
     console.log("Topic Deleted");
@@ -130,7 +126,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Getting Topic Attributes<a name="sns-examples-managing-topicsgetttopicattributes"></a>
 
-In this example, use a Node\.js module to retrive attributes of an Amazon SNS topic\. Create a Node\.js module with the file name `sns_gettopicattrubutes.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to retrieve attributes of an Amazon SNS topic\. Create a Node\.js module with the file name `sns_gettopicattributes.js`\. Configure the SDK as previously shown\.
 
 Create an object containing the `TopicArn` of a topic to delete to pass to the `getTopicAttributes` method of the `AWS.SNS` client class\. To call the `getTopicAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -144,7 +140,7 @@ AWS.config.update({region: 'REGION'});
 // Create promise and SNS service object
 var getTopicAttribsPromise = new AWS.SNS({apiVersion: '2010-03-31'}).getTopicAttributes({TopicArn: 'TOPIC_ARN'}).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 getTopicAttribsPromise.then(
   function(data) {
     console.log(data);
@@ -157,14 +153,14 @@ getTopicAttribsPromise.then(
 To run the example, type the following at the command line\.
 
 ```
-node sns_gettopicattrubutes.js
+node sns_gettopicattributes.js
 ```
 
 This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_gettopicattrubutes.js)\.
 
 ## Setting Topic Attributes<a name="sns-examples-managing-topicsstttopicattributes"></a>
 
-In this example, use a Node\.js module to set the mutable attributes of an Amazon SNS topic\. Create a Node\.js module with the file name `sns_settopicattrubutes.js`\. Configure the SDK as previously shown\.
+In this example, use a Node\.js module to set the mutable attributes of an Amazon SNS topic\. Create a Node\.js module with the file name `sns_settopicattributes.js`\. Configure the SDK as previously shown\.
 
 Create an object containing the parameters for the attribute update, including the `TopicArn` of the topic whose attributes you want to set, the name of the attribute to set, and the new value for that attribute\. You can set only the `Policy`, `DisplayName`, and `DeliveryPolicy` attributes\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `setTopicAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -184,7 +180,7 @@ var params = {
 // Create promise and SNS service object
 var setTopicAttribsPromise = new AWS.SNS({apiVersion: '2010-03-31'}).setTopicAttributes(params).promise();
 
-// handle promise's fulfilled/rejected states
+// Handle promise's fulfilled/rejected states
 setTopicAttribsPromise.then(
   function(data) {
     console.log(data);
@@ -197,7 +193,7 @@ setTopicAttribsPromise.then(
 To run the example, type the following at the command line\.
 
 ```
-node sns_settopicattrubutes.js
+node sns_settopicattributes.js
 ```
 
 This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_Settopicattrubutes.js)\.

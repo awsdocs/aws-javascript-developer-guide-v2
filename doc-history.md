@@ -1,6 +1,6 @@
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
-+ **SDK version:** v2\.266\.1
-+ **Latest documentation update:** June 29, 2018
++ **SDK version:** v2\.279\.1
++ **Latest documentation update:** July 20, 2018
 
 ## Document History<a name="doc-history-recent"></a>
 
@@ -8,6 +8,8 @@ The following table describes important changes in each release of the AWS SDK f
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New Lambda Tutorial](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html) | Added a new tutorial that builds the browser\-based game mentioned in code example topics for AWS Lambda\. The tutorial includes a downloadable zip archive containing the graphic assets used by the game, several Node\.js scripts used to create and configure the services and resources used by the game, and the Node\.js code for the AWS Lambda function that runs the game\. See [Tutorial: Creating and Using Lambda Functions](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/using-lambda-functions.html) for the new content\. | July 20, 2018 | 
+| [New Getting Started in a Browser Script](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html) | Getting Started in a Browser Script has been rewritten to simplify the example and to access the Amazon Polly service to send text and return synthesized speech you can play in the browser\. See [Getting Started in Browser Script](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html) for the new content\. | July 14, 2018 | 
 | [New Amazon SNS Code Samples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples.html) | Four new Node\.js code samples for working with Amazon SNS have been added\. See [Amazon SNS Examples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples.html) for the sample code\. | June 29, 2018 | 
 | [New Getting Started in Node\.js](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html) | Getting Started in Node\.js has been rewritten to use updated sample code and to provide greater detail in how to create the `package.json` file as well as the Node\.js code itself\. See [Getting Started in Node\.js](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html) for the new content\. | June 4, 2018 | 
 

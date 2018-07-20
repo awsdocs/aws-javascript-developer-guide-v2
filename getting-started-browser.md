@@ -1,249 +1,227 @@
 # Getting Started in a Browser Script<a name="getting-started-browser"></a>
 
-To start using the SDK for JavaScript in browser scripts, create a simple browser\-based app that authenticates users using Amazon Cognito Identity and Facebook login\. After logging in, the user gets temporary AWS credentials and assumes the pre\-specified AWS Identity and Access Management \(IAM\) role\. The role policy allows uploading and listing objects in Amazon Simple Storage Service \(Amazon S3\)\.
+![\[JavaScript code example that applies to browser execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsericon.png)
 
-For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
+**This browser script example shows you:**
++ How to access AWS services from a browser script using Amazon Cognito Identity\.
++ How to turn text into synthesized speech using Amazon Polly\.
++ How to use a presigner object to create a presigned URL\.
 
-**Contents**
-+ [Step 1: Creating and Configuring an Amazon S3 Bucket](#getting-started-browser-create-bucket)
-+ [Step 2: Creating the Facebook App and Getting the App ID](#getting-started-browser-facebook)
-+ [Step 3: Creating an IAM Role to Assign Users](#getting-started-browser-iam-role)
-+ [Step 4: Creating the HTML Page and Browser Script](#getting-started-browser-create-html)
-+ [Step 5: Running the Sample](#getting-started-browser-run-sample)
+## The Scenario<a name="getting-started-browser-scenario"></a>
 
-## Step 1: Creating and Configuring an Amazon S3 Bucket<a name="getting-started-browser-create-bucket"></a>
+Amazon Polly is a cloud service that converts text into lifelike speech\. You can use Amazon Polly to develop applications that increase engagement and accessibility\. Amazon Polly supports multiple languages and includes a variety of lifelike voices\. For more information about Amazon Polly, see the [http://docs.aws.amazon.com/polly/latest/dg/](http://docs.aws.amazon.com/polly/latest/dg/)\.
 
-In this exercise, you will use an Amazon S3 bucket both to store the objects you upload in the application and to host the HTML page of the application itself\. Cross\-origin resource sharing, or CORS, must be configured on the Amazon S3 bucket to be accessed directly from JavaScript in the browser\. For more information about CORS, see [Cross\-Origin Resource Sharing \(CORS\)](cors.md)\.
+The example shows how to set up and run a simple browser script that takes text you enter, sends that text to Amazon Polly, and then returns the URL of the synthesized audio of the text for you to play\. The browser script uses Amazon Cognito Identity to provide credentials needed to access AWS services\. You will see the basic patterns for loading and using the SDK for JavaScript in browser scripts\.
 
-**To create and configure the Amazon S3 bucket**
+**Note**  
+Playback of the synthesized speech in this example depends on running in a browser that supports HTML 5 audio\.
 
-1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
+![\[Illustration of how a browser script interacts with Amazon Cognito Identity and Amazon Polly services\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browserscenario.png)
 
-1. Choose **Create bucket**\. Give the bucket a unique name\. Note the bucket name and region for later use\. Choose **Next**\.
+The browser script uses the SDK for JavaScript to synthesize text by using these APIs:
++ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html) constructor
++ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html) constructor
++ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html#getSynthesizeSpeechUrl-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html#getSynthesizeSpeechUrl-property)
 
-1. In the **Set properties** panel under **Manage public permissions**, choose **Grant public read access to this bucket**\. Choose **Next**\.
+## Step 1: Create an Amazon Cognito Identity Pool<a name="getting-started-browser-create-identity-pool"></a>
 
-1. Choose **Create bucket**\. Choose the new bucket in the console\.
+In this exercise, you create and use an Amazon Cognito identity pool to provide unauthenticated access to your browser script for the Amazon Polly service\. Creating an identity pool also creates two IAM roles, one to support users authenticated by an identity provider and the other to support unauthenticated guest users\.
 
-1. In the pop\-up\-dialog, choose **Permissions**  
-![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-bucket-dialog.png)
+In this exercise, we will only work with the unauthenticated user role to keep the task focused\. You can integrate support for an identity provider and authenticated users later\.
 
-1. In the **Permissions** tab, choose **CORS Configuration**\. The console displays the **CORS configuration editor**\.  
-![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-cors-config.png)
+**To create an Amazon Cognito identity pool**
 
-1. Copy the following XML into the **CORS Configuration Editor** and then choose **Save**\.
+1. Sign in to the AWS Management Console and open the Amazon Cognito console at [https://console\.aws\.amazon\.com/cognito/\.](https://console.aws.amazon.com/cognito/)
 
-   ```
-   <?xml version="1.0" encoding="UTF-8"?>
-   <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01">
-      <CORSRule>
-         <AllowedOrigin>*</AllowedOrigin>
-         <AllowedMethod>GET</AllowedMethod>
-         <AllowedMethod>PUT</AllowedMethod>
-         <AllowedMethod>POST</AllowedMethod>
-         <AllowedMethod>DELETE</AllowedMethod>
-         <AllowedHeader>*</AllowedHeader>
-      </CORSRule>
-   </CORSConfiguration>
-   ```
+1. Choose **Manage Identity Pools** on the console opening page\.
 
-## Step 2: Creating the Facebook App and Getting the App ID<a name="getting-started-browser-facebook"></a>
+1. On the next page, choose **Create new identity pool**\.
 
-To complete this project, you must first obtain a Facebook App ID to use for Facebook login with Amazon Cognito Identity\.
+1. In the **Getting started wizard**, type a name for your identity pool in **Identity pool name**\.
 
-**To obtain a Facebook App ID**
+1. Choose **Enable access to unauthenticated identities**\.
 
-1. Go to [https://developers\.facebook\.com](https://developers.facebook.com) and log in with your Facebook account\.
+1. Choose **Create Pool**\.
 
-1. From the **My Apps** drop\-down menu, choose **Add a New App**\.  
-![\[Menu for adding a new App ID in Facebook Developer Console\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/facebook-add-app.png)
+1. On the next page, choose **View Details** to see the names of the two IAM roles created for your identity pool\. Make a note of the name of the role for unauthenticated identities\. You need this name to add the required policy for Amazon Polly\.
 
-1. Configure the Facebook app settings to specify the app display name and your contact email\. Note the app ID provided by Facebook, which you will include in the browser script later\.
+1. Choose **Allow**\.
 
-1. On the Facebook **Products** page, select **Facebook Login** then **Set Up**\. Choose **Web** for the platform where the application will run\.
+1. On the **Sample code** page, copy or write down the identity pool ID displayed in red\. You need this value for your browser script\.
 
-1. To specify the **Site URL**, type **https://*YOUR\-BUCKET\-NAME*\.s3\.amazonaws\.com/**\. Then choose **Save**\.
+After you create your Amazon Cognito identity pool, you're ready to add permissions for Amazon Polly that are needed by your browser script\.
 
-For more information about adding Facebook Login to a website, see [https://developers\.facebook\.com/docs/facebook\-login](https://developers.facebook.com/docs/facebook-login)\.
+## Step 2: Add a Policy to the Created IAM Role<a name="getting-started-browser-iam-role"></a>
 
-## Step 3: Creating an IAM Role to Assign Users<a name="getting-started-browser-iam-role"></a>
+To enable browser script access to Amazon Polly for speech synthesis, use the unauthenticated IAM role created for your Amazon Cognito identity pool\. This requires you to add an IAM policy to the role\. For more information on IAM roles, see [Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
-To prevent users from overwriting or changing other users' objects, users are authenticated using Facebook Login\. Each user who logs in has a unique identity that becomes part of the Amazon S3 key assigned to uploaded objects\. To protect objects uploaded by other users, use an IAM role assigned user\-specific write permissions at the prefix level with an IAM role policy\. For more information on IAM roles, see [Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the IAM User Guide\.
-
-**To create the IAM role and assign users**
+**To add an Amazon Polly policy to the IAM role associated with unauthenticated users**
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
-1. In the navigation pane, choose **Policies** and then choose **Create Policy**\. For **Create Your Own Policy**, choose **Select**\.
+1. In the navigation panel on the left of the page, choose **Roles**\.
 
-1. Name your policy \(for example **JavaScriptSample**\) and then copy the following JSON policy to the **Policy Document** text box\. Replace the two instances of *YOUR\_BUCKET\_NAME* with your actual bucket name and then choose **Create Policy**\.
+1. In the list of IAM roles, choose the unauthenticated identities role previously created by Amazon Cognito\.
 
-   ```
-   {
-      "Version": "2012-10-17",
-      "Statement": [
-         {
-            "Action": [
-               "s3:PutObject",
-               "s3:PutObjectAcl"
-            ],
-            "Resource": [
-                "arn:aws:s3:::YOUR_BUCKET_NAME/facebook-${graph.facebook.com:id}/*"
-            ],
-            "Effect": "Allow"
-         },
-         {
-            "Action": [
-               "s3:ListBucket"
-            ],
-            "Resource": [
-               "arn:aws:s3:::YOUR_BUCKET_NAME"
-            ],
-            "Effect": "Allow",
-            "Condition": {
-               "StringEquals": {
-                  "s3:prefix": "facebook-${graph.facebook.com:id}"
-                }
-             }
-          }
-       ]
-   }
-   ```
+1. In the **Summary** page for this role, choose **Attach policies**\.
 
-1. In the IAM console navigation pane, choose **Roles** and then choose **Create New Role**\.
+1. In the **Attach Permissions** page for this role, find and then choose **AmazonPollyFullAccess**\.
 
-1. Choose **Role for identity provider access** and select **Grant access to web identity providers**\.
+1. Choose **Attach policy**\.
 
-1. For **Identity Provider**, choose **Facebook**\. For **Application ID**, type your app ID and then choose **Next Step**\.
+After you create your Amazon Cognito identity pool and add permissions for Amazon Polly to your IAM role for unauthenticated users, you are ready to build the webpage and browser script\.
 
-1. On the **Verify Role Trust** page, choose **Next Step**\.
+## Step 3: Create the HTML Page<a name="getting-started-browser-create-html"></a>
 
-1. On the **Attach Policy** page, choose the policy you just created and then choose **Next Step**\.
+The sample app consists of a single HTML page that contains the user interface and browser script\. Create an HTML document and copy the following contents into it\. The page includes an `<audio>` element to play the synthesized speech, and a `<p>` element to display messages\.
 
-1. Enter a role name and choose **Create Role**\.
-
-## Step 4: Creating the HTML Page and Browser Script<a name="getting-started-browser-create-html"></a>
-
-The sample app consists of a single HTML page that contains the user interface and browser script\. Create an HTML document and copy the following contents into it\.
+For more information on the `<audio>` element, see [The Embed Audio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) on the [Mozilla Developer website\.](https://developer.mozilla.org/en-US/)
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AWS SDK for JavaScript - Sample Application</title>
-    <meta charset="utf-8">
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.266.1.min.js"></script>
+<meta charset="UTF-8">
+<title>AWS SDK for JavaScript - Browser Getting Started Application</title>
 </head>
 
 <body>
-    <input type="file" id="file-chooser" />
-    <button id="upload-button" style="display:none">Upload to S3</button>
-    <div id="results"></div>
-    <div id="fb-root"></div>
-    <script type="text/javascript">
-        var appId = 'YOUR_APP_ID';
-        var roleArn = 'YOUR_ROLE_ARN';
-        var bucketName = 'YOUR_BUCKET_NAME';
-        AWS.config.region = 'YOUR_BUCKET_REGION';
+    <div id="textToSynth">
+    <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
+    <button class="btn default" onClick="speakText()">Synthesize</button><p id="result">Enter text above then click Synthesize</p>
+    </div>
+        <audio id="audioPlayback" controls>
+  	        <source id="audioSource" type="audio/mp3" src="">
+		    <p id="result">result</p>
+    </audio>
+</body>
+</html>
+```
 
-        var fbUserId;
-        var bucket = new AWS.S3({
-            params: {
-                Bucket: bucketName
-            }
-        });
+Save the HTML file, naming it `polly.html`\. After you have created the user interface for the application, you're ready to add the browser script code that runs the application\.
 
-        var fileChooser = document.getElementById('file-chooser');
-        var button = document.getElementById('upload-button');
-        var results = document.getElementById('results');
+## Step 4: Write the Browser Script<a name="getting-started-browser-run-sample"></a>
 
-        button.addEventListener('click', function () {
-            var file = fileChooser.files[0];
-            if (file) {
-                results.innerHTML = '';
-                //Object key will be facebook-USERID#/FILE_NAME
-                var objKey = 'facebook-' + fbUserId + '/' + file.name;
-                var params = {
-                    Key: objKey,
-                    ContentType: file.type,
-                    Body: file,
-                    ACL: 'public-read'
-                };
+The first thing to do in creating the browser script is to add the SDK for JavaScript by adding this line after the `<audio>` element in the page\.
 
-                bucket.putObject(params, function (err, data) {
-                    if (err) {
-                        results.innerHTML = 'ERROR: ' + err;
-                    } else {
-                        listObjs();
-                    }
-                });
+```
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.279.1.min.js"></script>
+```
+
+Then add a new script element after the SDK entry in which you'll add the browser script\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
+
+To synthesize speech with Amazon Polly, you must first create the parameters JSON needed, which includes the sound format of the output, sampling rate, the ID of the voice to use, and the text to play back\. Set the `Text:` attribute to empty text initially, so that you can retrieve the value of the `<input>` element in the webpage and assign that value into the JSON\.
+
+```
+// Initialize the Amazon Cognito credentials provider
+AWS.config.region = 'REGION'; 
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
+
+// Function invoked by button click
+function speakText() {			
+    // Create synthesizeSpeech params JSON
+    var speechParams = {
+        OutputFormat: "mp3",
+        SampleRate: "16000",
+        Text: "",
+        TextType: "text",
+        VoiceId: "Matthew"
+    };
+    speechParams.Text = document.getElementById("textEntry").value;
+```
+
+Amazon Polly returns synthesized speech as an audio stream\. The easiest way to play that audio in a browser is to have Amazon Polly make the audio available at a presigned URL you can then set as the `src` property of the `<audio>` element in the webpage\.
+
+Create a new `AWS.Polly` service object\. Then create an `AWS.Polly.Presigner` object you'll use to create a presigned URL at which the synthesized speech audio can be retrieved\. You must pass the speech parameters JSON you just defined and the `AWS.Polly` service object to the `AWS.Polly.Presigner` constructor\.
+
+Then call the `getSynthesizeSpeechUrl` method of the presigner object, passing the speech parameters JSON\. If successful, this method returns the URL of the synthesized speech, which you then assign to the `<audio>` element for playback\.
+
+```
+// Create the Polly service object and presigner object
+    var polly = new AWS.Polly({apiVersion: '2016-06-10'});
+    var signer = new AWS.Polly.Presigner(speechParams, polly)
+
+    // Create presigned URL of synthesized speech file
+    signer.getSynthesizeSpeechUrl(speechParams, function(error, url) {
+    if (error) {
+	  document.getElementById('result').innerHTML = error;
+    } else {
+	  audioSource.src = url;  	  
+	  document.getElementById('result').innerHTML = "Speech ready to play.";
+    }
+  });
+}
+```
+
+## Step 5: Run the Sample<a name="getting-started-browser-run-sample"></a>
+
+To run the sample app, load `polly.html` into a web browser\. This is what the browser presentation should resemble\.
+
+![\[Web application browser interface\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsergetstarted.png)
+
+Enter a phrase you want turned to speech in the input box, then choose **Synthesize**\. When the audio is ready to play, a message appears\. Use the audio player controls to hear the synthesized speech\.
+
+## Full Sample<a name="getting-started-browser-full-sample"></a>
+
+Here is the full HTML page with the browser script\. It's also available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code//browserstart/polly.html)\.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AWS SDK for JavaScript - Browser Getting Started Application</title>
+</head>
+
+<body>
+    <div id="textToSynth">
+    <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
+    <button class="btn default" onClick="speakText()">Synthesize</button><p id="result">Enter text above then click Synthesize</p>
+    </div>
+    <audio id="audioPlayback" controls>
+      	<source id="audioSource" type="audio/mp3" src="">
+    	<p id="result">result</p>
+    </audio>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.279.1.min.js"></script>
+    <script>
+        // Initialize the Amazon Cognito credentials provider
+        AWS.config.region = 'REGION'; 
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
+        
+        // Function invoked by button click
+        function speakText() {			
+            // Create synthesizeSpeech params JSON
+            var speechParams = {
+                OutputFormat: "mp3",
+                SampleRate: "16000",
+                Text: "",
+                TextType: "text",
+                VoiceId: "Matthew"
+            };
+            speechParams.Text = document.getElementById("textEntry").value;
+            
+            // Create the Polly service object and presigner object
+            var polly = new AWS.Polly({apiVersion: '2016-06-10'});
+            var signer = new AWS.Polly.Presigner(speechParams, polly)
+        
+            // Create presigned URL of synthesized speech file
+            signer.getSynthesizeSpeechUrl(speechParams, function(error, url) {
+            if (error) {
+        	  document.getElementById('result').innerHTML = error;
             } else {
-                results.innerHTML = 'Nothing to upload.';
+        	  audioSource.src = url;  	  
+        	  document.getElementById('result').innerHTML = "Speech ready to play.";
             }
-        }, false);
-
-        function listObjs() {
-            var prefix = 'facebook-' + fbUserId;
-            bucket.listObjects({
-                Prefix: prefix
-            }, function (err, data) {
-                if (err) {
-                    results.innerHTML = 'ERROR: ' + err;
-                } else {
-                    var objKeys = "";
-                    data.Contents.forEach(function (obj) {
-                        objKeys += obj.Key + "<br>";
-                    });
-                    results.innerHTML = objKeys;
-                }
-            });
+          });
         }
-        /*!
-         * Login to your application using Facebook.
-         * Uses the Facebook SDK for JavaScript available here:
-         * https://developers.facebook.com/docs/javascript/quickstart/
-         */
-
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: appId
-            });
-
-            FB.login(function (response) {
-                bucket.config.credentials = new AWS.WebIdentityCredentials({
-                    ProviderId: 'graph.facebook.com',
-                    RoleArn: roleArn,
-                    WebIdentityToken: response.authResponse.accessToken
-                });
-                fbUserId = response.authResponse.userID;
-                button.style.display = 'block';
-            })
-        };
-
-         // Load the Facebook SDK asynchronously
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/all.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 </html>
 ```
 
-Before you can run the example, replace `YOUR_APP_ID`, `YOUR_ROLE_ARN`, `YOUR_BUCKET_NAME`, and `YOUR_BUCKET_REGION` with the actual values for the Facebook app ID, IAM role ARN, Amazon S3 bucket name, and bucket region\. You can find the Amazon Resource Name \(ARN\) of your IAM role in the IAM console by selecting the role and then choosing the **Summary** tab\.
+## Possible Enhancements<a name="getting-started-browser-variations"></a>
 
-Name the HTML file to `index.html` then upload it to the Amazon S3 bucket\.
-
-## Step 5: Running the Sample<a name="getting-started-browser-run-sample"></a>
-
-To run the sample app, type the following URL into a web browser\.
-
-```
-https://YOUR-BUCKET-NAME.s3.amazonaws.com/index.html
-```
+Here are variations on this application you can use to further explore using the SDK for JavaScript in a browser script\.
++ Experiment with other sound output formats\.
++ Add the option to select any of the various voices provided by Amazon Polly\.
++ Integrate an identity provider like Facebook or Amazon to use with the authenticated IAM role\.

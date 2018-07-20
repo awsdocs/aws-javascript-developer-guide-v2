@@ -16,13 +16,13 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 
 1. Connect to your Linux instance as `ec2-user` using SSH\.
 
-1. Install the current version of node version manager \(nvm\) by typing the following at the command line to install version 33\.8\.
+1. Install node version manager \(nvm\) by typing the following at the command line\.
 
    ```
-   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
    ```
 
-   We will use nvm to install Node\.js because nvm can install multiple versions of Node\.js and allow you to switch between them\. See the [nvm repo on GitHub](https://github.com/creationix/nvm) for the current version to install\.
+   We will use nvm to install Node\.js because nvm can install multiple versions of Node\.js and allow you to switch between them\. 
 
 1. Activate nvm by typing the following at the command line\.
 
@@ -33,13 +33,7 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 1. Use nvm to install the version of Node\.js you intend to use by typing the following at the command line\.
 
    ```
-   nvm install 8.11.2
-   ```
-
-   To install the latest LTS \(long\-term\-support\) release of Node\.js, type the following at the command line\.
-
-   ```
-   nvm install --lts
+   nvm install 4.4.5
    ```
 
    Installing Node\.js also installs the Node Package Manager \(npm\) so you can install additional modules as needed\.
@@ -52,17 +46,13 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 
    This should display the following message that confirms the installed version of Node\.js running\.
 
-   `Running Node.js v8.11.2`
+   `Running Node.js v4.4.5`
 
-## Creating an Amazon Machine Image<a name="w3ab1c25b7b8"></a>
+## Creating an Amazon Machine Image<a name="w3ab1c25b6b8"></a>
 
 After you install Node\.js on an Amazon EC2 instance, you can create an Amazon Machine Image \(AMI\) from that instance\. Creating an AMI makes it easy to provision multiple Amazon EC2 instances with the same Node\.js installation\. For more information about creating an AMI from an existing instance, see [Creating an Amazon EBS\-Backed Linux AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-## Installing Node\.js on Enterprise Linux<a name="w3ab1c25b7c10"></a>
-
-For instructions on how to install Node\.js on any Red Hat® Enterprise Linux® / RHEL, CentOS and Fedora or other distributions, see the following Node\.js documentation at [https://nodejs\.org/en/download/package\-manager/](https://nodejs.org/en/download/package-manager)\. 
-
-## Related Resources<a name="w3ab1c25b7c12"></a>
+## Related Resources<a name="w3ab1c25b6c10"></a>
 
 For more information about the commands and software used in this topic, see the following web pages:
 + node version manager \(nvm\): see [nvm repo on GitHub](https://github.com/creationix/nvm)\.

@@ -20,6 +20,9 @@ You can also develop Node\.js applications using the SDK for JavaScript in the A
 
 For browser\-based web, mobile and hybrid apps, you can also use the [AWS Amplify Library on GitHub](https://github.com/aws/aws-amplify), which extends the SDK for JavaScript, providing a declarative interface\.
 
+**Note**  
+Frameworks such as AWS Amplify may not offer the same browser support as the SDK for JavaScript\. Check the frameworks documentation for details\.
+
 ## Using the SDK with Web Browsers<a name="w3ab1b5c15"></a>
 
 All major web browsers support execution of JavaScript\. JavaScript code running in a web browser is often called client\-side JavaScript\.

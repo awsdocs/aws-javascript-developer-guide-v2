@@ -14,3 +14,6 @@ The SDK for JavaScript supports all modern web browsers, including these minimum
 | Windows Internet Explorer | 10\+ | 
 | Apple Safari | 5\+ | 
 | Android Browser | 4\.3\+ | 
+
+**Note**  
+Frameworks such as AWS Amplify may not offer the same browser support as the SDK for JavaScript\. Check the frameworks documentation for details\.
