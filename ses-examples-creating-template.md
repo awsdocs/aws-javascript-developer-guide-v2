@@ -60,7 +60,7 @@ templatePromise.then(
   });
 ```
 
-To run the example, type the following at the command line\. Amazon SES returns the template list\.
+To run the example, type the following at the command line\. Amazon SES returns the list of templates\.
 
 ```
 node ses_listtemplates.js

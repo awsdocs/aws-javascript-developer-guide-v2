@@ -105,7 +105,7 @@ Save the HTML file, naming it `polly.html`\. After you have created the user int
 The first thing to do in creating the browser script is to add the SDK for JavaScript by adding this line after the `<audio>` element in the page\.
 
 ```
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.279.1.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.282.1.min.js"></script>
 ```
 
 Then add a new script element after the SDK entry in which you'll add the browser script\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
@@ -182,7 +182,7 @@ Here is the full HTML page with the browser script\. It's also available [here o
       	<source id="audioSource" type="audio/mp3" src="">
     	<p id="result">result</p>
     </audio>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.279.1.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.282.1.min.js"></script>
     <script>
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'REGION'; 
