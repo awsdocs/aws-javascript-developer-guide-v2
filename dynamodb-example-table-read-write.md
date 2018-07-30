@@ -73,7 +73,9 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Getting an Item<a name="dynamodb-example-table-read-write-getting-an-item"></a>
 
-Create a Node\.js module with the file name `ddb_getitem.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to add an item, which in this example includes the name of the table, the name and value of the key for the item you're getting, and a projection expression that identifies the item attribute you want to retrieve\. Call the `getItem` method of the DynamoDB service object\.
+Create a Node\.js module with the file name `ddb_getitem.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. To identify the item to get, you must provide the value of the primary key for that item in the table\. By default, the `getItem` method returns all the attribute values defined for the item\. To get only a subset of all possible attribute values, specify a projection expression\.
+
+Create a JSON object containing the parameters needed to get an item, which in this example includes the name of the table, the name and value of the key for the item you're getting, and a projection expression that identifies the item attribute you want to retrieve\. Call the `getItem` method of the DynamoDB service object\.
 
 ```
 // Load the AWS SDK for Node.js
