@@ -33,7 +33,7 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 1. Use nvm to install the version of Node\.js you intend to use by typing the following at the command line\.
 
    ```
-   nvm install 4.4.5
+   nvm install 8.11.3
    ```
 
    Installing Node\.js also installs the Node Package Manager \(npm\) so you can install additional modules as needed\.
@@ -46,7 +46,7 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 
    This should display the following message that confirms the installed version of Node\.js running\.
 
-   `Running Node.js v4.4.5`
+   `Running Node.js v8.11.3`
 
 ## Creating an Amazon Machine Image<a name="w3ab1c25b6b8"></a>
 
