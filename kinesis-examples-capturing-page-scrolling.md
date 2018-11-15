@@ -7,16 +7,16 @@
 
 ## The Scenario<a name="kinesis-examples-capturing-page-scrolling-scenario"></a>
 
-In this example, a simple HTML page simulates the content of a blog page\. As the reader scrolls the simulated blog post, the browser script uses the SDK for JavaScript to record the scroll distance down the page and send that data to Kinesis using the [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html#putRecords-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html#putRecords-property) method of the Kinesis client class\. The streaming data captured by Amazon Kinesis Data Streams can then be processed by Amazon EC2 instances and stored in any of several data stores including Amazon DynamoDB and Amazon Redshift\.
+In this example, a simple HTML page simulates the content of a blog page\. As the reader scrolls the simulated blog post, the browser script uses the SDK for JavaScript to record the scroll distance down the page and send that data to Kinesis using the [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html#putRecords-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html#putRecords-property) method of the Kinesis client class\. The streaming data captured by Amazon Kinesis Data Streams can then be processed by Amazon EC2 instances and stored in any of several data stores including Amazon DynamoDB and Amazon Redshift\.
 
 ![\[JavaScript in a browser script sending scroll data to Kinesis.\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/kinesis-examples.png)
 
 ## Prerequisite Tasks<a name="kinesis-examples-capturing-page-scrolling-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-+ Create an Kinesis stream\. You need to include the stream's resource ARN in the browser script\. For more information about creating Amazon Kinesis Data Streams, see [Managing Kinesis Streams](http://docs.aws.amazon.com/streams/latest/dev/working-with-streams.html) in the *Amazon Kinesis Data Streams Developer Guide*\.
-+ Create an Amazon Cognito identity pool with access enabled for unauthenticated identities\. You need to include the identity pool ID in the code to obtain credentials for the browser script\. For more information about Amazon Cognito identity pools, see [Identity Pools](http://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html) in the *Amazon Cognito Developer Guide*\.
-+ Create an IAM role whose policy grants permission to submit data to an Kinesis stream\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
++ Create an Kinesis stream\. You need to include the stream's resource ARN in the browser script\. For more information about creating Amazon Kinesis Data Streams, see [Managing Kinesis Streams](https://docs.aws.amazon.com/streams/latest/dev/working-with-streams.html) in the *Amazon Kinesis Data Streams Developer Guide*\.
++ Create an Amazon Cognito identity pool with access enabled for unauthenticated identities\. You need to include the identity pool ID in the code to obtain credentials for the browser script\. For more information about Amazon Cognito identity pools, see [Identity Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html) in the *Amazon Cognito Developer Guide*\.
++ Create an IAM role whose policy grants permission to submit data to an Kinesis stream\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
 Use the following role policy when creating the IAM role\.
 
@@ -66,7 +66,7 @@ The HTML for the blog page consists mainly of a series of paragraphs contained w
                 <!-- Additional paragraphs in the blog page appear here -->
             </div>
         </div>
-        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.282.1.min.js"></script>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
         <script src="kinesis-example.js"></script>
     </body>
 </html>

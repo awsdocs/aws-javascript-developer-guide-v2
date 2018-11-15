@@ -8,9 +8,9 @@
 ## The Scenario<a name="sqs-examples-managing-visibility-timeout-scenario"></a>
 
 In this example, a Node\.js module is used to manage visibility timeout\. The Node\.js module uses the SDK for JavaScript to manage visibility timeout by using this method of the `AWS.SQS` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#changeMessageVisibility-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#changeMessageVisibility-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#changeMessageVisibility-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#changeMessageVisibility-property)
 
-For more information about Amazon SQS visibility timeout, see [Visibility Timeout](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html) in the *Amazon Simple Queue Service Developer Guide*\.
+For more information about Amazon SQS visibility timeout, see [Visibility Timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html) in the *Amazon Simple Queue Service Developer Guide*\.
 
 ## Prerequisite Tasks<a name="sqs-examples-managing-visibility-timeout-prerequisites"></a>
 
@@ -66,7 +66,7 @@ sqs.receiveMessage(params, function(err, data) {
     var visibilityParams = {
       QueueUrl: queueURL,
       ReceiptHandle: data.Messages[0].ReceiptHandle,
-      VisibilityTimeout: 36000 // 10 hour timeout
+      VisibilityTimeout: 20 // 20 seconds timeout
     };
     sqs.changeMessageVisibility(visibilityParams, function(err, data) {
       if (err) {

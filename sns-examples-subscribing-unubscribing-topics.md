@@ -10,10 +10,10 @@
 ## The Scenario<a name="sns-examples-subscribing-unubscribing-yopics-scenario"></a>
 
 In this example, you use a series of Node\.js modules to publish notification messages to Amazon SNS topics\. The Node\.js modules use the SDK for JavaScript to manage topics using these methods of the `AWS.SNS` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#subscribe-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#subscribe-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#confirmSubscription-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#confirmSubscription-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listSubscriptionsByTopic-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listSubscriptionsByTopic-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#unsubscribe-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#unsubscribe-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#subscribe-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#subscribe-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#confirmSubscription-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#confirmSubscription-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listSubscriptionsByTopic-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listSubscriptionsByTopic-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#unsubscribe-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#unsubscribe-property)
 
 ## Prerequisite Tasks<a name="sns-examples-subscribing-unubscribing-topics-prerequisites"></a>
 

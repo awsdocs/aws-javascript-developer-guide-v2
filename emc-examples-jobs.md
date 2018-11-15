@@ -1,21 +1,21 @@
-# Creating and Managing Transcoding Jobs in AWS Elemental MediaConvert<a name="emc-examples-jobs"></a>
+# Creating and Managing Transcoding Jobs in MediaConvert<a name="emc-examples-jobs"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-+ How to specify the account\-specific endpoint to use with AWS Elemental MediaConvert\.
-+ How to create transcoding jobs in AWS Elemental MediaConvert\.
++ How to specify the account\-specific endpoint to use with MediaConvert\.
++ How to create transcoding jobs in MediaConvert\.
 + How to cancel a transcoding job\.
 + How to retrieve the JSON for a completed transcoding job\.
 + How to retrieve a JSON array for up to 20 of the most recently created jobs\.
 
 ## The Scenario<a name="emc-examples-jobs-scenario"></a>
 
-In this example, you use a Node\.js module to call AWS Elemental MediaConvert to create and manage transcoding jobs\. The code uses the SDK for JavaScript to do this by using these methods of the AWS Elemental MediaConvert client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#cancelJob-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#cancelJob-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#getJob-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#getJob-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobs-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobs-property)
+In this example, you use a Node\.js module to call MediaConvert to create and manage transcoding jobs\. The code uses the SDK for JavaScript to do this by using these methods of the MediaConvert client class:
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#cancelJob-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#cancelJob-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#getJob-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#getJob-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobs-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobs-property)
 
 ## Prerequisite Tasks<a name="emc-examples-jobs-prerequisites"></a>
 
@@ -24,11 +24,11 @@ To set up and run this example, first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create and configure Amazon S3 buckets that provide storage for job input files and output files\. For details, see [Create Storage for Files](https://docs.aws.amazon.com/mediaconvert/latest/ug/set-up-file-locations.html) in the *AWS Elemental MediaConvert User Guide*\.
 + Upload the input video to the Amazon S3 bucket you provisioned for input storage\. For a list of supported input video codecs and containers, see [Supported Input Codecs and Containers](https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html) in the *AWS Elemental MediaConvert User Guide*\.
-+ Create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored\. For details, see [Set Up IAM Permissions](https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html) in the *AWS Elemental MediaConvert User Guide*\.
++ Create an IAM role that gives MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored\. For details, see [Set Up IAM Permissions](https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html) in the *AWS Elemental MediaConvert User Guide*\.
 
 ## Configuring the SDK<a name="emc-examples-jobs-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. Because AWS Elemental MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
+Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
 
 ```
 // Load the SDK for JavaScript

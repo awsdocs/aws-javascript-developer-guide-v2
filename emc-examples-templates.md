@@ -1,31 +1,31 @@
-# Using Job Templates in AWS Elemental MediaConvert<a name="emc-examples-templates"></a>
+# Using Job Templates in MediaConvert<a name="emc-examples-templates"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-+ How to create AWS Elemental MediaConvert job templates\.
++ How to create MediaConvert job templates\.
 + How to use a job template to create a transcoding job\.
 + How to list all your job templates\.
 + How to delete job templates\.
 
 ## The Scenario<a name="emc-examples-templates-scenario"></a>
 
-The JSON required to create a transcoding job in AWS Elemental MediaConvert is detailed, containing a large number of settings\. You can greatly simplify job creation by saving known\-good settings in a job template that you can use to create subsequent jobs\. In this example, you use a Node\.js module to call AWS Elemental MediaConvert to create, use, and manage job templates\. The code uses the SDK for JavaScript to do this by using these methods of the AWS Elemental MediaConvert client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJobTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJobTemplate-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#deleteJobTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#deleteJobTemplate-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobTemplates-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobTemplates-property)
+The JSON required to create a transcoding job in MediaConvert is detailed, containing a large number of settings\. You can greatly simplify job creation by saving known\-good settings in a job template that you can use to create subsequent jobs\. In this example, you use a Node\.js module to call MediaConvert to create, use, and manage job templates\. The code uses the SDK for JavaScript to do this by using these methods of the MediaConvert client class:
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJobTemplate-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJobTemplate-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#createJob-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#deleteJobTemplate-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#deleteJobTemplate-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobTemplates-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#listJobTemplates-property)
 
 ## Prerequisite Tasks<a name="emc-example-templates-prerequisites"></a>
 
 To set up and run this example, first complete these tasks:
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
-+ Create an IAM role that gives AWS Elemental MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored\. For details, see [Set Up IAM Permissions](https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html) in the *AWS Elemental MediaConvert User Guide*\.
++ Create an IAM role that gives MediaConvert access to your input files and the Amazon S3 buckets where your output files are stored\. For details, see [Set Up IAM Permissions](https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html) in the *AWS Elemental MediaConvert User Guide*\.
 
 ## Configuring the SDK<a name="emc-examples-templates-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. Because AWS Elemental MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
+Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
 
 ```
 // Load the SDK for JavaScript
@@ -40,7 +40,7 @@ AWS.config.mediaconvert({endpoint: 'ACCOUNT_ENDPOINT'});
 
 Create a Node\.js module with the file name `emc_create_jobtemplate.js`\. Be sure to configure the SDK as previously shown\.
 
-Specify the parameters JSON for template creation\. You can use most of the JSON parameters from a previous successful job to specify the `Settings` values in the template\. This example uses the job settings from [Creating and Managing Transcoding Jobs in AWS Elemental MediaConvert](emc-examples-jobs.md)\.
+Specify the parameters JSON for template creation\. You can use most of the JSON parameters from a previous successful job to specify the `Settings` values in the template\. This example uses the job settings from [Creating and Managing Transcoding Jobs in MediaConvert](emc-examples-jobs.md)\.
 
 Call the `createJobTemplate` method by creating a promise for invoking an `AWS.MediaConvert` service object, passing the parameters\. Then handle the response in the promise callback\.
 
@@ -277,7 +277,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 Create a Node\.js module with the file name `emc_listtemplates.js`\. Be sure to configure the SDK as previously shown\.
 
-Create an object to pass the request parameters for the `listTemplates` method of the `AWS.MediaConvert` client class\. Include values to determine what templates to list \(`NAME`, `CREATION DATE`, `SYSTEM`\), how many to list, and their sort order\. To call the `listTemplates` method, create a promise for invoking an AWS Elemental MediaConvert service object, passing the parameters\. Then handle the response in the promise callback\. 
+Create an object to pass the request parameters for the `listTemplates` method of the `AWS.MediaConvert` client class\. Include values to determine what templates to list \(`NAME`, `CREATION DATE`, `SYSTEM`\), how many to list, and their sort order\. To call the `listTemplates` method, create a promise for invoking an MediaConvert service object, passing the parameters\. Then handle the response in the promise callback\. 
 
 ```
 // Load the AWS SDK for Node.js
@@ -320,7 +320,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 Create a Node\.js module with the file name `emc_deletetemplate.js`\. Be sure to configure the SDK as previously shown\.
 
-Create an object to pass the name of the job template you want to delete as parameters for the `deleteJobTemplate` method of the `AWS.MediaConvert` client class\. To call the `deleteJobTemplate` method, create a promise for invoking an AWS Elemental MediaConvert service object, passing the parameters\. Handle the response in the promise callback\. 
+Create an object to pass the name of the job template you want to delete as parameters for the `deleteJobTemplate` method of the `AWS.MediaConvert` client class\. To call the `deleteJobTemplate` method, create a promise for invoking an MediaConvert service object, passing the parameters\. Handle the response in the promise callback\. 
 
 ```
 // Load the AWS SDK for Node.js

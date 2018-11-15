@@ -8,7 +8,7 @@
 ## The Scenario<a name="sns-examples-publishing-messages-scenario"></a>
 
 In this example, you use a series of Node\.js modules to publish messages from Amazon SNS to topic endpoints, emails, or phone numbers\. The Node\.js modules use the SDK for JavaScript to send messages using this method of the `AWS.SNS` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property)
 
 ## Prerequisite Tasks<a name="sns-examples-publishing-messages-prerequisites"></a>
 
@@ -42,7 +42,7 @@ var publishTextPromise = new AWS.SNS({apiVersion: '2010-03-31'}).publish(params)
 // Handle promise's fulfilled/rejected states
 publishTextPromise.then(
   function(data) {
-    console.log(`Message ${params.message} send sent to the topic ${params.topicArn}`);
+    console.log(`Message ${params.Message} send sent to the topic ${params.TopicArn}`);
     console.log("MessageID is " + data.MessageId);
   }).catch(
     function(err) {

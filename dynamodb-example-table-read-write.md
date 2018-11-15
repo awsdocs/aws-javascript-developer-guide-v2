@@ -10,9 +10,9 @@
 ## The Scenario<a name="dynamodb-example-table-read-write-scenario"></a>
 
 In this example, you use a series of Node\.js modules to read and write one item in a DynamoDB table by using these methods of the `AWS.DynamoDB` client class:
-+ [putItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property)
-+ [getItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#getItem-property)
-+ [deleteItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#deleteItem-property)
++ [putItem](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property)
++ [getItem](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#getItem-property)
++ [deleteItem](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#deleteItem-property)
 
 ## Prerequisite Tasks<a name="dynamodb-example-table-read-write-prerequisites"></a>
 

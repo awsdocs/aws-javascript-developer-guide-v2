@@ -20,7 +20,7 @@ To set the region in your JavaScript code, update the `AWS.Config` global config
 AWS.config.update({region: 'us-east-1'});
 ```
 
-For more information about current regions and available services in each region, see [ AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
+For more information about current regions and available services in each region, see [ AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
 
 ## Using an Environment Variable<a name="setting-region-environment-variable"></a>
 
@@ -40,7 +40,7 @@ If you don't already have a shared `config` file, you can create one in the desi
    output=json
 ```
 
-For more information about using shared config and credentials files, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md) or [Configuration and Credential Files](http://docs.aws.amazon.com/general/latest/gr/cli-config-files.html) in the *AWS Command Line Interface User Guide*\.
+For more information about using shared config and credentials files, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md) or [Configuration and Credential Files](https://docs.aws.amazon.com/general/latest/gr/cli-config-files.html) in the *AWS Command Line Interface User Guide*\.
 
 ## Order of Precedence for Setting the Region<a name="setting-region-order-of-precedence"></a>
 

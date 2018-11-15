@@ -10,10 +10,10 @@
 Amazon EC2 is hosted in multiple locations worldwide\. These locations are composed of regions and Availability Zones\. Each *region* is a separate geographic area\. Each region has multiple, isolated locations known as *Availability Zones*\. Amazon EC2 provides the ability to place instances and data in multiple locations\. 
 
 In this example, you use a series of Node\.js modules to retrieve details about regions and Availability Zones\. The Node\.js modules use the SDK for JavaScript to manage instances by using the following methods of the Amazon EC2 client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeAvailabilityZones-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeAvailabilityZones-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeAvailabilityZones-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeAvailabilityZones-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property)
 
-For more information about regions and Availability Zones, see [Regions and Availability Zones](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) in the *Amazon EC2 User Guide for Linux Instances* or [Regions and Availability Zones](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-regions-availability-zones.html) in the *Amazon EC2 User Guide for Windows Instances*\.
+For more information about regions and Availability Zones, see [Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) in the *Amazon EC2 User Guide for Linux Instances* or [Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-regions-availability-zones.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
 ## Prerequisite Tasks<a name="ec2-example-regions-availability-prerequisites"></a>
 

@@ -10,7 +10,7 @@ The Lambda function is invoked by the browser script every time the player of th
 
 The Lambda function generates three random results, one for each slot wheel in the game\. For each result, the Lambda function calls the Amazon DynamoDB table to retrieve the file name of the result graphic\. Once all three results are determined and their matching graphic URLs are retrieved, the result information is returned to the browser script for showing the result\.
 
-The Node\.js code needed for the Lambda function is provided in the `slotsassets.zip` archive file that you downloaded from the [code example archive on GitHub](https://github.com/aws-doc-sdk-examples/javascript/example_code/lambda/tutorial/slotassets.zip )\. You must edit this code to use it in your Lambda function\. Completing this portion of the application requires you to do these things:
+The Node\.js code needed for the Lambda function is provided in the `slotassets.zip` archive file that you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\. You must edit this code to use it in your Lambda function\. Completing this portion of the application requires you to do these things:
 + Edit the Node\.js code used by the Lambda function\.
 + Compress the Node\.js code into a \.zip archive file that you then upload to the Amazon S3 bucket used by the application\.
 + Edit the Node\.js setup script for creating the Lambda function\.
@@ -18,7 +18,7 @@ The Node\.js code needed for the Lambda function is provided in the `slotsassets
 
 **To make the necessary edits in the Node\.js code of the Lambda function**
 
-1. Open the `slotsassets.zip` archive that you downloaded from the [code sample archive on GitHub](https://github.com/aws-doc-sdk-examples/javascript/example_code/lambda/tutorial/slotassets.zip )\.
+1. Open the `slotassets.zip` archive that you downloaded from the [code sample archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
 
 1. Copy `slotpull.js` to the folder that contains your credentials JSON file\.
 
@@ -46,11 +46,11 @@ For details about the example code in the Lambda function, see [Writing a Lambda
 
 ## Creating the Lambda Function<a name="using-lambda-function-creation"></a>
 
-You can provide the Node\.js code for the Lambda function is in a file compressed into a \.zip archive file that you upload to an Amazon S3 bucket\. The `slotsassets.zip` archive file contains a Node\.js setup script named `lambda-function-setup.js` that you modify and then run to create the Lambda function\.
+You can provide the Node\.js code for the Lambda function is in a file compressed into a \.zip archive file that you upload to an Amazon S3 bucket\. The `slotassets.zip` archive file contains a Node\.js setup script named `lambda-function-setup.js` that you modify and then run to create the Lambda function\.
 
 **To edit the Node\.js setup script for creating the Lambda function**
 
-1. Open the `slotsassets.zip` archive file that you downloaded from the [code example archive on GitHub](https://github.com/aws-doc-sdk-examples/javascript/example_code/lambda/tutorial/slotassets.zip )\.
+1. Open the `slotassets.zip` archive file that you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
 
 1. Copy `lambda-function-setup.js` to the folder that contains your credentials JSON file\.
 
@@ -123,6 +123,6 @@ lambda.createFunction(params, function(err, data) {
 This script uses example code from this AWS SDK for JavaScript topic:
 + [Writing a Lambda Function in Node\.js](nodejs-write-lambda-function-example.md)
 
-## Next Step<a name="w3ab1c25b8c25c29"></a>
+## Next Step<a name="w4aac25b8c25c29"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

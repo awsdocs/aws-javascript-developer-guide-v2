@@ -1,5 +1,5 @@
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
-+ **SDK version:** v2\.282\.1
++ **SDK version:** v2\.283\.1
 + **Latest documentation update:** July 20, 2018
 
 ## Document History<a name="doc-history-recent"></a>

@@ -8,8 +8,8 @@
 ## The Scenario<a name="dynamodb-example-table-read-write-batch-scenario"></a>
 
 In this example, you use a series of Node\.js modules to put a batch of items in a DynamoDB table as well as read a batch of items\. The code uses the SDK for JavaScript to perform batch read and write operations using these methods of the DynamoDB client class:
-+ [batchGetItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#batchGetItem-property)
-+ [batchWriteItem](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#batchWriteItem-property)
++ [batchGetItem](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#batchGetItem-property)
++ [batchWriteItem](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#batchWriteItem-property)
 
 ## Prerequisite Tasks<a name="dynamodb-example-table-read-write-batch-prerequisites"></a>
 

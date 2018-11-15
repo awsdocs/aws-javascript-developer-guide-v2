@@ -6,14 +6,14 @@ In this task, you will focus on creating and populating the DynamoDB table used 
 
 ![\[Create a DynamoDB table for the tutorial application\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/create-ddb-table.png)![\[Create a DynamoDB table for the tutorial application\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)![\[Create a DynamoDB table for the tutorial application\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)
 
-The Lambda function generates three random numbers, then uses those numbers as keys to look up file names stored in an Amazon DynamoDB table\. In the `slotsassets.zip` archive file are two Node\.js scripts named `ddb-table-create.js` and `ddb_table-populate.js`\. Together these files create the DynamoDB table and populate it with the names of the image files in the Amazon S3 bucket\. The Lambda function exclusively provides access to the table\. Completing this portion of the application requires you to do these things:
+The Lambda function generates three random numbers, then uses those numbers as keys to look up file names stored in an Amazon DynamoDB table\. In the `slotassets.zip` archive file are two Node\.js scripts named `ddb-table-create.js` and `ddb_table-populate.js`\. Together these files create the DynamoDB table and populate it with the names of the image files in the Amazon S3 bucket\. The Lambda function exclusively provides access to the table\. Completing this portion of the application requires you to do these things:
 + Edit the Node\.js code used to create the DynamoDB table\.
 + Run the setup script that creates the DynamoDB table\.
 + Run the setup script, which populates the DynamoDB table with data the application expects and needs\.
 
 **To edit the Node\.js script that creates the DynamoDB table for the tutorial application**
 
-1. Open the `slotsassets.zip` archive file you downloaded from the [code example archive on GitHub](https://github.com/aws-doc-sdk-examples/javascript/example_code/lambda/tutorial/slotassets.zip )\.
+1. Open the `slotassets.zip` archive file you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
 
 1. Copy `ddb-table-create.js` and `ddb-table-populate.js` from the archive to the folder that contains your credentials JSON file\.
 
@@ -89,7 +89,7 @@ ddb.createTable(tableParams, function(err, data) {
 This script uses code from these AWS SDK for JavaScript code example topics:
 + [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)
 
-When the DynamoDB table exists, you must populate it with the items and data the application needs\. The `slotsassets.zip` archive file contains a Node\.js script named `ddb_table-populate.js` that automates data population for the DynamoDB table you just created\. 
+When the DynamoDB table exists, you must populate it with the items and data the application needs\. The `slotassets.zip` archive file contains a Node\.js script named `ddb_table-populate.js` that automates data population for the DynamoDB table you just created\. 
 
 **To run the Node\.js setup script that populates the DynamoDB table with data**
 
@@ -203,6 +203,6 @@ function post () {
 This script uses code from this AWS SDK for JavaScript code example topic:
 + [Reading and Writing A Single Item in DynamoDB](dynamodb-example-table-read-write.md)
 
-## Next Step<a name="w3ab1c25b8c22c27"></a>
+## Next Step<a name="w4aac25b8c22c27"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

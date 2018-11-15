@@ -10,13 +10,13 @@
 ## The Scenario<a name="iam-examples-managing-users-scenario"></a>
 
 In this example, a series of Node\.js modules are used to create and manage users in IAM\. The Node\.js modules use the SDK for JavaScript to create, delete, and update users using these methods of the `AWS.IAM` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createUser-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createUser-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listUsers-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listUsers-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateUser-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateUser-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getUser-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getUser-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteUser-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteUser-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createUser-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createUser-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listUsers-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listUsers-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateUser-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateUser-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getUser-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getUser-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteUser-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteUser-property)
 
-For more information about IAM users, see [IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) in the *IAM User Guide*\.
+For more information about IAM users, see [IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) in the *IAM User Guide*\.
 
 ## Prerequisite Tasks<a name="iam-examples-managing-users-prerequisites"></a>
 

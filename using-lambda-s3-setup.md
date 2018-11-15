@@ -8,11 +8,11 @@ In this task, you will focus on creating and preparing the Amazon S3 bucket used
 
 For this application, the first thing you need to create is an Amazon S3 bucket to store all the browser assets\. These include the HTML file, all graphics files, and the CSS file\. The bucket is configured as a static website so that it also serves the application from the bucket's URL\. 
 
-The `slotsassets.zip` archive file contains a Node\.js script named `s3-bucket-setup.js` that creates the Amazon S3 bucket and sets the website configuration\. 
+The `slotassets.zip` archive file contains a Node\.js script named `s3-bucket-setup.js` that creates the Amazon S3 bucket and sets the website configuration\. 
 
 **To create and configure the Amazon S3 bucket that the tutorial application uses**
 
-1. Open the `slotsassets.zip` archive file you downloaded from the [code example archive on GitHub](https://github.com/aws-doc-sdk-examples/javascript/example_code/lambda/tutorial/slotassets.zip )\.
+1. Open the `slotassets.zip` archive file you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
 
 1. Copy the `s3-bucket-setup.js` script from the archive to the folder that contains your credentials JSON file\.
 
@@ -78,6 +78,6 @@ This script uses code from these AWS SDK for JavaScript code example topics:
 + [Creating and Using Amazon S3 Buckets](s3-example-creating-buckets.md)
 + [Using an Amazon S3 Bucket as a Static Web Host](s3-example-static-web-host.md)
 
-## Next Step<a name="w3ab1c25b8c13c17"></a>
+## Next Step<a name="w4aac25b8c13c17"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

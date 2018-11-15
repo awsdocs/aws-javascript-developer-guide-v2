@@ -23,7 +23,7 @@ Set your SDK configuration using `AWS.Config` by setting its properties accordin
 | logger | Optional\. Specifies a logger object to which debugging information is written\. | 
 | update | Optional\. Updates the current configuration with new values\. | 
 
-For more information about the configuration object, see [ Class: AWS\.Config](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the API Reference\.
+For more information about the configuration object, see [ Class: AWS\.Config](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the API Reference\.
 
 ### Global Configuration Examples<a name="global-configuration-examples"></a>
 
@@ -54,7 +54,7 @@ var ec2_regionA = new AWS.EC2({region: 'ap-southeast-2', maxRetries: 15, apiVers
 var ec2_regionB = new AWS.EC2({region: 'us-east-1', maxRetries: 15, apiVersion: '2014-10-01'});
 ```
 
-You can also set configuration values specific to a service when configuring the SDK with `AWS.Config`\. The global configuration object supports many service\-specific configuration options\. For more information about service\-specific configuration, see [Class: AWS\.Config](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the AWS SDK for JavaScript API Reference\.
+You can also set configuration values specific to a service when configuring the SDK with `AWS.Config`\. The global configuration object supports many service\-specific configuration options\. For more information about service\-specific configuration, see [Class: AWS\.Config](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the AWS SDK for JavaScript API Reference\.
 
 ## Immutable Configuration Data<a name="immutable-config"></a>
 

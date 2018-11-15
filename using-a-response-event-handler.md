@@ -20,7 +20,7 @@ request.send();
 
 After the `send` method on the `AWS.Request` object is called, the event handler executes when the service object receives an `AWS.Response` object\.
 
-For more information about the `AWS.Request` object, see [Class: AWS\.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\. For more information about the `AWS.Response` object, see [Using the Response Object](the-response-object.md) or [Class: AWS\.Response](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Response.html) in the API Reference\.
+For more information about the `AWS.Request` object, see [Class: AWS\.Request](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\. For more information about the `AWS.Response` object, see [Using the Response Object](the-response-object.md) or [Class: AWS\.Response](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Response.html) in the API Reference\.
 
 ## Chaining Multiple Callbacks<a name="response-chaining-callbacks"></a>
 
@@ -47,7 +47,7 @@ The `AWS.Request` object raises these completion events based on the response of
 + `error`
 + `complete`
 
-You can register a callback function in response to any of these events\. For a complete list of all request object events, see [Class: AWS\.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\.
+You can register a callback function in response to any of these events\. For a complete list of all request object events, see [Class: AWS\.Request](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\.
 
 ### The success Event<a name="request-success-event"></a>
 
@@ -134,7 +134,7 @@ The `AWS.Request` object raises these HTTP events based on the response of each 
 + `httpError`
 + `httpDone`
 
-You can register a callback function in response to any of these events\. For a complete list of all request object events, see [Class: AWS\.Request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\.
+You can register a callback function in response to any of these events\. For a complete list of all request object events, see [Class: AWS\.Request](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Request.html) in the API Reference\.
 
 ### The httpHeaders Event<a name="request-httpheaders-event"></a>
 

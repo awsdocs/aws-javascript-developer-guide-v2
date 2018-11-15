@@ -1,6 +1,6 @@
 # Creating and Calling Service Objects<a name="creating-and-calling-service-objects"></a>
 
-The JavaScript API supports most available AWS services\. Each service class in the JavaScript API provides access to every API call in its service\. For more information on service classes, operations, and parameters in the JavaScript API, see the [API reference](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
+The JavaScript API supports most available AWS services\. Each service class in the JavaScript API provides access to every API call in its service\. For more information on service classes, operations, and parameters in the JavaScript API, see the [API reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
 
 When using the SDK in Node\.js, you add the SDK package to your application using `require`, which provides support for all current services\.
 
@@ -11,10 +11,10 @@ var AWS = require('aws-sdk');
 When using the SDK with browser JavaScript, you load the SDK package to your browser scripts using the AWS\-hosted SDK package\. To load the SDK package, add the following script tag\.
 
 ```
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.282.1.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
 ```
 
-The default hosted SDK package provides support for a subset of the available AWS services\. For a list of the default services in the hosted SDK package for the browser, see [Supported Services](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/#Supported_Services) in the API Reference\. You can use the SDK with other services if CORS security checking is disabled\. In this case, you can build a custom version of the SDK to include the additional services you require\. For more information on building a custom version of the SDK, see [Building the SDK for Browsers](building-sdk-for-browsers.md)\.
+The default hosted SDK package provides support for a subset of the available AWS services\. For a list of the default services in the hosted SDK package for the browser, see [Supported Services](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/#Supported_Services) in the API Reference\. You can use the SDK with other services if CORS security checking is disabled\. In this case, you can build a custom version of the SDK to include the additional services you require\. For more information on building a custom version of the SDK, see [Building the SDK for Browsers](building-sdk-for-browsers.md)\.
 
 ## Requiring Individual Services<a name="requiring-individual-services"></a>
 
@@ -101,7 +101,7 @@ When calling a method of a service object, pass parameters in JSON as required b
 s3.getObject({Bucket: 'bucketName', Key: 'keyName'});
 ```
 
-For more information about Amazon S3 parameters, see [Class: AWS\.S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html) in the API reference\.
+For more information about Amazon S3 parameters, see [Class: AWS\.S3](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html) in the API reference\.
 
 In addition, you can bind values to individual parameters when creating a service object using the `params` parameter\. The value of the `params` parameter of service objects is a map that specifies one or more of the parameter values defined by the service object\. The following example shows the `Bucket` parameter of an Amazon S3 service object being bound to a bucket named `myBucket`\.
 

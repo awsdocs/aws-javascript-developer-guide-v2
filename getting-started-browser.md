@@ -9,7 +9,7 @@
 
 ## The Scenario<a name="getting-started-browser-scenario"></a>
 
-Amazon Polly is a cloud service that converts text into lifelike speech\. You can use Amazon Polly to develop applications that increase engagement and accessibility\. Amazon Polly supports multiple languages and includes a variety of lifelike voices\. For more information about Amazon Polly, see the [http://docs.aws.amazon.com/polly/latest/dg/](http://docs.aws.amazon.com/polly/latest/dg/)\.
+Amazon Polly is a cloud service that converts text into lifelike speech\. You can use Amazon Polly to develop applications that increase engagement and accessibility\. Amazon Polly supports multiple languages and includes a variety of lifelike voices\. For more information about Amazon Polly, see the [https://docs.aws.amazon.com/polly/latest/dg/](https://docs.aws.amazon.com/polly/latest/dg/)\.
 
 The example shows how to set up and run a simple browser script that takes text you enter, sends that text to Amazon Polly, and then returns the URL of the synthesized audio of the text for you to play\. The browser script uses Amazon Cognito Identity to provide credentials needed to access AWS services\. You will see the basic patterns for loading and using the SDK for JavaScript in browser scripts\.
 
@@ -19,9 +19,9 @@ Playback of the synthesized speech in this example depends on running in a brows
 ![\[Illustration of how a browser script interacts with Amazon Cognito Identity and Amazon Polly services\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browserscenario.png)
 
 The browser script uses the SDK for JavaScript to synthesize text by using these APIs:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html) constructor
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html) constructor
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html#getSynthesizeSpeechUrl-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html#getSynthesizeSpeechUrl-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html) constructor
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html) constructor
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html#getSynthesizeSpeechUrl-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Polly/Presigner.html#getSynthesizeSpeechUrl-property)
 
 ## Step 1: Create an Amazon Cognito Identity Pool<a name="getting-started-browser-create-identity-pool"></a>
 
@@ -53,7 +53,7 @@ After you create your Amazon Cognito identity pool, you're ready to add permissi
 
 ## Step 2: Add a Policy to the Created IAM Role<a name="getting-started-browser-iam-role"></a>
 
-To enable browser script access to Amazon Polly for speech synthesis, use the unauthenticated IAM role created for your Amazon Cognito identity pool\. This requires you to add an IAM policy to the role\. For more information on IAM roles, see [Creating a Role to Delegate Permissions to an AWS Service](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
+To enable browser script access to Amazon Polly for speech synthesis, use the unauthenticated IAM role created for your Amazon Cognito identity pool\. This requires you to add an IAM policy to the role\. For more information on IAM roles, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
 **To add an Amazon Polly policy to the IAM role associated with unauthenticated users**
 
@@ -105,7 +105,7 @@ Save the HTML file, naming it `polly.html`\. After you have created the user int
 The first thing to do in creating the browser script is to add the SDK for JavaScript by adding this line after the `<audio>` element in the page\.
 
 ```
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.282.1.min.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
 ```
 
 Then add a new script element after the SDK entry in which you'll add the browser script\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
@@ -182,7 +182,7 @@ Here is the full HTML page with the browser script\. It's also available [here o
       	<source id="audioSource" type="audio/mp3" src="">
     	<p id="result">result</p>
     </audio>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.282.1.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
     <script>
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'REGION'; 

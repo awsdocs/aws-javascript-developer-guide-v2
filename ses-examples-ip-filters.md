@@ -12,9 +12,9 @@ In Amazon SES, a *filter* is a data structure that consists of a name, an IP add
 ## The Scenario<a name="ses-examples-receiving-email-scenario"></a>
 
 In this example, a series of Node\.js modules are used to send email in a variety of ways\. The Node\.js modules use the SDK for JavaScript to create and use email templates using these methods of the `AWS.SES` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptFilter-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptFilter-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listReceiptFilters-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listReceiptFilters-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptFilter-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptFilter-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptFilter-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createReceiptFilter-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listReceiptFilters-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listReceiptFilters-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptFilter-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteReceiptFilter-property)
 
 ## Prerequisite Tasks<a name="ses-examples-ip-filters-prerequisites"></a>
 

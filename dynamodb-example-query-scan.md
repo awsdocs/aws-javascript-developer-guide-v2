@@ -10,8 +10,8 @@
 Querying finds items in a table or a secondary index using only primary key attribute values\. You must provide a partition key name and a value for which to search\. You can also provide a sort key name and value, and use a comparison operator to refine the search results\. Scanning finds items by checking every item in the specified table\.
 
 In this example, you use a series of Node\.js modules to identify one or more items you want to retrieve from a DynamoDB table\. The code uses the SDK for JavaScript to query and scan tables using these methods of the DynamoDB client class:
-+ [query](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#query-property)
-+ [scan](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#scan-property)
++ [query](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#query-property)
++ [scan](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#scan-property)
 
 ## Prerequisite Tasks<a name="dynamodb-example-table-query-scan-prerequisites"></a>
 

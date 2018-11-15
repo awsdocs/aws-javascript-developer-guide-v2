@@ -10,13 +10,13 @@
 Users need their own access keys to make programmatic calls to AWS from the SDK for JavaScript\. To fill this need, you can create, modify, view, or rotate access keys \(access key IDs and secret access keys\) for IAM users\. By default, when you create an access key, its status is `Active`, which means the user can use the access key for API calls\. 
 
 In this example, a series of Node\.js modules are used manage access keys in IAM\. The Node\.js modules use the SDK for JavaScript to manage IAM access keys using these methods of the `AWS.IAM` client class:
-+ [createAccessKey](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createAccessKey-property)
-+ [listAccessKeys](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAccessKeys-property)
-+ [getAccessKeyLastUsed](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getAccessKeyLastUsed-property)
-+ [updateAccessKey](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateAccessKey-property)
-+ [deleteAccessKey](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteAccessKey-property)
++ [createAccessKey](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createAccessKey-property)
++ [listAccessKeys](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAccessKeys-property)
++ [getAccessKeyLastUsed](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getAccessKeyLastUsed-property)
++ [updateAccessKey](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#updateAccessKey-property)
++ [deleteAccessKey](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteAccessKey-property)
 
-For more information about IAM access keys, see [Access Keys](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\.
+For more information about IAM access keys, see [Access Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\.
 
 ## Prerequisite Tasks<a name="iam-examples-managing-access-keys-prerequisites"></a>
 

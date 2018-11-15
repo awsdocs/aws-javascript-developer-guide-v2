@@ -43,15 +43,15 @@ After you obtain the application ID from an identity provider, go to the IAM con
 
 1. Type the application ID provided by the identity provider in **Application ID** and then choose **Next Step**\.
 
-1. Configure permissions for the resources you want to expose, allowing access to specific operations on specific resources\. For more information about IAM permissions, see [ Overview of AWS IAM Permissions](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_permissions.html) in the *IAM User Guide*\. Review and, if needed, customize the role's trust relationship, and then choose **Next Step**\.
+1. Configure permissions for the resources you want to expose, allowing access to specific operations on specific resources\. For more information about IAM permissions, see [ Overview of AWS IAM Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_permissions.html) in the *IAM User Guide*\. Review and, if needed, customize the role's trust relationship, and then choose **Next Step**\.
 
-1. Attach additional policies you need and then choose **Next Step**\. For more information about IAM policies, see [Overview of IAM Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) in the *IAM User Guide*\.
+1. Attach additional policies you need and then choose **Next Step**\. For more information about IAM policies, see [Overview of IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) in the *IAM User Guide*\.
 
 1. Review the new role and then choose **Create Role**\.
 
 You can provide other constraints to the role, such as scoping it to specific user IDs\. If the role grants write permissions to your resources, make sure you correctly scope the role to users with the correct privileges, otherwise any user with an Amazon, Facebook, or Google identity will be able to modify resources in your application\.
 
-For more information on using web identity federation in IAM, see [ About Web Identity Federation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html) in the *IAM User Guide*\.
+For more information on using web identity federation in IAM, see [ About Web Identity Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html) in the *IAM User Guide*\.
 
 ## Step 3: Obtaining a Provider Access Token After Login<a name="config-web-identity-obtain-token"></a>
 

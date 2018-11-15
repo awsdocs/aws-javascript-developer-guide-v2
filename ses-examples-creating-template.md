@@ -12,11 +12,11 @@ Amazon SES lets you send personalized email messages using email templates\. For
 ## The Scenario<a name="ses-examples-creating-template-scenario"></a>
 
 In this example, you use a series of Node\.js modules to work with email templates\. The Node\.js modules use the SDK for JavaScript to create and use email templates using these methods of the `AWS.SES` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listTemplates-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listTemplates-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createTemplate-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#getTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#getTemplate-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteTemplate-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#updateTemplate-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#updateTemplate-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listTemplates-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#listTemplates-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createTemplate-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#createTemplate-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#getTemplate-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#getTemplate-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteTemplate-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#deleteTemplate-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#updateTemplate-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SES.html#updateTemplate-property)
 
 ## Prerequisite Tasks<a name="ses-examples-creating-template-prerequisites"></a>
 

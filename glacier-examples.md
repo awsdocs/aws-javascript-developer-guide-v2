@@ -4,7 +4,7 @@ Amazon Glacier is a secure cloud storage service for data archiving and long\-te
 
 ![\[Relationship between JavaScript environments, the SDK, and Amazon Glacier\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/code-samples-glacier.png)
 
-The JavaScript API for Amazon Glacier is exposed through the `AWS.Glacier` client class\. For more information about using the Amazon Glacier client class, see [Class: AWS\.Glacier](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Glacier.html) in the API reference\.
+The JavaScript API for Amazon Glacier is exposed through the `AWS.Glacier` client class\. For more information about using the Amazon Glacier client class, see [Class: AWS\.Glacier](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Glacier.html) in the API reference\.
 
 **Topics**
 + [Creating an Amazon Glacier Vault](glacier-example-creating-a-vault.md)

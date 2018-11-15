@@ -4,4 +4,4 @@ When you create an AWS Lambda function, you must create a special IAM role that 
 
 The execution role provides the Lambda function with the credentials it needs to run and to invoke other web services\. As a result, you do not need to provide credentials to the Node\.js code you write within a Lambda function\.
 
-For more information about creating a Lambda execution role, see [Manage Permissions: Using an IAM Role \(Execution Role\)](http://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role) in the *AWS Lambda Developer Guide*\.
+For more information about creating a Lambda execution role, see [Manage Permissions: Using an IAM Role \(Execution Role\)](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role) in the *AWS Lambda Developer Guide*\.

@@ -10,11 +10,11 @@
 If you want the URL for your sign\-in page to contain your company name or other friendly identifier instead of your AWS account ID, you can create an alias for your AWS account ID\. If you create an AWS account alias, your sign\-in page URL changes to incorporate the alias\.
 
 In this example, a series of Node\.js modules are used to create and manage IAM account aliases\. The Node\.js modules use the SDK for JavaScript to manage alises using these methods of the `AWS.IAM` client class:
-+ [createAccountAlias](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createAccountAlias-property)
-+ [listAccountAliases](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAccountAliases-property)
-+ [deleteAccountAlias](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteAccountAlias-property)
++ [createAccountAlias](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#createAccountAlias-property)
++ [listAccountAliases](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listAccountAliases-property)
++ [deleteAccountAlias](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteAccountAlias-property)
 
-For more information about IAM account aliases, see [Your AWS Account ID and Its Alias](http://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\.
+For more information about IAM account aliases, see [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the *IAM User Guide*\.
 
 ## Prerequisite Tasks<a name="iam-examples-account-alises-prerequisites"></a>
 

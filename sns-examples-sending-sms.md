@@ -13,11 +13,11 @@
 You can use Amazon SNS to send text messages, or SMS messages, to SMS\-enabled devices\. You can send a message directly to a phone number, or you can send a message to multiple phone numbers at once by subscribing those phone numbers to a topic and sending your message to the topic\.
 
 In this example, you use a series of Node\.js modules to publish SMS text messages from Amazon SNS to SMS\-enabled devices\. The Node\.js modules use the SDK for JavaScript to publish SMS messages using these methods of the `AWS.SNS` client class:
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#getSMSAttributes-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#getSMSAttributes-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#checkIfPhoneNumberIsOptedOut-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#checkIfPhoneNumberIsOptedOut-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listPhoneNumbersOptedOut-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listPhoneNumbersOptedOut-property)
-+ [http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#getSMSAttributes-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#getSMSAttributes-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#checkIfPhoneNumberIsOptedOut-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#checkIfPhoneNumberIsOptedOut-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listPhoneNumbersOptedOut-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#listPhoneNumbersOptedOut-property)
++ [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#publish-property)
 
 ## Prerequisite Tasks<a name="sns-examples-sending-sms-prerequisites"></a>
 
@@ -29,7 +29,7 @@ To set up and run this example, you must first complete these tasks:
 
 Use Amazon SNS to specify preferences for SMS messaging, such as how your deliveries are optimized \(for cost or for reliable delivery\), your monthly spending limit, how message deliveries are logged, and whether to subscribe to daily SMS usage reports\. These preferences are retrieved and set as SMS attributes for Amazon SNS\.
 
-In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_getsmstype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for getting SMS attributes, including the names of the individual attributes to get\. For details on available SMS attributes, see [SetSMSAttributes](http://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
+In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_getsmstype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for getting SMS attributes, including the names of the individual attributes to get\. For details on available SMS attributes, see [SetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
 
 This example gets the `DefaultSMSType` attribute, which controls whether SMS messages are sent as `Promotional`, which optimizes message delivery to incur the lowest cost, or as `Transactional`, which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -71,7 +71,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Setting SMS Attributes<a name="sending-sms-setattributes"></a>
 
-In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_setsmsttype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each\. For details on available SMS attributes, see [ SetSMSAttributes](http://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
+In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_setsmsttype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each\. For details on available SMS attributes, see [ SetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
 
 This example sets the `DefaultSMSType` attribute to `Transactional`, which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 

@@ -4,7 +4,7 @@ Amazon Simple Queue Service \(SQS\) is a fast, reliable, scalable, fully managed
 
 ![\[Relationship between JavaScript environments, the SDK, and Amazon SQS\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/code-samples-sqs.png)
 
-The JavaScript API for Amazon SQS is exposed through the `AWS.SQS` client class\. For more information about using the CloudWatch client class, see [Class: AWS\.SQS](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html) in the API reference\.
+The JavaScript API for Amazon SQS is exposed through the `AWS.SQS` client class\. For more information about using the CloudWatch client class, see [Class: AWS\.SQS](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html) in the API reference\.
 
 **Topics**
 + [Using Queues in Amazon SQS](sqs-examples-using-queues.md)
