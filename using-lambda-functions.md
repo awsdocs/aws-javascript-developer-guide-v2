@@ -38,7 +38,7 @@ To create this application you'll need resources from multiple services that mus
 
 1. [Prepare the browser script](using-lambda-browser-script.md)\. Save the edited copy of `index.html` for upload to Amazon S3\.
 
-1. Open the `slotsassets.zip` archive you downloaded from the [code example archive on GitHub](https://github.com/aws-doc-sdk-examples/javascript/example_code/lambda/tutorial/slotassets.zip ), and copy the contents into your working directory\.
+1. Open the `slotsassets.zip` archive you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip), and copy the contents into your working directory\.
 
 1. [Create a Lambda execution role in IAM](using-lambda-iam-role-setup.md)\.
 
