@@ -53,7 +53,7 @@ ec2.describeKeyPairs(function(err, data) {
    if (err) {
       console.log("Error", err);
    } else {
-      console.log("Success", JSON.stringify(data.KeyPairs);
+      console.log("Success", JSON.stringify(data.KeyPairs));
    }
 });
 ```
