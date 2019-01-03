@@ -1,9 +1,9 @@
-# Creating an Amazon Glacier Vault<a name="glacier-example-creating-a-vault"></a>
+# Creating a Glacier Vault<a name="glacier-example-creating-a-vault"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-+ How to create a vault using the `createVault` method of the Amazon Glacier service object\.
++ How to create a vault using the `createVault` method of the Amazon S3 Glacier service object\.
 
 ## Prerequisite Tasks<a name="glacier-example-createvault-prerequisites"></a>
 

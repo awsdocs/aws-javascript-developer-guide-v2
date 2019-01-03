@@ -8,7 +8,7 @@ Not all services are immediately available in the SDK\. To find out which servic
 
 ## Using the SDK with Node\.js<a name="w4aab5b9"></a>
 
-Node\.js a cross\-platform runtime for running server\-side JavaScript applications\. You can set up Node\.js on an Amazon EC2 instance to run on a server\. You can also use Node\.js to write on\-demand AWS Lambda functions\.
+Node\.js is a cross\-platform runtime for running server\-side JavaScript applications\. You can set up Node\.js on an Amazon EC2 instance to run on a server\. You can also use Node\.js to write on\-demand AWS Lambda functions\.
 
 Using the SDK for JavaScript for Node\.js differs from using it for JavaScript in a web browser in the way you load the SDK and in how you obtain the credentials needed to access specific web services\. When use of particular APIs differs between Node\.js and the browser, those differences will be called out\.
 

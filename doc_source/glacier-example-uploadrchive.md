@@ -1,11 +1,11 @@
-# Uploading an Archive to Amazon Glacier<a name="glacier-example-uploadrchive"></a>
+# Uploading an Archive to Glacier<a name="glacier-example-uploadrchive"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-+ How to upload an archive to Amazon Glacier using the `uploadArchive` method of the Amazon Glacier service object\.
++ How to upload an archive to Amazon S3 Glacier using the `uploadArchive` method of the Glacier service object\.
 
-The following example uploads a single `Buffer` object as an entire archive using the `uploadArchive` method of the Amazon Glacier service object\.
+The following example uploads a single `Buffer` object as an entire archive using the `uploadArchive` method of the Glacier service object\.
 
 The example assumes you've already created a vault named `YOUR_VAULT_NAME`\. The SDK automatically computes the tree hash checksum for the data uploaded, though you can override it by passing your own checksum parameter:
 

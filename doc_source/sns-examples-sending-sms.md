@@ -67,11 +67,11 @@ To run the example, type the following at the command line\.
 node sns_getsmstype.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_getsmsattributes.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_getsmstype.js)\.
 
 ## Setting SMS Attributes<a name="sending-sms-setattributes"></a>
 
-In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_setsmsttype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each\. For details on available SMS attributes, see [ SetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
+In this example, use a Node\.js module to get the current SMS attributes in Amazon SNS\. Create a Node\.js module with the file name `sns_setsmstype.js`\. Configure the SDK as previously shown\. Create an object containing the parameters for setting SMS attributes, including the names of the individual attributes to set and the values to set for each\. For details on available SMS attributes, see [ SetSMSAttributes](https://docs.aws.amazon.com/sns/latest/api/API_SetSMSAttributes.html) in the Amazon Simple Notification Service API Reference\.
 
 This example sets the `DefaultSMSType` attribute to `Transactional`, which optimizes message delivery to achieve the highest reliability\. Pass the parameters to the `setTopicAttributes` method of the `AWS.SNS` client class\. To call the `getSMSAttributes` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
@@ -104,10 +104,10 @@ setSMSTypePromise.then(
 To run the example, type the following at the command line\.
 
 ```
-node sns_setsmsttype.js
+node sns_setsmstype.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_setsmsttype.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_setsmstype.js)\.
 
 ## Checking If a Phone Number Has Opted Out<a name="sending-sms-checkifphonenumberisoptedout"></a>
 
@@ -140,7 +140,7 @@ To run the example, type the following at the command line\.
 node sns_checkphoneoptout.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_checkphoneoptput.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_checkphoneoptout.js)\.
 
 ## Listing Opted\-Out Phone Numbers<a name="sending-sms-listphonenumbersoptedout"></a>
 
@@ -174,7 +174,7 @@ To run the example, type the following at the command line\.
 node sns_listnumbersoptedout.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_listnumbersoptedput.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_listnumbersoptedout.js)\.
 
 ## Publishing an SMS Message<a name="sending-sms-publishsms"></a>
 

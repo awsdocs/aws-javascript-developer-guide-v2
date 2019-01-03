@@ -156,7 +156,7 @@ To run the example, type the following at the command line\.
 node sns_gettopicattributes.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_gettopicattrubutes.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_gettopicattributes.js)\.
 
 ## Setting Topic Attributes<a name="sns-examples-managing-topicsstttopicattributes"></a>
 
@@ -196,4 +196,4 @@ To run the example, type the following at the command line\.
 node sns_settopicattributes.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_Settopicattrubutes.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_settopicattributes.js)\.

@@ -1,7 +1,7 @@
 # AWS SDK for JavaScript Developer Guide for SDK v2
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -86,10 +86,10 @@ Amazon's trademarks and trade dress may not be used in
       + [Getting Your Account-Specific Endpoint for MediaConvert](emc-examples-getendpoint.md)
       + [Creating and Managing Transcoding Jobs in MediaConvert](emc-examples-jobs.md)
       + [Using Job Templates in MediaConvert](emc-examples-templates.md)
-   + [Amazon Glacier Examples](glacier-examples.md)
-      + [Creating an Amazon Glacier Vault](glacier-example-creating-a-vault.md)
-      + [Uploading an Archive to Amazon Glacier](glacier-example-uploadrchive.md)
-      + [Doing a Multipart Upload to Amazon Glacier](glacier-example-multipart-upload.md)
+   + [Amazon S3 Glacier Examples](glacier-examples.md)
+      + [Creating a Glacier Vault](glacier-example-creating-a-vault.md)
+      + [Uploading an Archive to Glacier](glacier-example-uploadrchive.md)
+      + [Doing a Multipart Upload to Glacier](glacier-example-multipart-upload.md)
    + [AWS IAM Examples](iam-examples.md)
       + [Managing IAM Users](iam-examples-managing-users.md)
       + [Working with IAM Policies](iam-examples-policies.md)

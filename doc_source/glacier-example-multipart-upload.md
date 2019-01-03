@@ -1,6 +1,6 @@
-# Doing a Multipart Upload to Amazon Glacier<a name="glacier-example-multipart-upload"></a>
+# Doing a Multipart Upload to Glacier<a name="glacier-example-multipart-upload"></a>
 
-The following example creates a multipart upload out of 1 megabyte chunks of a `Buffer` object using the `initiateMultipartUpload` method of the Amazon Glacier service object\.
+The following example creates a multipart upload out of 1 megabyte chunks of a `Buffer` object using the `initiateMultipartUpload` method of the Amazon S3 Glacier service object\.
 
 The example assumes you have already created a vault named `YOUR_VAULT_NAME`\. A complete SHA\-256 tree hash is manually computed using the `computeChecksums` method\.
 
