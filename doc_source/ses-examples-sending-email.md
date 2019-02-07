@@ -83,10 +83,10 @@ var params = {
     },
   Source: 'SENDER_EMAIL_ADDRESS', /* required */
   ReplyToAddresses: [
-      'EMAIL_ADDRESS',
+     'EMAIL_ADDRESS',
     /* more items */
   ],
-};       
+};
 
 // Create the promise and SES service object
 var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
@@ -137,7 +137,7 @@ var params = {
   Template: 'TEMPLATE_NAME', /* required */
   TemplateData: '{ \"REPLACEMENT_TAG_NAME\":\"REPLACEMENT_VALUE\" }', /* required */
   ReplyToAddresses: [
-      'EMAIL_ADDRESS',
+    'EMAIL_ADDRESS'
   ],
 };
 
@@ -181,12 +181,12 @@ var params = {
     {
       Destination: { /* required */
         CcAddresses: [
-        'EMAIL_ADDRESS',
+          'EMAIL_ADDRESS',
           /* more items */
         ],
         ToAddresses: [
-        'EMAIL_ADDRESS',
-        'EMAIL_ADDRESS',
+          'EMAIL_ADDRESS',
+          'EMAIL_ADDRESS'
           /* more items */
         ]
       },
@@ -197,7 +197,7 @@ var params = {
   Template: 'TEMPLATE_NAME', /* required */
   DefaultTemplateData: '{ \"REPLACEMENT_TAG_NAME\":\"REPLACEMENT_VALUE\" }',
   ReplyToAddresses: [
-      'EMAIL_ADDRESS',
+    'EMAIL_ADDRESS'
   ]
 };
 

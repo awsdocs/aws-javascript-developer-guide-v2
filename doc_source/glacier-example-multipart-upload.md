@@ -5,6 +5,7 @@ The following example creates a multipart upload out of 1 megabyte chunks of a `
 The example assumes you have already created a vault named `YOUR_VAULT_NAME`\. A complete SHA\-256 tree hash is manually computed using the `computeChecksums` method\.
 
 ```
+// Create a new service object and some supporting variables
 var glacier = new AWS.Glacier({apiVersion: '2012-06-01'}),
     vaultName = 'YOUR_VAULT_NAME',
     buffer = new Buffer(2.5 * 1024 * 1024), // 2.5MB buffer
@@ -19,6 +20,7 @@ var treeHash = glacier.computeChecksums(buffer).treeHash;
 
 // Initiate the multipart upload
 console.log('Initiating upload to', vaultName);
+// Call Glacier to initiate the upload.
 glacier.initiateMultipartUpload(params, function (mpErr, multipart) {
     if (mpErr) { console.log('Error!', mpErr.stack); return; }
     console.log("Got upload ID", multipart.uploadId);
@@ -32,21 +34,21 @@ glacier.initiateMultipartUpload(params, function (mpErr, multipart) {
                 range: 'bytes ' + i + '-' + (end-1) + '/*',
                 body: buffer.slice(i, end)
             };
-    
+
         // Send a single part
         console.log('Uploading part', i, '=', partParams.range);
         glacier.uploadMultipartPart(partParams, function(multiErr, mData) {
             if (multiErr) return;
             console.log("Completed part", this.request.params.range);
             if (--numPartsLeft > 0) return; // complete only when all parts uploaded
-        
+
             var doneParams = {
                 vaultName: vaultName,
                 uploadId: multipart.uploadId,
                 archiveSize: buffer.length.toString(),
                 checksum: treeHash // the computed tree hash
             };
-        
+
             console.log("Completing upload...");
             glacier.completeMultipartUpload(doneParams, function(err, data) {
                 if (err) {

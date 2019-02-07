@@ -43,7 +43,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 var params = {
   AttributeDefinitions: [
@@ -81,7 +81,7 @@ ddb.createTable(params, function(err, data) {
   if (err) {
     console.log("Error", err);
   } else {
-    console.log("Success", data);
+    console.log("Table Created", data);
   }
 });
 ```
@@ -105,7 +105,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 // Call DynamoDB to retrieve the list of tables
 ddb.listTables({Limit: 10}, function(err, data) {
@@ -136,7 +136,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 var params = {
   TableName: process.argv[2]
@@ -171,7 +171,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 var params = {
   TableName: process.argv[2]

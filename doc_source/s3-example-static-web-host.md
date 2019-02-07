@@ -49,7 +49,8 @@ AWS.config.update({region: 'REGION'});
 s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 var bucketParams = {Bucket: process.argv[2]};
-// call S3 to retrieve policy for selected bucket
+
+// call S3 to retrieve the website configuration for selected bucket
 s3.getBucketWebsite(bucketParams, function(err, data) {
   if (err) {
     console.log("Error", err);
@@ -84,7 +85,7 @@ AWS.config.update({region: 'REGION'});
 // Create S3 service object
 s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
-// Create JSON for setBucketWebsite parameters
+// Create JSON for putBucketWebsite parameters
 var staticHostParams = {
   Bucket: '',
   WebsiteConfiguration: {
@@ -97,19 +98,19 @@ var staticHostParams = {
   }
 };
 
-// Insert specified bucket name index and error documents into params JSON
+// Insert specified bucket name and index and error documents into params JSON
 // from command line arguments
 staticHostParams.Bucket = process.argv[2];
 staticHostParams.WebsiteConfiguration.IndexDocument.Suffix = process.argv[3];
 staticHostParams.WebsiteConfiguration.ErrorDocument.Key = process.argv[4];
 
-// set the new policy on the selected bucket
+// set the new website configuration on the selected bucket
 s3.putBucketWebsite(staticHostParams, function(err, data) {
   if (err) {
     // display error message
     console.log("Error", err);
   } else {
-    // update the displayed policy for the selected bucket
+    // update the displayed website configuration for the selected bucket
     console.log("Success", data);
   }
 });
@@ -139,9 +140,10 @@ AWS.config.update({region: 'REGION'});
 s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 var bucketParams = {Bucket: process.argv[2]};
-// call S3 to delete policy for selected bucket
-s3.deleteBucketWebsite(bucketParams, function(err, data) {
-  if (err) {
+
+// call S3 to delete website configuration for selected bucket
+s3.deleteBucketWebsite(bucketParams, function(error, data) {
+  if (error) {
     console.log("Error", err);
   } else if (data) {
     console.log("Success", data);

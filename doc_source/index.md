@@ -51,6 +51,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Building the SDK for Browsers](building-sdk-for-browsers.md)
       + [Cross-Origin Resource Sharing (CORS)](cors.md)
    + [Bundling Applications with Webpack](webpack.md)
+   + [SDK Metrics in the AWS SDK for JavaScript](metrics.md)
 + [Working with Services in the SDK for JavaScript](working-with-services.md)
    + [Creating and Calling Service Objects](creating-and-calling-service-objects.md)
    + [Logging AWS SDK for JavaScript Calls](logging-sdk-calls.md)

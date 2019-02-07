@@ -85,6 +85,7 @@ AWS.config.update({region: 'REGION'});
 var params = {
   attributes: { /* required */
     'DefaultSMSType': 'Transactional', /* highest reliability */
+    //'DefaultSMSType': 'Promotional' /* lowest cost */
   }
 };
 

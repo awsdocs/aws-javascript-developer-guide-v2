@@ -47,15 +47,15 @@ AWS.config.update({region: 'REGION'});
 // Create S3 service object
 s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
-// set the parameters for S3.getBucketCors
+// Set the parameters for S3.getBucketCors
 var bucketParams = {Bucket: process.argv[2]};
 
 // call S3 to retrieve CORS configuration for selected bucket
 s3.getBucketCors(bucketParams, function(err, data) {
   if (err) {
-    console.log(err);
+    console.log("Error", err);
   } else if (data) {
-    console.log(JSON.stringify(data.CORSRules));
+    console.log("Success", JSON.stringify(data.CORSRules));
   }
 });
 ```
@@ -94,7 +94,7 @@ var thisConfig = {
   MaxAgeSeconds:3000
 };
 
-// Create array of allowed methods parameter based on command line parameters
+// Assemble the list of allowed methods based on command line parameters
 var allowedMethods = [];
 process.argv.forEach(function (val, index, array) {
   if (val.toUpperCase() === "POST") {allowedMethods.push("POST")};
@@ -105,9 +105,12 @@ process.argv.forEach(function (val, index, array) {
   if (val.toUpperCase() === "HEAD") {allowedMethods.push("HEAD")};
 });
 
-// create CORS params
+// Copy the array of allowed methods into the config object
 thisConfig.AllowedMethods = allowedMethods;
+// Create array of configs then add the config object to it
 var corsRules = new Array(thisConfig);
+
+// Create CORS params
 var corsParams = {Bucket: process.argv[2], CORSConfiguration: {CORSRules: corsRules}};
 
 // set the new CORS configuration on the selected bucket

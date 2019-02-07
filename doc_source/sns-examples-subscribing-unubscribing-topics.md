@@ -28,7 +28,7 @@ In this example, use a Node\.js module to list all subscriptions to an Amazon SN
 Create an object containing the `TopicArn` parameter for the topic whose subscriptions you want to list\. Pass the parameters to the `listSubscriptionsByTopic` method of the `AWS.SNS` client class\. To call the `listSubscriptionsByTopic` method, create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the `response` in the promise callback\.
 
 ```
-/// Load the AWS SDK for Node.js
+// Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set region
 AWS.config.update({region: 'REGION'});
@@ -67,7 +67,7 @@ To call the `subscribe` method, create a promise for invoking an Amazon SNS serv
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set region
-AWS.config.update({region: 'REGION'});                
+AWS.config.update({region: 'REGION'});
 
 // Create subscribe/email parameters
 var params = {
@@ -109,7 +109,7 @@ To call the `subscribe` method, create a promise for invoking an Amazon SNS serv
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set region
-AWS.config.update({region: 'REGION'});                
+AWS.config.update({region: 'REGION'});
 
 // Create subscribe/email parameters
 var params = {
@@ -151,7 +151,7 @@ To call the `subscribe` method, create a promise for invoking an Amazon SNS serv
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set region
-AWS.config.update({region: 'REGION'});                
+AWS.config.update({region: 'REGION'});
 
 // Create subscribe/email parameters
 var params = {

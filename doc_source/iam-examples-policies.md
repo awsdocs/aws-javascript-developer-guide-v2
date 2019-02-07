@@ -79,9 +79,9 @@ var params = {
 
 iam.createPolicy(params, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log("New Policy: ", data);
+    console.log("Success", data);
   }
 });
 ```
@@ -113,9 +113,9 @@ var params = {
 
 iam.getPolicy(params, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log(params.PolicyArn + ' - ' + data.Policy.Description);
+    console.log("Success", data.Policy.Description);
   }
 });
 ```
@@ -147,32 +147,26 @@ var paramsRoleList = {
   RoleName: process.argv[2]
 };
 
-var policyName = 'AmazonDynamoDBFullAccess';
-var policyArn = 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess';
-
-iam.listAttachedRolePolicies(paramsRoleList).eachPage(function(err, data) {
+iam.listAttachedRolePolicies(paramsRoleList, function(err, data) {
   if (err) {
-    throw err;
-  }
-  if (data && data.AttachedPolicies) {
-    data.AttachedPolicies.forEach(function(rolePolicy) {
-      if (rolePolicy.PolicyName === policyName) {
-        console.log(policyName + ' is already attached to this role.');
+    console.log("Error", err);
+  } else {
+    var myRolePolicies = data.AttachedPolicies;
+    myRolePolicies.forEach(function (val, index, array) {
+      if (myRolePolicies[index].PolicyName === 'AmazonDynamoDBFullAccess') {
+        console.log("AmazonDynamoDBFullAccess is already attached to this role.")
         process.exit();
       }
     });
-  } else {
-    // there are no more results when data is null
     var params = {
-      PolicyArn: policyArn,
+      PolicyArn: 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess',
       RoleName: process.argv[2]
     };
     iam.attachRolePolicy(params, function(err, data) {
       if (err) {
-        console.error('Unable to attach policy to role.');
-        throw err;
+        console.log("Unable to attach policy to role", err);
       } else {
-        console.log('Role attached successfully.');
+        console.log("Role attached successfully");
       }
     });
   }
@@ -194,7 +188,7 @@ Check the array members to see if the policy you want to detach from the role is
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set region
+// Set the region 
 AWS.config.update({region: 'REGION'});
 
 // Create the IAM service object
@@ -204,39 +198,27 @@ var paramsRoleList = {
   RoleName: process.argv[2]
 };
 
-var policyName = 'AmazonDynamoDBFullAccess';
-var policyArn = 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess';
-
-iam.listAttachedRolePolicies(paramsRoleList).eachPage(function(err, data, done) {
+iam.listAttachedRolePolicies(paramsRoleList, function(err, data) {
   if (err) {
-    throw err;
-  }
-  var foundPolicy = false;
-  if (data && data.AttachedPolicies) {
-    data.AttachedPolicies.forEach(function(rolePolicy) {
-      if (rolePolicy.PolicyName !== policyName) {
-        return;
-      }
-      foundPolicy = true;
-      var params = {
-        PolicyArn: policyArn,
-        RoleName: process.argv[2]
-      };
-      iam.detachRolePolicy(params, function(err, data) {
-        if (err) {
-          console.error('Unable to detach policy from role.');
-          throw err;
-        } else {
-          console.log('Policy detached from role successfully.');
-          process.exit();
-        }
-      });
-    });
-    if (!foundPolicy) {
-      done();
-    }
+    console.log("Error", err);
   } else {
-    console.log('Policy was not attached to the role.');
+    var myRolePolicies = data.AttachedPolicies;
+    myRolePolicies.forEach(function (val, index, array) {
+      if (myRolePolicies[index].PolicyName === 'AmazonDynamoDBFullAccess') {
+        var params = {
+          PolicyArn: 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess',
+          RoleName: process.argv[2]
+        };
+        iam.detachRolePolicy(params, function(err, data) {
+          if (err) {
+            console.log("Unable to detach policy from role", err);
+          } else {
+            console.log("Policy detached from role successfully");
+            process.exit();
+          }
+        });
+      }
+    });
   }
 });
 ```

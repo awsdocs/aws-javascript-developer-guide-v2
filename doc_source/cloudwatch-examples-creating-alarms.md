@@ -41,7 +41,7 @@ Create a Node\.js module with the file name `cw_describealarms.js`\. Be sure to 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set region 
+// Set the region 
 AWS.config.update({region: 'REGION'});
 
 // Create CloudWatch service object
@@ -74,15 +74,14 @@ Create a Node\.js module with the file name `cw_putmetricalarm.js`\. Be sure to 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set region 
+// Set the region 
 AWS.config.update({region: 'REGION'});
-
 
 // Create CloudWatch service object
 var cw = new AWS.CloudWatch({apiVersion: '2010-08-01'});
 
 var params = {
-  AlarmName: 'Web_Server_CPU_Utilization', 
+  AlarmName: 'Web_Server_CPU_Utilization',
   ComparisonOperator: 'GreaterThanThreshold',
   EvaluationPeriods: 1,
   MetricName: 'CPUUtilization',
@@ -125,13 +124,17 @@ Create a Node\.js module with the file name `cw_deletealarms.js`\. Be sure to co
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set region 
+// Set the region 
 AWS.config.update({region: 'REGION'});
 
 // Create CloudWatch service object
 var cw = new AWS.CloudWatch({apiVersion: '2010-08-01'});
 
-cw.deleteAlarms({AlarmNames: ['Web_Server_CPU_Utilization']}, function(err, data) {
+var params = {
+  AlarmNames: ['Web_Server_CPU_Utilization']
+};
+
+cw.deleteAlarms(params, function(err, data) {
   if (err) {
     console.log("Error", err);
   } else {

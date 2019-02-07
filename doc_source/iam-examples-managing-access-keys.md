@@ -42,7 +42,7 @@ Create a Node\.js module with the file name `iam_createaccesskeys.js`\. Be sure 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set region
+// Set the region 
 AWS.config.update({region: 'REGION'});
 
 // Create the IAM service object
@@ -50,7 +50,7 @@ var iam = new AWS.IAM({apiVersion: '2010-05-08'});
 
 iam.createAccessKey({UserName: 'IAM_USER_NAME'}, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
     console.log("Success", data.AccessKey);
   }
@@ -85,7 +85,7 @@ var params = {
 
 iam.listAccessKeys(params, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
     console.log("Success", data);
   }
@@ -115,9 +115,9 @@ var iam = new AWS.IAM({apiVersion: '2010-05-08'});
 
 iam.getAccessKeyLastUsed({AccessKeyId: 'ACCESS_KEY_ID'}, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log("Last Access Key used: " + data.AccessKeyLastUsed);
+    console.log("Success", data.AccessKeyLastUsed);
   }
 });
 ```
@@ -151,9 +151,9 @@ var params = {
 
 iam.updateAccessKey(params, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log('Access Key updated.');
+    console.log("Success", data);
   }
 });
 ```
@@ -186,7 +186,7 @@ var params = {
 
 iam.deleteAccessKey(params, function(err, data) {
   if (err) {
-    throw err);
+    console.log("Error", err);
   } else {
     console.log("Success", data);
   }

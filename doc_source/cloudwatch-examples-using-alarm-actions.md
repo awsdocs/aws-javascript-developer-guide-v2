@@ -83,7 +83,7 @@ var params = {
   Statistic: 'Average',
   Threshold: 70.0,
   ActionsEnabled: true,
-  AlarmActions: ['arn:aws:swf:us-west-2:{CUSTOMER_ACCOUNT}:action/actions/AWS_EC2.InstanceId.Reboot/1.0'], /* This is a workflow */
+  AlarmActions: ['ACTION_ARN'],
   AlarmDescription: 'Alarm when server CPU exceeds 70%',
   Dimensions: [
     {

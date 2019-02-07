@@ -28,10 +28,14 @@ AWS.config.update({region: 'us-west-2'});
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
 // Set the region 
-AWS.config.update({region: 'us-west-2'});
+AWS.config.update({region: 'REGION'});
 
+// Create a new service object
 var glacier = new AWS.Glacier({apiVersion: '2012-06-01'});
+// Call Glacier to create the vault
 glacier.createVault({vaultName: 'YOUR_VAULT_NAME'}, function(err) {
-if (!err) console.log("Created vault!")
+  if (!err) {
+    console.log("Created vault!")
+  }
 });
 ```

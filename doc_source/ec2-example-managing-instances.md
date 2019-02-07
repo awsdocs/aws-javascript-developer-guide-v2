@@ -49,9 +49,13 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create EC2 service object
-ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
+var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
-// Call EC2 to retrieve the policy for selected bucket
+var params = {
+  DryRun: false
+};
+
+// Call EC2 to retrieve policy for selected bucket
 ec2.describeInstances(params, function(err, data) {
   if (err) {
     console.log("Error", err.stack);
@@ -82,7 +86,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create EC2 service object
-ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
+var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
   InstanceIds: ['INSTANCE_ID'],
@@ -90,7 +94,7 @@ var params = {
 };
 
 if (process.argv[2].toUpperCase() === "ON") {
-  // call EC2 to start monitoring the selected instances
+  // Call EC2 to start monitoring the selected instances
   ec2.monitorInstances(params, function(err, data) {
     if (err && err.code === 'DryRunOperation') {
       params.DryRun = false;
@@ -106,7 +110,7 @@ if (process.argv[2].toUpperCase() === "ON") {
     }
   });
 } else if (process.argv[2].toUpperCase() === "OFF") {
-  // call EC2 to stop monitoring the selected instances
+  // Call EC2 to stop monitoring the selected instances
   ec2.unmonitorInstances(params, function(err, data) {
     if (err && err.code === 'DryRunOperation') {
       params.DryRun = false;
@@ -145,7 +149,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create EC2 service object
-ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
+var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
   InstanceIds: [process.argv[3]],
@@ -153,7 +157,7 @@ var params = {
 };
 
 if (process.argv[2].toUpperCase() === "START") {
-  // call EC2 to start the selected instances
+  // Call EC2 to start the selected instances
   ec2.startInstances(params, function(err, data) {
     if (err && err.code === 'DryRunOperation') {
       params.DryRun = false;
@@ -169,7 +173,7 @@ if (process.argv[2].toUpperCase() === "START") {
     }
   });
 } else if (process.argv[2].toUpperCase() === "STOP") {
-  // call EC2 to stop the selected instances
+  // Call EC2 to stop the selected instances
   ec2.stopInstances(params, function(err, data) {
     if (err && err.code === 'DryRunOperation') {
       params.DryRun = false;
@@ -206,14 +210,14 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create EC2 service object
-ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
+var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
   InstanceIds: ['INSTANCE_ID'],
   DryRun: true
 };
 
-// call EC2 to reboot instances
+// Call EC2 to reboot instances
 ec2.rebootInstances(params, function(err, data) {
   if (err && err.code === 'DryRunOperation') {
     params.DryRun = false;

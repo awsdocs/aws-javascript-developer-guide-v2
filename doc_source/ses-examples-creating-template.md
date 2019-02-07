@@ -113,7 +113,7 @@ var AWS = require('aws-sdk');
 // Set the region 
 AWS.config.update({region: 'REGION'});
 
-// Create createTemplate params 
+// Create createTemplate params
 var params = {
   Template: { 
     TemplateName: 'TEMPLATE_NAME', /* required */
@@ -130,7 +130,7 @@ var templatePromise = new AWS.SES({apiVersion: '2010-12-01'}).createTemplate(par
 templatePromise.then(
   function(data) {
     console.log(data);
-  }).switch(
+  }).catch(
     function(err) {
     console.error(err, err.stack);
   });

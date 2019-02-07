@@ -76,14 +76,15 @@ The HTML for the blog page consists mainly of a series of paragraphs contained w
 
 Obtain the credentials needed to configure the SDK by calling the `CognitoIdentityCredentials` method, providing the Amazon Cognito identity pool ID\. Upon success, create the Kinesis service object in the callback function\.
 
+The following code snippet shows this step\. \(See [Capturing Web Page Scroll Progress Code](kinesis-examples-capturing-page-scrolling-full.md) for the full example\.\)
+
 ```
 // Configure Credentials to use Cognito
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: 'IDENTITY_POOL_ID'
 });
 
-AWS.config.region = 'us-west-2';
-            
+AWS.config.region = 'REGION';
 // We're going to partition Amazon Kinesis records based on an identity.
 // We need to get credentials first, then attach our event listeners.
 AWS.config.credentials.get(function(err) {
@@ -93,7 +94,7 @@ AWS.config.credentials.get(function(err) {
         console.error(err);
         return;
     }
-    // create kinesis service object
+    // create Amazon Kinesis service object
     var kinesis = new AWS.Kinesis({
         apiVersion: '2013-12-02'
     });
@@ -103,15 +104,18 @@ AWS.config.credentials.get(function(err) {
 
 Scroll progress is calculated using the `scrollHeight` and `scrollTop` properties of the `<div>` containing the content of the blog post\. Each scroll record is created in an event listener function for the `scroll` event and then added to an array of records for periodic submission to Kinesis\.
 
+The following code snippet shows this step\. \(See [Capturing Web Page Scroll Progress Code](kinesis-examples-capturing-page-scrolling-full.md) for the full example\.\)
+
 ```
-   var blogContent = document.getElementById('BlogContent');
+    // Get the ID of the Web page element.
+    var blogContent = document.getElementById('BlogContent');
 
-   // Get Scrollable height
-   var scrollableHeight = blogContent.clientHeight;
+    // Get Scrollable height
+    var scrollableHeight = blogContent.clientHeight;
 
-   var recordData = [];
-   var TID = null;
-   blogContent.addEventListener('scroll', function(event) {
+    var recordData = [];
+    var TID = null;
+    blogContent.addEventListener('scroll', function(event) {
         clearTimeout(TID);
         // Prevent creating a record while a user is actively scrolling
         TID = setTimeout(function() {
@@ -141,6 +145,8 @@ Scroll progress is calculated using the `scrollHeight` and `scrollTop` propertie
 ## Submitting Records to Kinesis<a name="kinesis-examples-capturing-page-scrolling-submit-records"></a>
 
 Once each second, if there are records in the array, those pending records are sent to Kinesis\.
+
+The following code snippet shows this step\. \(See [Capturing Web Page Scroll Progress Code](kinesis-examples-capturing-page-scrolling-full.md) for the full example\.\)
 
 ```
     // upload data to Amazon Kinesis every second if data exists

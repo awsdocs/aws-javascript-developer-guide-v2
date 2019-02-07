@@ -49,14 +49,14 @@ var sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 var queueURL = "SQS_QUEUE_URL";
 
 var params = {
- AttributeNames: [
+  AttributeNames: [
     "SentTimestamp"
- ],
- MaxNumberOfMessages: 1,
- MessageAttributeNames: [
+  ],
+  MaxNumberOfMessages: 1,
+  MessageAttributeNames: [
     "All"
- ],
- QueueUrl: queueURL
+  ],
+  QueueUrl: queueURL
 };
 
 sqs.receiveMessage(params, function(err, data) {
@@ -66,7 +66,7 @@ sqs.receiveMessage(params, function(err, data) {
     var visibilityParams = {
       QueueUrl: queueURL,
       ReceiptHandle: data.Messages[0].ReceiptHandle,
-      VisibilityTimeout: 20 // 20 seconds timeout
+      VisibilityTimeout: 20 // 20 second timeout
     };
     sqs.changeMessageVisibility(visibilityParams, function(err, data) {
       if (err) {

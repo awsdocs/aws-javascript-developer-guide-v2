@@ -95,7 +95,7 @@ AWS.config.update({region: 'REGION'});
 var cwevents = new AWS.CloudWatchEvents({apiVersion: '2015-10-07'});
 
 var params = {
-  Name: 'DEMO_EVENT', 
+  Name: 'DEMO_EVENT',
   RoleArn: 'IAM_ROLE_ARN',
   ScheduleExpression: 'rate(5 minutes)',
   State: 'ENABLED'
@@ -179,7 +179,7 @@ var params = {
       Resources: [
         'RESOURCE_ARN',
       ],
-      Source: 'com.company.myapp'
+      Source: 'com.company.app'
     }
   ]
 };

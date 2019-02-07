@@ -50,8 +50,8 @@ In the project directory, create a new file named `package.json`\. Then add this
 ```
 {
   "dependencies": {},
-  "name": "awsnodesample",
-  "description": "A simple Node.js application showing usage of the AWS SDK for Node.js.",
+  "name": "aws-nodejs-sample",
+  "description": "A simple Node.js application illustrating usage of the AWS SDK for Node.js.",
   "version": "1.0.1",
   "main": "sample.js",
   "devDependencies": {},

@@ -38,21 +38,21 @@ AWS.config.update({region: 'us-west-2'});
 Create a Node\.js module with the file name `s3_listbuckets.js`\. Make sure to configure the SDK as previously shown\. To access Amazon Simple Storage Service, create an `AWS.S3` service object\. Call the `listBuckets` method of the Amazon S3 service object to retrieve a list of your buckets\. The `data` parameter of the callback function has a `Buckets` property containing an array of maps to represent the buckets\. Display the bucket list by logging it to the console\.
 
 ```
-// Load the SDK for JavaScript
+// Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
 AWS.config.update({region: 'REGION'});
 
 // Create S3 service object
 s3 = new AWS.S3({apiVersion: '2006-03-01'});
-                    
-// Call S3 to list current buckets
+
+// Call S3 to list the buckets
 s3.listBuckets(function(err, data) {
-   if (err) {
-      console.log("Error", err);
-   } else {
-      console.log("Bucket List", data.Buckets);
-   }
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Success", data.Buckets);
+  }
 });
 ```
 
@@ -71,26 +71,27 @@ Create a Node\.js module with the file name `s3_createbucket.js`\. Make sure to 
 Add a variable to hold the parameters used to call the `createBucket` method of the Amazon S3 service object, including the name for the newly created bucket\. The callback function logs the new bucket's location to the console after Amazon S3 successfully creates it\.
 
 ```
-// Load the SDK for JavaScript
+// Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
 AWS.config.update({region: 'REGION'});
 
-// Create the parameters for calling createBucket
-var bucketParams = {
-   Bucket : process.argv[2]
-};            
-
 // Create S3 service object
 s3 = new AWS.S3({apiVersion: '2006-03-01'});
-                                   
-// Call S3 to create the bucket
+
+// Create the parameters for calling createBucket
+var bucketParams = {
+  Bucket : process.argv[2],
+  ACL : 'public-read'
+};
+
+// call S3 to create the bucket
 s3.createBucket(bucketParams, function(err, data) {
-   if (err) {
-      console.log("Error", err);
-   } else {
-      console.log("Success", data.Location);
-   }
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Success", data.Location);
+  }
 });
 ```
 
@@ -121,13 +122,13 @@ s3 = new AWS.S3({apiVersion: '2006-03-01'});
 var uploadParams = {Bucket: process.argv[2], Key: '', Body: ''};
 var file = process.argv[3];
 
+// Configure the file stream and obtain the upload parameters
 var fs = require('fs');
 var fileStream = fs.createReadStream(file);
 fileStream.on('error', function(err) {
   console.log('File Error', err);
 });
 uploadParams.Body = fileStream;
-
 var path = require('path');
 uploadParams.Key = path.basename(file);
 
@@ -156,23 +157,26 @@ Create a Node\.js module with the file name`s3_listobjects.js`\. Make sure to co
 Add a variable to hold the parameters used to call the `listObjects` method of the Amazon S3 service object, including the name of the bucket to read\. The callback function logs a list of objects \(files\) or a failure message\.
 
 ```
-// Load the SDK for JavaScript
+// Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
 AWS.config.update({region: 'REGION'});
 
-// Create the parameters for calling createBucket
+// Create S3 service object
+s3 = new AWS.S3({apiVersion: '2006-03-01'});
+
+// Create the parameters for calling listObjects
 var bucketParams = {
-   Bucket : BUCKET_NAME
-};                    
-                                   
- // Call S3 to create the bucket
+  Bucket : 'BUCKET_NAME',
+};
+
+// Call S3 to obtain a list of the objects in the bucket
 s3.listObjects(bucketParams, function(err, data) {
-   if (err) {
-      console.log("Error", err);
-   } else {
-      console.log("Success", data);
-   }
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Success", data);
+  }
 });
 ```
 
@@ -191,23 +195,26 @@ Create a Node\.js module with the file name `s3_deletebucket.js`\. Make sure to 
 Add a variable to hold the parameters used to call the `createBucket` method of the Amazon S3 service object, including the name of the bucket to delete\. The bucket must be empty in order to delete it\. The callback function logs a success or failure message\.
 
 ```
-// Load the SDK for JavaScript
+// Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the region
 AWS.config.update({region: 'REGION'});
 
-// Create the parameters for calling createBucket
+// Create S3 service object
+s3 = new AWS.S3({apiVersion: '2006-03-01'});
+
+// Create params for S3.deleteBucket
 var bucketParams = {
-   Bucket : BUCKET_NAME
-};                    
-                                   
- // Call S3 to create the bucket
+  Bucket : 'BUCKET_NAME'
+};
+
+// Call S3 to delete the bucket
 s3.deleteBucket(bucketParams, function(err, data) {
-   if (err) {
-      console.log("Error", err);
-   } else {
-      console.log("Success", data);
-   }
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Success", data);
+  }
 });
 ```
 

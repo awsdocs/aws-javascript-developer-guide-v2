@@ -18,3 +18,4 @@ The topics in this section describe various ways to configure the SDK for JavaSc
 + [Node\.js Considerations](node-js-considerations.md)
 + [Browser Script Considerations](browser-js-considerations.md)
 + [Bundling Applications with Webpack](webpack.md)
++ [SDK Metrics in the AWS SDK for JavaScript](metrics.md)

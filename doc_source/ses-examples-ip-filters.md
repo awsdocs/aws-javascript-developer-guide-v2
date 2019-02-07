@@ -88,7 +88,7 @@ Create an empty parameters object\. To call the `listReceiptFilters` method, cre
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Set the region 
-AWS.config.update({region: 'us-west-2'});
+AWS.config.update({region: 'REGION'});
 
 // Create the promise and SES service object
 var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).listReceiptFilters({}).promise();

@@ -49,7 +49,7 @@ var cw = new AWS.CloudWatch({apiVersion: '2010-08-01'});
 var params = {
   Dimensions: [
     {
-      Name: 'LogGroupName', 
+      Name: 'LogGroupName', /* required */
     },
   ],
   MetricName: 'IncomingLogEvents',
@@ -108,7 +108,7 @@ cw.putMetricData(params, function(err, data) {
   if (err) {
     console.log("Error", err);
   } else {
-    console.log("Success", data);
+    console.log("Success", JSON.stringify(data));
   }
 });
 ```

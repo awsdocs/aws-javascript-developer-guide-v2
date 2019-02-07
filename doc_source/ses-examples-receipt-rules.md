@@ -57,7 +57,7 @@ var params = {
   Actions: [
      {
     S3Action: {
-     BucketName: "S3_BUCKET_NAME/*",
+     BucketName: "S3_BUCKET_NAME",
      ObjectKeyPrefix: "email"
     }
    }
@@ -153,7 +153,7 @@ var newRulePromise = new AWS.SES({apiVersion: '2010-12-01'}).createReceiptRuleSe
 newRulePromise.then(
   function(data) {
     console.log(data);
-  }).catch
+  }).catch(
     function(err) {
     console.error(err, err.stack);
   });
@@ -180,7 +180,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the promise and SES service object
-var newRulePromise = new AWS.SES({apiVersion: '2010-12-01'}).deleeReceiptRuleSet({RuleSetName: "NAME"}).promise();
+var newRulePromise = new AWS.SES({apiVersion: '2010-12-01'}).deleteReceiptRuleSet({RuleSetName: "NAME"}).promise();
 
 // Handle promise's fulfilled/rejected states
 newRulePromise.then(

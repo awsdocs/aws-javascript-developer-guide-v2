@@ -43,13 +43,13 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 var params = {
-  TableName: 'TABLE',
+  TableName: 'CUSTOMER_LIST',
   Item: {
     'CUSTOMER_ID' : {N: '001'},
-    'CUSTOMER_NAME' : {S: 'Richard Roe'},
+    'CUSTOMER_NAME' : {S: 'Richard Roe'}
   }
 };
 
@@ -84,12 +84,12 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 var params = {
   TableName: 'TABLE',
   Key: {
-    'KEY_NAME' : {N: '001'},
+    'KEY_NAME': {N: '001'}
   },
   ProjectionExpression: 'ATTRIBUTE_NAME'
 };
@@ -123,12 +123,12 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'REGION'});
 
 // Create the DynamoDB service object
-ddb = new AWS.DynamoDB({apiVersion: '2012-10-08'});
+var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 var params = {
   TableName: 'TABLE',
   Key: {
-    'KEY_NAME' : {S: 'VALUE'},
+    'KEY_NAME': {N: 'VALUE'}
   }
 };
 

@@ -47,14 +47,11 @@ AWS.config.update({region: 'REGION'});
 // Create the IAM service object
 var iam = new AWS.IAM({apiVersion: '2010-05-08'});
 
-iam.listServerCertificates().eachPage(function(err, data) {
+iam.listServerCertificates({}, function(err, data) {
   if (err) {
-    throw err;
-  }
-  if (data && data.ServerCertificateMetadataList) {
-    data.ServerCertificateMetadataList.forEach(function(metadata) {
-      console.log(metadata);
-    });
+    console.log("Error", err);
+  } else {
+    console.log("Success", data);
   }
 });
 ```
@@ -82,10 +79,9 @@ var iam = new AWS.IAM({apiVersion: '2010-05-08'});
 
 iam.getServerCertificate({ServerCertificateName: 'CERTIFICATE_NAME'}, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log('Server Certificate:');
-    console.log(data);
+    console.log("Success", data);
   }
 });
 ```
@@ -118,9 +114,9 @@ var params = {
 
 iam.updateServerCertificate(params, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log('Server Certificate updated.');
+    console.log("Success", data);
   }
 });
 ```
@@ -148,9 +144,9 @@ var iam = new AWS.IAM({apiVersion: '2010-05-08'});
 
 iam.deleteServerCertificate({ServerCertificateName: 'CERTIFICATE_NAME'}, function(err, data) {
   if (err) {
-    throw err;
+    console.log("Error", err);
   } else {
-    console.log('Server Certificate deleted.');
+    console.log("Success", data);
   }
 });
 ```

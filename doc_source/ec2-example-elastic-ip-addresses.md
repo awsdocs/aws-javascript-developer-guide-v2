@@ -52,17 +52,17 @@ var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 
 var params = {
   Filters: [
-     {Name: 'domain', Values: ['vpc']}
+    {Name: 'domain', Values: ['vpc']}
   ]
 };
 
 // Retrieve Elastic IP address descriptions
 ec2.describeAddresses(params, function(err, data) {
-   if (err) {
-      console.log("Error", err);
-   } else {
-      console.log("Success", JSON.stringify(data.Addresses));
-   }
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Success", JSON.stringify(data.Addresses));
+  }
 });
 ```
 

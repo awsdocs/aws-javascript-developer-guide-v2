@@ -206,12 +206,12 @@ The rest of the function takes the list of objects \(photos\) from the album and
 
 ```
 function viewAlbum(albumName) {
-  var albumPhotosKey = encodeURIComponent(albumName) + '/';
+  var albumPhotosKey = encodeURIComponent(albumName) + '//';
   s3.listObjects({Prefix: albumPhotosKey}, function(err, data) {
     if (err) {
       return alert('There was an error viewing your album: ' + err.message);
     }
-    // `this` references the AWS.Response instance that represents the response
+    // 'this' references the AWS.Response instance that represents the response
     var href = this.request.httpRequest.endpoint.href;
     var bucketUrl = href + albumBucketName + '/';
 
@@ -251,7 +251,7 @@ function viewAlbum(albumName) {
       '</button>',
       '<button onclick="listAlbums()">',
         'Back To Albums',
-      '</button>',      
+      '</button>',
     ]
     document.getElementById('app').innerHTML = getHtml(htmlTemplate);
   });

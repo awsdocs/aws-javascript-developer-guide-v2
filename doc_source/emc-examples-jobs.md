@@ -232,7 +232,7 @@ var endpointPromise = new AWS.MediaConvert({apiVersion: '2017-08-29'}).cancelJob
 // Handle promise's fulfilled/rejected status
 endpointPromise.then(
   function(data) {
-    console.log("Job  " + params.Id + " is canceled", );
+    console.log("Job  " + params.Id + " is canceled");
   },
   function(err) {
     console.log("Error", err);

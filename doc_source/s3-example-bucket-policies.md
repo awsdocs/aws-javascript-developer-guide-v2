@@ -112,12 +112,12 @@ var bucketPolicyParams = {Bucket: process.argv[2], Policy: JSON.stringify(readOn
 
 // set the new policy on the selected bucket
 s3.putBucketPolicy(bucketPolicyParams, function(err, data) {
-   if (err) {
-     // display error message
-     console.log("Error", err);
-   } else {
-     console.log("Success", data);
-   }
+  if (err) {
+    // display error message
+    console.log("Error", err);
+  } else {
+    console.log("Success", data);
+  }
 });
 ```
 
@@ -146,8 +146,8 @@ s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 var bucketParams = {Bucket: process.argv[2]};
 // call S3 to delete policy for selected bucket
-s3.deleteBucketPolicy(bucketParams, function(error, data) {
-  if (error) {
+s3.deleteBucketPolicy(bucketParams, function(err, data) {
+  if (err) {
     console.log("Error", err);
   } else if (data) {
     console.log("Success", data);

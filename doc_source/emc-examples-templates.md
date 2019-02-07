@@ -287,7 +287,6 @@ AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
 
-
 var params = {
   ListBy: 'NAME',
   MaxResults: 10,
@@ -329,7 +328,6 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
-
 
 var params = {
   Name: 'TEMPLATE_NAME'

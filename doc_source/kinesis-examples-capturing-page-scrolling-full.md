@@ -9,7 +9,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 });
 
 AWS.config.region = 'REGION';
-// We're going to partition kinesis records based on an identity.
+// We're going to partition Amazon Kinesis records based on an identity.
 // We need to get credentials first, then attach our event listeners.
 AWS.config.credentials.get(function(err) {
     // attach event listener
@@ -18,11 +18,12 @@ AWS.config.credentials.get(function(err) {
         console.error(err);
         return;
     }
-    // create kinesis client once
+    // create Amazon Kinesis service object
     var kinesis = new AWS.Kinesis({
         apiVersion: '2013-12-02'
     });
 
+    // Get the ID of the Web page element.
     var blogContent = document.getElementById('BlogContent');
 
     // Get Scrollable height
@@ -42,7 +43,7 @@ AWS.config.credentials.get(function(err) {
             var scrollTopPercentage = Math.round((scrollTop / scrollHeight) * 100);
             var scrollBottomPercentage = Math.round(((scrollTop + scrollableHeight) / scrollHeight) * 100);
 
-            // Create the kinesis record
+            // Create the Amazon Kinesis record
             var record = {
                 Data: JSON.stringify({
                     blog: window.location.href,
@@ -56,15 +57,15 @@ AWS.config.credentials.get(function(err) {
         }, 100);
     });
 
-    // upload data to kinesis every second if data exists
+    // upload data to Amazon Kinesis every second if data exists
     setInterval(function() {
         if (!recordData.length) {
             return;
         }
-        // upload data to kinesis
+        // upload data to Amazon Kinesis
         kinesis.putRecords({
             Records: recordData,
-            StreamName: 'blog_stats'
+            StreamName: 'NAME_OF_STREAM'
         }, function(err, data) {
             if (err) {
                 console.error(err);

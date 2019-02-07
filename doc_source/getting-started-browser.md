@@ -168,28 +168,28 @@ Here is the full HTML page with the browser script\. It's also available [here o
 ```
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>AWS SDK for JavaScript - Browser Getting Started Application</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>AWS SDK for JavaScript - Browser Getting Started Application</title>
+  </head>
 
-<body>
+  <body>
     <div id="textToSynth">
-    <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
-    <button class="btn default" onClick="speakText()">Synthesize</button><p id="result">Enter text above then click Synthesize</p>
+      <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
+      <button class="btn default" onClick="speakText()">Synthesize</button><p id="result">Enter text above then click Synthesize</p>
     </div>
     <audio id="audioPlayback" controls>
-      	<source id="audioSource" type="audio/mp3" src="">
-    	<p id="result">result</p>
+      <source id="audioSource" type="audio/mp3" src="">
+        <p id="result">result</p>
     </audio>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
-    <script>
+    <script type="text/javascript">
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'REGION'; 
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
         
         // Function invoked by button click
-        function speakText() {			
+        function speakText() {
             // Create synthesizeSpeech params JSON
             var speechParams = {
                 OutputFormat: "mp3",
@@ -207,15 +207,15 @@ Here is the full HTML page with the browser script\. It's also available [here o
             // Create presigned URL of synthesized speech file
             signer.getSynthesizeSpeechUrl(speechParams, function(error, url) {
             if (error) {
-        	  document.getElementById('result').innerHTML = error;
+            document.getElementById('result').innerHTML = error;
             } else {
-        	  audioSource.src = url;  	  
-        	  document.getElementById('result').innerHTML = "Speech ready to play.";
+            audioSource.src = url;
+            document.getElementById('result').innerHTML = "Speech ready to play.";
             }
           });
         }
     </script>
-</body>
+  </body>
 </html>
 ```
 

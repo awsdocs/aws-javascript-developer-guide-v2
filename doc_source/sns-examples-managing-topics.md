@@ -35,7 +35,6 @@ var AWS = require('aws-sdk');
 // Set region
 AWS.config.update({region: 'REGION'});
 
-
 // Create promise and SNS service object
 var createTopicPromise = new AWS.SNS({apiVersion: '2010-03-31'}).createTopic({Name: "TOPIC_NAME"}).promise();
 
@@ -69,7 +68,6 @@ var AWS = require('aws-sdk');
 // Set region
 AWS.config.update({region: 'REGION'});
 
-
 // Create promise and SNS service object
 var listTopicsPromise = new AWS.SNS({apiVersion: '2010-03-31'}).listTopics({}).promise();
 
@@ -102,7 +100,7 @@ Create an object containing the `TopicArn` of the topic to delete to pass to the
 var AWS = require('aws-sdk');
 // Set region
 AWS.config.update({region: 'REGION'});
-                
+
 // Create promise and SNS service object
 var deleteTopicPromise = new AWS.SNS({apiVersion: '2010-03-31'}).deleteTopic({TopicArn: 'TOPIC_ARN'}).promise();
 

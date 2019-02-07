@@ -35,7 +35,7 @@ Create a Node\.js module with the file name `emc_getendpoint.js`\. Be sure to co
 Create an object to pass the empty request parameters for the `describeEndpoints` method of the AWS\.MediaConvert client class\. To call the `describeEndpoints` method, create a promise for invoking an MediaConvert service object, passing the parameters\. Handle the response in the promise callback\. 
 
 ```
-// Load the AWS SDK for Node.js
+// Load the SDK for JavaScript
 var AWS = require('aws-sdk');
 // Set the region 
 AWS.config.update({region: 'us-west-2'});
