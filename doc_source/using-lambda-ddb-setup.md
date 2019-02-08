@@ -203,6 +203,6 @@ function post () {
 This script uses code from this AWS SDK for JavaScript code example topic:
 + [Reading and Writing A Single Item in DynamoDB](dynamodb-example-table-read-write.md)
 
-## Next Step<a name="w4aac25b8c22c27"></a>
+## Next Step<a name="w4aac26b8c22c27"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

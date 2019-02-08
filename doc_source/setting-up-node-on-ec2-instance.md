@@ -48,11 +48,11 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 
    `Running Node.js v4.4.5`
 
-## Creating an Amazon Machine Image<a name="w4aac25b6b8"></a>
+## Creating an Amazon Machine Image<a name="w4aac26b6b8"></a>
 
 After you install Node\.js on an Amazon EC2 instance, you can create an Amazon Machine Image \(AMI\) from that instance\. Creating an AMI makes it easy to provision multiple Amazon EC2 instances with the same Node\.js installation\. For more information about creating an AMI from an existing instance, see [Creating an Amazon EBS\-Backed Linux AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-## Related Resources<a name="w4aac25b6c10"></a>
+## Related Resources<a name="w4aac26b6c10"></a>
 
 For more information about the commands and software used in this topic, see the following web pages:
 + node version manager \(nvm\): see [nvm repo on GitHub](https://github.com/creationix/nvm)\.

@@ -38,7 +38,7 @@ putObjectPromise.then(function(data) {
 });
 ```
 
-## Coordinating Multiple Promises<a name="w4aac19c17c14c13"></a>
+## Coordinating Multiple Promises<a name="w4aac20c17c14c13"></a>
 
 In some situations, your code must make multiple asynchronous calls that require action only when they have all returned successfully\. If you manage those individual asynchronous method calls with promises, you can create an additional promise that uses the `all` method\. This method fulfills this umbrella promise if and when the array of promises that you pass into the method are fulfilled\. The callback function is passed an array of the values of the promises passed to the `all` method\.
 
@@ -56,11 +56,11 @@ Promise.all([firstPromise, secondPromise, thirdPromise]).then(function(values) {
 });
 ```
 
-## Browser and Node\.js Support for Promises<a name="w4aac19c17c14c15"></a>
+## Browser and Node\.js Support for Promises<a name="w4aac20c17c14c15"></a>
 
 Support for native JavaScript promises \(ECMAScript 2015\) depends on the JavaScript engine and version in which your code executes\. To help determine the support for JavaScript promises in each environment where your code needs to run, see the [ECMAScript Compatability Table](https://kangax.github.io/compat-table/es6/) on GitHub\.
 
-## Using Other Promise Implementations<a name="w4aac19c17c14c17"></a>
+## Using Other Promise Implementations<a name="w4aac20c17c14c17"></a>
 
 In addition to the native promise implementation in ECMAScript 2015, you can also use third\-party promise libraries, including:
 + [bluebird](http://bluebirdjs.com)

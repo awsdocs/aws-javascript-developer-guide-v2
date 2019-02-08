@@ -7,7 +7,7 @@
 + Send emails based on an email template\.
 + Send bulk emails based on an email template\.
 
-The Amazon SES API provides two different ways for you to send an email, depending on how much control you want over the composition of the email message: formatted and raw\. For details, see [Sending Formatted Email Using the Amazon SES API](Amazon Simple Email Service Developer Guidesend-email-formatted.html) and [Sending Raw Email Using the Amazon SES API](Amazon Simple Email Service Developer Guidesend-email-raw.html)\.
+The Amazon SES API provides two different ways for you to send an email, depending on how much control you want over the composition of the email message: formatted and raw\. For details, see [Sending Formatted Email Using the Amazon SES API](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-formatted.html) and [Sending Raw Email Using the Amazon SES API](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-raw.html)\.
 
 ## The Scenario<a name="ses-examples-sending-email-scenario"></a>
 

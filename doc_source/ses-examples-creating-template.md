@@ -7,7 +7,7 @@
 + Retrieve and update email templates\.
 + Create and delete email templates\.
 
-Amazon SES lets you send personalized email messages using email templates\. For details on how to create and use email templates in Amazon Simple Email Service, see [Sending Personalized Email Using the Amazon SES API](Amazon Simple Email Service Developer Guidesend-personalized-email-api.html) in the Amazon Simple Email Service Developer Guide\.
+Amazon SES lets you send personalized email messages using email templates\. For details on how to create and use email templates in Amazon Simple Email Service, see [Sending Personalized Email Using the Amazon SES API](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html) in the Amazon Simple Email Service Developer Guide\.
 
 ## The Scenario<a name="ses-examples-creating-template-scenario"></a>
 

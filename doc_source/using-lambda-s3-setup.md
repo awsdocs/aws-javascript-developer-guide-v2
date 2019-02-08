@@ -78,6 +78,6 @@ This script uses code from these AWS SDK for JavaScript code example topics:
 + [Creating and Using Amazon S3 Buckets](s3-example-creating-buckets.md)
 + [Using an Amazon S3 Bucket as a Static Web Host](s3-example-static-web-host.md)
 
-## Next Step<a name="w4aac25b8c13c17"></a>
+## Next Step<a name="w4aac26b8c13c17"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

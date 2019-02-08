@@ -123,6 +123,6 @@ lambda.createFunction(params, function(err, data) {
 This script uses example code from this AWS SDK for JavaScript topic:
 + [Writing a Lambda Function in Node\.js](nodejs-write-lambda-function-example.md)
 
-## Next Step<a name="w4aac25b8c25c29"></a>
+## Next Step<a name="w4aac26b8c25c29"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

@@ -66,6 +66,6 @@ Next, update the browser script to include the Amazon Cognito identity pool ID c
 
 1. Save `index.html`\.
 
-## Next Step<a name="w4aac25b8c16c13"></a>
+## Next Step<a name="w4aac26b8c16c13"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.

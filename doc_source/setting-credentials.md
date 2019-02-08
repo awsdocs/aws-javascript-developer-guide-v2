@@ -18,3 +18,8 @@ For more information on granting the least privilege, see [ Best Practices](http
 While it is possible to do so, we recommend you not hard code credentials inside an application or browser script\. Hard coding credentials poses a risk of exposing your access key ID and secret access key\.
 
 For more information about how to manage your access keys, see [ Best Practices for Managing AWS Access Keys](https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html) in the AWS General Reference\.
+
+**Topics**
++ [Best Practices for Credentials](#credentials-best-practices)
++ [Setting Credentials in Node\.js](setting-credentials-node.md)
++ [Setting Credentials in a Web Browser](setting-credentials-browser.md)

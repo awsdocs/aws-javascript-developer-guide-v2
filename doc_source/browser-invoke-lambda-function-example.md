@@ -30,7 +30,7 @@ AWS.config.update({region: 'REGION'});
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
 ```
 
-## Creating the Lambda Service Object<a name="w4aac22c25c13c15"></a>
+## Creating the Lambda Service Object<a name="w4aac23c25c13c15"></a>
 
 After configuring the SDK, this portion of the browser script creates a new Lambda service object, setting the region and API version\. After creating the service object, the code creates a JSON object for passing the parameters that are needed to invoke a Lambda function with the service object\. The code then creates a variable to hold the data returned by the Lambda function\.
 
