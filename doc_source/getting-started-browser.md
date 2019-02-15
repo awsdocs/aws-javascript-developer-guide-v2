@@ -36,6 +36,8 @@ In this exercise, we will only work with the unauthenticated user role to keep t
 1. Choose **Manage Identity Pools** on the console opening page\.
 
 1. On the next page, choose **Create new identity pool**\.
+**Note**  
+If there are no other identity pools, the Amazon Cognito console will skip this page and open the next page instead\.
 
 1. In the **Getting started wizard**, type a name for your identity pool in **Identity pool name**\.
 
@@ -47,7 +49,7 @@ In this exercise, we will only work with the unauthenticated user role to keep t
 
 1. Choose **Allow**\.
 
-1. On the **Sample code** page, copy or write down the identity pool ID displayed in red\. You need this value for your browser script\.
+1. On the **Sample code** page, select the Platform of *JavaScript*\. Then, copy or write down the identity pool ID and the region\. You need these values to replace REGION and IDENTITY\_POOL\_ID in your browser script\.
 
 After you create your Amazon Cognito identity pool, you're ready to add permissions for Amazon Polly that are needed by your browser script\.
 
@@ -61,11 +63,11 @@ To enable browser script access to Amazon Polly for speech synthesis, use the un
 
 1. In the navigation panel on the left of the page, choose **Roles**\.
 
-1. In the list of IAM roles, choose the unauthenticated identities role previously created by Amazon Cognito\.
+1. In the list of IAM roles, click on the link for the unauthenticated identities role previously created by Amazon Cognito\.
 
 1. In the **Summary** page for this role, choose **Attach policies**\.
 
-1. In the **Attach Permissions** page for this role, find and then choose **AmazonPollyFullAccess**\.
+1. In the **Attach Permissions** page for this role, find and then select the check box for **AmazonPollyFullAccess**\.
 
 1. Choose **Attach policy**\.
 
@@ -73,7 +75,7 @@ After you create your Amazon Cognito identity pool and add permissions for Amazo
 
 ## Step 3: Create the HTML Page<a name="getting-started-browser-create-html"></a>
 
-The sample app consists of a single HTML page that contains the user interface and browser script\. Create an HTML document and copy the following contents into it\. The page includes an `<audio>` element to play the synthesized speech, and a `<p>` element to display messages\.
+The sample app consists of a single HTML page that contains the user interface and browser script\. To begin, create an HTML document and copy the following contents into it\. The page includes an input field and button, an `<audio>` element to play the synthesized speech, and a `<p>` element to display messages\. \(Note that the full example is shown at the bottom of this page\.\)
 
 For more information on the `<audio>` element, see [The Embed Audio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) on the [Mozilla Developer website\.](https://developer.mozilla.org/en-US/)
 
@@ -102,55 +104,56 @@ Save the HTML file, naming it `polly.html`\. After you have created the user int
 
 ## Step 4: Write the Browser Script<a name="getting-started-browser-run-sample"></a>
 
-The first thing to do in creating the browser script is to add the SDK for JavaScript by adding this line after the `<audio>` element in the page\.
+The first thing to do when creating the browser script is to include the SDK for JavaScript by adding this line after the `<audio>` element in the page\.
 
 ```
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
 ```
 
-Then add a new script element after the SDK entry in which you'll add the browser script\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
+Then add a new `<script>` element after the SDK entry\. You'll add the browser script to this element\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
 
-To synthesize speech with Amazon Polly, you must first create the parameters JSON needed, which includes the sound format of the output, sampling rate, the ID of the voice to use, and the text to play back\. Set the `Text:` attribute to empty text initially, so that you can retrieve the value of the `<input>` element in the webpage and assign that value into the JSON\.
-
-```
-// Initialize the Amazon Cognito credentials provider
-AWS.config.region = 'REGION'; 
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
-
-// Function invoked by button click
-function speakText() {			
-    // Create synthesizeSpeech params JSON
-    var speechParams = {
-        OutputFormat: "mp3",
-        SampleRate: "16000",
-        Text: "",
-        TextType: "text",
-        VoiceId: "Matthew"
-    };
-    speechParams.Text = document.getElementById("textEntry").value;
-```
-
-Amazon Polly returns synthesized speech as an audio stream\. The easiest way to play that audio in a browser is to have Amazon Polly make the audio available at a presigned URL you can then set as the `src` property of the `<audio>` element in the webpage\.
-
-Create a new `AWS.Polly` service object\. Then create an `AWS.Polly.Presigner` object you'll use to create a presigned URL at which the synthesized speech audio can be retrieved\. You must pass the speech parameters JSON you just defined and the `AWS.Polly` service object to the `AWS.Polly.Presigner` constructor\.
-
-Then call the `getSynthesizeSpeechUrl` method of the presigner object, passing the speech parameters JSON\. If successful, this method returns the URL of the synthesized speech, which you then assign to the `<audio>` element for playback\.
+To synthesize speech with Amazon Polly, you must provide a variety of parameters including the sound format of the output, the sampling rate, the ID of the voice to use, and the text to play back\. When you initially create the parameters, set the `Text:` parameter to an empty string; the `Text:` parameter will be set to the value you retrieve from the `<input>` element in the webpage\.
 
 ```
-// Create the Polly service object and presigner object
-    var polly = new AWS.Polly({apiVersion: '2016-06-10'});
-    var signer = new AWS.Polly.Presigner(speechParams, polly)
+        // Initialize the Amazon Cognito credentials provider
+        AWS.config.region = 'REGION'; 
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
+        
+        // Function invoked by button click
+        function speakText() {
+            // Create the JSON parameters for getSynthesizeSpeechUrl
+            var speechParams = {
+                OutputFormat: "mp3",
+                SampleRate: "16000",
+                Text: "",
+                TextType: "text",
+                VoiceId: "Matthew"
+            };
+            speechParams.Text = document.getElementById("textEntry").value;
+```
 
-    // Create presigned URL of synthesized speech file
-    signer.getSynthesizeSpeechUrl(speechParams, function(error, url) {
-    if (error) {
-	  document.getElementById('result').innerHTML = error;
-    } else {
-	  audioSource.src = url;  	  
-	  document.getElementById('result').innerHTML = "Speech ready to play.";
-    }
-  });
-}
+Amazon Polly returns synthesized speech as an audio stream\. The easiest way to play that audio in a browser is to have Amazon Polly make the audio available at a presigned URL you can then set as the `src` attribute of the `<audio>` element in the webpage\.
+
+Create a new `AWS.Polly` service object\. Then create the `AWS.Polly.Presigner` object you'll use to create the presigned URL from which the synthesized speech audio can be retrieved\. You must pass the speech parameters that you defined as well as the `AWS.Polly` service object that you created to the `AWS.Polly.Presigner` constructor\.
+
+After you create the presigner object, call the `getSynthesizeSpeechUrl` method of that object, passing the speech parameters\. If successful, this method returns the URL of the synthesized speech, which you then assign to the `<audio>` element for playback\.
+
+```
+            // Create the Polly service object and presigner object
+            var polly = new AWS.Polly({apiVersion: '2016-06-10'});
+            var signer = new AWS.Polly.Presigner(speechParams, polly)
+        
+            // Create presigned URL of synthesized speech file
+            signer.getSynthesizeSpeechUrl(speechParams, function(error, url) {
+            if (error) {
+                document.getElementById('result').innerHTML = error;
+            } else {
+                document.getElementById('audioSource').src = url;
+                document.getElementById('audioPlayback').load();
+                document.getElementById('result').innerHTML = "Speech ready to play.";
+            }
+          });
+        }
 ```
 
 ## Step 5: Run the Sample<a name="getting-started-browser-run-sample"></a>
@@ -190,7 +193,7 @@ Here is the full HTML page with the browser script\. It's also available [here o
         
         // Function invoked by button click
         function speakText() {
-            // Create synthesizeSpeech params JSON
+            // Create the JSON parameters for getSynthesizeSpeechUrl
             var speechParams = {
                 OutputFormat: "mp3",
                 SampleRate: "16000",
@@ -207,10 +210,11 @@ Here is the full HTML page with the browser script\. It's also available [here o
             // Create presigned URL of synthesized speech file
             signer.getSynthesizeSpeechUrl(speechParams, function(error, url) {
             if (error) {
-            document.getElementById('result').innerHTML = error;
+                document.getElementById('result').innerHTML = error;
             } else {
-            audioSource.src = url;
-            document.getElementById('result').innerHTML = "Speech ready to play.";
+                document.getElementById('audioSource').src = url;
+                document.getElementById('audioPlayback').load();
+                document.getElementById('result').innerHTML = "Speech ready to play.";
             }
           });
         }
