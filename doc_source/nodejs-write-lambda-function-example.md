@@ -7,7 +7,7 @@
 + How to create a service object used to access a DynamoDB table that stores the data values retrieved and returned by the Lambda function\.
 + How to return the requested data to the calling application as a JSON payload\.
 
-## The Scenario<a name="w4aac23c25c15b9"></a>
+## The Scenario<a name="w4aac22c25c15b9"></a>
 
 In this example, a Lambda function supports a browser\-hosted slot machine game\. For the purposes of this example, we treat the JavaScript code running in the browser as a closed box\. When a player pulls the slot machine lever, the browser code invokes the Lambda function to generate the random results of each spin\. While this task is pretty simple, it illustrates one of the benefits of a Lambda function, which is that you can keep proprietary code hidden and separate from JavaScript code running in the browser\.
 
@@ -19,7 +19,7 @@ The asynchronous requests to DynamoDB use separate calls to the `getItem` method
 
 Because it's necessary to make three separate asynchronous requests to DynamoDB, the Lambda function can only return its results after receiving the response from all three method calls\.
 
-## Prerequisite Tasks<a name="w4aac23c25c15c11"></a>
+## Prerequisite Tasks<a name="w4aac22c25c15c11"></a>
 
 To set up and run this example, you must first complete these tasks:
 + Create an HTML page with browser script accessed in an Amazon S3 bucket acting as a static web host\. The browser script invokes the Lambda function\.
@@ -59,7 +59,7 @@ Use the following role policy when creating the IAM role\.
 }
 ```
 
-## Configuring the SDK<a name="w4aac23c25c15c13"></a>
+## Configuring the SDK<a name="w4aac22c25c15c13"></a>
 
 Here is the portion of the Lambda function that configures the SDK\. The credentials are not provided in the code because they are supplied to a Lambda function through the required IAM execution role\.
 
@@ -68,7 +68,7 @@ var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-2'});
 ```
 
-## Preparing JSON Objects<a name="w4aac23c25c15c15"></a>
+## Preparing JSON Objects<a name="w4aac22c25c15c15"></a>
 
 This Lambda function creates two different JSON objects\. The first of these JSON objects packages the data sent as the response of the Lambda function after it has successfully completed\. The second JSON object holds the parameters needed to call the `getItem` method of the DynamoDB service object\. The name\-value pairs of this JSON are determined by the parameters of `getItem`\.
 
@@ -89,7 +89,7 @@ var thisPullParams = {
 };
 ```
 
-## Calling DynamoDB<a name="w4aac23c25c15c17"></a>
+## Calling DynamoDB<a name="w4aac22c25c15c17"></a>
 
 Each of the three calls to the `getItem` method of the DynamoDB service object is made and each response is managed using its own `Promise` object\. All three of these `Promise` objects are identical except for the name used to keep track of which result is used for which result in the game\.
 
@@ -117,7 +117,7 @@ thisPullParams.Key.slotPosition.N = Math.floor(Math.random()*10).toString();
 var myRightPromise = request.getItem(thisPullParams).promise().then(function(data) {return URL_BASE + data.Item.imageFile.S});
 ```
 
-## Gathering and Sending the Response<a name="w4aac23c25c15c19"></a>
+## Gathering and Sending the Response<a name="w4aac22c25c15c19"></a>
 
 The Lambda function can't send its response until all three of the asynchronous calls to DynamoDB have completed and returned their values\. To track the resolution of all three `Promise` objects used to call DynamoDB, another `Promise` object is used\. The callback of this `Promise` object is invoked by `Promise.all`, which takes an array of `Promise` objects as its parameters\. So this `Promise` resolves only if all of the `Promise` objects in the array resolve\. The callback receives an array holding the return values of resolved `Promise` objects as its parameter\.
 

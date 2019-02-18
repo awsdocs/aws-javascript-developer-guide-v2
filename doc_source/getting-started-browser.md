@@ -77,26 +77,27 @@ After you create your Amazon Cognito identity pool and add permissions for Amazo
 
 The sample app consists of a single HTML page that contains the user interface and browser script\. To begin, create an HTML document and copy the following contents into it\. The page includes an input field and button, an `<audio>` element to play the synthesized speech, and a `<p>` element to display messages\. \(Note that the full example is shown at the bottom of this page\.\)
 
-For more information on the `<audio>` element, see [The Embed Audio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) on the [Mozilla Developer website\.](https://developer.mozilla.org/en-US/)
+For more information on the `<audio>` element, see [section 4\.7\.11\. The audio element](https://www.w3.org/TR/html/semantics-embedded-content.html#elementdef-audio) in the W3C Recommendation for HTML 5\.2\.
 
 ```
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>AWS SDK for JavaScript - Browser Getting Started Application</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>AWS SDK for JavaScript - Browser Getting Started Application</title>
+  </head>
 
-<body>
+  <body>
     <div id="textToSynth">
-    <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
-    <button class="btn default" onClick="speakText()">Synthesize</button><p id="result">Enter text above then click Synthesize</p>
+      <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
+      <button class="btn default" onClick="speakText()">Synthesize</button>
+      <p id="result">Enter text above then click Synthesize</p>
     </div>
-        <audio id="audioPlayback" controls>
-  	        <source id="audioSource" type="audio/mp3" src="">
-		    <p id="result">result</p>
+    <audio id="audioPlayback" controls>
+      <source id="audioSource" type="audio/mp3" src="">
     </audio>
-</body>
+    <!-- (script elements go here) -->
+ </body>
 </html>
 ```
 
@@ -179,11 +180,11 @@ Here is the full HTML page with the browser script\. It's also available [here o
   <body>
     <div id="textToSynth">
       <input autofocus size="23" type="text" id="textEntry" value="It's very good to meet you."/>
-      <button class="btn default" onClick="speakText()">Synthesize</button><p id="result">Enter text above then click Synthesize</p>
+      <button class="btn default" onClick="speakText()">Synthesize</button>
+      <p id="result">Enter text above then click Synthesize</p>
     </div>
     <audio id="audioPlayback" controls>
       <source id="audioSource" type="audio/mp3" src="">
-        <p id="result">result</p>
     </audio>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
     <script type="text/javascript">

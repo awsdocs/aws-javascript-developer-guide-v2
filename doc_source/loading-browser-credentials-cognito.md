@@ -50,7 +50,7 @@ FB.login(function (response) {
 
 Amazon Cognito supports both authenticated and unauthenticated users\. Unauthenticated users receive access to your resources even if they aren't logged in with any of your identity providers\. This degree of access is useful to display content to users prior to logging in\. Each unauthenticated user has a unique identity in Amazon Cognito even though they have not been individually logged in and authenticated\.
 
-### Initially Unauthenticated User<a name="w4aac17c31c14c10c12b4"></a>
+### Initially Unauthenticated User<a name="w4aac16c31c14c10c12b4"></a>
 
 Users typically start with the unauthenticated role, for which you set the credentials property of your configuration object without a `Logins` property\. In this case, your default configuration might look like the following:
 

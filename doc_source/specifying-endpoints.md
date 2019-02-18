@@ -2,19 +2,19 @@
 
 Calls to API methods in the SDK for JavaScript are made to service endpoint URIs\. By default, these endpoints are built from the region you have configured for your code\. However, there are situations in which you need to specify a custom endpoint for your API calls\.
 
-## Endpoint String Format<a name="w4aac17c23b4"></a>
+## Endpoint String Format<a name="w4aac16c23b4"></a>
 
 Endpoint values should be a string in the format:
 
 **`https://{service}.{region}.amazonaws.com`**
 
-## Endpoints for the ap\-northeast\-3 Region<a name="w4aac17c23c10"></a>
+## Endpoints for the ap\-northeast\-3 Region<a name="w4aac16c23c10"></a>
 
 The `ap-northeast-3` region in Japan is not returned by region enumeration APIs, such as [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property)\. To define endpoints for this region, follow the format described previously\. So the Amazon EC2 endpoint for this region would be
 
 `ec2.ap-northeast-3.amazonaws.com`
 
-## Endpoints for MediaConvert<a name="w4aac17c23c12"></a>
+## Endpoints for MediaConvert<a name="w4aac16c23c12"></a>
 
 You need to create a custom endpoint to use with MediaConvert\. Each customer account is assigned its own endpoint, which you must use\. Here is an example of how to use a custom endpoint with MediaConvert\.
 

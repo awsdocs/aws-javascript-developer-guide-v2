@@ -88,6 +88,6 @@ This script uses code from these AWS SDK for JavaScript code example topics:
 + [Writing a Lambda Function in Node\.js](nodejs-write-lambda-function-example.md)
 + [Working with IAM Policies](iam-examples-policies.md)
 
-## Next Step<a name="w4aac26b8c19c15"></a>
+## Next Step<a name="w4aac25b8c19c15"></a>
 
 Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.
