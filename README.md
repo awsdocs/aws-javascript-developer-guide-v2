@@ -1,12 +1,12 @@
 ## AWS JavaScript Developer Guide V2
 
-The open source version of the AWS SDK for JavaScript Developer Guide
+The open source version of the [AWS SDK for JavaScript Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/index.html).
 
 This repository contains source content for the official AWS SDK for JavaScript Developer Guide. The source code for the `AWS SDK for JavaScript 2.0`_ is also on GitHub, at https://github.com/aws/aws-sdk-js.
 
 ## Recent Updates
 
-You can find out when this guide has had major updates and what those updates were by looking in the [Document History](/doc-history.md "Document History") topic.
+You can find out when this guide has had major updates and what those updates were by looking in the [Document History](doc_source/doc-history.md) topic.
 
 ## Reporting issues
 
