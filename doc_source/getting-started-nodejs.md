@@ -17,7 +17,7 @@ Because bucket names in Amazon S3 must be globally unique, this example includes
 ## Prerequisite Tasks<a name="getting-started-nodejs-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-+ Create a working directory for developing your Node\.js module\. Name this directory `awsnodesample`\.
++ Create a working directory for developing your Node\.js module\. Name this directory `awsnodesample`\. Note that the directory must be created in a location that can be updated by applications\. For example, in Windows, do not create the directory under "C:\\Program Files"\.
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\. You can find downloads of the current and LTS versions of Node\.js for a variety of operating systems at [https://nodejs\.org/en/download/current/](https://nodejs.org/en/download/current/)\.
 
 **Contents**
@@ -63,7 +63,7 @@ In the project directory, create a new file named `package.json`\. Then add this
 }
 ```
 
-Save the file\. As you install the modules you need, the `dependencies` portion of the file will be completed\. You can find the final JSON file [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/nodegetstarted/package.json)\. 
+Save the file\. As you install the modules you need, the `dependencies` portion of the file will be completed\. You can find a JSON file that shows an example of these dependencies [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/nodegetstarted/example_package.json)\. 
 
 ## Step 3: Install the SDK and Dependencies<a name="getting-started-nodejs-install-sdk"></a>
 
@@ -75,7 +75,7 @@ From the `awsnodesample` directory in the package, type the following at the com
 npm install aws-sdk
 ```
 
-This command installs the SDK for JavaScript in your project, and updates `package.json` to list the SDK as a project dependency\.
+This command installs the SDK for JavaScript in your project, and updates `package.json` to list the SDK as a project dependency\. You can find information about this package by searching for "aws\-sdk" on the [npm website](https://www.npmjs.com)\.
 
 Next, install the `uuid` module to the project by typing the following at the command line, which installs the module and updates `package.json`\. For more information about `uuid`, see the module's page at [https://www\.npmjs\.com/package/uuid](https://www.npmjs.com/package/uuid)\.
 
@@ -85,13 +85,13 @@ npm install uuid
 
 These packages and their associated code are installed in the `node_modules` subdirectory of your project\.
 
-For more information on installing Node\.js packages, see [How to Install Local Packages](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) and [How to Create Node\.js Modules](https://docs.npmjs.com/getting-started/creating-node-modules) at the [npm \(Node\.js package manager\) website](https://www.npmjs.com)\. For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
+For more information on installing Node\.js packages, see [Downloading and installing packages locally](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) and [Creating Node\.js Modules](https://docs.npmjs.com/getting-started/creating-node-modules) on the [npm \(Node\.js package manager\) website](https://www.npmjs.com)\. For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
 
 ## Step 4: Write the Node\.js Code<a name="getting-started-nodejs-js-code"></a>
 
-Create a new file named `sample.js` to contain the example code\. Begin by adding the `require` function calls to include the SDK for JavaScript and `uuid` modules, so they are available for you to use\.
+Create a new file named `sample.js` to contain the example code\. Begin by adding the `require` function calls to include the SDK for JavaScript and `uuid` modules so that they are available for you to use\.
 
-Build a unique bucket name that's used to create an Amazon S3 bucket by appending a unique ID value to a recognizable prefix, in this case `'node-sdk-sample-'`\. You generate the unique ID by calling the `uuid` module\. Then create a name for the `Key` parameter used to upload an object to the bucket\.
+Build a unique bucket name that is used to create an Amazon S3 bucket by appending a unique ID value to a recognizable prefix, in this case `'node-sdk-sample-'`\. You generate the unique ID by calling the `uuid` module\. Then create a name for the `Key` parameter used to upload an object to the bucket\.
 
 Create a `promise` object to call the `createBucket` method of the `AWS.S3` service object\. On a successful response, create the parameters needed to upload text to the newly created bucket\. Using another promise, call the `putObject` method to upload the text object to the bucket\.
 

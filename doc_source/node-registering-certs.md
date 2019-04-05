@@ -6,19 +6,17 @@ In this example, a specific certificate on disk is used to create an `https.Agen
 
 ```
 var fs = require('fs');
-    var https = require('https');
-    var fs = require('fs');
+var https = require('https');
+var certs = [
+  fs.readFileSync('/path/to/cert.pem')
+];
     
-    var certs = [
-      fs.readFileSync('/path/to/cert.pem')
-    ];
-    
-    AWS.config.update({
-      httpOptions: {
-        agent: new https.Agent({
-          rejectUnauthorized: true,
-          ca: certs
-        })
-      }
-    });
+AWS.config.update({
+  httpOptions: {
+    agent: new https.Agent({
+      rejectUnauthorized: true,
+      ca: certs
+    })
+  }
+});
 ```

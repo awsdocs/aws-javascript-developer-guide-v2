@@ -2,7 +2,7 @@
 
 You can use AWS Cloud9 with the AWS SDK for JavaScript to write and run your JavaScript in the browser code —as well as write, run, and debug your Node\.js code—using just a browser\. AWS Cloud9 includes tools such as a code editor and terminal, plus a debugger for Node\.js code\. Because the AWS Cloud9 IDE is cloud based, you can work on your projects from your office, home, or anywhere using an internet\-connected machine\. For general information about AWS Cloud9, see the [AWS Cloud9 User Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/)\.
 
-Follow these stps to set up AWS Cloud9 with the SDK for JavaScript:
+Follow these steps to set up AWS Cloud9 with the SDK for JavaScript:
 
 **Contents**
 + [Step 1: Set up Your AWS Account to Use AWS Cloud9](#cloud9-javascript-account)

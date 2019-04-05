@@ -12,6 +12,22 @@ Here are the ways you can supply your credentials in order of recommendation:
 
 1. Loaded from a JSON file on disk
 
+1. Other credential\-provider classes provided by the JavaScript SDK
+
+If more than one credential source is available to the SDK, the default precedence of selection is as follows:
+
+1. Credentials that are explicitly set through the service\-client constructor
+
+1. Credentials that are loaded into the `AWS.config` object
+
+1. Environment variables
+
+1. The shared credentials file
+
+1. Credentials loaded from AWS IAM \(if running on Amazon EC2\)
+
+For more information, see [Class: AWS\.Credentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html) and [Class: AWS\.CredentialProviderChain](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CredentialProviderChain.html) in the API reference\.
+
 **Warning**  
 While it is possible to do so, we do not recommend hard\-coding your AWS credentials in your application\. Hard\-coding credentials poses a risk of exposing your access key ID and secret access key\.
 

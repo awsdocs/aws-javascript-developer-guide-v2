@@ -1,6 +1,6 @@
 # Additional Resources<a name="resources"></a>
 
-The following links provide additional resources you can use with the SDK for JavaScript\.
+The following links provide additional resources you can use with the [AWS SDK for JavaScript](aws-jsdk-reference.md)\.
 
 ## JavaScript SDK Forum<a name="aws-jsdk-forum"></a>
 
@@ -8,10 +8,10 @@ You can find questions and discussions on matters of interest to users of the SD
 
 ## JavaScript SDK and Developer Guide on GitHub<a name="github-issues"></a>
 
-There are several repos on GitHub for the AWS SDK for JavaScript\.
+There are several repositories on GitHub for the SDK for JavaScript\.
 + The current SDK for JavaScript is available in the [SDK repo](https://github.com/aws/aws-sdk-js)\.
-+ The SDK for JavaScript Developer Guide is available in markdown format in its own [documentation repo](https://github.com/awsdocs/aws-javascript-developer-guide-v2)\.
-+ The sample code included in this guide is available in the [ SDK sample code repo](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript)\.
++ The SDK for JavaScript Developer Guide \(this document\) is available in markdown format in its own [documentation repo](https://github.com/awsdocs/aws-javascript-developer-guide-v2)\.
++ Some of the sample code that is included in this guide is available in the [SDK sample code repo](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript)\.
 
 ## JavaScript SDK on Gitter<a name="aws-jsdk-gitter"></a>
 
