@@ -23,7 +23,7 @@ To set up and run this example, you must first complete these tasks:
 
 ## Configuring the SDK<a name="browser-invoke-lambda-function-example-sdk"></a>
 
-Here is the portion of the browser script that configures the SDK for JavaScript, using Amazon Cognito to obtain credentials\. This will return a set of temporary IAM credentials that correspon to the unauthenticated role for the Identity Pool, the IAM role that we set up and attached as part of the prerequisites.
+Here is the portion of the browser script that configures the SDK for JavaScript, using Amazon Cognito to obtain credentials\. This will return a set of temporary IAM credentials (access key and secret key) that correspond to the unauthenticated role for the Identity Pool, the IAM role that we set up and attached as part of the prerequisites.
 
 ```
 AWS.config.update({region: 'REGION'});
