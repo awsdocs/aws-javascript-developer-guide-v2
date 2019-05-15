@@ -152,7 +152,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Listing Objects in an Amazon S3 Bucket<a name="s3-example-listing-objects"></a>
 
-Create a Node\.js module with the file name`s3_listobjects.js`\. Make sure to configure the SDK as previously shown\. Create an `AWS.S3` service object\. 
+Create a Node\.js module with the file name `s3_listobjects.js`\. Make sure to configure the SDK as previously shown\. Create an `AWS.S3` service object\. 
 
 Add a variable to hold the parameters used to call the `listObjects` method of the Amazon S3 service object, including the name of the bucket to read\. The callback function logs a list of objects \(files\) or a failure message\.
 

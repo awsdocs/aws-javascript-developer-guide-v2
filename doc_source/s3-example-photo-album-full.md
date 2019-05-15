@@ -1,6 +1,30 @@
-# Uploading Photos to Amazon S3 Code<a name="s3-example-photo-album-full"></a>
+# Uploading Photos to Amazon S3: Full Code<a name="s3-example-photo-album-full"></a>
 
-Here is the browser script code for the Amazon S3 photo album example\.
+This section contains the full HTML and JavaScript code for the example in which photos are uploaded to an Amazon S3 photo album\. See the [parent section](s3-example-photo-album.md) for details and prerequisites\.
+
+The HTML for the example:
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+       function getHtml(template) {
+          return template.join('\n');
+       }
+       listAlbums();
+    </script>
+  </head>
+  <body>
+    <h1>My Photo Albums App</h1>
+    <div id="app"></div>
+  </body>
+</html>
+```
+
+The browser script code for the example:
 
 ```
 var albumBucketName = 'BUCKET_NAME';

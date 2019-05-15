@@ -4,7 +4,7 @@ There are several ways in Node\.js to supply your credentials to the SDK\. Some 
 
 Here are the ways you can supply your credentials in order of recommendation:
 
-1. Loaded from AWS Identity and Access Management \(IAM\) roles for Amazon EC2 \(if running on Amazon EC2\)
+1. Loaded from AWS Identity and Access Management \(IAM\) roles for Amazon EC2
 
 1. Loaded from the shared credentials file \(`~/.aws/credentials`\)
 
@@ -18,13 +18,15 @@ If more than one credential source is available to the SDK, the default preceden
 
 1. Credentials that are explicitly set through the service\-client constructor
 
-1. Credentials that are loaded into the `AWS.config` object
-
 1. Environment variables
 
 1. The shared credentials file
 
-1. Credentials loaded from AWS IAM \(if running on Amazon EC2\)
+1. Credentials loaded from the ECS credentials provider \(if applicable\)
+
+1. Credentials that are obtained by using a credential process specified in the shared AWS config file or the shared credentials file\. For more information, see [Loading Credentials in Node\.js using a Configured Credential Process](loading-node-credentials-configured-credential-process.md)\.
+
+1. Credentials loaded from AWS IAM using the credentials provider of the Amazon EC2 instance \(if configured in the instance metadata\)
 
 For more information, see [Class: AWS\.Credentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html) and [Class: AWS\.CredentialProviderChain](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CredentialProviderChain.html) in the API reference\.
 
@@ -39,3 +41,4 @@ The topics in this section describe how to load credentials into Node\.js\.
 + [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)
 + [Loading Credentials in Node\.js from Environment Variables](loading-node-credentials-environment.md)
 + [Loading Credentials in Node\.js from a JSON File](loading-node-credentials-json-file.md)
++ [Loading Credentials in Node\.js using a Configured Credential Process](loading-node-credentials-configured-credential-process.md)

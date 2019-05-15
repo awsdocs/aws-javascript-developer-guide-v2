@@ -24,7 +24,7 @@ When using a third\-party logger, set all options before assigning the logger to
 
 ```
 // Require logplease
-Const myLogger = require(‘logplease’);
+const myLogger = require(‘logplease’);
 // Set external log file option
 myLogger.setLogFile(‘debug.log’);
 // Set log level

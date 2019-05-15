@@ -22,7 +22,7 @@ Amazon S3 buckets require CORS configuration before you can perform operations o
 
 You can configure an Amazon S3 bucket to use CORS in the Amazon S3 console\.
 
-1. In the Amazon S3 console, choose the bucket you want to configure\.
+1. In the Amazon S3 console, find the bucket you want to configure and select its check box\.
 
 1. In the pop\-up\-dialog, choose **Permissions**  
 ![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-bucket-dialog.png)
