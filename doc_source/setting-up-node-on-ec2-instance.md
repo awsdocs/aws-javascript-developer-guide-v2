@@ -17,12 +17,14 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 1. Connect to your Linux instance as `ec2-user` using SSH\.
 
 1. Install node version manager \(nvm\) by typing the following at the command line\.
+**Warning**  
+AWS does not control the following code\. Before you run it, be sure to verify its authenticity and integrity\. More information about this code can be found in the [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) GitHub repository\.
 
    ```
-   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
    ```
 
-   We will use nvm to install Node\.js because nvm can install multiple versions of Node\.js and allow you to switch between them\. 
+   We will use nvm to install Node\.js because nvm can install multiple versions of Node\.js and allow you to switch between them\.
 
 1. Activate nvm by typing the following at the command line\.
 

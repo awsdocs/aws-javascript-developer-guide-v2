@@ -43,11 +43,13 @@ After AWS Cloud9 opens the IDE for your development environment, follow one or b
    ```
 
    If the IDE can't find npm, run the following commands, one at a time in the following order, to install npm\. \(These commands assume you chose the option to **Create a new instance for environment \(EC2\)**, earlier in this topic\.\)
+**Warning**  
+AWS does not control the following code\. Before you run it, be sure to verify its authenticity and integrity\. More information about this code can be found in the [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) GitHub repository\.
 
    ```
-   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash # Download and install Node Version Manager (nvm).
-   . ~/.bashrc                                                                         # Activate nvm.
-   nvm install node                                                                    # Use nvm to install npm (and Node.js at the same time).
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash # Download and install Node Version Manager (nvm).
+   . ~/.bashrc                                                                     # Activate nvm.
+   nvm install node                                                                # Use nvm to install npm (and Node.js at the same time).
    ```
 
 ### To set up the SDK for JavaScript in the browser<a name="cloud9-javascript-sdk-browser"></a>
