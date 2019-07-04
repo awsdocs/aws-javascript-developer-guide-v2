@@ -27,7 +27,7 @@ To set up and run this example, you must first complete these tasks:
 + In the [IAM console](https://console.aws.amazon.com/iam/), find the IAM role created by Amazon Cognito for unauthenticated users\. Add the following policy to grant read and write permissions to an Amazon S3 bucket\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
   Use this role policy for the IAM role created by Amazon Cognito for unauthenticated users\.
-**Note**  
+**Warning**  
 If you enable access for unauthenticated users, you will grant write access to the bucket, and all objects in the bucket, to anyone in the world\. This security posture is useful in this example to keep it focused on the primary goals of the example\. In many live situations, however, tighter security, such as using authenticated users and object ownership, is highly advisable\.
 
   ```
