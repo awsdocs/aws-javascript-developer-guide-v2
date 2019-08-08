@@ -18,12 +18,12 @@ To set up and run this example, you must first complete these tasks:
 + Download the \.zip archive that contains the assets needed for this app from [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
 + In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket configured to serve as a static web host\. Upload the HTML page, CSS file, and application graphics to the bucket\.
 + In the [Amazon Cognito console](https://console.aws.amazon.com/cognito/), create an Amazon Cognito identity pool with access enabled for unauthenticated identities\. You need to include the identity pool ID in the code to obtain credentials for the browser script\.
-+ In the [IAM console](https://console.aws.amazon.com/iam/), create an IAM role whose policy grants permission to invoke a Lambda function\.
++ In the [IAM console](https://console.aws.amazon.com/iam/), create an IAM role for the Identity Pool to use\. Select Web Identity as the trusted entity, Cognito as the Identity Provider and input your identity pool ID from the previous step\. Next attach a policy that grants permission to invoke a Lambda function\. Finally, attach the policy to your Identity Pool as the unauthenticated role\.
 + Create the Lambda function called by the browser script that returns the result of each game spin\.
 
 ## Configuring the SDK<a name="browser-invoke-lambda-function-example-sdk"></a>
 
-Here is the portion of the browser script that configures the SDK for JavaScript, using Amazon Cognito to obtain credentials\.
+Here is the portion of the browser script that configures the SDK for JavaScript, using Amazon Cognito to obtain credentials\. This will return a set of temporary IAM credentials (access key and secret key) that correspond to the unauthenticated role for the Identity Pool, the IAM role that we set up and attached as part of the prerequisites.
 
 ```
 AWS.config.update({region: 'REGION'});
