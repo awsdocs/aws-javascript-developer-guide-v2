@@ -11,4 +11,4 @@ The JavaScript API for IAM is exposed through the `AWS.IAM` client class\. For m
 + [Working with IAM Policies](iam-examples-policies.md)
 + [Managing IAM Access Keys](iam-examples-managing-access-keys.md)
 + [Working with IAM Server Certificates](iam-examples-server-certificates.md)
-+ [Managing IAM Account Aliases](iam-examples-account-alises.md)
++ [Managing IAM Account Aliases](iam-examples-account-aliases.md)

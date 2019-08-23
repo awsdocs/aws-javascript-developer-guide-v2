@@ -43,7 +43,7 @@ aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
 
 ## Step 2: Create the Package JSON for the Project<a name="getting-started-nodejs-download"></a>
 
-After you create the `awsnodesample` project directory, you create and add a `package.json` file for holding the metadata for your Node\.js project\. For details about using `package.json` in a Node\.js project, see [What is the file package\.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json/) on the [docs\.nodejitsu\.com](https://docs.nodejitsu.com) site\.
+After you create the `awsnodesample` project directory, you create and add a `package.json` file for holding the metadata for your Node\.js project\. For details about using `package.json` in a Node\.js project, see [What is the file package\.json?](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)\.
 
 In the project directory, create a new file named `package.json`\. Then add this JSON to the file\.
 

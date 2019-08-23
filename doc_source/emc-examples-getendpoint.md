@@ -7,7 +7,7 @@
 
 ## The Scenario<a name="emc-example-getendpoint-scenario"></a>
 
-In this example, you use a Node\.js module to call MediaConvert and retrieve your account\-specific endpoint\. You can retrieve your endpoint URL from the service default endpoint and so do not yet need your acccount\-specific endpoint\. The code uses the SDK for JavaScript to retrieve this endpoint by using this method of the MediaConvert client class:
+In this example, you use a Node\.js module to call MediaConvert and retrieve your account\-specific endpoint\. You can retrieve your endpoint URL from the service default endpoint and so do not yet need your account\-specific endpoint\. The code uses the SDK for JavaScript to retrieve this endpoint by using this method of the MediaConvert client class:
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#describeEndpoints-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html#describeEndpoints-property)
 
 ## Prerequisite Tasks<a name="emc-example-getendpoint-prerequisites"></a>
@@ -19,12 +19,12 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="emc-example-getendpoint-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. 
+Configure the SDK for JavaScript by creating a global configuration object, and then setting the Region for your code\. In this example, the Region is set to `us-west-2`\. 
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 
@@ -37,7 +37,7 @@ Create an object to pass the empty request parameters for the `describeEndpoints
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 
 // Create empty request parameters

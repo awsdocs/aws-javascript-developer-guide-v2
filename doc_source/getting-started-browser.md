@@ -49,7 +49,7 @@ If there are no other identity pools, the Amazon Cognito console will skip this 
 
 1. Choose **Allow**\.
 
-1. On the **Sample code** page, select the Platform of *JavaScript*\. Then, copy or write down the identity pool ID and the region\. You need these values to replace REGION and IDENTITY\_POOL\_ID in your browser script\.
+1. On the **Sample code** page, select the Platform of *JavaScript*\. Then, copy or write down the identity pool ID and the Region\. You need these values to replace REGION and IDENTITY\_POOL\_ID in your browser script\.
 
 After you create your Amazon Cognito identity pool, you're ready to add permissions for Amazon Polly that are needed by your browser script\.
 
@@ -113,11 +113,13 @@ The first thing to do when creating the browser script is to include the SDK for
 
 \(To find the current SDK\_VERSION\_NUMBER, see the API Reference for the SDK for JavaScript at [https://docs\.aws\.amazon\.com/AWSJavaScriptSDK/latest/index\.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.\)
 
-Then add a new `<script>` element after the SDK entry\. You'll add the browser script to this element\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
+Then add a new `<script type="text/javascript">` element after the SDK entry\. You'll add the browser script to this element\. Set the AWS Region and credentials for the SDK\. Next, create a function named `speakText()` that will be invoked as an event handler by the button\.
 
 To synthesize speech with Amazon Polly, you must provide a variety of parameters including the sound format of the output, the sampling rate, the ID of the voice to use, and the text to play back\. When you initially create the parameters, set the `Text:` parameter to an empty string; the `Text:` parameter will be set to the value you retrieve from the `<input>` element in the webpage\.
 
 ```
+    <script type="text/javascript">
+
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'REGION'; 
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});
@@ -157,6 +159,7 @@ After you create the presigner object, call the `getSynthesizeSpeechUrl` method 
             }
           });
         }
+    </script>
 ```
 
 ## Step 5: Run the Sample<a name="getting-started-browser-run-sample"></a>
@@ -190,6 +193,7 @@ Here is the full HTML page with the browser script\. It's also available [here o
     </audio>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
     <script type="text/javascript">
+
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'REGION'; 
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'IDENTITY_POOL_ID'});

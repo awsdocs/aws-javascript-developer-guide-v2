@@ -26,18 +26,18 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="ec2-example-key-pairs-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object then setting the region for your code\. In this example, the region is set to `us-west-2`\.
+Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 
 ## Describing Your Key Pairs<a name="ec2-example-key-pairs-describing"></a>
 
-Create a Node\.js module with the file name `ec2_describekeypairs.js`\. Be sure to configure the SDK as previously shown\. To access Amazon EC2, create an `AWS.EC2` service object\. Create an empty JSON object to hold the parameters needed by the `describeKeyPairs` method to return descriptions for all your key pairs\. You can also provide an array of names of key pairs in the `KeyName` portion of the parameters  to the `describeKeyPairs` method\.
+Create a Node\.js module with the file name `ec2_describekeypairs.js`\. Be sure to configure the SDK as previously shown\. To access Amazon EC2, create an `AWS.EC2` service object\. Create an empty JSON object to hold the parameters needed by the `describeKeyPairs` method to return descriptions for all your key pairs\. You can also provide an array of names of key pairs in the `KeyName` portion of the parameters in the JSON file to the `describeKeyPairs` method\.
 
 ```
 // Load the AWS SDK for Node.js

@@ -1,8 +1,6 @@
 # Create and Populate a DynamoDB Table<a name="using-lambda-ddb-setup"></a>
 
-This topic is part of a larger tutorial about using the AWS SDK for JavaScript with Lambda functions\. To start at the beginning of the tutorial, see [Tutorial: Creating and Using Lambda Functions](using-lambda-functions.md)\.
-
-In this task, you will focus on creating and populating the DynamoDB table used by the application\.
+In this task, you create and populate the DynamoDB table used by the application\.
 
 ![\[Create a DynamoDB table for the tutorial application\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/create-ddb-table.png)![\[Create a DynamoDB table for the tutorial application\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)![\[Create a DynamoDB table for the tutorial application\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)
 
@@ -13,19 +11,15 @@ The Lambda function generates three random numbers, then uses those numbers as k
 
 **To edit the Node\.js script that creates the DynamoDB table for the tutorial application**
 
-1. Open the `slotassets.zip` archive file you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
-
-1. Copy `ddb-table-create.js` and `ddb-table-populate.js` from the archive to the folder that contains your credentials JSON file\.
-
-1. Open `ddb-table-create.js` in a text editor\.
+1. Open `ddb-table-create.js` in the `slotassets` directory in a text editor\.
 
 1. Find this line in the script\.
 
    `TableName: "TABLE_NAME"`
 
-   Edit the table name to one you choose\. Make a note of the table name\.
+   Change *TABLE\_NAME* to one you choose\. Make a note of the table name\.
 
-1. Save the edits, and then close the file\. 
+1. Save and close the file\.
 
 **To run the Node\.js setup script that creates the DynamoDB table**
 + At the command line, type the following\.
@@ -39,7 +33,7 @@ The setup script `ddb-table-create.js` runs the following code\. It creates the 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Load credentials and set region from JSON file
+// Load credentials and set Region from JSON file
 AWS.config.loadFromPath('./config.json');
 
 // Create DynamoDB service object
@@ -86,10 +80,7 @@ ddb.createTable(tableParams, function(err, data) {
 });
 ```
 
-This script uses code from these AWS SDK for JavaScript code example topics:
-+ [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)
-
-When the DynamoDB table exists, you must populate it with the items and data the application needs\. The `slotassets.zip` archive file contains a Node\.js script named `ddb-table-populate.js` that automates data population for the DynamoDB table you just created\. 
+Once the DynamoDB table exists, you can populate it with the items and data the application needs\. The `slotassets` directory contains t Node\.js script `ddb-table-populate.js` that automates data population for the DynamoDB table you just created\. 
 
 **To run the Node\.js setup script that populates the DynamoDB table with data**
 
@@ -101,7 +92,7 @@ When the DynamoDB table exists, you must populate it with the items and data the
 
    Change *TABLE\_NAME* to the name of the table you created previously\.
 
-1. Save the edits, and then close the file\.
+1. Save and close the file\.
 
 1. At the command line, type the following\.
 
@@ -114,7 +105,7 @@ The setup script `ddb-table-populate.js` runs the following code\. It creates th
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Load credentials and set region from JSON file
+// Load credentials and set Region from JSON file
 AWS.config.loadFromPath('./config.json');
 
 // Create DynamoDB service object
@@ -202,9 +193,4 @@ function post () {
 }
 ```
 
-This script uses code from this AWS SDK for JavaScript code example topic:
-+ [Reading and Writing A Single Item in DynamoDB](dynamodb-example-table-read-write.md)
-
-## Next Step<a name="w4aac25b8c22c29"></a>
-
-Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.
+Click **next** to continue the tutorial\.

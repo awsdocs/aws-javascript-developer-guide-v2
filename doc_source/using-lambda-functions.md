@@ -15,30 +15,31 @@ This diagram illustrates most of the elements in this application and how they r
 
 ## Prerequisites<a name="using-lambda-prerequisites"></a>
 
-This tutorial assumes you have completed these tasks before you begin:
+You must complete the following tasks before you can begin the tutorial:
 + Install Node\.js on your computer to run various scripts that help set up the Amazon S3 bucket and the Amazon DynamoDB table, and create and configure the Lambda function\. The Lambda function itself runs in the AWS Lambda Node\.js environment\. For information about installing Node\.js, see [www\.nodejs\.org](http://www.nodejs.org)\.
 + Install the AWS SDK for JavaScript on your computer to run the setup scripts\. For information on installing the AWS SDK for JavaScript for Node\.js, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
-+ Download `slotassets.zip` from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\. This archive contains the browser assets that are used by the application, the Node\.js code that's used in the Lambda function, and several setup scripts\. In this tutorial, you modify the `index.html` file and upload all the browser asset files to an Amazon S3 bucket you provision for this application\. As part of creating the Lambda function, you also modify the Node\.js code in `slotpull.js` before uploading it to the Amazon S3 bucket\.
 
-After you meet the prerequisites, this tutorial should take about 30 minutes to complete\.
+The tutorial should take about 30 minutes to complete\.
 
 ## Tutorial Steps<a name="using-lambda-procedures"></a>
 
-To create this application you'll need resources from multiple services that must be connected and configured in both the code of the browser script and the Node\.js code of the Lambda function\. In some cases, the tasks involved are described here, while other tasks require topics of their own to detail the instructions\. After you complete each of the steps in an additional topic, return to the steps here and continue\.
+To create this application you'll need resources from multiple services that must be connected and configured in both the code of the browser script and the Node\.js code of the Lambda function\.
 
 **To construct the tutorial application and the Lambda function it uses**
 
 1. Create a working directory on your computer for this tutorial\.
 
-1. Copy `slotassets.zip` into your working directory\.
+   On Linux or Mac let's use `~/MyLambdaApp`; on Windows let's use `C:\MyLambdaApp`\. From now on we'll just call it `MyLambdaApp`\.
+
+1. Download `slotassets.zip` from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\. This archive contains the browser assets that are used by the application, the Node\.js code that's used in the Lambda function, and several setup scripts\. In this tutorial, you modify the `index.html` file and upload all the browser asset files to an Amazon S3 bucket you provision for this application\. As part of creating the Lambda function, you also modify the Node\.js code in `slotpull.js` before uploading it to the Amazon S3 bucket\.
+
+   Unzip the contents of `slotassets.zip` as the directory `slotassets` in `MyLambdaApp`\. The `slotassets` directory should contain the 30 files\.
 
 1. Create a JSON file with your account credentials in your working directory\. This file is used by the setup scripts to authenticate their AWS requests\. For details, see [Loading Credentials in Node\.js from a JSON File](loading-node-credentials-json-file.md)\.
 
 1. [Create an Amazon S3 bucket configured as a static website](using-lambda-s3-setup.md)\.
 
 1. [Prepare the browser script](using-lambda-browser-script.md)\. Save the edited copy of `index.html` for upload to Amazon S3\.
-
-1. Open the `slotassets.zip` archive you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip), and copy the contents into your working directory\.
 
 1. [Create a Lambda execution role in IAM](using-lambda-iam-role-setup.md)\.
 

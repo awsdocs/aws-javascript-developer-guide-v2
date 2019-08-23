@@ -22,13 +22,13 @@ In this example, you use a series of Node\.js modules to send email in a variety
 
 ## Configuring the SDK<a name="ses-examples-deleting-address-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, setting the region, and providing credentials for your code\. In this example, the credentials are provided using the JSON file you created\.
+Configure the SDK for JavaScript by creating a global configuration object, setting the Region, and providing credentials for your code\. In this example, the credentials are provided using the JSON file you created\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
 
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 

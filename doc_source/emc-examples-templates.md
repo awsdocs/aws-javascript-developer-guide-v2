@@ -25,12 +25,12 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="emc-examples-templates-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
+Configure the SDK for JavaScript by creating a global configuration object, and then setting the Region for your code\. In this example, the Region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 // Set the custom endpoint for your acccount
 AWS.config.mediaconvert({endpoint: 'ACCOUNT_ENDPOINT'});
@@ -47,10 +47,10 @@ Call the `createJobTemplate` method by creating a promise for invoking an `AWS.M
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
-// Set the custom endpoint for your acccount
-AWS.config.mediaconvert({endpoint: 'ACCOUNT_ENDPOINT'});
+// Set the custom endpoint for your account
+AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
 
 var params = {
   Category: 'YouTube Jobs',
@@ -213,10 +213,10 @@ Create the job creation parameters JSON, including the name of the job template 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
-// Set the custom endpoint for your acccount
-AWS.config.mediaconvert({endpoint: 'ACCOUNT_ENDPOINT'});
+// Set the custom endpoint for your account
+AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
 
 var params = {
   "Queue": "QUEUE_ARN",
@@ -282,7 +282,7 @@ Create an object to pass the request parameters for the `listTemplates` method o
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -324,7 +324,7 @@ Create an object to pass the name of the job template you want to delete as para
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};

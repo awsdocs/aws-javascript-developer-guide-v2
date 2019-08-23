@@ -10,7 +10,7 @@
 
 Metrics are data about the performance of your systems\. You can enable detailed monitoring of some resources, such as your Amazon EC2 instances, or your own application metrics\. 
 
-In this example, a series of Node\.js modules are used to get metrics from CloudWatch\. In this example, a series of Node\.js modules are used to send events to Amazon CloudWatch Events\. The Node\.js modules use the SDK for JavaScript to get metrics from CloudWatch using these methods of the `CloudWatch` client class:
+In this example, a series of Node\.js modules are used to get metrics from CloudWatch and to send events to Amazon CloudWatch Events\. The Node\.js modules use the SDK for JavaScript to get metrics from CloudWatch using these methods of the `CloudWatch` client class:
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#listMetrics-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#listMetrics-property)
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#putMetricData-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatch.html#putMetricData-property)
 
@@ -24,12 +24,12 @@ To set up and run this example, you must first complete these tasks:
 
 ## Configuring the SDK<a name="cloudwatch-examples-getting-metrics-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object then setting the region for your code\. In this example, the region is set to `us-west-2`\.
+Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 

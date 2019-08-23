@@ -1,7 +1,7 @@
 # Configuring the SDK for JavaScript<a name="configuring-the-jssdk"></a>
 
 Before you use the SDK for JavaScript to invoke web services using the API, you must configure the SDK\. At a minimum, you must configure these settings:
-+ The *region* in which you will request services\.
++ The Region in which you will request services\.
 + The *credentials* that authorize your access to SDK resources\.
 
 In addition to these settings, you may also have to configure permissions for your AWS resources\. For example, you can limit access to an Amazon S3 bucket or restrict an Amazon DynamoDB table for read\-only access\.

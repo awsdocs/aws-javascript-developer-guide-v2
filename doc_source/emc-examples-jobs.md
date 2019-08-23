@@ -28,15 +28,15 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="emc-examples-jobs-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, and then setting the region for your code\. In this example, the region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
+Configure the SDK for JavaScript by creating a global configuration object, and then setting the Region for your code\. In this example, the Region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
-// Set the custom endpoint for your acccount
-AWS.config.mediaconvert({endpoint: 'ACCOUNT_ENDPOINT'});
+// Set the custom endpoint for your account
+AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
 ```
 
 ## Defining a Simple Transcoding Job<a name="emc-examples-jobs-spec"></a>
@@ -215,7 +215,7 @@ Create a Node\.js module with the file name `emc_canceljob.js`\. Be sure to conf
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 // Set MediaConvert to customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -257,7 +257,7 @@ Create the parameters JSON, including values to specify whether to sort the list
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};

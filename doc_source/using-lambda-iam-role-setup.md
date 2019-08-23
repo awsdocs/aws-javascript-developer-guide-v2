@@ -10,11 +10,7 @@ A Lambda function requires an execution role created in IAM that provides the fu
 
 **To create the Lambda execution role in IAM**
 
-1. Open the `slotassets.zip` archive file that you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
-
-1. Copy the `lambda-role-setup.js` script from the archive to the folder that contains your credentials JSON file\.
-
-1. Open `lambda-role-setup.js` in a text editor\.
+1. Open `lambda-role-setup.js` in the `slotassets` directory in a text editor\.
 
 1. Find this line of code\.
 
@@ -22,7 +18,7 @@ A Lambda function requires an execution role created in IAM that provides the fu
 
    Replace **ROLE** with another name\. 
 
-1. Save your changes to `lambda-role-setup.js`, and then close the file\. 
+1. Save your changes and close the file\. 
 
 1. At the command line, type the following\.
 
@@ -39,7 +35,7 @@ The `createRole` method automatically URL\-encodes the JSON to create the execut
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Load credentials and set region from JSON file
+// Load credentials and set Region from JSON file
 AWS.config.loadFromPath('./config.json');
 
 // Create the IAM service object
@@ -84,10 +80,4 @@ iam.createRole(createParams, function(err, data) {
 });
 ```
 
-This script uses code from these AWS SDK for JavaScript code example topics:
-+ [Writing a Lambda Function in Node\.js](nodejs-write-lambda-function-example.md)
-+ [Working with IAM Policies](iam-examples-policies.md)
-
-## Next Step<a name="w4aac25b8c19c15"></a>
-
-Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.
+Click **next** to continue the tutorial\.

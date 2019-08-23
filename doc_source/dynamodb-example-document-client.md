@@ -27,12 +27,12 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="dynamodb-example-document-client-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object then setting the region for your code\. In this example, the region is set to `us-west-2`\.
+Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 

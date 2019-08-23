@@ -26,7 +26,7 @@ Requiring the SDK for JavaScript as shown previously includes the entire SDK int
 // Import the AWS SDK
 var AWS = require('aws-sdk');
 
-// Set credentials and region
+// Set credentials and Region
 // This can also be done directly on the service client
 AWS.config.update({region: 'us-west-1', credentials: {YOUR_CREDENTIALS}});
 
@@ -45,7 +45,7 @@ Here is what the code to create the previous Amazon S3 service object looks like
 // Import the Amazon S3 service client
 var S3 = require('aws-sdk/clients/s3');
  
-// Set credentials and region
+// Set credentials and Region
 var s3 = new S3({
     apiVersion: '2006-03-01',
     region: 'us-west-1', 
@@ -73,7 +73,7 @@ var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 By default, a service object is configured with the global settings also used to configure the SDK\. However, you can configure a service object with runtime configuration data that is specific to that service object\. Service\-specific configuration data is applied after applying the global configuration settings\.
 
-In the following example, an Amazon EC2 service object is created with configuration for a specific region but otherwise uses the global configuration\.
+In the following example, an Amazon EC2 service object is created with configuration for a specific Region but otherwise uses the global configuration\.
 
 ```
 var ec2 = new AWS.EC2({region: 'us-west-2', apiVersion: '2014-10-01'});

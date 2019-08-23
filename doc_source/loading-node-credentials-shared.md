@@ -4,7 +4,7 @@ You can keep your AWS credentials data in a shared file used by SDKs and the com
 + The shared credentials file on Linux, Unix, and macOS: `~/.aws/credentials`
 + The shared credentials file on Windows: `C:\Users\USER_NAME\.aws\credentials`
 
-If you do not already have a shared credentials file, you can create one in the designated directory\. Add the following text to the credentials file, replacing *<YOUR\_ACCESS\_KEY\_ID>* and *<YOUR\_SECRET\_ACCESS\_KEY>* values:
+If you do not already have a shared credentials file, see [Getting Your Credentials](getting-your-credentials.md)\. Once you the following those instructions, you should see text similar to the following in the credentials file, where *<YOUR\_ACCESS\_KEY\_ID>* is your access key ID and *<YOUR\_SECRET\_ACCESS\_KEY>* is your secret access key:
 
 ```
 [default]

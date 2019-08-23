@@ -28,12 +28,12 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="ec2-example-elastic-ip-addresses-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object then setting the region for your code\. In this example, the region is set to `us-west-2`\.
+Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 
@@ -78,7 +78,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 Create a Node\.js module with the file name `ec2_allocateaddress.js`\. Be sure to configure the SDK as previously shown\. To access Amazon EC2, create an `AWS.EC2` service object\. Create a JSON object for the parameters used to allocate an Elastic IP address, which in this case specifies the `Domain` is a VPC\. Call the `allocateAddress` method of the Amazon EC2 service object\.
 
-Upon success, the `data` parameter to the callback function has an `AllocationId` property that identifies the allocated Elastic IP address\.
+If the call succeeds, the `data` parameter to the callback function has an `AllocationId` property that identifies the allocated Elastic IP address\.
 
 Create a JSON object for the parameters used to associate an Elastic IP address to an Amazon EC2 instance, including the `AllocationId` from the newly allocated address and the `InstanceId` of the Amazon EC2 instance\. Then call the `associateAddresses` method of the Amazon EC2 service object\.
 

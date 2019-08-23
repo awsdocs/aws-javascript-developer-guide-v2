@@ -20,7 +20,7 @@ To set up and run this example, you must first complete these tasks:
 
 In this example, use a Node\.js module to publish a message to an Amazon SNS topic\. Create a Node\.js module with the file name `sns_publishtotopic.js`\. Configure the SDK as previously shown\.
 
-Create an object containing the parameters for publishing a message, including the message text and the ARN of the SNS topic\. For details on available SMS attributes, see SetSMSAttributes in the Amazon Simple Notification Service API Reference of the SNS topic\.
+Create an object containing the parameters for publishing a message, including the message text and the ARN of the SNS topic\. For details on available SMS attributes, see [SetSMSAttributes](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property)\.
 
 Pass the parameters to the `publish` method of the `AWS.SNS` client class\. Create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the response in the promise callback\. 
 

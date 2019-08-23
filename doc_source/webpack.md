@@ -127,7 +127,7 @@ Consider the following example of the code used to create an Amazon S3 service o
 // Import the AWS SDK
 var AWS = require('aws-sdk');
 
-// Set credentials and region
+// Set credentials and Region
 // This can also be done directly on the service client
 AWS.config.update({region: 'us-west-1', credentials: {YOUR_CREDENTIALS}});
 
@@ -142,7 +142,7 @@ Here is what the same code looks like when it includes only the Amazon S3 portio
 // Import the Amazon S3 service client
 var S3 = require('aws-sdk/clients/s3');
  
-// Set credentials and region
+// Set credentials and Region
 var s3 = new S3({
     apiVersion: '2006-03-01',
     region: 'us-west-1', 

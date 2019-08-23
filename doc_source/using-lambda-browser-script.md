@@ -54,9 +54,7 @@ Next, update the browser script to include the Amazon Cognito identity pool ID c
 
 **To prepare the browser script in the webpage**
 
-1. Open the `slotassets.zip` archive file that you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
-
-1. Open `index.html` in a text editor\.
+1. Open `index.html` in the `MyLambdaApp` folder in a text editor\.
 
 1. Find this line of code in the browser script\.
 
@@ -66,6 +64,4 @@ Next, update the browser script to include the Amazon Cognito identity pool ID c
 
 1. Save `index.html`\.
 
-## Next Step<a name="w4aac25b8c16c13"></a>
-
-Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.
+Click **next** to continue the tutorial\.

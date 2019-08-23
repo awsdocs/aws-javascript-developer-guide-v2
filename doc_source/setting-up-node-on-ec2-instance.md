@@ -32,10 +32,10 @@ AWS does not control the following code\. Before you run it, be sure to verify i
    . ~/.nvm/nvm.sh
    ```
 
-1. Use nvm to install the version of Node\.js you intend to use by typing the following at the command line\.
+1. Use nvm to install the latest version of Node\.js by typing the following at the command line\.
 
    ```
-   nvm install 4.4.5
+   nvm install node
    ```
 
    Installing Node\.js also installs the Node Package Manager \(npm\) so you can install additional modules as needed\.
@@ -46,15 +46,15 @@ AWS does not control the following code\. Before you run it, be sure to verify i
    node -e "console.log('Running Node.js ' + process.version)"
    ```
 
-   This should display the following message that confirms the installed version of Node\.js running\.
+   This displays the following message that shows the version of Node\.js that is running\.
 
-   `Running Node.js v4.4.5`
+   `Running Node.js VERSION`
 
-## Creating an Amazon Machine Image<a name="w4aac25b6b8"></a>
+## Creating an Amazon Machine Image<a name="setting-up-node-on-ec2-instance-create-image"></a>
 
 After you install Node\.js on an Amazon EC2 instance, you can create an Amazon Machine Image \(AMI\) from that instance\. Creating an AMI makes it easy to provision multiple Amazon EC2 instances with the same Node\.js installation\. For more information about creating an AMI from an existing instance, see [Creating an Amazon EBS\-Backed Linux AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-## Related Resources<a name="w4aac25b6c10"></a>
+## Related Resources<a name="setting-up-node-on-ec2-instance-related-resource"></a>
 
 For more information about the commands and software used in this topic, see the following web pages:
 + node version manager \(nvm\): see [nvm repo on GitHub](https://github.com/creationix/nvm)\.

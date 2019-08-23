@@ -1,26 +1,19 @@
 # Create an Amazon S3 Bucket Configured as a Static Website<a name="using-lambda-s3-setup"></a>
 
-This topic is part of a larger tutorial about using the AWS SDK for JavaScript with AWS Lambda functions\. To start at the beginning of the tutorial, see [Tutorial: Creating and Using Lambda Functions](using-lambda-functions.md)\.
-
-In this task, you will focus on creating and preparing the Amazon S3 bucket used by the application\.
+In this task, you create and prepare the Amazon S3 bucket used by the application\.
 
 ![\[JavaScript running in a browser that creates an Amazon S3 bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/create-s3-bucket.png)![\[JavaScript running in a browser that creates an Amazon S3 bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)![\[JavaScript running in a browser that creates an Amazon S3 bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)
 
 For this application, the first thing you need to create is an Amazon S3 bucket to store all the browser assets\. These include the HTML file, all graphics files, and the CSS file\. The bucket is configured as a static website so that it also serves the application from the bucket's URL\. 
 
-The `slotassets.zip` archive file contains a Node\.js script named `s3-bucket-setup.js` that creates the Amazon S3 bucket and sets the website configuration\. 
+The `slotassets` directory contains the Node\.js script `s3-bucket-setup.js` that creates the Amazon S3 bucket and sets the website configuration\. 
 
 **To create and configure the Amazon S3 bucket that the tutorial application uses**
++ At the command line, type the following command, where *BUCKET\_NAME* is the name for the bucket:
 
-1. Open the `slotassets.zip` archive file you downloaded from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\.
+  `node s3-bucket-setup.js BUCKET_NAME`
 
-1. Copy the `s3-bucket-setup.js` script from the archive to the folder that contains your credentials JSON file\.
-
-1. At the command line, type:
-
-   `node s3-bucket-setup.js BUCKET_NAME`
-
-   where *BUCKET\_NAME* is the name for the bucket\. The bucket name must be globally unique\. When successful, the script displays the URL of the new bucket\. Make a note of this URL because you'll use it later\.
+  The bucket name must be globally unique\. If the command succeeds, the script displays the URL of the new bucket\. Make a note of this URL because you'll use it later\.
 
 ## Setup Script<a name="using-lambda-s3-script"></a>
 
@@ -29,7 +22,7 @@ The setup script runs the following code\. It takes the command\-line argument t
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Load credentials and set region from JSON file
+// Load credentials and set Region from JSON file
 AWS.config.loadFromPath('./config.json');
 
 // Create S3 service object
@@ -74,10 +67,4 @@ s3.createBucket(bucketParams, function(err, data) {
 });
 ```
 
-This script uses code from these AWS SDK for JavaScript code example topics:
-+ [Creating and Using Amazon S3 Buckets](s3-example-creating-buckets.md)
-+ [Using an Amazon S3 Bucket as a Static Web Host](s3-example-static-web-host.md)
-
-## Next Step<a name="w4aac25b8c13c17"></a>
-
-Return to the full [Tutorial Steps](using-lambda-functions.md#using-lambda-procedures)\.
+Click **next** to continue the tutorial\.

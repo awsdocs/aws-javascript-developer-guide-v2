@@ -6,7 +6,7 @@
 + How to create an Amazon EC2 instance from a public Amazon Machine Image \(AMI\)\.
 + How to create and assign tags to the new Amazon EC2 instance\.
 
-## The Scenario<a name="ec2-example-creating-an-instance-scenario"></a>
+## About the Example<a name="ec2-example-creating-an-instance-scenario"></a>
 
 In this example, you use a Node\.js module to create an Amazon EC2 instance and assign both a key pair and tags to it\. The code uses the SDK for JavaScript to create and tag an instance by using these methods of the Amazon EC2 client class:
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#runInstances-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#runInstances-property)
@@ -21,12 +21,12 @@ To set up and run this example, first complete these tasks\.
 
 ## Configuring the SDK<a name="ec2-example-creating-an-instance-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object then setting the region for your code\. 
+Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. 
 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the Region 
 AWS.config.update({region: 'us-west-2'});
 ```
 
