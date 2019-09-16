@@ -18,19 +18,24 @@ Here is an example of the log output\.
 
 You can also use a third\-party logger, provided it has `log()` or `write()` operations to write to a log file or server\. You must install and set up your custom logger as instructed before you can use it with the SDK for JavaScript\.
 
-One such logger you can use in either browser scripts or in Node\.js is logplease\. In Node\.js, you can configure logplease to write log entries to a log file\. You can also use it with webpack\.
+One such logger you can use in either browser scripts or in Node\.js is cabin\. In Node\.js, you can configure cabin to write log entries to a log file\. You can also use it with webpack\.
 
-When using a third\-party logger, set all options before assigning the logger to `AWS.Config.logger`\. For example, the following specifies an external log file and sets the log level for logplease
+When using a third\-party logger, set all options before assigning the logger to `AWS.config.logger`\. For example, the following specifies an external log file and sets the log level for logplease
 
 ```
-// Require logplease
-const myLogger = require(‘logplease’);
-// Set external log file option
-myLogger.setLogFile(‘debug.log’);
-// Set log level
-myLogger.setLogLevel(‘DEBUG’);
+// Require cabin
+const Cabin = require('cabin');
+const { Signale } = require('signale');
+const pino = require('pino');
+
+// Create a new logger instance
+const logger = new Cabin({
+  axe: {
+    logger: process.env.NODE_ENV === 'production' ? pino({ customLevels: { log: 30 } }) : new Signale()
+  }
+});
 // Assign logger to SDK
-AWS.Config.logger = myLogger;
+AWS.config.logger = logger;
 ```
 
-For more information about logplease, see the [logplease Simple JavaScript Logger](https://github.com/haadcode/logplease) on GitHub\.
+For more information about cabin, see the [cabin JavaScript Logger](https://github.com/cabinjs/cabin) on GitHub\.
