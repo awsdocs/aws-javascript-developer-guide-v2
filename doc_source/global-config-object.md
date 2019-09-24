@@ -8,9 +8,9 @@ Setting global configuration with `AWS.Config` is often easier to get started, b
 
 ## Setting Global Configuration<a name="setting-global-configuration"></a>
 
-After you load the SDK, use the global variable, `AWS`, to access the SDK\. You use this global access variable with the JavaScript API to interact with individual services\. The SDK includes a global configuration object, `AWS.Config`, that you use to specify the SDK configuration settings required by your application\.
+After you load the `aws-sdk` package in your code you can use the `AWS` global variable to access the SDK's classes and interact with individual services\. The SDK includes a global configuration object, `AWS.Config`, that you can use to specify the SDK configuration settings required by your application\.
 
-Set your SDK configuration using `AWS.Config` by setting its properties according to your application needs\. The following table summarizes `AWS.Config` properties commonly used to set the configuration of the SDK\.
+Configure the SDK by setting `AWS.Config` properties according to your application needs\. The following table summarizes `AWS.Config` properties commonly used to set the configuration of the SDK\.
 
 
 ****  
@@ -41,6 +41,29 @@ You can also set these properties after creating `AWS.Config` using the `update`
 ```
 myConfig = new AWS.Config();
 myConfig.update({region: 'us-east-1'});
+```
+
+You can get your default credentials by calling the static `getCredentials` method of `AWS.config`:
+
+```
+var AWS = require("aws-sdk");
+
+AWS.config.getCredentials(function(err) {
+  if (err) console.log(err.stack);
+  // credentials not loaded
+  else {
+    console.log("Access key:", AWS.config.credentials.accessKeyId);
+    console.log("Secret access key:", AWS.config.credentials.secretAccessKey);
+  }
+});
+```
+
+Similarly, if you have set your region correctly in your `config` file, you get that value by setting the `AWS_SDK_LOAD_CONFIG` environment variable is set to a truthy value and calling the static `region` property of `AWS.config`:
+
+```
+var AWS = require("aws-sdk");
+
+console.log("Region: ", AWS.config.region);
 ```
 
 ## Setting Configuration Per Service<a name="service-specific-configuration"></a>

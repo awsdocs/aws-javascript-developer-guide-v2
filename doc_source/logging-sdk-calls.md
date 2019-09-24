@@ -23,14 +23,18 @@ One such logger you can use in either browser scripts or in Node\.js is logpleas
 When using a third\-party logger, set all options before assigning the logger to `AWS.Config.logger`\. For example, the following specifies an external log file and sets the log level for logplease
 
 ```
+// Require AWS Node.js SDK
+const AWS = require('aws-sdk')
 // Require logplease
-const myLogger = require(‘logplease’);
+const logplease = require('logplease');
 // Set external log file option
-myLogger.setLogFile(‘debug.log’);
+logplease.setLogfile('debug.log');
 // Set log level
-myLogger.setLogLevel(‘DEBUG’);
+logplease.setLogLevel('DEBUG');
+// Create logger
+const logger = logplease.create('logger name');
 // Assign logger to SDK
-AWS.Config.logger = myLogger;
+AWS.config.logger = logger;
 ```
 
 For more information about logplease, see the [logplease Simple JavaScript Logger](https://github.com/haadcode/logplease) on GitHub\.

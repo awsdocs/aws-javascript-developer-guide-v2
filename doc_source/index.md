@@ -46,6 +46,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Locking API Versions](locking-api-versions.md)
    + [Node.js Considerations](node-js-considerations.md)
       + [Configuring maxSockets in Node.js](node-configuring-maxsockets.md)
+      + [Reusing Connections with Keep-Alive in Node.js](node-reusing-connections.md)
       + [Configuring Proxies for Node.js](node-configuring-proxies.md)
       + [Registering Certificate Bundles in Node.js](node-registering-certs.md)
    + [Browser Script Considerations](browser-js-considerations.md)

@@ -41,6 +41,29 @@ aws_access_key_id = YOUR_ACCESS_KEY_ID
 aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
 ```
 
+You can determine whether you have set your credentials correctly by executing the following code with `node`:
+
+```
+var AWS = require("aws-sdk");
+
+AWS.config.getCredentials(function(err) {
+  if (err) console.log(err.stack);
+  // credentials not loaded
+  else {
+    console.log("Access key:", AWS.config.credentials.accessKeyId);
+    console.log("Secret access key:", AWS.config.credentials.secretAccessKey);
+  }
+});
+```
+
+Similarly, if you have set your region correctly in your `config` file, you can display that value by setting the `AWS_SDK_LOAD_CONFIG` environment variable is set to a truthy value and using the following code:
+
+```
+var AWS = require("aws-sdk");
+
+console.log("Region: ", AWS.config.region);
+```
+
 ## Step 2: Create the Package JSON for the Project<a name="getting-started-nodejs-download"></a>
 
 After you create the `awsnodesample` project directory, you create and add a `package.json` file for holding the metadata for your Node\.js project\. For details about using `package.json` in a Node\.js project, see [What is the file package\.json?](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)\.
