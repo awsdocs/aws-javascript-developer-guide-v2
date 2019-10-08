@@ -21,17 +21,6 @@ To set up and run this example, first complete these tasks:
 + Install Node\.js\. For more information, see the [Node\.js website](https://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
-## Configuring the SDK<a name="dynamodb-example-using-tables-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Creating a Table<a name="dynamodb-examples-using-tables-creating-a-table"></a>
 
 Create a Node\.js module with the file name `ddb_createtable.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to create a table, which in this example includes the name and data type for each attribute, the key schema, the name of the table, and the units of throughput to provision\. Call the `createTable` method of the DynamoDB service object\.
@@ -162,7 +151,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Deleting a Table<a name="dynamodb-examples-using-tables-deleting-a-table"></a>
 
-Create a Node\.js module with the file name `ddb_deletetable.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to describe a table, which in this example includes the name of the table provided as a command\-line parameter\. Call the `deleteTable` method of the DynamoDB service object\.
+Create a Node\.js module with the file name `ddb_deletetable.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to delete a table, which in this example includes the name of the table provided as a command\-line parameter\. Call the `deleteTable` method of the DynamoDB service object\.
 
 ```
 // Load the AWS SDK for Node.js
