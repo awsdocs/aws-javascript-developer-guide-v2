@@ -69,11 +69,11 @@ When an unauthenticated user logs in to an identity provider and you have a toke
 ```
 // Called when an identity provider has a token for a logged in user
 function userLoggedIn(providerName, token) {
-creds.params.Logins = creds.params.Logins || {};
-creds.params.Logins[providerName] = token;
+  creds.params.Logins = creds.params.Logins || {};
+  creds.params.Logins[providerName] = token;
                     
-// Expire credentials to refresh them on the next request
-creds.expired = true;
+  // Expire credentials to refresh them on the next request
+  creds.expired = true;
 }
 ```
 
