@@ -52,7 +52,7 @@ In your code, change the following:
 
 ```
 svc.operation(params, function (err, data) {
-console.log('Request ID:', data.RequestId);
+  console.log('Request ID:', data.RequestId);
 });
 ```
 
@@ -60,7 +60,7 @@ To the following:
 
 ```
 svc.operation(params, function () {
-console.log('Request ID:', this.requestId);
+  console.log('Request ID:', this.requestId);
 });
 ```
 
