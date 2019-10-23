@@ -13,13 +13,13 @@ For more information about webpack, see the [webpack module bundler](https://web
 To install the webpack module bundler, you must first have npm, the Node\.js package manager, installed\. Type the following command to install the webpack CLI and JavaScript module\.
 
 ```
-npm install webpack
+npm install --save-dev webpack
 ```
 
 You may also need to install a webpack plugin that allows it to load JSON files\. Type the following command to install the JSON loader plugin\.
 
 ```
-npm install json-loader
+npm install --save-dev json-loader
 ```
 
 ## Configuring Webpack<a name="webpack-configuring"></a>
