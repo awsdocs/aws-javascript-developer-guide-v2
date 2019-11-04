@@ -20,17 +20,6 @@ To set up and run this example, first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create a DynamoDB table whose items you can access\. For more information about creating a DynamoDB table, see [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)\.
 
-## Configuring the SDK<a name="dynamodb-example-table-query-scan-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Querying a Table<a name="dynamodb-example-table-query-scan-querying"></a>
 
 This example queries a table that contains episode information about a video series, returning the episode titles and subtitles of second season episodes past episode 9 that contain a specified phrase in their subtitle\.

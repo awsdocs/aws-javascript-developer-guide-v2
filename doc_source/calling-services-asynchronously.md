@@ -9,4 +9,9 @@ Making asynchronous calls to an AWS service includes managing those calls so you
 + [Using an Anonymous Callback Function](using-a-callback-function.md)
 + [Using a Request Object Event Listener](using-a-response-event-handler.md)
 + [Using JavaScript Promises](using-promises.md)
++ [Using async/await](#using-async-await)
 + [Requests With a Node\.js Stream Object](requests-using-stream-objects.md)
+
+## Using async/await<a name="using-async-await"></a>
+
+Rather than using promises, you should consider using async/await\. Async functions are simpler and take less boilerplate than using promises\. Await can only be used in an async function to asynchronously wait for a value\.

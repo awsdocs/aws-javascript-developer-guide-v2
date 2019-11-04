@@ -20,17 +20,6 @@ To set up and run this example, you must first complete these tasks:
 + Create an Amazon SQS queue\. For an example of creating a queue, see [Using Queues in Amazon SQS](sqs-examples-using-queues.md)\.
 + Send a message to the queue\. For an example of sending a message to a queue, see [Sending and Receiving Messages in Amazon SQS](sqs-examples-send-receive-messages.md)\.
 
-## Configuring the SDK<a name="sqs-examples-managing-visibility-timeout-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Changing the Visibility Timeout<a name="sqs-examples-managing-visibility-timeout-setting"></a>
 
 Create a Node\.js module with the file name `sqs_changingvisibility.js`\. Be sure to configure the SDK as previously shown\. To access Amazon Simple Queue Service, create an `AWS.SQS` service object\. Receive the message from the queue\.

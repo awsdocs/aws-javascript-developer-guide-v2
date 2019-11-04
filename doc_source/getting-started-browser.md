@@ -68,6 +68,8 @@ To enable browser script access to Amazon Polly for speech synthesis, use the un
 1. In the **Summary** page for this role, choose **Attach policies**\.
 
 1. In the **Attach Permissions** page for this role, find and then select the check box for **AmazonPollyFullAccess**\.
+**Note**  
+You can use this process to enable access to any Amazon or AWS service\.
 
 1. Choose **Attach policy**\.
 
@@ -77,7 +79,7 @@ After you create your Amazon Cognito identity pool and add permissions for Amazo
 
 The sample app consists of a single HTML page that contains the user interface and browser script\. To begin, create an HTML document and copy the following contents into it\. The page includes an input field and button, an `<audio>` element to play the synthesized speech, and a `<p>` element to display messages\. \(Note that the full example is shown at the bottom of this page\.\)
 
-For more information on the `<audio>` element, see [section 4\.7\.11\. The audio element](https://www.w3.org/TR/html/semantics-embedded-content.html#elementdef-audio) in the W3C Recommendation for HTML 5\.2\.
+For more information on the `<audio>` element, see [audio](https://www.w3schools.com/tags/tag_audio.asp)\.
 
 ```
 <!DOCTYPE html>

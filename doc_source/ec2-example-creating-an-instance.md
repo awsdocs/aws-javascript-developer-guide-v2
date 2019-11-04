@@ -19,17 +19,6 @@ To set up and run this example, first complete these tasks\.
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create a key pair\. For details, see [Working with Amazon EC2 Key Pairs](ec2-example-key-pairs.md)\. You use the name of the key pair in this example\.
 
-## Configuring the SDK<a name="ec2-example-creating-an-instance-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. 
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Creating and Tagging an Instance<a name="ec2-example-creating-an-instance-and-tags"></a>
 
 Create a Node\.js module with the file name `ec2_createinstances.js`\. Be sure to configure the SDK as previously shown\.

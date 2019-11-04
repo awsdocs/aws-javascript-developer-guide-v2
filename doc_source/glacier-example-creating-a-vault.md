@@ -11,17 +11,6 @@ To set up and run this example, you must first complete these tasks:
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
-## Configuring the SDK<a name="glacier-example-createvault-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Create the Vault<a name="glacier-example-createvault-code"></a>
 
 ```

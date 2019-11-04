@@ -23,17 +23,6 @@ To set up and run this example, you must first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create an Amazon SQS queue\. For an example of creating a queue, see [Using Queues in Amazon SQS](sqs-examples-using-queues.md)\.
 
-## Configuring the SDK<a name="sqs-examples-send-receive-messages-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Sending a Message to a Queue<a name="sqs-examples-send-receive-messages-sending"></a>
 
 Create a Node\.js module with the file name `sqs_sendmessage.js`\. Be sure to configure the SDK as previously shown\. To access Amazon SQS, create an `AWS.SQS` service object\. Create a JSON object containing the parameters needed for your message, including the URL of the queue to which you want to send this message\. In this example, the message provides details about a book on a list of fiction best sellers including the title, author, and number of weeks on the list\.

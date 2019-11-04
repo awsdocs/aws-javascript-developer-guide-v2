@@ -208,8 +208,6 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Canceling a Transcoding Job<a name="emc-examples-jobs-cancel"></a>
 
-You can cancel jobs only while they are still in the queue\. You can’t cancel jobs that have already started transcoding\.
-
 Create a Node\.js module with the file name `emc_canceljob.js`\. Be sure to configure the SDK as previously shown\. Create the JSON that includes the ID of the job to cancel\. Then call the `cancelJob` method by creating a promise for invoking an `AWS.MediaConvert` service object, passing the parameters\. Handle the response in the promise callback\.
 
 ```

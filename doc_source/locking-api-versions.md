@@ -14,8 +14,12 @@ You can globally configure a set of service API versions by specifying the `apiV
 
 ```
 AWS.config.apiVersions = {
-dynamodb: '2011-12-05',
-ec2: '2013-02-01',
-redshift: 'latest'
+  dynamodb: '2011-12-05',
+  ec2: '2013-02-01',
+  redshift: 'latest'
 };
 ```
+
+## Getting API Versions<a name="getting-api-versions"></a>
+
+To get the API version for a service, see the *Locking the API Version* section on the service's reference page, such as [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html) for Amazon S3\.

@@ -45,7 +45,7 @@ Use the following role policy when creating the IAM role\.
 }
 ```
 
-## Configuring the SDK<a name="cloudwatch-examples-using-alarm-actions-configure-sdk"></a>
+## <a name="cloudwatch-examples-using-alarm-actions-configure-sdk"></a>
 
 Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
 

@@ -39,5 +39,4 @@ One example of an npm package you can use with the AWS SDK for JavaScript is `br
 + [Configuring maxSockets in Node\.js](node-configuring-maxsockets.md)
 + [Reusing Connections with Keep\-Alive in Node\.js](node-reusing-connections.md)
 + [Configuring Proxies for Node\.js](node-configuring-proxies.md)
-+ [Reusing Connections with Keep-Alive](node-reusing-connections.md)
 + [Registering Certificate Bundles in Node\.js](node-registering-certs.md)

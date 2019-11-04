@@ -52,17 +52,6 @@ Use the following role policy when creating the IAM role\.
 }
 ```
 
-## Configuring the SDK<a name="cloudwatch-examples-subscriptions-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Describing Existing Subscription Filters<a name="cloudwatch-examples-subscriptions-describing"></a>
 
 Create a Node\.js module with the file name `cwl_describesubscriptionfilters.js`\. Be sure to configure the SDK as previously shown\. To access CloudWatch Logs, create an `AWS.CloudWatchLogs` service object\. Create a JSON object containing the parameters needed to describe your existing filters, including the name of the log group and the maximum number of filters you want described\. Call the `describeSubscriptionFilters` method\.

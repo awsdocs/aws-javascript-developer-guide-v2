@@ -24,17 +24,6 @@ To set up and run this example, you must first complete these tasks:
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
-## Configuring the SDK<a name="iam-examples-managing-access-keys-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Creating Access Keys for a User<a name="iam-examples-managing-access-keys-creating"></a>
 
 Create a Node\.js module with the file name `iam_createaccesskeys.js`\. Be sure to configure the SDK as previously shown\. To access IAM, create an `AWS.IAM` service object\. Create a JSON object containing the parameters needed to create new access keys, which includes IAM user's name\. Call the `createAccessKey` method of the `AWS.IAM` service object\.

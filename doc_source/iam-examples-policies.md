@@ -26,17 +26,6 @@ To set up and run this example, you must first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create an IAM role to which you can attach policies\. For more information about creating roles, see [Creating IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html) in the *IAM User Guide*\.
 
-## Configuring the SDK<a name="iam-examples-policies-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Creating an IAM Policy<a name="iam-examples-policies-creating"></a>
 
 Create a Node\.js module with the file name `iam_createpolicy.js`\. Be sure to configure the SDK as previously shown\. To access IAM, create an `AWS.IAM` service object\. Create two JSON objects, one containing the policy document you want to create and the other containing the parameters needed to create the policy, which includes the policy JSON and the name you want to give the policy\. Be sure to stringify the policy JSON object in the parameters\. Call the `createPolicy` method of the `AWS.IAM` service object\.

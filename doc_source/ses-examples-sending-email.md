@@ -20,18 +20,6 @@ In this example, you use a series of Node\.js modules to send email in a variety
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a credentials JSON file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
-## Configuring the SDK<a name="ses-examples-deleting-address-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object, setting the Region, and providing credentials for your code\. In this example, the credentials are provided using the JSON file you created\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Email Message Sending Requirements<a name="ses-examples-sending-msail-reqs"></a>
 
 Amazon SES composes an email message and immediately queues it for sending\. To send email using the `SES.sendEmail` method, your message must meet the following requirements:

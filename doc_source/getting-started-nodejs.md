@@ -56,7 +56,7 @@ AWS.config.getCredentials(function(err) {
 });
 ```
 
-Similarly, if you have set your region correctly in your `config` file, you can display that value by setting the `AWS_SDK_LOAD_CONFIG` environment variable is set to a truthy value and using the following code:
+Similarly, if you have set your region correctly in your `config` file, you can display that value by setting the `AWS_SDK_LOAD_CONFIG` environment variable to a truthy value and using the following code:
 
 ```
 var AWS = require("aws-sdk");

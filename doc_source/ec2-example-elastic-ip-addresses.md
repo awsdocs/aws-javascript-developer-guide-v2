@@ -26,17 +26,6 @@ To set up and run this example, first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create an Amazon EC2 instance\. For more information about creating Amazon EC2 instances, see [Amazon EC2 Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html) in the *Amazon EC2 User Guide for Linux Instances* or [Amazon EC2 Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Instances.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## Configuring the SDK<a name="ec2-example-elastic-ip-addresses-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Describing Elastic IP Addresses<a name="ec2-example-elastic-ip-addresses-describing"></a>
 
 Create a Node\.js module with the file name `ec2_describeaddresses.js`\. Be sure to configure the SDK as previously shown\. To access Amazon EC2, create an `AWS.EC2` service object\. Create a JSON object to pass as parameters, filtering the addresses returned by those in your VPC\. To retrieve descriptions of all your Elastic IP addresses, omit a filter from the parameters JSON\. Then call the `describeAddresses` method of the Amazon EC2 service object\.

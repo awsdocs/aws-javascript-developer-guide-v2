@@ -21,17 +21,6 @@ To set up and run this example, first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create a DynamoDB table whose items you can access\. For more information about creating a DynamoDB table, see [Creating and Using Tables in DynamoDB](dynamodb-examples-using-tables.md)\.
 
-## Configuring the SDK<a name="dynamodb-example-table-read-write-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Writing an Item<a name="dynamodb-example-table-read-write-writing-an-item"></a>
 
 Create a Node\.js module with the file name `ddb_putitem.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to add an item, which in this example includes the name of the table and a map that defines the attributes to set and the values for each attribute\. Call the `putItem` method of the DynamoDB service object\.
@@ -114,7 +103,7 @@ This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-do
 
 ## Deleting an Item<a name="dynamodb-example-table-read-write-deleting-an-item"></a>
 
-Create a Node\.js module with the file name `ddb_deleteitem.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to add an item, which in this example includes the name of the table and both the key name and value for the item you're deleting\. Call the `deleteItem` method of the DynamoDB service object\.
+Create a Node\.js module with the file name `ddb_deleteitem.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to delete an item, which in this example includes the name of the table and both the key name and value for the item you're deleting\. Call the `deleteItem` method of the DynamoDB service object\.
 
 ```
 // Load the AWS SDK for Node.js

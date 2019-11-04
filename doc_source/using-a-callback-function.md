@@ -36,7 +36,7 @@ new AWS.EC2({apiVersion: '2014-10-01'}).describeInstances(function(error, data) 
 });
 ```
 
-## Accessing the Request and Response Objects<a name="w4aac16c23c14c19"></a>
+## Accessing the Request and Response Objects<a name="access-request-response"></a>
 
 Within the callback function, the JavaScript keyword `this` refers to the underlying `AWS.Response` object for most services\. In the following example, the `httpResponse` property of an `AWS.Response` object is used within a callback function to log the raw response data and headers to help with debugging\.
 

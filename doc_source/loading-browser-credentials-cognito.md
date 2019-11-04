@@ -50,7 +50,7 @@ FB.login(function (response) {
 
 Amazon Cognito supports both authenticated and unauthenticated users\. Unauthenticated users receive access to your resources even if they aren't logged in with any of your identity providers\. This degree of access is useful to display content to users prior to logging in\. Each unauthenticated user has a unique identity in Amazon Cognito even though they have not been individually logged in and authenticated\.
 
-### Initially Unauthenticated User<a name="w4aac14c31c23c11c13b5"></a>
+### Initially Unauthenticated User<a name="browser-switching-initially-unauthenticated-user"></a>
 
 Users typically start with the unauthenticated role, for which you set the credentials property of your configuration object without a `Logins` property\. In this case, your default configuration might look like the following:
 
@@ -69,11 +69,11 @@ When an unauthenticated user logs in to an identity provider and you have a toke
 ```
 // Called when an identity provider has a token for a logged in user
 function userLoggedIn(providerName, token) {
-creds.params.Logins = creds.params.Logins || {};
-creds.params.Logins[providerName] = token;
+  creds.params.Logins = creds.params.Logins || {};
+  creds.params.Logins[providerName] = token;
                     
-// Expire credentials to refresh them on the next request
-creds.expired = true;
+  // Expire credentials to refresh them on the next request
+  creds.expired = true;
 }
 ```
 

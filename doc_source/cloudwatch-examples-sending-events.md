@@ -65,17 +65,6 @@ Use the following trust relationship when creating the IAM role\.
 }
 ```
 
-## Configuring the SDK<a name="cloudwatch-examples-sending-events-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Creating a Scheduled Rule<a name="cloudwatch-examples-sending-events-rules"></a>
 
 Create a Node\.js module with the file name `cwe_putrule.js`\. Be sure to configure the SDK as previously shown\. To access CloudWatch Events, create an `AWS.CloudWatchEvents` service object\. Create a JSON object containing the parameters needed to specify the new scheduled rule, which include the following: 

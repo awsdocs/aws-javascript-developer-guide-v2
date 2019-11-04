@@ -21,17 +21,6 @@ To set up and run this example, you must first complete these tasks:
 + Create a shared configurations file with your user credentials\. For more information about providing a shared credentials file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 + Create an Amazon SQS queue to serve as a dead letter queue\. For an example of creating a queue, see [Using Queues in Amazon SQS](sqs-examples-using-queues.md)\.
 
-## Configuring the SDK<a name="sqs-examples-dead-letter-queues-configure-sdk"></a>
-
-Configure the SDK for JavaScript by creating a global configuration object then setting the Region for your code\. In this example, the Region is set to `us-west-2`\.
-
-```
-// Load the SDK for JavaScript
-var AWS = require('aws-sdk');
-// Set the Region 
-AWS.config.update({region: 'us-west-2'});
-```
-
 ## Configuring Source Queues<a name="sqs-examples-dead-letter-queues-configuring-source-queues"></a>
 
 After you create a queue to act as a dead letter queue, you must configure the other queues that route unprocessed messages to the dead letter queue\. To do this, specify a redrive policy that identifies the queue to use as a dead letter queue and the maximum number of receives by individual messages before they are routed to the dead letter queue\.
