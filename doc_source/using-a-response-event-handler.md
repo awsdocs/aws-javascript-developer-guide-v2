@@ -31,7 +31,7 @@ request.
   on('success', function(response) {
     console.log("Success!");
   }).
-  on('error', function(response) {
+  on('error', function(error, response) {
     console.log("Error!");
   }).
   on('complete', function() {
