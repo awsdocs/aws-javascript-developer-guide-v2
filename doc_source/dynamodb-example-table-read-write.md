@@ -78,7 +78,8 @@ var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 var params = {
   TableName: 'TABLE',
   Key: {
-    'KEY_NAME': {N: '001'}
+    'KEY_NAME': {N: '001'},
+    'CUSTOMER_NAME': { S: 'Richard Roe' },
   },
   ProjectionExpression: 'ATTRIBUTE_NAME'
 };
