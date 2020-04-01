@@ -40,6 +40,7 @@ If you enable access for unauthenticated users, you will grant write access to t
               "s3:DeleteObject",
               "s3:GetObject",
               "s3:ListBucket",
+              "s3:PutObjectAcl",
               "s3:PutObject"
            ],
            "Resource": [
