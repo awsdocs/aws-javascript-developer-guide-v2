@@ -8,8 +8,10 @@ The HTML for the example:
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
-    <script src="./app.js"></script>
+     <!-- **DO THIS**: -->
+    <!--   Replace SDK_VERSION_NUMBER with the current SDK version number -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-SDK_VERSION_NUMBER.js"></script>
+    <script src="./s3_photoExample.js"></script>
     <script>
        function getHtml(template) {
           return template.join('\n');
@@ -91,7 +93,7 @@ function createAlbum(albumName) {
   if (albumName.indexOf("/") !== -1) {
     return alert("Album names cannot contain slashes.");
   }
-  var albumKey = encodeURIComponent(albumName) + "/";
+  var albumKey = encodeURIComponent(albumName);
   s3.headObject({ Key: albumKey }, function(err, data) {
     if (!err) {
       return alert("Album already exists.");
@@ -110,7 +112,7 @@ function createAlbum(albumName) {
 }
 
 function viewAlbum(albumName) {
-  var albumPhotosKey = encodeURIComponent(albumName) + "//";
+  var albumPhotosKey = encodeURIComponent(albumName) + "/";
   s3.listObjects({ Prefix: albumPhotosKey }, function(err, data) {
     if (err) {
       return alert("There was an error viewing your album: " + err.message);
@@ -172,7 +174,7 @@ function addPhoto(albumName) {
   }
   var file = files[0];
   var fileName = file.name;
-  var albumPhotosKey = encodeURIComponent(albumName) + "//";
+  var albumPhotosKey = encodeURIComponent(albumName) + "/";
 
   var photoKey = albumPhotosKey + fileName;
 

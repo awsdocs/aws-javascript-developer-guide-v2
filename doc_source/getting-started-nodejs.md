@@ -51,7 +51,6 @@ AWS.config.getCredentials(function(err) {
   // credentials not loaded
   else {
     console.log("Access key:", AWS.config.credentials.accessKeyId);
-    console.log("Secret access key:", AWS.config.credentials.secretAccessKey);
   }
 });
 ```

@@ -73,7 +73,7 @@ Add a variable to hold the parameters used to call the `createBucket` method of 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the region
 AWS.config.update({region: 'REGION'});
 
 // Create S3 service object
@@ -81,8 +81,7 @@ s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 // Create the parameters for calling createBucket
 var bucketParams = {
-  Bucket : process.argv[2],
-  ACL : 'public-read'
+  Bucket : process.argv[2]
 };
 
 // call S3 to create the bucket

@@ -34,7 +34,7 @@ Call the `createJobTemplate` method by creating a promise for invoking an `AWS.M
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set the custom endpoint for your account
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -200,7 +200,7 @@ Create the job creation parameters JSON, including the name of the job template 
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set the custom endpoint for your account
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -269,7 +269,7 @@ Create an object to pass the request parameters for the `listTemplates` method o
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -311,7 +311,7 @@ Create an object to pass the name of the job template you want to delete as para
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};

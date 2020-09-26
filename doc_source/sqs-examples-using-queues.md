@@ -134,7 +134,7 @@ Create a Node\.js module with the file name `sqs_deletequeue.js`\. Be sure to co
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the region
 AWS.config.update({region: 'REGION'});
 
 // Create an SQS service object

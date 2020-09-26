@@ -33,7 +33,7 @@ Configure the SDK for JavaScript by creating a global configuration object, and 
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set the custom endpoint for your account
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -213,7 +213,7 @@ Create a Node\.js module with the file name `emc_canceljob.js`\. Be sure to conf
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set MediaConvert to customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};
@@ -255,7 +255,7 @@ Create the parameters JSON, including values to specify whether to sort the list
 ```
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 // Set the customer endpoint
 AWS.config.mediaconvert = {endpoint : 'ACCOUNT_ENDPOINT'};

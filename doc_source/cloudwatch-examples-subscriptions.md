@@ -34,7 +34,7 @@ Use the following role policy when creating the IAM role\.
          "Effect": "Allow",
          "Action": [
             "logs:CreateLogGroup",
-            "logs:CrateLogStream",
+            "logs:CreateLogStream",
             "logs:PutLogEvents"
          ],
          "Resource": "arn:aws:logs:*:*:*"

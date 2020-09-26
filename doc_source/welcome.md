@@ -6,6 +6,12 @@ The [AWS SDK for JavaScript](aws-jsdk-reference.md) provides a JavaScript API fo
 
 Not all services are immediately available in the SDK\. To find out which services are currently supported by the AWS SDK for JavaScript, see [ https://github\.com/aws/aws\-sdk\-js/blob/master/SERVICES\.md]( https://github.com/aws/aws-sdk-js/blob/master/SERVICES.md)\. For information about the SDK for JavaScript on GitHub, see [Additional Resources](resources.md)\.
 
+## Maintenance and support for SDK major versions<a name="sdks-major-versions-maintenance-support"></a>
+
+For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the [AWS SDKs and Tools Shared Configuration and Credentials Reference Guide](https://docs.aws.amazon.com/credref/latest/refdocs/overview.html):
++ [AWS SDKs and Tools Maintenance Policy](https://docs.aws.amazon.com/credref/latest/refdocs/maint-policy.html)
++ [AWS SDKs and Tools Version Support Matrix](https://docs.aws.amazon.com/credref/latest/refdocs/version-support-matrix.html)
+
 ## Using the SDK with Node\.js<a name="welcome_node"></a>
 
 Node\.js is a cross\-platform runtime for running server\-side JavaScript applications\. You can set up Node\.js on an Amazon EC2 instance to run on a server\. You can also use Node\.js to write on\-demand AWS Lambda functions\.
@@ -14,7 +20,7 @@ Using the SDK for Node\.js differs from the way in which you use it for JavaScri
 
 ## Using the SDK with AWS Cloud9<a name="welcome_cloud9"></a>
 
-You can also develop Node\.js applications using the SDK for JavaScript in the AWS Cloud9 IDE\. For a sample of how to use AWS Cloud9 for Node\.js development, see [Node\.js Sample for AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide//sample-nodejs.html) in the *AWS Cloud9 User Guide*\. For more information on using AWS Cloud9 with the SDK for JavaScript, see [Using AWS Cloud9 with the AWS SDK for JavaScript](cloud9-javascript.md)\.
+You can also develop Node\.js applications using the SDK for JavaScript in the AWS Cloud9 IDE\. For a sample of how to use AWS Cloud9 for Node\.js development, see [Node\.js Sample for AWS Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-nodejs.html) in the *AWS Cloud9 User Guide*\. For more information on using AWS Cloud9 with the SDK for JavaScript, see [Using AWS Cloud9 with the AWS SDK for JavaScript](cloud9-javascript.md)\.
 
 ## Using the SDK with AWS Amplify<a name="welcome_amplify"></a>
 

@@ -26,7 +26,7 @@ Create an object to pass the empty request parameters for the `describeEndpoints
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the Region 
+// Set the Region
 AWS.config.update({region: 'us-west-2'});
 
 // Create empty request parameters

@@ -1,4 +1,4 @@
-# Doing a Multipart Upload to Glacier<a name="glacier-example-multipart-upload"></a>
+# Doing a Multipart Upload to S3 Glacier<a name="glacier-example-multipart-upload"></a>
 
 The following example creates a multipart upload out of 1 megabyte chunks of a `Buffer` object using the `initiateMultipartUpload` method of the Amazon S3 Glacier service object\.
 

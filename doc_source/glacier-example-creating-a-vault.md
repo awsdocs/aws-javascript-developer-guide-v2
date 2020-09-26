@@ -1,4 +1,4 @@
-# Creating a Glacier Vault<a name="glacier-example-creating-a-vault"></a>
+# Creating a S3 Glacier Vault<a name="glacier-example-creating-a-vault"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 

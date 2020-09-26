@@ -1,7 +1,7 @@
 # AWS SDK for JavaScript Developer Guide for SDK v2
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -90,9 +90,9 @@ Amazon's trademarks and trade dress may not be used in
       + [Creating and Managing Transcoding Jobs in MediaConvert](emc-examples-jobs.md)
       + [Using Job Templates in MediaConvert](emc-examples-templates.md)
    + [Amazon S3 Glacier Examples](glacier-examples.md)
-      + [Creating a Glacier Vault](glacier-example-creating-a-vault.md)
-      + [Uploading an Archive to Glacier](glacier-example-uploadrchive.md)
-      + [Doing a Multipart Upload to Glacier](glacier-example-multipart-upload.md)
+      + [Creating a S3 Glacier Vault](glacier-example-creating-a-vault.md)
+      + [Uploading an Archive to S3 Glacier](glacier-example-uploadrchive.md)
+      + [Doing a Multipart Upload to S3 Glacier](glacier-example-multipart-upload.md)
    + [AWS IAM Examples](iam-examples.md)
       + [Managing IAM Users](iam-examples-managing-users.md)
       + [Working with IAM Policies](iam-examples-policies.md)
@@ -142,5 +142,12 @@ Amazon's trademarks and trade dress may not be used in
       + [Prepare and Create the Lambda Function](using-lambda-function-prep.md)
       + [Run the Lambda Function](running-lambda-function.md)
 + [JavaScript API Reference](aws-jsdk-reference.md)
++ [Security for this AWS Product or Service](security.md)
+   + [Data Protection in this AWS Product or Service](data-protection.md)
+   + [Identity and Access Management for this AWS Product or Service](security-iam.md)
+   + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
+   + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)
+   + [Infrastructure Security for this AWS Product or Service](infrastructure-security.md)
+   + [Enforcing TLS 1.2](enforcing-tls.md)
 + [Additional Resources](resources.md)
 + [Document History for AWS SDK for JavaScript](doc-history.md)

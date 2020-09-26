@@ -31,7 +31,7 @@ The code next adds a `Name` tag to a new instance, which the Amazon EC2 console 
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 // Load credentials and set region from JSON file
-AWS.config.loadFromPath('./config.json');
+AWS.config.update({region: 'REGION'});
 
 // Create EC2 service object
 var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
@@ -39,7 +39,7 @@ var ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
 // AMI is amzn-ami-2011.09.1.x86_64-ebs
 var instanceParams = {
    ImageId: 'AMI_ID', 
-   InstanceType: 't1.micro',
+   InstanceType: 't2.micro',
    KeyName: 'KEY_PAIR_NAME',
    MinCount: 1,
    MaxCount: 1

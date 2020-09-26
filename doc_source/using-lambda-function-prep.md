@@ -38,6 +38,8 @@ The Node\.js code needed for the Lambda function is in the `slotassets` director
    aws s3 cp slotpull.js.zip s3://BUCKET
    ```
 
+1. Upload the website files \- the HTML, PNG, and CSS files \- to the bucket\.
+
 ## Lambda Function Code<a name="using-lambda-function-code"></a>
 
 The code creates a JSON object to package the result for the browser script in the application\. Next, it generates three random integer values that are used to look up items in the DynamoDB table, and obtains file names of images in the Amazon S3 bucket\. The result JSON is populated and passed back to the Lambda function caller\.
@@ -98,7 +100,7 @@ var lambda = new AWS.Lambda({apiVersion: '2015-03-31'});
 
 var params = {
   Code: { /* required */
-    S3Bucket: ''BUCKET_NAME',
+    S3Bucket: 'BUCKET_NAME',
     S3Key: 'ZIP_FILE_NAME'
   },
   FunctionName: 'slotTurn', /* required */

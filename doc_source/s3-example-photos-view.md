@@ -229,7 +229,7 @@ The rest of the function takes the list of objects that are in the album and gen
 ```
 // Show the photos that exist in an album.
 function viewAlbum(albumName) {
-  var albumPhotosKey = encodeURIComponent(albumName) + '/_';
+  var albumPhotosKey = encodeURIComponent(albumName) + '/';
   s3.listObjects({Prefix: albumPhotosKey}, function(err, data) {
     if (err) {
       return alert('There was an error viewing your album: ' + err.message);
@@ -281,6 +281,7 @@ function viewAlbum(albumName) {
       '</div>',
     ]
     document.getElementById('viewer').innerHTML = getHtml(htmlTemplate);
+    document.getElementsByTagName('img')[0].setAttribute('style', 'display:none;');
   });
 }
 ```
