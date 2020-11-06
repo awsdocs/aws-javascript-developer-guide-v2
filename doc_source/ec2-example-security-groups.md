@@ -90,7 +90,7 @@ ec2.describeVpcs(function(err, data) {
         GroupName: 'SECURITY_GROUP_NAME',
         VpcId: vpc
      };
-     // Create the instance
+     // Create the Security Group
      ec2.createSecurityGroup(paramsSecurityGroup, function(err, data) {
         if (err) {
            console.log("Error", err);
