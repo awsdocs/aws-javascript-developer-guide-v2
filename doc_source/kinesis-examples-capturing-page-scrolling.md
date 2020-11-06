@@ -81,23 +81,23 @@ The following code snippet shows this step\. \(See [Capturing Web Page Scroll Pr
 ```
 // Configure Credentials to use Cognito
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: "IDENTITY_POOL_ID",
+    IdentityPoolId: 'IDENTITY_POOL_ID'
 });
 
-AWS.config.region = "REGION";
+AWS.config.region = 'REGION';
 // We're going to partition Amazon Kinesis records based on an identity.
 // We need to get credentials first, then attach our event listeners.
-AWS.config.credentials.get(function (err) {
-  // attach event listener
-  if (err) {
-    alert("Error retrieving credentials.");
-    console.error(err);
-    return;
-  }
-  // create Amazon Kinesis service object
-  const kinesis = new AWS.Kinesis({
-    apiVersion: "2013-12-02",
-  });
+AWS.config.credentials.get(function(err) {
+    // attach event listener
+    if (err) {
+        alert('Error retrieving credentials.');
+        console.error(err);
+        return;
+    }
+    // create Amazon Kinesis service object
+    var kinesis = new AWS.Kinesis({
+        apiVersion: '2013-12-02'
+    });
 ```
 
 ## Creating Scroll Records<a name="kinesis-examples-capturing-page-scrolling-create-records"></a>
@@ -107,41 +107,39 @@ Scroll progress is calculated using the `scrollHeight` and `scrollTop` propertie
 The following code snippet shows this step\. \(See [Capturing Web Page Scroll Progress Code](kinesis-examples-capturing-page-scrolling-full.md) for the full example\.\)
 
 ```
-  // Get the ID of the Web page element.
-  const blogContent = document.getElementById("BlogContent");
+    // Get the ID of the Web page element.
+    var blogContent = document.getElementById('BlogContent');
 
-  // Get Scrollable height
-  const scrollableHeight = blogContent.clientHeight;
+    // Get Scrollable height
+    var scrollableHeight = blogContent.clientHeight;
 
-  const recordData = [];
-  let TID = null;
-  blogContent.addEventListener("scroll", function (event) {
-    clearTimeout(TID);
-    // Prevent creating a record while a user is actively scrolling
-    TID = setTimeout(function () {
-      // calculate percentage
-      const scrollableElement = event.target;
-      const scrollHeight = scrollableElement.scrollHeight;
-      const scrollTop = scrollableElement.scrollTop;
+    var recordData = [];
+    var TID = null;
+    blogContent.addEventListener('scroll', function(event) {
+        clearTimeout(TID);
+        // Prevent creating a record while a user is actively scrolling
+        TID = setTimeout(function() {
+            // calculate percentage
+            var scrollableElement = event.target;
+            var scrollHeight = scrollableElement.scrollHeight;
+            var scrollTop = scrollableElement.scrollTop;
 
-      const scrollTopPercentage = Math.round((scrollTop / scrollHeight) * 100);
-      const scrollBottomPercentage = Math.round(
-        ((scrollTop + scrollableHeight) / scrollHeight) * 100
-      );
+            var scrollTopPercentage = Math.round((scrollTop / scrollHeight) * 100);
+            var scrollBottomPercentage = Math.round(((scrollTop + scrollableHeight) / scrollHeight) * 100);
 
-      // Create the Amazon Kinesis record
-      const record = {
-        Data: JSON.stringify({
-          blog: window.location.href,
-          scrollTopPercentage: scrollTopPercentage,
-          scrollBottomPercentage: scrollBottomPercentage,
-          time: new Date(),
-        }),
-        PartitionKey: "partition-" + AWS.config.credentials.identityId,
-      };
-      recordData.push(record);
-    }, 100);
-  });
+            // Create the Amazon Kinesis record
+            var record = {
+                Data: JSON.stringify({
+                    blog: window.location.href,
+                    scrollTopPercentage: scrollTopPercentage,
+                    scrollBottomPercentage: scrollBottomPercentage,
+                    time: new Date()
+                }),
+                PartitionKey: 'partition-' + AWS.config.credentials.identityId
+            };
+            recordData.push(record);
+        }, 100);
+    });
 ```
 
 ## Submitting Records to Kinesis<a name="kinesis-examples-capturing-page-scrolling-submit-records"></a>
@@ -151,25 +149,22 @@ Once each second, if there are records in the array, those pending records are s
 The following code snippet shows this step\. \(See [Capturing Web Page Scroll Progress Code](kinesis-examples-capturing-page-scrolling-full.md) for the full example\.\)
 
 ```
-  // upload data to Amazon Kinesis every second if data exists
-  setInterval(function () {
-    if (!recordData.length) {
-      return;
-    }
-    // upload data to Amazon Kinesis
-    kinesis.putRecords(
-      {
-        Records: recordData,
-        StreamName: "NAME_OF_STREAM",
-      },
-      function (err, data) {
-        if (err) {
-          console.error(err);
+    // upload data to Amazon Kinesis every second if data exists
+    setInterval(function() {
+        if (!recordData.length) {
+            return;
         }
-      }
-    );
-    // clear record data
-    recordData = [];
-  }, 1000);
+        // upload data to Amazon Kinesis
+        kinesis.putRecords({
+            Records: recordData,
+            StreamName: 'NAME_OF_STREAM'
+        }, function(err, data) {
+            if (err) {
+                console.error(err);
+            }
+        });
+        // clear record data
+        recordData = [];
+    }, 1000);
 });
 ```

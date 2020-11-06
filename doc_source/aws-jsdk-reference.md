@@ -4,7 +4,7 @@ The API Reference topics for the latest version of the SDK for JavaScript are fo
 
 [https://docs\.aws\.amazon\.com/AWSJavaScriptSDK/latest/index\.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
 
-## SDK Changelog on GitHub<a name="w6aac22b7"></a>
+## SDK Changelog on GitHub<a name="w8aac22b7"></a>
 
 The changelog for releases from version 2\.4\.8 and later is found at:
 

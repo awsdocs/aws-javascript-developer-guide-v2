@@ -143,7 +143,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Run the Lambda Function](running-lambda-function.md)
 + [JavaScript API Reference](aws-jsdk-reference.md)
 + [Security for this AWS Product or Service](security.md)
-   + [Data Protection in this AWS Product or Service](data-protection.md)
+   + [Data protection in this AWS product or service](data-protection.md)
    + [Identity and Access Management for this AWS Product or Service](security-iam.md)
    + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
    + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)

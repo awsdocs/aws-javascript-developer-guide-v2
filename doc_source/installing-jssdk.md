@@ -39,7 +39,7 @@ You can download minified and non\-minified distributable versions of the curren
 
 ------
 
-## Installing Using Bower<a name="w6aac11c11b9"></a>
+## Installing Using Bower<a name="w8aac11c11b9"></a>
 
 [Bower](https://bower.io) is a package manager for the web\. After you install Bower, you can use it to install the SDK\. To install the SDK using Bower, type the following into a terminal window:
 
