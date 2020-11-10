@@ -62,6 +62,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Using an Anonymous Callback Function](using-a-callback-function.md)
       + [Using a Request Object Event Listener](using-a-response-event-handler.md)
       + [Using JavaScript Promises](using-promises.md)
+      + [Using Async/Await](using-async-await.md)
       + [Requests With a Node.js Stream Object](requests-using-stream-objects.md)
    + [Using the Response Object](the-response-object.md)
    + [Working with JSON](working-with-json.md)
