@@ -14,7 +14,7 @@ const AWS = require('aws-sdk');
 const http = require('http');
 const agent = new http.Agent({
   keepAlive: true, 
-// Infinitity is read as 50 sockets
+// Infinity is read as 50 sockets
   maxSockets: Infinity
 });
 
