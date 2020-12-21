@@ -98,7 +98,7 @@ ec2.describeVpcs(function(err, data) {
            var SecurityGroupId = data.GroupId;
            console.log("Success", SecurityGroupId);
            var paramsIngress = {
-             GroupId: 'SECURITY_GROUP_ID',
+             GroupId: SecurityGroupId,
              IpPermissions:[
                 {
                    IpProtocol: "tcp",
