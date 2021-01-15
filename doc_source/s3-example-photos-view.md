@@ -144,7 +144,7 @@ For this example, the file is named `PhotoViewer.js`, and is located in the same
 
 ## Configuring the SDK<a name="s3-example-photos-view-config"></a>
 
-Obtain the credentials you need to configure the SDK by calling the `CognitoIdentityCredentials` method\. You need to provide the Amazon Cognito identity pool ID\. Then create an `AWS.S3` service object\.
+To obtain the credentials you need to configure the SDK by calling the `CognitoIdentityCredentials` method\. You need to provide the Amazon Cognito identity pool ID\. Then create an `AWS.S3` service object\.
 
 ```
 // **DO THIS**:
