@@ -21,7 +21,7 @@ The following procedure helps you install Node\.js on an Amazon Linux instance\.
 AWS does not control the following code\. Before you run it, be sure to verify its authenticity and integrity\. More information about this code can be found in the [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) GitHub repository\.
 
    ```
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
    ```
 
    We will use nvm to install Node\.js because nvm can install multiple versions of Node\.js and allow you to switch between them\.
