@@ -2,6 +2,8 @@
 
 There are several ways in Node\.js to supply your credentials to the SDK\. Some of these are more secure and others afford greater convenience while developing an application\. When obtaining credentials in Node\.js, be careful about relying on more than one source such as an environment variable and a JSON file you load\. You can change the permissions under which your code runs without realizing the change has happened\.
 
+Some ways are synchronous and some ways are asynchronous. To ensure asynchronous credentials are available, follow the notes and examples at [AWS SDK for JavaScript > Credentials > getCredentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html#getCredentials-property).
+
 Here are the ways you can supply your credentials in order of recommendation:
 
 1. Loaded from AWS Identity and Access Management \(IAM\) roles for Amazon EC2
