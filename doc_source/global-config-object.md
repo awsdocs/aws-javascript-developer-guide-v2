@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using the Global Configuration Object<a name="global-config-object"></a>
 
 There are two ways to configure the SDK:
@@ -23,7 +29,7 @@ Configure the SDK by setting `AWS.Config` properties according to your applicati
 | logger | Optional\. Specifies a logger object to which debugging information is written\. | 
 | update | Optional\. Updates the current configuration with new values\. | 
 
-For more information about the configuration object, see [ Class: AWS\.Config](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the API Reference\.
+For more information about the configuration object, see [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the API Reference\.
 
 ### Global Configuration Examples<a name="global-configuration-examples"></a>
 
@@ -69,14 +75,14 @@ console.log("Region: ", AWS.config.region);
 
 Each service that you use in the SDK for JavaScript is accessed through a service object that is part of the API for that service\. For example, to access the Amazon S3 service you create the Amazon S3 service object\. You can specify configuration settings that are specific to a service as part of the constructor for that service object\. When you set configuration values on a service object, the constructor takes all of the configuration values used by `AWS.Config`, including credentials\.
 
-For example, if you need to access Amazon EC2 objects in multiple Regions, create an EC2 service object for each Region and then set the Region configuration of each service object accordingly\.
+For example, if you need to access Amazon EC2 objects in multiple Regions, create an Amazon EC2 service object for each Region and then set the Region configuration of each service object accordingly\.
 
 ```
 var ec2_regionA = new AWS.EC2({region: 'ap-southeast-2', maxRetries: 15, apiVersion: '2014-10-01'});
 var ec2_regionB = new AWS.EC2({region: 'us-east-1', maxRetries: 15, apiVersion: '2014-10-01'});
 ```
 
-You can also set configuration values specific to a service when configuring the SDK with `AWS.Config`\. The global configuration object supports many service\-specific configuration options\. For more information about service\-specific configuration, see [Class: AWS\.Config](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the AWS SDK for JavaScript API Reference\.
+You can also set configuration values specific to a service when configuring the SDK with `AWS.Config`\. The global configuration object supports many service\-specific configuration options\. For more information about service\-specific configuration, see [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html) in the AWS SDK for JavaScript API Reference\.
 
 ## Immutable Configuration Data<a name="immutable-config"></a>
 

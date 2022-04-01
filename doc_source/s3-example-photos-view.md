@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Viewing Photos in an Amazon S3 Bucket from a Browser<a name="s3-example-photos-view"></a>
 
 ![\[JavaScript code example that applies to browser execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsericon.png)
@@ -22,14 +28,14 @@ In this example, you must use the same AWS Region for both the Amazon S3 bucket 
 
 ### Create the Bucket<a name="s3-example-photos-view-prereq-bucket"></a>
 
-In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket where you can store albums and photos\. For more information about using the console to create an S3 bucket, see [Creating a Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket where you can store albums and photos\. For more information about using the console to create an S3 bucket, see [Creating a Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) in the *Amazon Simple Storage Service User Guide*\.
 
 As you create the S3 bucket, be sure to do the following:
 + Make note of the bucket name so you can use it in a subsequent prerequisite task, Configure Role Permissions\.
 + Choose an AWS Region to create the bucket in\. This must be the same Region that you'll use to create an Amazon Cognito identity pool in a subsequent prerequisite task, Create an Identity Pool\.
 + In the **Create Bucket** wizard, on the **Public access settings\.\.\.** page, in the **Manage public access control lists \(ACLs\)** group, clear these boxes: **Block new public ACLs and uploading public objects** and **Remove public access granted through public ACLs**\.
 
-  For information about how to check and configure bucket permissions, see [Setting Bucket and Object Access Permissions](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/set-permissions.html) in the *Amazon Simple Storage Service Console User Guide*\.
+  For information about how to check and configure bucket permissions, see [Setting permissions for website access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html) in the *Amazon Simple Storage Service User Guide*\.
 
 ### Create an Identity Pool<a name="s3-example-photos-view-prereq-idpool"></a>
 
@@ -84,6 +90,32 @@ For additional information about creating an IAM role, see [Creating a Role to D
 
 Before the browser script can access the Amazon S3 bucket, you have to set up its [CORS configuration](cors.md#configuring-cors-s3-bucket) as follows\.
 
+**Important**  
+In the new S3 console, the CORS configuration must be JSON\.
+
+------
+#### [ JSON ]
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "HEAD",
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ]
+    }
+]
+```
+
+------
+#### [ XML ]
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
@@ -95,6 +127,8 @@ Before the browser script can access the Amazon S3 bucket, you have to set up it
     </CORSRule>
 </CORSConfiguration>
 ```
+
+------
 
 ### Create Albums and Upload Photos<a name="s3-example-photos-view-create-albums"></a>
 
@@ -123,7 +157,7 @@ For this example, the file names of the photo files must start with a single und
 
 The HTML for the photo\-viewing application consists of a `<div>` element in which the browser script creates the viewing interface\. The first `<script>` element adds the SDK to the browser script\. The second `<script>` element adds the external JavaScript file that holds the browser script code\. 
 
-For this example, the file is named `PhotoViewer.js`, and is located in the same folder as the HTML file\. To find the current SDK\_VERSION\_NUMBER, see the API Reference for the SDK for JavaScript at [https://docs\.aws\.amazon\.com/AWSJavaScriptSDK/latest/index\.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
+For this example, the file is named `PhotoViewer.js`, and is located in the same folder as the HTML file\. To find the current SDK\_VERSION\_NUMBER, see the API Reference for the SDK for JavaScript at [AWS SDK for JavaScript API Reference Guide](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
 
 ```
 <!DOCTYPE html>
@@ -141,6 +175,8 @@ For this example, the file is named `PhotoViewer.js`, and is located in the same
   </body>
 </html>
 ```
+
+
 
 ## Configuring the SDK<a name="s3-example-photos-view-config"></a>
 
@@ -234,7 +270,7 @@ function viewAlbum(albumName) {
     if (err) {
       return alert('There was an error viewing your album: ' + err.message);
     }
-    // 'this' references the AWS.Response instance that represents the response
+    // 'this' references the AWS.Request instance that represents the response
     var href = this.request.httpRequest.endpoint.href;
     var bucketUrl = href + albumBucketName + '/';
 

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Working with Email Templates in Amazon SES<a name="ses-examples-creating-template"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -55,7 +61,7 @@ To run the example, type the following at the command line\. Amazon SES returns 
 node ses_listtemplates.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_listtemplates.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_listtemplates.js)\.
 
 ## Getting an Email Template<a name="ses-examples-get-template"></a>
 
@@ -64,18 +70,18 @@ In this example, use a Node\.js module to get an email template to use with Amaz
 Create an object to pass the `TemplateName` parameter for the `getTemplate` method of the `AWS.SES` client class\. To call the `getTemplate` method, create a promise for invoking an Amazon SES service object, passing the parameters\. Then handle the `response` in the promise callback\.
 
 ```
-// Load the AWS SDK for Node.js
+    // Load the AWS SDK for Node.js.
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the AWS Region.
 AWS.config.update({region: 'REGION'});
 
-// Create the promise and SES service object
+// Create the promise and Amazon Simple Email Service (Amazon SES) service object.
 var templatePromise = new AWS.SES({apiVersion: '2010-12-01'}).getTemplate({TemplateName: 'TEMPLATE_NAME'}).promise();
 
 // Handle promise's fulfilled/rejected states
 templatePromise.then(
   function(data) {
-    console.log(data.SubjectPart);
+    console.log(data.Template.SubjectPart);
   }).catch(
     function(err) {
     console.error(err, err.stack);
@@ -88,7 +94,7 @@ To run the example, type the following at the command line\. Amazon SES returns 
 node ses_gettemplate.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_gettemplate.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_gettemplate.js)\.
 
 ## Creating an Email Template<a name="ses-examples-create-template"></a>
 
@@ -131,7 +137,7 @@ To run the example, type the following at the command line\. The template is add
 node ses_createtemplate.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_createtemplate.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_createtemplate.js)\.
 
 ## Updating an Email Template<a name="ses-examples-update-template"></a>
 
@@ -174,7 +180,7 @@ To run the example, type the following at the command line\. Amazon SES returns 
 node ses_updatetemplate.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_updatetemplate.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_updatetemplate.js)\.
 
 ## Deleting an Email Template<a name="ses-examples-delete-template"></a>
 
@@ -207,4 +213,4 @@ To run the example, type the following at the command line\. Amazon SES returns 
 node ses_deletetemplate.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_deletetemplate.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_deletetemplate.js)\.

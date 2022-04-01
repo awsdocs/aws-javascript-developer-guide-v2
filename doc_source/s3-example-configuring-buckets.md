@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Configuring Amazon S3 Buckets<a name="s3-example-configuring-buckets"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -11,7 +17,7 @@ In this example, a series of Node\.js modules are used to list your Amazon S3 bu
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketCors-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketCors-property)
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketCors-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketCors-property)
 
-For more information about using CORS configuration with an Amazon S3 bucket, see [Cross\-Origin Resource Sharing \(CORS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about using CORS configuration with an Amazon S3 bucket, see [Cross\-Origin Resource Sharing \(CORS\)](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) in the *Amazon Simple Storage Service User Guide*\.
 
 ## Prerequisite Tasks<a name="s3-example-configuring-buckets-prerequisites"></a>
 

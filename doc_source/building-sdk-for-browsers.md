@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Building the SDK for Browsers<a name="building-sdk-for-browsers"></a>
 
 The SDK for JavaScript is provided as a JavaScript file with support included for a default set of services\. This file is typically loaded into browser scripts using a `<script>` tag that references the hosted SDK package\. However, you may need support for services other than the default set or otherwise need to customize the SDK\.
@@ -13,8 +19,6 @@ If you work with the SDK outside of an environment that enforces CORS in your br
 ## Using the SDK Builder to Build the SDK for JavaScript<a name="using-the-sdk-builder"></a>
 
 The easiest way to create your own build of the AWS SDK for JavaScript is to use the SDK builder web application at [https://sdk\.amazonaws\.com/builder/js](https://sdk.amazonaws.com/builder/js)\. Use the SDK builder to specify services, and their API versions, to include in your build\. 
-
-![\[SDK builder web interface for customizing SDK builds\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/sdk-builder.png)
 
 Choose **Select all services** or choose **Select default services** as a starting point from which you can add or remove services\. Choose **Development** for more readable code or choose **Minified** to create a minified build to deploy\. After you choose the services and versions to include, choose **Build** to build and download your custom SDK\.
 

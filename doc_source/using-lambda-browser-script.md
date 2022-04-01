@@ -1,10 +1,14 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Prepare the Browser Script<a name="using-lambda-browser-script"></a>
 
 This topic is part of a larger tutorial about using the AWS SDK for JavaScript with AWS Lambda functions\. To start at the beginning of the tutorial, see [Tutorial: Creating and Using Lambda Functions](using-lambda-functions.md)\.
 
 In this task, you will focus on creating an Amazon Cognito identity pool used to authenticate your browser script code, and then editing the browser script accordingly\.
-
-![\[Preparing the browser JavaScript\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browser-script.png)![\[Preparing the browser JavaScript\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)![\[Preparing the browser JavaScript\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)
 
 ## Prepare an Amazon Cognito Identity Pool<a name="identity-pool"></a>
 
@@ -23,6 +27,8 @@ The JavaScript code in the browser script needs authentication to access AWS ser
 1. Choose **Edit** to change the role policy, and then choose **Ok**\.
 
 1. In the text box, edit the policy to insert this `"lambda:InvokeFunction"` action, so the full policy becomes the following\.
+
+   
 
    ```
    {
@@ -45,8 +51,7 @@ The JavaScript code in the browser script needs authentication to access AWS ser
 
 1. Choose **Allow**\.
 
-1. Choose **Sample code** in the side menu\. Make a note of the identity pool ID, shown in red text in the console\.  
-![\[Preparing an Amazon Cognito identity pool for the browser script\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/identity-pool-id.png)![\[Preparing an Amazon Cognito identity pool for the browser script\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)![\[Preparing an Amazon Cognito identity pool for the browser script\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)
+1. Choose **Sample code** in the side menu\. Make a note of the identity pool ID\.
 
 ## Edit the Browser Script<a name="edit-script"></a>
 

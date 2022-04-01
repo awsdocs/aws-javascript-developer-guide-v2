@@ -1,7 +1,7 @@
 # AWS SDK for JavaScript Developer Guide for SDK v2
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -33,7 +33,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Getting Your Credentials](getting-your-credentials.md)
    + [Setting Credentials](setting-credentials.md)
       + [Setting Credentials in Node.js](setting-credentials-node.md)
-         + [Loading Credentials in Node.js from IAM Roles for EC2](loading-node-credentials-iam.md)
+         + [Loading Credentials in Node.js from IAM roles for Amazon EC2](loading-node-credentials-iam.md)
          + [Loading Credentials for a Node.js Lambda Function](loading-node-credentials-lambda.md)
          + [Loading Credentials in Node.js from the Shared Credentials File](loading-node-credentials-shared.md)
          + [Loading Credentials in Node.js from Environment Variables](loading-node-credentials-environment.md)
@@ -53,7 +53,6 @@ Amazon's trademarks and trade dress may not be used in
       + [Building the SDK for Browsers](building-sdk-for-browsers.md)
       + [Cross-Origin Resource Sharing (CORS)](cors.md)
    + [Bundling Applications with Webpack](webpack.md)
-   + [SDK Metrics in the AWS SDK for JavaScript](metrics.md)
 + [Working with Services in the SDK for JavaScript](working-with-services.md)
    + [Creating and Calling Service Objects](creating-and-calling-service-objects.md)
    + [Logging AWS SDK for JavaScript Calls](logging-sdk-calls.md)
@@ -61,8 +60,8 @@ Amazon's trademarks and trade dress may not be used in
       + [Managing Asychronous Calls](making-asynchronous-calls.md)
       + [Using an Anonymous Callback Function](using-a-callback-function.md)
       + [Using a Request Object Event Listener](using-a-response-event-handler.md)
+      + [Using async/await](using-async-await.md)
       + [Using JavaScript Promises](using-promises.md)
-      + [Requests With a Node.js Stream Object](requests-using-stream-objects.md)
    + [Using the Response Object](the-response-object.md)
    + [Working with JSON](working-with-json.md)
 + [SDK for JavaScript Code Examples](sdk-code-samples.md)
@@ -86,7 +85,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Working with Security Groups in Amazon EC2](ec2-example-security-groups.md)
       + [Using Elastic IP Addresses in Amazon EC2](ec2-example-elastic-ip-addresses.md)
    + [AWS Elemental MediaConvert Examples](emc-examples.md)
-      + [Getting Your Account-Specific Endpoint for MediaConvert](emc-examples-getendpoint.md)
+      + [Getting Your Region-Specific Endpoint for MediaConvert](emc-examples-getendpoint.md)
       + [Creating and Managing Transcoding Jobs in MediaConvert](emc-examples-jobs.md)
       + [Using Job Templates in MediaConvert](emc-examples-templates.md)
    + [Amazon S3 Glacier Examples](glacier-examples.md)
@@ -148,6 +147,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
    + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)
    + [Infrastructure Security for this AWS Product or Service](infrastructure-security.md)
-   + [Enforcing TLS 1.2](enforcing-tls.md)
+   + [Enforcing a minimum version of TLS](enforcing-tls.md)
 + [Additional Resources](resources.md)
 + [Document History for AWS SDK for JavaScript](doc-history.md)

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using an Anonymous Callback Function<a name="using-a-callback-function"></a>
 
 Each service object method that creates an `AWS.Request` object can accept an anonymous callback function as the last parameter\. The signature of this callback function is:

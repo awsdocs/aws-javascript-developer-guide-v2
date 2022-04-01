@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using Web Federated Identity to Authenticate Users<a name="loading-browser-credentials-federated-id"></a>
 
 You can directly configure individual identity providers to access AWS resources using web identity federation\. AWS currently supports authenticating users using web identity federation through several identity providers:
@@ -35,8 +41,7 @@ After you obtain the application ID from an identity provider, go to the IAM con
 
 1. In **Select Role Type**, choose **Role for Identity Provider Access**\.
 
-1. For **Grant access to web identity providers**, choose **Select**\.  
-![\[Selecting Role for Identity Provider Access\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/web_identity_provider_iam.png)
+1. For **Grant access to web identity providers**, choose **Select**\.
 
 1. From the **Identity Provider** list, choose the identity provider that you want to use for this IAM role\.  
 ![\[Selecting Role for Identity Provider Access\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/iam-provider-select.png)

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Sending Email Using Amazon SES<a name="ses-examples-sending-email"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -95,7 +101,7 @@ To run the example, type the following at the command line\. The email is queued
 node ses_sendemail.js
 ```
 
-This sample code can be [found here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_sendemail.js)\. 
+This sample code can be [found here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_sendemail.js)\. 
 
 ## Sending an Email Using a Template<a name="ses-examples-sendtemplatedemail"></a>
 
@@ -149,7 +155,7 @@ To run the example, type the following at the command line\. The email is queued
 node ses_sendtemplatedemail.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_sendtemplatedemail.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_sendtemplatedemail.js)\.
 
 ## Sending Bulk Email Using a Template<a name="ses-examples-sendbulktemplatedemail"></a>
 
@@ -209,4 +215,4 @@ To run the example, type the following at the command line\. The email is queued
 node ses_sendbulktemplatedemail.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_sendbulktemplatedemail.js)\. 
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_sendbulktemplatedemail.js)\. 

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Managing IAM Account Aliases<a name="iam-examples-account-aliases"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -50,7 +56,7 @@ To run the example, type the following at the command line\.
 node iam_createaccountalias.js ALIAS
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_createaccountalias.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_createaccountalias.js)\.
 
 ## Listing Account Aliases<a name="iam-examples-account-aliases-listing"></a>
 
@@ -80,7 +86,7 @@ To run the example, type the following at the command line\.
 node iam_listaccountaliases.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_listaccountaliases.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_listaccountaliases.js)\.
 
 ## Deleting an Account Alias<a name="iam-examples-account-aliases-deleting"></a>
 
@@ -110,4 +116,4 @@ To run the example, type the following at the command line\.
 node iam_deleteaccountalias.js ALIAS
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_deleteaccountalias.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_deleteaccountalias.js)\.

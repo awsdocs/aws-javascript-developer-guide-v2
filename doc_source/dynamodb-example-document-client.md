@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using the DynamoDB Document Client<a name="dynamodb-example-document-client"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -9,7 +15,7 @@
 
 The DynamoDB document client simplifies working with items by abstracting the notion of attribute values\. This abstraction annotates native JavaScript types supplied as input parameters, as well as converts annotated response data to native JavaScript types\.
 
-For more information on the DynamoDB Document Client class, see [AWS\.DynamoDB\.DocumentClient](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html) in the API Reference\. For more information on programming with Amazon DynamoDB, see [Programming with DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.html) in the *Amazon DynamoDB Developer Guide*\.
+For more information on the DynamoDB Document Client class, see [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html) in the API Reference\. For more information on programming with Amazon DynamoDB, see [Programming with DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.html) in the *Amazon DynamoDB Developer Guide*\.
 
 In this example, you use a series of Node\.js modules to perform basic operations on a DynamoDB table using the document client\. The code uses the SDK for JavaScript to query and scan tables using these methods of the DynamoDB Document Client class:
 + [get](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#get-property)
@@ -58,7 +64,7 @@ To run the example, type the following at the command line\.
 node ddbdoc_get.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddbdoc_get.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddbdoc_get.js)\.
 
 ## Putting an Item in a Table<a name="dynamodb-example-document-client-put"></a>
 
@@ -97,7 +103,7 @@ To run the example, type the following at the command line\.
 node ddbdoc_put.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddbdoc_put.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddbdoc_put.js)\.
 
 ## Updating an Item in a Table<a name="dynamodb-example-document-client-update"></a>
 
@@ -144,7 +150,7 @@ To run the example, type the following at the command line\.
 node ddbdoc_update.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddbdoc_update.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddbdoc_update.js)\.
 
 ## Querying a Table<a name="dynamodb-example-document-client-query"></a>
 
@@ -187,7 +193,7 @@ To run the example, type the following at the command line\.
 node ddbdoc_query.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddbdoc_query.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddbdoc_query.js)\.
 
 ## Deleting an Item from a Table<a name="dynamodb-example-document-client-delete"></a>
 
@@ -224,4 +230,4 @@ To run the example, type the following at the command line\.
 node ddbdoc_delete.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddbdoc_delete.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddbdoc_delete.js)\.

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Run the Lambda Function<a name="running-lambda-function"></a>
 
 In this task, you run the application\.
@@ -6,7 +12,9 @@ In this task, you run the application\.
 
 1. Open a web browser\.
 
-1. Point the browser at the URL for the Amazon S3 bucket that hosts the application\.  
+1. Open the `index.html` in the Amazon S3 bucket that hosts the application\.
+**Note**  
+To do this, go open the Amazon S3 bucket in the AWS console, select the bucket, and choose **Open**\.  
 ![\[Slot machine web application running in a browser that invokes a Lambda function\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/app_02.png)![\[Slot machine web application running in a browser that invokes a Lambda function\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)![\[Slot machine web application running in a browser that invokes a Lambda function\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/)
 
 1. Select the handle on the right side of the slot machine\. The wheels begin to spin as the browser script invokes the Lambda function to generate results for this turn\.  

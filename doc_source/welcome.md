@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # What Is the AWS SDK for JavaScript?<a name="welcome"></a>
 
 The [AWS SDK for JavaScript](aws-jsdk-reference.md) provides a JavaScript API for AWS services\. You can use the JavaScript API to build libraries or applications for [Node\.js](https://nodejs.org/en/) or the browser\.
@@ -8,9 +14,9 @@ Not all services are immediately available in the SDK\. To find out which servic
 
 ## Maintenance and support for SDK major versions<a name="sdks-major-versions-maintenance-support"></a>
 
-For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the [AWS SDKs and Tools Shared Configuration and Credentials Reference Guide](https://docs.aws.amazon.com/credref/latest/refdocs/overview.html):
-+ [AWS SDKs and Tools Maintenance Policy](https://docs.aws.amazon.com/credref/latest/refdocs/maint-policy.html)
-+ [AWS SDKs and Tools Version Support Matrix](https://docs.aws.amazon.com/credref/latest/refdocs/version-support-matrix.html)
+For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the [AWS SDKs and Tools Reference Guide](https://docs.aws.amazon.com/sdkref/latest/guide/overview.html):
++ [AWS SDKs and tools maintenance policy](https://docs.aws.amazon.com/sdkref/latest/guide/maint-policy.html)
++ [AWS SDKs and tools version support matrix](https://docs.aws.amazon.com/sdkref/latest/guide/version-support-matrix.html)
 
 ## Using the SDK with Node\.js<a name="welcome_node"></a>
 

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Managing Asychronous Calls<a name="making-asynchronous-calls"></a>
 
 For example, the home page of an e\-commerce website lets returning customers sign in\. Part of the benefit for customers who sign in is that, after signing in, the site then customizes itself to their particular preferences\. To make this happen:

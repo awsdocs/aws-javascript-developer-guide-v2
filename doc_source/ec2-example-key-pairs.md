@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Working with Amazon EC2 Key Pairs<a name="ec2-example-key-pairs"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -53,7 +59,7 @@ To run the example, type the following at the command line\.
 node ec2_describekeypairs.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_describekeypairs.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_describekeypairs.js)\.
 
 ## Creating a Key Pair<a name="ec2-example-key-pairs-creating"></a>
 
@@ -88,7 +94,7 @@ To run the example, type the following at the command line\.
 node ec2_createkeypair.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_createkeypair.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_createkeypair.js)\.
 
 ## Deleting a Key Pair<a name="ec2-example-key-pairs-deleting"></a>
 
@@ -123,4 +129,4 @@ To run the example, type the following at the command line\.
 node ec2_deletekeypair.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_deletekeypair.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_deletekeypair.js)\.

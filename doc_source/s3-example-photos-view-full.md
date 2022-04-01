@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Viewing Photos in an Amazon S3 Bucket: Full Code<a name="s3-example-photos-view-full"></a>
 
 This section contains the full HTML and JavaScript code for the example in which photos in an Amazon S3 bucket can be viewed\. See the [parent section](s3-example-photos-view.md) for details and prerequisites\.
@@ -102,7 +108,7 @@ function viewAlbum(albumName) {
     if (err) {
       return alert('There was an error viewing your album: ' + err.message);
     }
-    // 'this' references the AWS.Response instance that represents the response
+    // 'this' references the AWS.Request instance that represents the response
     var href = this.request.httpRequest.endpoint.href;
     var bucketUrl = href + albumBucketName + '/';
 

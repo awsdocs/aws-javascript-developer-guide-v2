@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using the Response Object<a name="the-response-object"></a>
 
 After a service object method has been called, it returns an `AWS.Response` object by passing it to your callback function\. You access the contents of the response through the properties of the `AWS.Response` object\. There are two properties of the `AWS.Response` object you use to access the contents of the response:

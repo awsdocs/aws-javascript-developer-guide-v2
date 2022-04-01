@@ -1,20 +1,26 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Specifying Custom Endpoints<a name="specifying-endpoints"></a>
 
 Calls to API methods in the SDK for JavaScript are made to service endpoint URIs\. By default, these endpoints are built from the Region you have configured for your code\. However, there are situations in which you need to specify a custom endpoint for your API calls\.
 
-## Endpoint String Format<a name="w8aac14c23b5"></a>
+## Endpoint String Format<a name="w8aac16c23b5"></a>
 
 Endpoint values should be a string in the format:
 
 **`https://{service}.{region}.amazonaws.com`**
 
-## Endpoints for the ap\-northeast\-3 Region<a name="w8aac14c23c11"></a>
+## Endpoints for the ap\-northeast\-3 Region<a name="w8aac16c23c11"></a>
 
 The `ap-northeast-3` Region in Japan is not returned by Region enumeration APIs, such as [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeRegions-property)\. To define endpoints for this Region, follow the format described previously\. So the Amazon EC2 endpoint for this Region would be
 
 `ec2.ap-northeast-3.amazonaws.com`
 
-## Endpoints for MediaConvert<a name="w8aac14c23c13"></a>
+## Endpoints for MediaConvert<a name="w8aac16c23c13"></a>
 
 You need to create a custom endpoint to use with MediaConvert\. Each customer account is assigned its own endpoint, which you must use\. Here is an example of how to use a custom endpoint with MediaConvert\.
 

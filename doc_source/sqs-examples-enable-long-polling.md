@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Enabling Long Polling in Amazon SQS<a name="sqs-examples-enable-long-polling"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -59,7 +65,7 @@ To run the example, type the following at the command line\.
 node sqs_longpolling_createqueue.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sqs/sqs_longpolling_createqueue.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sqs/sqs_longpolling_createqueue.js)\.
 
 ## Enabling Long Polling on an Existing Queue<a name="sqs-examples-enable-long-polling-existing-queue"></a>
 
@@ -96,7 +102,7 @@ To run the example, type the following at the command line\.
 node sqs_longpolling_existingqueue.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sqs/sqs_longpolling_existingqueue.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sqs/sqs_longpolling_existingqueue.js)\.
 
 ## Enabling Long Polling on Message Receipt<a name="sqs-examples-enable-long-polling-on-receive-message"></a>
 
@@ -140,4 +146,4 @@ To run the example, type the following at the command line\.
 node sqs_longpolling_receivemessage.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sqs/sqs_longpolling_receivemessage.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sqs/sqs_longpolling_receivemessage.js)\.

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Setting the AWS Region<a name="setting-region"></a>
 
 A Region is a named set of AWS resources in the same geographical area\. An example of a Region is `us-east-1`, which is the US East \(N\. Virginia\) Region\. You specify a Region when configuring the SDK for JavaScript so that the SDK accesses the resources in that Region\. Some services are available only in specific Regions\.
@@ -9,7 +15,7 @@ The SDK for JavaScript doesn't select a Region by default\. However, you can set
 When you instantiate a service object, you can specify the Region for that resource as part of the client class constructor, as shown here\.
 
 ```
-var s3 = new AWS.S3({apiVersion: '2006-03-01', region: 'us-west-2'});
+var s3 = new AWS.S3({apiVersion: '2006-03-01', region: 'us-east-1'});
 ```
 
 ## Using the Global Configuration Object<a name="setting-region-config-object"></a>
@@ -20,7 +26,7 @@ To set the Region in your JavaScript code, update the `AWS.Config` global config
 AWS.config.update({region: 'us-east-1'});
 ```
 
-For more information about current Regions and available services in each Region, see [ AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
+For more information about current Regions and available services in each Region, see [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
 
 ## Using an Environment Variable<a name="setting-region-environment-variable"></a>
 
@@ -36,7 +42,7 @@ If you don't already have a shared `config` file, you can create one in the desi
 
 ```
 [default]
-   region=us-west-2
+   region=us-east-1
    output=json
 ```
 

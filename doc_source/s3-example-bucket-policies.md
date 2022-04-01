@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Working with Amazon S3 Bucket Policies<a name="s3-example-bucket-policies"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -7,16 +13,16 @@
 + How to add or update the bucket policy of an Amazon S3 bucket\.
 + How to delete the bucket policy of an Amazon S3 bucket\.
 
-## The Scenario<a name="w8aac18c25c25c15b9"></a>
+## The Scenario<a name="w8aac20c25c27c15b9"></a>
 
 In this example, a series of Node\.js modules are used to retrieve, set, or delete a bucket policy on an Amazon S3 bucket\. The Node\.js modules use the SDK for JavaScript to configure policy for a selected Amazon S3 bucket using these methods of the Amazon S3 client class:
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketPolicy-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getBucketPolicy-property)
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketPolicy-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putBucketPolicy-property)
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteBucketPolicy-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteBucketPolicy-property)
 
-For more information about bucket policies for Amazon S3 buckets, see [ Using Bucket Policies and User Policies](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about bucket policies for Amazon S3 buckets, see [ Using Bucket Policies and User Policies](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html) in the *Amazon Simple Storage Service User Guide*\.
 
-## Prerequisite Tasks<a name="w8aac18c25c25c15c11"></a>
+## Prerequisite Tasks<a name="w8aac20c25c27c15c11"></a>
 
 To set up and run this example, you must first complete these tasks:
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](https://nodejs.org)\.

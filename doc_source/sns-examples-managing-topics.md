@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Managing Topics in Amazon SNS<a name="sns-examples-managing-topics"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -54,7 +60,7 @@ To run the example, type the following at the command line\.
 node sns_createtopic.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_createtopic.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_createtopic.js)\.
 
 ## Listing Your Topics<a name="sns-examples-managing-topics-listtopics"></a>
 
@@ -87,7 +93,7 @@ To run the example, type the following at the command line\.
 node sns_listtopics.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_listtopics.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_listtopics.js)\.
 
 ## Deleting a Topic<a name="sns-examples-managing-topics-deletetopic"></a>
 
@@ -120,7 +126,7 @@ To run the example, type the following at the command line\.
 node sns_deletetopic.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_deletetopic.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_deletetopic.js)\.
 
 ## Getting Topic Attributes<a name="sns-examples-managing-topicsgetttopicattributes"></a>
 
@@ -154,7 +160,7 @@ To run the example, type the following at the command line\.
 node sns_gettopicattributes.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_gettopicattributes.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_gettopicattributes.js)\.
 
 ## Setting Topic Attributes<a name="sns-examples-managing-topicsstttopicattributes"></a>
 
@@ -194,4 +200,4 @@ To run the example, type the following at the command line\.
 node sns_settopicattributes.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_settopicattributes.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_settopicattributes.js)\.

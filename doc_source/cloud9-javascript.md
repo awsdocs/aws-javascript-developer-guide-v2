@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using AWS Cloud9 with the AWS SDK for JavaScript<a name="cloud9-javascript"></a>
 
 You can use AWS Cloud9 with the AWS SDK for JavaScript to write and run your JavaScript in the browser code —as well as write, run, and debug your Node\.js code—using just a browser\. AWS Cloud9 includes tools such as a code editor and terminal, plus a debugger for Node\.js code\. Because the AWS Cloud9 IDE is cloud based, you can work on your projects from your office, home, or anywhere using an internet\-connected machine\. For general information about AWS Cloud9, see the [AWS Cloud9 User Guide](https://docs.aws.amazon.com/cloud9/latest/user-guide/)\.
@@ -70,7 +76,7 @@ git clone https://github.com/awsdocs/aws-doc-sdk-examples.git
 
 To find code examples for the SDK for JavaScript, use the **Environment** window to open the `ENVIRONMENT_NAME\aws-doc-sdk-examples\javascript\example_code`, where *ENVIRONMENT\_NAME* is the name of your AWS Cloud9 development environment\.
 
-To learn how to work with these and other code examples, see [SDK for JavaScript Code Examples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sdk-code-samples.html)\.
+To learn how to work with these and other code examples, see [SDK for JavaScript Code Examples](https://docs.aws.amazon.com/sdk-for-javascript/latest/developer-guide/sdk-code-samples.html)\.
 
 ## Step 5: Run and Debug Example Code<a name="cloud9-javascript-run"></a>
 

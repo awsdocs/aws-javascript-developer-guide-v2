@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using IP Address Filters for Email Receipt in Amazon SES<a name="ses-examples-ip-filters"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -7,7 +13,7 @@
 + List your current IP address filters\.
 + Delete an IP address filter\.
 
-In Amazon SES, a *filter* is a data structure that consists of a name, an IP address range, and whether to allow or block mail from it\. IP addresses you want to block or allow are specified as a single IP address or a range of IP addresses in Classless Inter\-Domain Routing \(CIDR\) notation\. For details on how Amazon SES receives email, see [Amazon SES Email\-Receiving Concepts](Amazon Simple Email Service Developer Guidereceiving-email-concepts.html) in the Amazon Simple Email Service Developer Guide\.
+In Amazon SES, a *filter* is a data structure that consists of a name, an IP address range, and whether to allow or block mail from it\. IP addresses you want to block or allow are specified as a single IP address or a range of IP addresses in Classless Inter\-Domain Routing \(CIDR\) notation\. For details on how Amazon SES receives email, see [Amazon SES Email\-Receiving Concepts](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html) in the Amazon Simple Email Service Developer Guide\.
 
 ## The Scenario<a name="ses-examples-receiving-email-scenario"></a>
 
@@ -76,7 +82,7 @@ To run the example, type the following at the command line\. The filter is creat
 node ses_createreceiptfilter.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_createreceiptfilter.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_createreceiptfilter.js)\.
 
 ## Listing Your IP Address Filters<a name="ses-examples-ip-filters-listing"></a>
 
@@ -109,7 +115,7 @@ To run the example, type the following at the command line\. Amazon SES returns 
 node ses_listreceiptfilters.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_listreceiptfilters.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_listreceiptfilters.js)\.
 
 ## Deleting an IP Address Filter<a name="ses-examples-ip-filters-deleting"></a>
 
@@ -142,4 +148,4 @@ To run the example, type the following at the command line\. The filter is delet
 node ses_deletereceiptfilter.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ses/ses_deletereceiptfilter.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ses/ses_deletereceiptfilter.js)\.

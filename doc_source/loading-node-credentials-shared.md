@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Loading Credentials in Node\.js from the Shared Credentials File<a name="loading-node-credentials-shared"></a>
 
 You can keep your AWS credentials data in a shared file used by SDKs and the command line interface\. When the SDK for JavaScript loads, it automatically searches the shared credentials file, which is named "credentials"\. Where you keep the shared credentials file depends on your operating system:
@@ -35,7 +41,7 @@ By default, the SDK checks the `AWS_PROFILE` environment variable to determine w
 **Note**  
 When setting environment variables, be sure to take appropriate actions afterwards \(according to the needs of your operating system\) to make the variables available in the shell or command environment\.
 
-After setting the environment variable \(if needed\), you can run a file named `script.js` that uses the SDK as follows:
+After setting the environment variable \(if needed\), you can run a JavaScreipt file that uses the SDK, such as for example, a file named `script.js`\.
 
 ```
 $ node script.js

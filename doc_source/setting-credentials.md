@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Setting Credentials<a name="setting-credentials"></a>
 
 AWS uses credentials to identify who is calling services and whether access to the requested resources is allowed\. In AWS, these credentials are typically the access key ID and the secret access key that were created along with your account\.

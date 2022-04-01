@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Configuring the SDK for JavaScript<a name="configuring-the-jssdk"></a>
 
 Before you use the SDK for JavaScript to invoke web services using the API, you must configure the SDK\. At a minimum, you must configure these settings:
@@ -18,4 +24,3 @@ The topics in this section describe various ways to configure the SDK for JavaSc
 + [Node\.js Considerations](node-js-considerations.md)
 + [Browser Script Considerations](browser-js-considerations.md)
 + [Bundling Applications with Webpack](webpack.md)
-+ [SDK Metrics in the AWS SDK for JavaScript](metrics.md)

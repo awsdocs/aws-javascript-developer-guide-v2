@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Working with IAM Server Certificates<a name="iam-examples-server-certificates"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -51,7 +57,7 @@ To run the example, type the following at the command line\.
 node iam_listservercerts.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_listservercerts.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_listservercerts.js)\.
 
 ## Getting a Server Certificate<a name="iam-examples-server-certificates-getting"></a>
 
@@ -81,7 +87,7 @@ To run the example, type the following at the command line\.
 node iam_getservercert.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_getservercert.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_getservercert.js)\.
 
 ## Updating a Server Certificate<a name="iam-examples-server-certificates-updating"></a>
 
@@ -116,7 +122,7 @@ To run the example, type the following at the command line\.
 node iam_updateservercert.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_updateservercert.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_updateservercert.js)\.
 
 ## Deleting a Server Certificate<a name="iam-examples-server-certificates-deleting"></a>
 
@@ -146,4 +152,4 @@ To run the example, type the following at the command line\.
 node iam_deleteservercert.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_deleteservercert.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_deleteservercert.js)\.

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Security for this AWS Product or Service<a name="security"></a>
 
 Cloud security at Amazon Web Services \(AWS\) is the highest priority\. As an AWS customer, you benefit from a data center and network architecture that is built to meet the requirements of the most security\-sensitive organizations\. Security is a shared responsibility between AWS and you\. The [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) describes this as Security of the Cloud and Security in the Cloud\.
@@ -14,4 +20,4 @@ This AWS product or service follows the [shared responsibility model](https://aw
 + [Compliance Validation](compliance-validation.md)
 + [Resilience](disaster-recovery-resiliency.md)
 + [Infrastructure Security](infrastructure-security.md)
-+ [Enforcing TLS 1\.2](enforcing-tls.md)
++ [Enforcing a minimum version of TLS](enforcing-tls.md)

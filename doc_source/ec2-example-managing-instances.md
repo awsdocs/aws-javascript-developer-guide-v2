@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Managing Amazon EC2 Instances<a name="ec2-example-managing-instances"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -60,7 +66,7 @@ To run the example, type the following at the command line\.
 node ec2_describeinstances.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_describeinstances.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_describeinstances.js)\.
 
 ## Managing Instance Monitoring<a name="ec2-example-managing-instances-monitoring"></a>
 
@@ -123,7 +129,7 @@ To run the example, type the following at the command line, specifying `ON` to b
 node ec2_monitorinstances.js ON
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_monitorinstances.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_monitorinstances.js)\.
 
 ## Starting and Stopping Instances<a name="ec2-example-managing-instances-starting-stopping"></a>
 
@@ -186,7 +192,7 @@ To run the example, type the following at the command line specifying `START` to
 node ec2_startstopinstances.js START INSTANCE_ID
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_startstopinstances.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_startstopinstances.js)\.
 
 ## Rebooting Instances<a name="ec2-example-managing-instances-rebooting"></a>
 
@@ -229,4 +235,4 @@ To run the example, type the following at the command line\.
 node ec2_rebootinstances.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/ec2/ec2_rebootinstances.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/ec2/ec2_rebootinstances.js)\.

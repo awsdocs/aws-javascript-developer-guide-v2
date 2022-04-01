@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Sending Events to Amazon CloudWatch Events<a name="cloudwatch-examples-sending-events"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -9,7 +15,7 @@
 
 ## The Scenario<a name="cloudwatch-examples-sending-events-scenario"></a>
 
-CloudWatch Events delivers a near real\-time stream of system events that describe changes in Amazon Web Services \(AWS\) resources to any of various targets\. Using simple rules, you can match events and route them to one or more target functions or streams\.
+CloudWatch Events delivers a near real\-time stream of system events that describe changes in Amazon Web Services resources to any of various targets\. Using simple rules, you can match events and route them to one or more target functions or streams\.
 
 In this example, a series of Node\.js modules are used to send events to CloudWatch Events\. The Node\.js modules use the SDK for JavaScript to manage instances using these methods of the `CloudWatchEvents` client class:
 + [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putRule-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchEvents.html#putRule-property)
@@ -105,9 +111,9 @@ To run the example, type the following at the command line\.
 node cwe_putrule.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cwe_putrule.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascript/example_code/cloudwatch-events/cwe_putrule.js)\.
 
-## Adding a Lambda Function Target<a name="cloudwatch-examples-sending-events-targets"></a>
+## Adding a AWS Lambda Function Target<a name="cloudwatch-examples-sending-events-targets"></a>
 
 Create a Node\.js module with the file name `cwe_puttargets.js`\. Be sure to configure the SDK as previously shown\. To access CloudWatch Events, create an `AWS.CloudWatchEvents` service object\. Create a JSON object containing the parameters needed to specify the rule to which you want to attach the target, including the ARN of the Lambda function you created\. Call the `putTargets` method of the `AWS.CloudWatchEvents` service object\.
 
@@ -145,7 +151,7 @@ To run the example, type the following at the command line\.
 node cwe_puttargets.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cwe_puttargets.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascript/example_code/cloudwatch-events/cwe_puttargets.js)\.
 
 ## Sending Events<a name="cloudwatch-examples-sending-events-putevents"></a>
 
@@ -188,4 +194,4 @@ To run the example, type the following at the command line\.
 node cwe_putevents.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cwe_putevents.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascript/example_code/cloudwatch-events/cwe_putevents.js)\.

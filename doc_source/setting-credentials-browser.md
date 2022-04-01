@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Setting Credentials in a Web Browser<a name="setting-credentials-browser"></a>
 
 There are several ways to supply your credentials to the SDK from browser scripts\. Some of these are more secure and others afford greater convenience while developing a script\. Here are the ways you can supply your credentials in order of recommendation:

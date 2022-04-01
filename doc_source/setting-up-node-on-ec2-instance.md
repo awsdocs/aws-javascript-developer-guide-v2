@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Tutorial: Setting Up Node\.js on an Amazon EC2 Instance<a name="setting-up-node-on-ec2-instance"></a>
 
 A common scenario for using Node\.js with the SDK for JavaScript is to set up and run a Node\.js web application on an Amazon Elastic Compute Cloud \(Amazon EC2\) instance\. In this tutorial, you will create a Linux instance, connect to it using SSH, and then install Node\.js to run on that instance\. 
@@ -6,7 +12,7 @@ A common scenario for using Node\.js with the SDK for JavaScript is to set up an
 
 This tutorial assumes that you have already launched a Linux instance with a public DNS name that is reachable from the Internet and to which you are able to connect using SSH\. For more information, see [Step 1: Launch an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance_linux) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-You must also have configured your security group to allow `SSH` \(port 22\), `HTTP` \(port 80\), and `HTTPS` \(port 443\) connections\. For more information about these prerequisites, see [ Setting Up with Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+You must also have configured your security group to allow `SSH` \(port 22\), `HTTP` \(port 80\), and `HTTPS` \(port 443\) connections\. For more information about these prerequisites, see [ Setting Up with Amazon Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 ## Procedure<a name="setting-up-node-on-ec2-instance-procedure"></a>
 
@@ -51,7 +57,7 @@ AWS does not control the following code\. Before you run it, be sure to verify i
    `Running Node.js VERSION`
 
 **Note**  
-The node installation only applies to the current EC2 session\. Once the EC2 instance goes away, you'll have to re\-install node again\. The alternative is to make an AMI of the EC2 instance once you have the configuration that you want to keep, as described in the following section\.
+The node installation only applies to the current Amazon EC2 session\. Once the Amazon EC2 instance goes away, you'll have to re\-install node again\. The alternative is to make an AMI of the Amazon EC2 instance once you have the configuration that you want to keep, as described in the following section\.
 
 ## Creating an Amazon Machine Image<a name="setting-up-node-on-ec2-instance-create-image"></a>
 

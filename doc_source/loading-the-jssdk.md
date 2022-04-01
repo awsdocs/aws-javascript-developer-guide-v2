@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Loading the SDK for JavaScript<a name="loading-the-jssdk"></a>
 
 How you load the SDK for JavaScript depends on whether you are loading it to run in a web browser or in Node\.js\.
@@ -37,7 +43,7 @@ The quickest way to get started with the SDK is to load the hosted SDK package d
 <script src="https://sdk.amazonaws.com/js/aws-sdk-SDK_VERSION_NUMBER.min.js"></script>
 ```
 
-To find the current SDK\_VERSION\_NUMBER, see the API Reference for the SDK for JavaScript at [https://docs\.aws\.amazon\.com/AWSJavaScriptSDK/latest/index\.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
+To find the current SDK\_VERSION\_NUMBER, see the API Reference for the SDK for JavaScript at [AWS SDK for JavaScript API Reference Guide](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/)\.
 
 After the SDK loads in your page, the SDK is available from the global variable `AWS` \(or `window.AWS`\)\.
 

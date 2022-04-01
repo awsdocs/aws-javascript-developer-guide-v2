@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Capturing Web Page Scroll Progress with Amazon Kinesis<a name="kinesis-examples-capturing-page-scrolling"></a>
 
 ![\[JavaScript code example that applies to browser execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsericon.png)
@@ -8,8 +14,6 @@
 ## The Scenario<a name="kinesis-examples-capturing-page-scrolling-scenario"></a>
 
 In this example, a simple HTML page simulates the content of a blog page\. As the reader scrolls the simulated blog post, the browser script uses the SDK for JavaScript to record the scroll distance down the page and send that data to Kinesis using the [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html#putRecords-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Kinesis.html#putRecords-property) method of the Kinesis client class\. The streaming data captured by Amazon Kinesis Data Streams can then be processed by Amazon EC2 instances and stored in any of several data stores including Amazon DynamoDB and Amazon Redshift\.
-
-![\[JavaScript in a browser script sending scroll data to Kinesis.\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/kinesis-examples.png)
 
 ## Prerequisite Tasks<a name="kinesis-examples-capturing-page-scrolling-prerequisites"></a>
 

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using Alarm Actions in Amazon CloudWatch<a name="cloudwatch-examples-using-alarm-actions"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -119,7 +125,7 @@ To run the example, type the following at the command line\.
 node cw_enablealarmactions.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cw_enablealarmactions.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/cloudwatch/cw_enablealarmactions.js)\.
 
 ## Disabling Actions on an Alarm<a name="cloudwatch-examples-using-alarm-actions-disabling"></a>
 
@@ -149,4 +155,4 @@ To run the example, type the following at the command line\.
 node cw_disablealarmactions.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cw_disablealarmactions.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/cloudwatch/cw_disablealarmactions.js)\.

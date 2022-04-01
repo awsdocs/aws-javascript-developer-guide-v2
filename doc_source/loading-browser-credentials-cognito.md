@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using Amazon Cognito Identity to Authenticate Users<a name="loading-browser-credentials-cognito"></a>
 
 The recommended way to obtain AWS credentials for your browser scripts is to use the Amazon Cognito Identity credentials object, `AWS.CognitoIdentityCredentials`\. Amazon Cognito enables authentication of users through third\-party identity providers\.
@@ -79,4 +85,4 @@ function userLoggedIn(providerName, token) {
 
 You can also Create `CognitoIdentityCredentials` object\. If you do, you must reset the credentials properties of existing service objects you created\. Service objects read from the global configuration only on object initialization\. 
 
-For more information about the `CognitoIdentityCredentials` object, see [ AWS\.CognitoIdentityCredentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html) in the AWS SDK for JavaScript API Reference\. 
+For more information about the `CognitoIdentityCredentials` object, see [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentityCredentials.html) in the AWS SDK for JavaScript API Reference\. 
