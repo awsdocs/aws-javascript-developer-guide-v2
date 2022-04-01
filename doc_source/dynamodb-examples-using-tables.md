@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Creating and Using Tables in DynamoDB<a name="dynamodb-examples-using-tables"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -81,7 +87,7 @@ To run the example, type the following at the command line\.
 node ddb_createtable.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddb_createtable.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddb_createtable.js)\.
 
 ## Listing Your Tables<a name="dynamodb-examples-using-tables-listing-tables"></a>
 
@@ -112,7 +118,7 @@ To run the example, type the following at the command line\.
 node ddb_listtables.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddb_listtables.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddb_listtables.js)\.
 
 ## Describing a Table<a name="dynamodb-examples-using-tables-describing-a-table"></a>
 
@@ -147,7 +153,7 @@ To run the example, type the following at the command line\.
 node ddb_describetable.js TABLE_NAME
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddb_describetable.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddb_describetable.js)\.
 
 ## Deleting a Table<a name="dynamodb-examples-using-tables-deleting-a-table"></a>
 
@@ -184,4 +190,4 @@ To run the example, type the following at the command line\.
 node ddb_deletetable.js TABLE_NAME
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddb_deletetable.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddb_deletetable.js)\.

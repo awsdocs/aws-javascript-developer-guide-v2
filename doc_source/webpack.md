@@ -1,10 +1,14 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Bundling Applications with Webpack<a name="webpack"></a>
 
 Web applications in browser scripts or Node\.js use of code modules creates dependencies\. These code modules can have dependencies of their own, resulting in a collection of interconnected modules that your application requires to function\. To manage dependencies, you can use a module bundler like webpack\.
 
 The webpack module bundler parses your application code, searching for `import` or `require` statements, to create bundles that contain all the assets your application needs so that the assets can be easily served through a webpage\. The SDK for JavaScript can be included in webpack as one of the dependencies to include in the output bundle\.
-
-![\[Process by which webpack bundles application module dependencies into a static asset\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/webpack.png)
 
 For more information about webpack, see the [webpack module bundler](https://webpack.github.io/) on GitHub\.
 

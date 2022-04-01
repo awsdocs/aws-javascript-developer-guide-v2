@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Managing IAM Access Keys<a name="iam-examples-managing-access-keys"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -52,7 +58,7 @@ To run the example, type the following at the command line\. Be sure to pipe the
 node iam_createaccesskeys.js > newuserkeys.txt
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_createaccesskeys.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_createaccesskeys.js)\.
 
 ## Listing a User's Access Keys<a name="iam-examples-managing-access-keys-listing"></a>
 
@@ -87,7 +93,7 @@ To run the example, type the following at the command line\.
 node iam_listaccesskeys.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_listaccesskeys.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_listaccesskeys.js)\.
 
 ## Getting the Last Use for Access Keys<a name="iam-examples-managing-access-keys-last-used"></a>
 
@@ -117,7 +123,7 @@ To run the example, type the following at the command line\.
 node iam_accesskeylastused.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_accesskeylastused.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_accesskeylastused.js)\.
 
 ## Updating Access Key Status<a name="iam-examples-managing-access-keys-updating"></a>
 
@@ -153,7 +159,7 @@ To run the example, type the following at the command line\.
 node iam_updateaccesskey.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_updateaccesskey.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_updateaccesskey.js)\.
 
 ## Deleting Access Keys<a name="iam-examples-managing-access-keys-deleting"></a>
 
@@ -188,4 +194,4 @@ To run the example, type the following at the command line\.
 node iam_deleteaccesskey.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/iam/iam_deleteaccesskey.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/iam/iam_deleteaccesskey.js)\.

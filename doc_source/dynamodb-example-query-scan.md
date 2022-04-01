@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Querying and Scanning a DynamoDB Table<a name="dynamodb-example-query-scan"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -65,39 +71,45 @@ To run the example, type the following at the command line\.
 node ddb_query.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddb_query.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddb_query.js)\.
 
 ## Scanning a Table<a name="dynamodb-example-table-query-scan-scanning"></a>
 
 Create a Node\.js module with the file name `ddb_scan.js`\. Be sure to configure the SDK as previously shown\. To access DynamoDB, create an `AWS.DynamoDB` service object\. Create a JSON object containing the parameters needed to scan the table for items, which in this example includes the name of the table, the list of attribute values to return for each matching item, and an expression to filter the result set to find items containing a specified phrase\. Call the `scan` method of the DynamoDB service object\.
 
 ```
-// Load the AWS SDK for Node.js
-var AWS = require('aws-sdk');
-// Set the region
-AWS.config.update({region: 'REGION'});
+    // Load the AWS SDK for Node.js.
+var AWS = require("aws-sdk");
+// Set the AWS Region.
+AWS.config.update({ region: "REGION" });
 
-// Create DynamoDB service object
-var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+// Create DynamoDB service object.
+var ddb = new AWS.DynamoDB({ apiVersion: "2012-08-10" });
 
-var params = {
+const params = {
+  // Specify which items in the results are returned.
+  FilterExpression: "Subtitle = :topic AND Season = :s AND Episode = :e",
+  // Define the expression attribute value, which are substitutes for the values you want to compare.
   ExpressionAttributeValues: {
-    ':s': {N: '2'},
-    ':e' : {N: '09'},
-    ':topic' : {S: 'PHRASE'}
+    ":topic": {S: "SubTitle2"},
+    ":s": {N: 1},
+    ":e": {N: 2},
   },
-  ProjectionExpression: 'Episode, Title, Subtitle',
-  FilterExpression: 'contains (Subtitle, :topic)',
-  TableName: 'EPISODES_TABLE'
+  // Set the projection expression, which are the attributes that you want.
+  ProjectionExpression: "Season, Episode, Title, Subtitle",
+  TableName: "EPISODES_TABLE",
 };
 
-ddb.scan(params, function(err, data) {
+ddb.scan(params, function (err, data) {
   if (err) {
     console.log("Error", err);
   } else {
-    //console.log("Success", data.Items);
-    data.Items.forEach(function(element, index, array) {
-      console.log(element.Title.S + " (" + element.Subtitle.S + ")");
+    console.log("Success", data);
+    data.Items.forEach(function (element, index, array) {
+      console.log(
+          "printing",
+          element.Title.S + " (" + element.Subtitle.S + ")"
+      );
     });
   }
 });
@@ -109,4 +121,4 @@ To run the example, type the following at the command line\.
 node ddb_scan.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddb_scan.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/dynamodb/ddb_scan.js)\.

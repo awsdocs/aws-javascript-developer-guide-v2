@@ -1,9 +1,15 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Creating and Managing Transcoding Jobs in MediaConvert<a name="emc-examples-jobs"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
 
 **This Node\.js code example shows:**
-+ How to specify the account\-specific endpoint to use with MediaConvert\.
++ How to specify the region\-specific endpoint to use with MediaConvert\.
 + How to create transcoding jobs in MediaConvert\.
 + How to cancel a transcoding job\.
 + How to retrieve the JSON for a completed transcoding job\.
@@ -28,7 +34,7 @@ To set up and run this example, first complete these tasks:
 
 ## Configuring the SDK<a name="emc-examples-jobs-configure-sdk"></a>
 
-Configure the SDK for JavaScript by creating a global configuration object, and then setting the Region for your code\. In this example, the Region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your account\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
+Configure the SDK for JavaScript by creating a global configuration object, and then setting the Region for your code\. In this example, the Region is set to `us-west-2`\. Because MediaConvert uses custom endpoints for each account, you must also configure the `AWS.MediaConvert` client class to use your region\-specific endpoint\. To do this, set the `endpoint` parameter on `AWS.config.mediaconvert`\.
 
 ```
 // Load the SDK for JavaScript
@@ -204,7 +210,7 @@ To run the example, type the following at the command line\.
 node emc_createjob.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_createjob.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_createjob.js)\.
 
 ## Canceling a Transcoding Job<a name="emc-examples-jobs-cancel"></a>
 
@@ -244,7 +250,7 @@ To run the example, type the following at the command line\.
 node ec2_canceljob.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_canceljob.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_canceljob.js)\.
 
 ## Listing Recent Transcoding Jobs<a name="emc-examples-jobs-listing"></a>
 
@@ -288,4 +294,4 @@ To run the example, type the following at the command line\.
 node emc_listjobs.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_listjobs.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_listjobs.js)\.

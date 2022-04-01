@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Creating Alarms in Amazon CloudWatch<a name="cloudwatch-examples-creating-alarms"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -54,7 +60,7 @@ To run the example, type the following at the command line\.
 node cw_describealarms.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cw_describealarms.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/cloudwatch/cw_describealarms.js)\.
 
 ## Creating an Alarm for a CloudWatch Metric<a name="cloudwatch-examples-creating-alarms-putmetricalarm"></a>
 
@@ -104,7 +110,7 @@ To run the example, type the following at the command line\.
 node cw_putmetricalarm.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cw_putmetricalarm.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/cloudwatch/cw_putmetricalarm.js)\.
 
 ## Deleting an Alarm<a name="cloudwatch-examples-creating-alarms-deleting"></a>
 
@@ -138,4 +144,4 @@ To run the example, type the following at the command line\.
 node cw_deletealarms.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cw_deletealarms.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/cloudwatch/cw_deletealarms.js)\.

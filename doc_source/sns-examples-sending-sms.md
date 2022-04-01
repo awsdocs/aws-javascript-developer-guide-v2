@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Sending SMS Messages with Amazon SNS<a name="sns-examples-sending-sms"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -67,7 +73,7 @@ To run the example, type the following at the command line\.
 node sns_getsmstype.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_getsmstype.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_getsmstype.js)\.
 
 ## Setting SMS Attributes<a name="sending-sms-setattributes"></a>
 
@@ -108,7 +114,7 @@ To run the example, type the following at the command line\.
 node sns_setsmstype.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_setsmstype.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_setsmstype.js)\.
 
 ## Checking If a Phone Number Has Opted Out<a name="sending-sms-checkifphonenumberisoptedout"></a>
 
@@ -141,7 +147,7 @@ To run the example, type the following at the command line\.
 node sns_checkphoneoptout.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_checkphoneoptout.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_checkphoneoptout.js)\.
 
 ## Listing Opted\-Out Phone Numbers<a name="sending-sms-listphonenumbersoptedout"></a>
 
@@ -175,7 +181,7 @@ To run the example, type the following at the command line\.
 node sns_listnumbersoptedout.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_listnumbersoptedout.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_listnumbersoptedout.js)\.
 
 ## Publishing an SMS Message<a name="sending-sms-publishsms"></a>
 
@@ -216,4 +222,4 @@ To run the example, type the following at the command line\.
 node sns_publishsms.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_publishsms.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_publishsms.js)\.

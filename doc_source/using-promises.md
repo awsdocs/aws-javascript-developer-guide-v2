@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using JavaScript Promises<a name="using-promises"></a>
 
 The `AWS.Request.promise` method provides a way to call a service operation and manage asynchronous flow instead of using callbacks\. In Node\.js and browser scripts, an `AWS.Request` object is returned when a service operation is called without a callback function\. You can call the request's `send` method to make the service call\.

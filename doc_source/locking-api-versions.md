@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Locking API Versions<a name="locking-api-versions"></a>
 
 AWS services have API version numbers to keep track of API compatibility\. API versions in AWS services are identified by a `YYYY-mm-dd` formatted date string\. For example, the current API version for Amazon S3 is `2006-03-01`\.

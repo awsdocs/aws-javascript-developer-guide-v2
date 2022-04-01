@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Working with JSON<a name="working-with-json"></a>
 
 JSON is a format for data exchange that is both human and machine\-readable\. While the name JSON is an acronym for *JavaScript Object Notation*, the format of JSON is independent of any programming language\.

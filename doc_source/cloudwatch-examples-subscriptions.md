@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using Subscription Filters in Amazon CloudWatch Logs<a name="cloudwatch-examples-subscriptions"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -85,7 +91,7 @@ To run the example, type the following at the command line\.
 node cwl_describesubscriptionfilters.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cwl_describesubscriptionfilters.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascript/example_code/cloudwatch-logs/cwl_describesubscriptionfilters.js)\.
 
 ## Creating a Subscription Filter<a name="cloudwatch-examples-subscriptions-creating"></a>
 
@@ -122,7 +128,7 @@ To run the example, type the following at the command line\.
 node cwl_putsubscriptionfilter.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cwl_putsubscriptionfilter.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascript/example_code/cloudwatch-logs/cwl_putsubscriptionfilter.js)\.
 
 ## Deleting a Subscription Filter<a name="cloudwatch-examples-subscriptions-deleting"></a>
 
@@ -157,4 +163,4 @@ To run the example, type the following at the command line\.
 node cwl_deletesubscriptionfilter.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/cloudwatch/cwl_deletesubscriptionfilter.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javascript/example_code/cloudwatch-logs/cwl_deletesubscriptionfilter.js)\.

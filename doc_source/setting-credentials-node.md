@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Setting Credentials in Node\.js<a name="setting-credentials-node"></a>
 
 There are several ways in Node\.js to supply your credentials to the SDK\. Some of these are more secure and others afford greater convenience while developing an application\. When obtaining credentials in Node\.js, be careful about relying on more than one source such as an environment variable and a JSON file you load\. You can change the permissions under which your code runs without realizing the change has happened\.
@@ -28,7 +34,7 @@ If more than one credential source is available to the SDK, the default preceden
 
 1. Credentials loaded from AWS IAM using the credentials provider of the Amazon EC2 instance \(if configured in the instance metadata\)
 
-For more information, see [Class: AWS\.Credentials](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html) and [Class: AWS\.CredentialProviderChain](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CredentialProviderChain.html) in the API reference\.
+For more information, see [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Credentials.html) and [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CredentialProviderChain.html](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CredentialProviderChain.html) in the API reference\.
 
 **Warning**  
 While it is possible to do so, we do not recommend hard\-coding your AWS credentials in your application\. Hard\-coding credentials poses a risk of exposing your access key ID and secret access key\.
@@ -36,7 +42,7 @@ While it is possible to do so, we do not recommend hard\-coding your AWS credent
 The topics in this section describe how to load credentials into Node\.js\.
 
 **Topics**
-+ [Loading Credentials in Node\.js from IAM Roles for EC2](loading-node-credentials-iam.md)
++ [Loading Credentials in Node\.js from IAM roles for Amazon EC2](loading-node-credentials-iam.md)
 + [Loading Credentials for a Node\.js Lambda Function](loading-node-credentials-lambda.md)
 + [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)
 + [Loading Credentials in Node\.js from Environment Variables](loading-node-credentials-environment.md)

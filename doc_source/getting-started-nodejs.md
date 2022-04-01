@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Getting Started in Node\.js<a name="getting-started-nodejs"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -23,13 +29,35 @@ To set up and run this example, you must first complete these tasks:
 **Contents**
 + [The Scenario](#getting-started-nodejs-scenario)
 + [Prerequisite Tasks](#getting-started-nodejs-prerequisites)
-+ [Step 1: Configure Your Credentials](#getting-started-nodejs-credentials)
-+ [Step 2: Create the Package JSON for the Project](#getting-started-nodejs-download)
-+ [Step 3: Install the SDK and Dependencies](#getting-started-nodejs-install-sdk)
++ [Step 1: Install the SDK and Dependencies](#getting-started-nodejs-install-sdk)
++ [Step 2: Configure Your Credentials](#getting-started-nodejs-credentials)
++ [Step 3: Create the Package JSON for the Project](#getting-started-nodejs-download)
 + [Step 4: Write the Node\.js Code](#getting-started-nodejs-js-code)
 + [Step 5: Run the Sample](#getting-started-nodejs-run-sample)
 
-## Step 1: Configure Your Credentials<a name="getting-started-nodejs-credentials"></a>
+## Step 1: Install the SDK and Dependencies<a name="getting-started-nodejs-install-sdk"></a>
+
+You install the SDK for JavaScript package using [npm \(the Node\.js package manager\)](https://www.npmjs.com)\. 
+
+From the `awsnodesample` directory in the package, type the following at the command line\.
+
+```
+npm install aws-sdk
+```
+
+This command installs the SDK for JavaScript in your project, and updates `package.json` to list the SDK as a project dependency\. You can find information about this package by searching for "aws\-sdk" on the [npm website](https://www.npmjs.com)\.
+
+Next, install the `uuid` module to the project by typing the following at the command line, which installs the module and updates `package.json`\. For more information about `uuid`, see the module's page at [https://www\.npmjs\.com/package/uuid](https://www.npmjs.com/package/uuid)\.
+
+```
+npm install uuid
+```
+
+These packages and their associated code are installed in the `node_modules` subdirectory of your project\.
+
+For more information on installing Node\.js packages, see [Downloading and installing packages locally](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) and [Creating Node\.js Modules](https://docs.npmjs.com/getting-started/creating-node-modules) on the [npm \(Node\.js package manager\) website](https://www.npmjs.com)\. For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
+
+## Step 2: Configure Your Credentials<a name="getting-started-nodejs-credentials"></a>
 
 You need to provide credentials to AWS so that only your account and its resources are accessed by the SDK\. For more information about obtaining your account credentials, see [Getting Your Credentials](getting-your-credentials.md)\.
 
@@ -63,7 +91,7 @@ var AWS = require("aws-sdk");
 console.log("Region: ", AWS.config.region);
 ```
 
-## Step 2: Create the Package JSON for the Project<a name="getting-started-nodejs-download"></a>
+## Step 3: Create the Package JSON for the Project<a name="getting-started-nodejs-download"></a>
 
 After you create the `awsnodesample` project directory, you create and add a `package.json` file for holding the metadata for your Node\.js project\. For details about using `package.json` in a Node\.js project, see [What is the file package\.json?](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)\.
 
@@ -73,7 +101,7 @@ In the project directory, create a new file named `package.json`\. Then add this
 {
   "dependencies": {},
   "name": "aws-nodejs-sample",
-  "description": "A simple Node.js application illustrating usage of the AWS SDK for Node.js.",
+  "description": "A simple Node.js application illustrating usage of the SDK for JavaScript.",
   "version": "1.0.1",
   "main": "sample.js",
   "devDependencies": {},
@@ -85,29 +113,7 @@ In the project directory, create a new file named `package.json`\. Then add this
 }
 ```
 
-Save the file\. As you install the modules you need, the `dependencies` portion of the file will be completed\. You can find a JSON file that shows an example of these dependencies [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/nodegetstarted/example_package.json)\. 
-
-## Step 3: Install the SDK and Dependencies<a name="getting-started-nodejs-install-sdk"></a>
-
-You install the SDK for JavaScript package using [npm \(the Node\.js package manager\)](https://www.npmjs.com)\. 
-
-From the `awsnodesample` directory in the package, type the following at the command line\.
-
-```
-npm install aws-sdk
-```
-
-This command installs the SDK for JavaScript in your project, and updates `package.json` to list the SDK as a project dependency\. You can find information about this package by searching for "aws\-sdk" on the [npm website](https://www.npmjs.com)\.
-
-Next, install the `uuid` module to the project by typing the following at the command line, which installs the module and updates `package.json`\. For more information about `uuid`, see the module's page at [https://www\.npmjs\.com/package/uuid](https://www.npmjs.com/package/uuid)\.
-
-```
-npm install uuid
-```
-
-These packages and their associated code are installed in the `node_modules` subdirectory of your project\.
-
-For more information on installing Node\.js packages, see [Downloading and installing packages locally](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) and [Creating Node\.js Modules](https://docs.npmjs.com/getting-started/creating-node-modules) on the [npm \(Node\.js package manager\) website](https://www.npmjs.com)\. For information about downloading and installing the AWS SDK for JavaScript, see [Installing the SDK for JavaScript](installing-jssdk.md)\.
+Save the file\. As you install the modules you need, the `dependencies` portion of the file will be completed\. You can find a JSON file that shows an example of these dependencies [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/nodegetstarted/example_package.json)\. 
 
 ## Step 4: Write the Node\.js Code<a name="getting-started-nodejs-js-code"></a>
 
@@ -147,7 +153,7 @@ bucketPromise.then(
 });
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/nodegetstarted/sample.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/nodegetstarted/sample.js)\.
 
 ## Step 5: Run the Sample<a name="getting-started-nodejs-run-sample"></a>
 

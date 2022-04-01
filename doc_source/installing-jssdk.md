@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Installing the SDK for JavaScript<a name="installing-jssdk"></a>
 
 Whether and how you install the AWS SDK for JavaScript depends whether the code executes in Node\.js modules or browser scripts\.
@@ -39,7 +45,7 @@ You can download minified and non\-minified distributable versions of the curren
 
 ------
 
-## Installing Using Bower<a name="w8aac11c11b9"></a>
+## Installing Using Bower<a name="w8aac13c11b9"></a>
 
 [Bower](https://bower.io) is a package manager for the web\. After you install Bower, you can use it to install the SDK\. To install the SDK using Bower, type the following into a terminal window:
 

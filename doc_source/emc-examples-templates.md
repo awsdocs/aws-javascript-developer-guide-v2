@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Using Job Templates in MediaConvert<a name="emc-examples-templates"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -189,7 +195,7 @@ To run the example, type the following at the command line\.
 node emc_create_jobtemplate.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_create_jobtemplate.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_create_jobtemplate.js)\.
 
 ## Creating a Transcoding Job from a Job Template<a name="emc-examples-templates-createjob"></a>
 
@@ -258,7 +264,7 @@ To run the example, type the following at the command line\.
 node emc_template_createjob.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_template_createjob.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_template_createjob.js)\.
 
 ## Listing Your Job Templates<a name="emc-examples-templates-listing"></a>
 
@@ -300,7 +306,7 @@ To run the example, type the following at the command line\.
 node emc_listtemplates.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_template_createjob.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_template_createjob.js)\.
 
 ## Deleting a Job Template<a name="emc-examples-templates-delete"></a>
 
@@ -340,4 +346,4 @@ To run the example, type the following at the command line\.
 node emc_deletetemplate.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/mediaconvert/emc_deletetemplate.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/mediaconvert/emc_deletetemplate.js)\.

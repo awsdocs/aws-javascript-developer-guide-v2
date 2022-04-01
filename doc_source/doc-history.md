@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
 + **SDK version:** See [JavaScript API Reference](aws-jsdk-reference.md)
 + **Latest major documentation update:** May 13, 2019
@@ -9,9 +15,8 @@ The following table describes important changes in each release of the AWS SDK f
 | Change | Description | Date | 
 | --- |--- |--- |
 | [Viewing Photos in an Amazon S3 Bucket from a Browser](s3-example-photos-view.md) | Added an example for simply viewing photos in existing photo albums\. | May 13, 2019 | 
-| [Setting Credentials in Node\.js, new credential\-loading choices](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html) | Added information about credentials that are loaded from the ECS credentials provider or a configured credential process\. | April 25, 2019 | 
-| [Credentials using a Configured Credential Process](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-configured-credential-process.html) | Added information about credentials that are loaded from a configured credential process\. | April 25, 2019 | 
-| [New topic for SDK Metrics\.](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/metrics.html) | Information for SDK Metrics has been added to the developer guide for AWS SDK for JavaScript\. See [SDK Metrics in the SDK for JavaScript](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/metrics.html) for the new content\. | January 11, 2019 | 
+| [Setting Credentials in Node\.js, new credential\-loading choices](https://docs.aws.amazon.com/sdk-for-javascript/latest/developer-guide/setting-credentials-node.html) | Added information about credentials that are loaded from the ECS credentials provider or a configured credential process\. | April 25, 2019 | 
+| [Credentials using a Configured Credential Process](https://docs.aws.amazon.com/sdk-for-javascript/latest/developer-guide/loading-node-credentials-configured-credential-process.html) | Added information about credentials that are loaded from a configured credential process\. | April 25, 2019 | 
 | [New Lambda Tutorial](using-lambda-functions.md) | Added a tutorial that builds a browser\-based game\. The tutorial includes a downloadable zip archive containing the graphic assets used by the game, several Node\.js scripts used to create and configure the services and resources used by the game, and the Node\.js code for the AWS Lambda function that runs the game\. | July 20, 2018 | 
 | [New Getting Started in a Browser Script](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html) | Getting Started in a Browser Script has been rewritten to simplify the example and to access the Amazon Polly service to send text and return synthesized speech you can play in the browser\. See [Getting Started in Browser Script](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html) for the new content\. | July 14, 2018 | 
 | [New Amazon SNS Code Samples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples.html) | Four new Node\.js code samples for working with Amazon SNS have been added\. See [Amazon SNS Examples](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples.html) for the sample code\. | June 29, 2018 | 

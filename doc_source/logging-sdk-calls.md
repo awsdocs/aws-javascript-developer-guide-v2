@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Logging AWS SDK for JavaScript Calls<a name="logging-sdk-calls"></a>
 
 The AWS SDK for JavaScript is instrumented with a built\-in logger so you can log API calls you make with the SDK for JavaScript\.

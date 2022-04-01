@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Upgrading the SDK for JavaScript from Version 1<a name="upgrading-from-v1"></a>
 
 The following notes help you upgrade the SDK for JavaScript from version 1 to version 2\.

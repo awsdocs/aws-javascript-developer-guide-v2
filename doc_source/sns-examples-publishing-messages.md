@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Publishing Messages in Amazon SNS<a name="sns-examples-publishing-messages"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -16,11 +22,11 @@ To set up and run this example, you must first complete these tasks:
 + Install Node\.js\. For more information about installing Node\.js, see the [Node\.js website](http://nodejs.org)\.
 + Create a shared configurations file with your user credentials\. For more information about providing a credentials JSON file, see [Loading Credentials in Node\.js from the Shared Credentials File](loading-node-credentials-shared.md)\.
 
-## Publishing a Message to an SNS Topic<a name="sns-examples-publishing-text-messages"></a>
+## Publishing a Message to an Amazon SNS Topic<a name="sns-examples-publishing-text-messages"></a>
 
 In this example, use a Node\.js module to publish a message to an Amazon SNS topic\. Create a Node\.js module with the file name `sns_publishtotopic.js`\. Configure the SDK as previously shown\.
 
-Create an object containing the parameters for publishing a message, including the message text and the ARN of the SNS topic\. For details on available SMS attributes, see [SetSMSAttributes](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property)\.
+Create an object containing the parameters for publishing a message, including the message text and the ARN of the Amazon SNS topic\. For details on available SMS attributes, see [SetSMSAttributes](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html#setSMSAttributes-property)\.
 
 Pass the parameters to the `publish` method of the `AWS.SNS` client class\. Create a promise for invoking an Amazon SNS service object, passing the parameters object\. Then handle the response in the promise callback\. 
 
@@ -56,4 +62,4 @@ To run the example, type the following at the command line\.
 node sns_publishtotopic.js
 ```
 
-This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sns/sns_publishtotopic.js)\.
+This sample code can be found [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/sns/sns_publishtotopic.js)\.

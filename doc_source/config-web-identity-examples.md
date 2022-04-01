@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Web Federated Identity Examples<a name="config-web-identity-examples"></a>
 
 Here are a few examples of using web federated identity to obtain credentials in browser JavaScript\. These examples must be run from an http:// or https:// host scheme to ensure the identity provider can redirect to your application\. 

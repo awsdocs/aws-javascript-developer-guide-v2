@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Create a Lambda Execution Role in IAM<a name="using-lambda-iam-role-setup"></a>
 
 This topic is part of a larger tutorial about using the AWS SDK for JavaScript with AWS Lambda functions\. To start at the beginning of the tutorial, see [Tutorial: Creating and Using Lambda Functions](using-lambda-functions.md)\.
@@ -14,7 +20,7 @@ A Lambda function requires an execution role created in IAM that provides the fu
 
 1. Find this line of code\.
 
-   `RoleName: "ROLE"`
+   `const ROLE = "ROLE"`
 
    Replace **ROLE** with another name\. 
 

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Resilience for this AWS Product or Service<a name="disaster-recovery-resiliency"></a>
 
 The Amazon Web Services \(AWS\) global infrastructure is built around AWS Regions and Availability Zones\.

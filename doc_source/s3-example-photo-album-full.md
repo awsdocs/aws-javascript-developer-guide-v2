@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Uploading Photos to Amazon S3: Full Code<a name="s3-example-photo-album-full"></a>
 
 This section contains the full HTML and JavaScript code for the example in which photos are uploaded to an Amazon S3 photo album\. See the [parent section](s3-example-photo-album.md) for details and prerequisites\.
@@ -183,8 +189,7 @@ function addPhoto(albumName) {
     params: {
       Bucket: albumBucketName,
       Key: photoKey,
-      Body: file,
-      ACL: "public-read"
+      Body: file
     }
   });
 

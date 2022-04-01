@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Getting Started with the AWS SDK for JavaScript<a name="getting-started"></a>
 
 The AWS SDK for JavaScript provides access to web services in either browser scripts or Node\.js\. This section has two getting started exercises that show you how to work with the SDK for JavaScript in each of these JavaScript environments\.

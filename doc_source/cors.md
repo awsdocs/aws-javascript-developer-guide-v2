@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Cross\-Origin Resource Sharing \(CORS\)<a name="cors"></a>
 
 Cross\-origin resource sharing, or CORS, is a security feature of modern web browsers\. It enables web browsers to negotiate which domains can make requests of external websites or services\. CORS is an important consideration when developing browser applications with the AWS SDK for JavaScript because most requests to resources are sent to an external domain, such as the endpoint for a web service\. If your JavaScript environment enforces CORS security, you must configure CORS with the service\.
@@ -22,26 +28,29 @@ Amazon S3 buckets require CORS configuration before you can perform operations o
 
 You can configure an Amazon S3 bucket to use CORS in the Amazon S3 console\.
 
-1. In the Amazon S3 console, find the bucket you want to configure and select its check box\.
+1. In the Amazon S3 console, choose the bucket you want to edit\.
 
-1. In the pop\-up\-dialog, choose **Permissions**  
-![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-bucket-dialog.png)
+1. Select the **Permissions** tab, and scoll down to the **Cross\-origin resource sharing \(CORS\)** panel\.  
+![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/cors_panel.png)
 
-1. In the **Permission** tab, choose **CORS Configuration**\.
-
-1. Type your CORS configuration in the **CORS Configuration Editor** and then choose **Save**\.  
-![\[CORS Configuration Editor in Amazon S3 for setting CORS configuration of a bucket\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/s3-cors-config.png)
+1. Choose **Edit**, and type your CORS configuration in the **CORS Configuration Editor**, then choose **Save**\.
 
 A CORS configuration is an XML file that contains a series of rules within a `<CORSRule>`\. A configuration can have up to 100 rules\. A rule is defined by one of the following tags:
 + `<AllowedOrigin>`, which specifies domain origins that you allow to make cross\-domain requests\.
 + `<AllowedMethod>`, which specifies a type of request you allow \(GET, PUT, POST, DELETE, HEAD\) in cross\-domain requests\.
 + `<AllowedHeader>`, which specifies the headers allowed in a preflight request\.
 
-For sample configurations, see [How Do I Configure CORS on My Bucket?](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html#how-do-i-enable-cors) in the *Amazon Simple Storage Service Developer Guide*\.
+For sample configurations, see [How Do I Configure CORS on My Bucket?](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html#how-do-i-enable-cors) in the *Amazon Simple Storage Service User Guide*\.
 
 ## CORS Configuration Example<a name="cors-configuration-example"></a>
 
 The following CORS configuration sample allows a user to view, add, remove, or update objects inside of a bucket from the domain `example.org`, though it is recommended that you scope the `<AllowedOrigin>` to the domain of your website\. You can specify `"*"` to allow any origin\.
+
+**Important**  
+In the new S3 console, the CORS configuration must be JSON\.
+
+------
+#### [ XML ]
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -59,6 +68,34 @@ The following CORS configuration sample allows a user to view, add, remove, or u
   </CORSRule>
 </CORSConfiguration>
 ```
+
+------
+#### [ JSON ]
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "HEAD",
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE"
+        ],
+        "AllowedOrigins": [
+            "https://www.example.org"
+        ],
+        "ExposeHeaders": [
+             "ETag",
+             "x-amz-meta-custom-header"]
+    }
+]
+```
+
+------
 
 This configuration does not authorize the user to perform actions on the bucket\. It enables the browser's security model to allow a request to Amazon S3\. Permissions must be configured through bucket permissions or IAM role permissions\.
 

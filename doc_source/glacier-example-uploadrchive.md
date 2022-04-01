@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Uploading an Archive to S3 Glacier<a name="glacier-example-uploadrchive"></a>
 
 ![\[JavaScript code example that applies to Node.js execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/nodeicon.png)
@@ -20,12 +26,12 @@ To set up and run this example, you must first complete these tasks:
 ```
 // Load the SDK for JavaScript
 var AWS = require('aws-sdk');
-// Set the region 
+// Set the region
 AWS.config.update({region: 'REGION'});
-            
+
 // Create a new service object and buffer
-var glacier = new AWS.Glacier({apiVersion: '2012-06-01'}),
-buffer = new Buffer(2.5 * 1024 * 1024); // 2.5MB buffer
+var glacier = new AWS.Glacier({apiVersion: '2012-06-01'});
+buffer = Buffer.alloc(2.5 * 1024 * 1024); // 2.5MB buffer
 
 var params = {vaultName: 'YOUR_VAULT_NAME', body: buffer};
 // Call Glacier to upload the archive.

@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Doing a Multipart Upload to S3 Glacier<a name="glacier-example-multipart-upload"></a>
 
 The following example creates a multipart upload out of 1 megabyte chunks of a `Buffer` object using the `initiateMultipartUpload` method of the Amazon S3 Glacier service object\.

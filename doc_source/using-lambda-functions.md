@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Tutorial: Creating and Using Lambda Functions<a name="using-lambda-functions"></a>
 
 In this tutorial, you learn how to:
@@ -31,7 +37,7 @@ To create this application you'll need resources from multiple services that mus
 
    On Linux or Mac let's use `~/MyLambdaApp`; on Windows let's use `C:\MyLambdaApp`\. From now on we'll just call it `MyLambdaApp`\.
 
-1. Download `slotassets.zip` from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/lambda/tutorial/slotassets.zip)\. This archive contains the browser assets that are used by the application, the Node\.js code that's used in the Lambda function, and several setup scripts\. In this tutorial, you modify the `index.html` file and upload all the browser asset files to an Amazon S3 bucket you provision for this application\. As part of creating the Lambda function, you also modify the Node\.js code in `slotpull.js` before uploading it to the Amazon S3 bucket\.
+1. Download `slotassets.zip` from the [code example archive on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/lambda/tutorial)\. This archive contains the browser assets that are used by the application, the Node\.js code that's used in the Lambda function, and several setup scripts\. In this tutorial, you modify the `index.html` file and upload all the browser asset files to an Amazon S3 bucket you provision for this application\. As part of creating the Lambda function, you also modify the Node\.js code in `slotpull.js` before uploading it to the Amazon S3 bucket\.
 
    Unzip the contents of `slotassets.zip` as the directory `slotassets` in `MyLambdaApp`\. The `slotassets` directory should contain the 30 files\.
 
@@ -48,3 +54,6 @@ To create this application you'll need resources from multiple services that mus
 1. [Prepare and create the Lambda function](using-lambda-function-prep.md)\.
 
 1. [Run the Lambda function\.](running-lambda-function.md)
+
+**Note**  
+The code for this example is available [here on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript/example_code/lambda)\.

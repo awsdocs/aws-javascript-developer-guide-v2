@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Create an Amazon S3 Bucket Configured as a Static Website<a name="using-lambda-s3-setup"></a>
 
 In this task, you create and prepare the Amazon S3 bucket used by the application\.

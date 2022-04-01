@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Configuring Proxies for Node\.js<a name="node-configuring-proxies"></a>
 
 If you can't directly connect to the internet, the SDK for JavaScript supports use of HTTP or HTTPS proxies through a third\-party HTTP agent, such as [proxy\-agent](https://github.com/TooTallNate/node-proxy-agent)\. To install proxy\-agent, type the following at the command line\.

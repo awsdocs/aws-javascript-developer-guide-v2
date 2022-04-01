@@ -1,3 +1,9 @@
+--------
+
+The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great new features, including modular architecture\. For more information, see the [AWS SDK for JavaScript v3 Developer Guide](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html)\.
+
+--------
+
 # Uploading Photos to Amazon S3 from a Browser<a name="s3-example-photo-album"></a>
 
 ![\[JavaScript code example that applies to browser execution\]](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/browsericon.png)
@@ -22,7 +28,7 @@ The browser script uses the SDK for JavaScript to interact with an Amazon S3 buc
 ## Prerequisite Tasks<a name="s3-example-photo-album-scenario-prerequisites"></a>
 
 To set up and run this example, you must first complete these tasks:
-+ In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket that you will use to store the photos in the album\. For more information about creating a bucket in the console, see [Creating a Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\. Make sure you have both **Read** and **Write** permissions on **Objects**\.
++ In the [Amazon S3 console](https://console.aws.amazon.com/s3/), create an Amazon S3 bucket that you will use to store the photos in the album\. For more information about creating a bucket in the console, see [Creating a Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) in the *Amazon Simple Storage Service User Guide*\. Make sure you have both **Read** and **Write** permissions on **Objects**\. For more information about setting bucket permissions, see [Setting permissions for website access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html)\.
 + In the [Amazon Cognito console](https://console.aws.amazon.com/cognito/), create an Amazon Cognito identity pool using Federated Identities with access enabled for unauthenticated users in the same Region as the Amazon S3 bucket\. You need to include the identity pool ID in the code to obtain credentials for the browser script\. For more information about Amazon Cognito Federated Identities, see [Amazon Cognito Identity Pools \(Federated Identites\)](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-identity.html) in the *Amazon Cognito Developer Guide*\.
 + In the [IAM console](https://console.aws.amazon.com/iam/), find the IAM role created by Amazon Cognito for unauthenticated users\. Add the following policy to grant read and write permissions to an Amazon S3 bucket\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
@@ -40,9 +46,11 @@ If you enable access for unauthenticated users, you will grant write access to t
               "s3:DeleteObject",
               "s3:GetObject",
               "s3:ListBucket",
-              "s3:PutObject"
+              "s3:PutObject",
+              "s3:PutObjectAcl"
            ],
-           "Resource": [
+           "Resource": [            
+              "arn:aws:s3:::BUCKET_NAME",
               "arn:aws:s3:::BUCKET_NAME/*"
            ]
         }
@@ -53,6 +61,38 @@ If you enable access for unauthenticated users, you will grant write access to t
 ## Configuring CORS<a name="s3-example-photo-album-cors-configuration"></a>
 
 Before the browser script can access the Amazon S3 bucket, you must first set up its [CORS configuration](cors.md#configuring-cors-s3-bucket) as follows\.
+
+**Important**  
+In the new S3 console, the CORS configuration must be JSON\.
+
+------
+#### [ JSON ]
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "HEAD",
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": [
+            "ETag"
+        ]
+    }
+]
+```
+
+------
+#### [ XML ]
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -69,6 +109,8 @@ Before the browser script can access the Amazon S3 bucket, you must first set up
     </CORSRule>
 </CORSConfiguration>
 ```
+
+------
 
 ## The Web Page<a name="s3-example-photo-album-html"></a>
 
@@ -274,7 +316,7 @@ function viewAlbum(albumName) {
 
 To upload a photo to an album in the Amazon S3 bucket, the application's `addPhoto` function uses a file picker element in the web page to identify a file to upload\. It then forms a key for the photo to upload from the current album name and the file name\.
 
-The function calls the `upload` method of the Amazon S3 service object to upload the photo\. The `ACL` parameter is set to `public-read` so the application can fetch the photos in an album for display by their URL in the bucket\. After uploading the photo, the function redisplays the album so the uploaded photo appears\.
+The function calls the `upload` method of the Amazon S3 service object to upload the photo\. After uploading the photo, the function redisplays the album so the uploaded photo appears\.
 
 ```
 function addPhoto(albumName) {
@@ -293,8 +335,7 @@ function addPhoto(albumName) {
     params: {
       Bucket: albumBucketName,
       Key: photoKey,
-      Body: file,
-      ACL: "public-read"
+      Body: file
     }
   });
 
