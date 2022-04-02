@@ -6,7 +6,7 @@ The AWS SDK for JavaScript version 3 \(v3\) is a rewrite of v2 with some great n
 
 # Document History for AWS SDK for JavaScript<a name="doc-history"></a>
 + **SDK version:** See [JavaScript API Reference](aws-jsdk-reference.md)
-+ **Latest major documentation update:** May 13, 2019
++ **Latest major documentation update:** March 31, 2022
 
 ## Document History<a name="doc-history-recent"></a>
 
@@ -14,6 +14,7 @@ The following table describes important changes in each release of the AWS SDK f
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Enforcing a minimum version of TLS](enforcing-tls.md) | Added information about TLS 1\.3\. | March 31, 2022 | 
 | [Viewing Photos in an Amazon S3 Bucket from a Browser](s3-example-photos-view.md) | Added an example for simply viewing photos in existing photo albums\. | May 13, 2019 | 
 | [Setting Credentials in Node\.js, new credential\-loading choices](https://docs.aws.amazon.com/sdk-for-javascript/latest/developer-guide/setting-credentials-node.html) | Added information about credentials that are loaded from the ECS credentials provider or a configured credential process\. | April 25, 2019 | 
 | [Credentials using a Configured Credential Process](https://docs.aws.amazon.com/sdk-for-javascript/latest/developer-guide/loading-node-credentials-configured-credential-process.html) | Added information about credentials that are loaded from a configured credential process\. | April 25, 2019 | 
