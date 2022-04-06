@@ -41,7 +41,7 @@ By default, the SDK checks the `AWS_PROFILE` environment variable to determine w
 **Note**  
 When setting environment variables, be sure to take appropriate actions afterwards \(according to the needs of your operating system\) to make the variables available in the shell or command environment\.
 
-After setting the environment variable \(if needed\), you can run a JavaScreipt file that uses the SDK, such as for example, a file named `script.js`\.
+After setting the environment variable \(if needed\), you can run a JavaScript file that uses the SDK, such as for example, a file named `script.js`\.
 
 ```
 $ node script.js
