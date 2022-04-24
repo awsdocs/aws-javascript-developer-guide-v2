@@ -57,7 +57,7 @@ AWS does not control the following code\. Before you run it, be sure to verify i
    `Running Node.js VERSION`
 
 **Note**  
-The node installation only applies to the current Amazon EC2 session\. Once the Amazon EC2 instance goes away, you'll have to re\-install node again\. The alternative is to make an AMI of the Amazon EC2 instance once you have the configuration that you want to keep, as described in the following section\.
+The node installation only applies to the current Amazon EC2 instance\. Once the Amazon EC2 instance goes away, you'll have to re\-install node again\. The alternative is to make an AMI of the Amazon EC2 instance once you have the configuration that you want to keep, as described in the following section\.
 
 ## Creating an Amazon Machine Image<a name="setting-up-node-on-ec2-instance-create-image"></a>
 
