@@ -59,7 +59,7 @@ var params = {
       /* more items */
     ]
   },
-  Message: { /* required */
+  Content: { /* required */
     Body: { /* required */
       Html: {
        Charset: "UTF-8",
